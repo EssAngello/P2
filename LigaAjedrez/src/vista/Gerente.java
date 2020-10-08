@@ -27,6 +27,10 @@ public class Gerente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Nominas = new javax.swing.JFrame();
+        listNominas = new java.awt.List();
+        jLabel2 = new javax.swing.JLabel();
+        jButtonAtras = new javax.swing.JButton();
         jButtonHistorial = new javax.swing.JButton();
         jButtonClubes = new javax.swing.JButton();
         jButtonHistorialClubes = new javax.swing.JButton();
@@ -38,6 +42,41 @@ public class Gerente extends javax.swing.JFrame {
         jButtonReservarSede = new javax.swing.JButton();
         jButtonResponsableI = new javax.swing.JButton();
         jButtonResultadoPartido = new javax.swing.JButton();
+
+        Nominas.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jLabel2.setText("NOMINAS");
+
+        jButtonAtras.setText("ATRÁS");
+
+        javax.swing.GroupLayout NominasLayout = new javax.swing.GroupLayout(Nominas.getContentPane());
+        Nominas.getContentPane().setLayout(NominasLayout);
+        NominasLayout.setHorizontalGroup(
+            NominasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NominasLayout.createSequentialGroup()
+                .addGroup(NominasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(NominasLayout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addGroup(NominasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(listNominas, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(NominasLayout.createSequentialGroup()
+                        .addGap(149, 149, 149)
+                        .addComponent(jButtonAtras)))
+                .addContainerGap(67, Short.MAX_VALUE))
+        );
+        NominasLayout.setVerticalGroup(
+            NominasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NominasLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(listNominas, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addComponent(jButtonAtras)
+                .addContainerGap())
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -175,6 +214,8 @@ public class Gerente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFrame Nominas;
+    private javax.swing.JButton jButtonAtras;
     private javax.swing.JButton jButtonClubes;
     private javax.swing.JButton jButtonHistorial;
     private javax.swing.JButton jButtonHistorialClubes;
@@ -186,5 +227,7 @@ public class Gerente extends javax.swing.JFrame {
     private javax.swing.JButton jButtonResultadoPartido;
     private javax.swing.JButton jButtonTorneos;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private java.awt.List listNominas;
     // End of variables declaration//GEN-END:variables
 }

@@ -43,10 +43,7 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jrb_senior" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jlb_categoria" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="173" pref="173" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jlb_categoria" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -54,14 +51,13 @@
                           <Component id="jbt_cancelar" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
                           <Component id="jbt_registrarse" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="8" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jlb_apellido" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jlb_telefono" alignment="0" min="-2" max="-2" attributes="0"/>
