@@ -29,9 +29,12 @@ public class Club extends javax.swing.JFrame {
 
         InfoEntrenador = new javax.swing.JPanel();
         InfoGerente = new javax.swing.JPanel();
+        jlb_historialClubes = new javax.swing.JLabel();
+        jbt_volver = new javax.swing.JButton();
+        jlt_historialClubes = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jlb_nombreClub = new javax.swing.JLabel();
         jbt_unirse = new javax.swing.JButton();
         jbt_cancelar = new javax.swing.JButton();
@@ -56,14 +59,27 @@ public class Club extends javax.swing.JFrame {
             .addGap(0, 286, Short.MAX_VALUE)
         );
 
-        jLabel1.setText("historial de clubes:");
+        jlb_historialClubes.setText("historial de clubes:");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jbt_volver.setText("volver");
+        jbt_volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_volverActionPerformed(evt);
+            }
+        });
+
+        jlt_historialClubes.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Informacion del Entrenador");
+
+        jLabel2.setText("nombre:");
+
+        jLabel3.setText("apellido:");
 
         javax.swing.GroupLayout InfoGerenteLayout = new javax.swing.GroupLayout(InfoGerente);
         InfoGerente.setLayout(InfoGerenteLayout);
@@ -72,20 +88,38 @@ public class Club extends javax.swing.JFrame {
             .addGroup(InfoGerenteLayout.createSequentialGroup()
                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(InfoGerenteLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel1))
+                        .addGap(30, 30, 30)
+                        .addComponent(jbt_volver))
                     .addGroup(InfoGerenteLayout.createSequentialGroup()
-                        .addGap(168, 168, 168)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(71, Short.MAX_VALUE))
+                        .addGap(155, 155, 155)
+                        .addComponent(jlt_historialClubes, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(InfoGerenteLayout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jlb_historialClubes)
+                            .addComponent(jLabel3))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoGerenteLayout.createSequentialGroup()
+                .addGap(0, 106, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(90, 90, 90))
         );
         InfoGerenteLayout.setVerticalGroup(
             InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoGerenteLayout.createSequentialGroup()
-                .addContainerGap(173, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(1, 1, 1)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(jlb_historialClubes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jlt_historialClubes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jbt_volver)
                 .addContainerGap())
         );
 
@@ -179,7 +213,7 @@ public class Club extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jlb_federacion)
                             .addComponent(jlb_federacionPerteneciente))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
                         .addComponent(jbt_cancelar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -193,6 +227,10 @@ public class Club extends javax.swing.JFrame {
     private void jbt_infoGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoGerenteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbt_infoGerenteActionPerformed
+
+    private void jbt_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt_volverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,19 +271,22 @@ public class Club extends javax.swing.JFrame {
     private javax.swing.JPanel InfoEntrenador;
     private javax.swing.JPanel InfoGerente;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jbt_cancelar;
     private javax.swing.JButton jbt_infoEntrenador;
     private javax.swing.JButton jbt_infoGerente;
     private javax.swing.JButton jbt_reservaEntrenamiento;
     private javax.swing.JButton jbt_unirse;
+    private javax.swing.JButton jbt_volver;
     private javax.swing.JLabel jlb_entrenador;
     private javax.swing.JLabel jlb_federacion;
     private javax.swing.JLabel jlb_federacionPerteneciente;
     private javax.swing.JLabel jlb_gerente;
+    private javax.swing.JLabel jlb_historialClubes;
     private javax.swing.JLabel jlb_nombreClub;
     private javax.swing.JLabel jlb_nombreEntrenador;
     private javax.swing.JLabel jlb_nombreGerente;
+    private javax.swing.JList<String> jlt_historialClubes;
     // End of variables declaration//GEN-END:variables
 }
