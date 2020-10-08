@@ -31,6 +31,10 @@ public class Gerente extends javax.swing.JFrame {
         listNominas = new java.awt.List();
         jLabel2 = new javax.swing.JLabel();
         jButtonAtras = new javax.swing.JButton();
+        IRPF = new javax.swing.JFrame();
+        jLabelIRPF = new javax.swing.JLabel();
+        listIRPF = new java.awt.List();
+        jButtonOK = new javax.swing.JButton();
         jButtonHistorial = new javax.swing.JButton();
         jButtonClubes = new javax.swing.JButton();
         jButtonHistorialClubes = new javax.swing.JButton();
@@ -44,6 +48,12 @@ public class Gerente extends javax.swing.JFrame {
         jButtonResultadoPartido = new javax.swing.JButton();
 
         Nominas.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        listNominas.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                listNominasFocusGained(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
         jLabel2.setText("NOMINAS");
@@ -76,6 +86,46 @@ public class Gerente extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(jButtonAtras)
                 .addContainerGap())
+        );
+
+        jLabelIRPF.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jLabelIRPF.setText("IRPF");
+
+        listIRPF.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                listIRPFFocusGained(evt);
+            }
+        });
+
+        jButtonOK.setText("OK");
+
+        javax.swing.GroupLayout IRPFLayout = new javax.swing.GroupLayout(IRPF.getContentPane());
+        IRPF.getContentPane().setLayout(IRPFLayout);
+        IRPFLayout.setHorizontalGroup(
+            IRPFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(IRPFLayout.createSequentialGroup()
+                .addGroup(IRPFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(IRPFLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabelIRPF, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(IRPFLayout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(listIRPF, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(IRPFLayout.createSequentialGroup()
+                        .addGap(172, 172, 172)
+                        .addComponent(jButtonOK)))
+                .addContainerGap(64, Short.MAX_VALUE))
+        );
+        IRPFLayout.setVerticalGroup(
+            IRPFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(IRPFLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jLabelIRPF)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(listIRPF, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonOK)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -178,6 +228,14 @@ public class Gerente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonTorneosActionPerformed
 
+    private void listNominasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_listNominasFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_listNominasFocusGained
+
+    private void listIRPFFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_listIRPFFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_listIRPFFocusGained
+
     /**
      * @param args the command line arguments
      */
@@ -214,6 +272,7 @@ public class Gerente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFrame IRPF;
     private javax.swing.JFrame Nominas;
     private javax.swing.JButton jButtonAtras;
     private javax.swing.JButton jButtonClubes;
@@ -222,12 +281,15 @@ public class Gerente extends javax.swing.JFrame {
     private javax.swing.JButton jButtonHistorialPartidos;
     private javax.swing.JButton jButtonIRPF;
     private javax.swing.JButton jButtonNominas;
+    private javax.swing.JButton jButtonOK;
     private javax.swing.JButton jButtonReservarSede;
     private javax.swing.JButton jButtonResponsableI;
     private javax.swing.JButton jButtonResultadoPartido;
     private javax.swing.JButton jButtonTorneos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelIRPF;
+    private java.awt.List listIRPF;
     private java.awt.List listNominas;
     // End of variables declaration//GEN-END:variables
 }
