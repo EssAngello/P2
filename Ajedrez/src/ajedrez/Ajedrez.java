@@ -16,6 +16,7 @@ public class Ajedrez {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //Hola que tal
     }
     
 }
