@@ -27,112 +27,196 @@ public class Gerente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Nominas = new javax.swing.JFrame();
-        listNominas = new java.awt.List();
+        InscribirseClubGerente = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButtonAtras = new javax.swing.JButton();
-        IRPF = new javax.swing.JFrame();
-        jLabelIRPF = new javax.swing.JLabel();
-        listIRPF = new java.awt.List();
-        jButtonOK = new javax.swing.JButton();
-        jButtonHistorial = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        HistorialClubesGerente = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        jButton5 = new javax.swing.JButton();
+        DatosPersonales = new javax.swing.JPanel();
+        jlb_tituloInfoGerente = new javax.swing.JLabel();
+        jlb_infoGerenteNombre = new javax.swing.JLabel();
+        jlb_infoGerenteApellido = new javax.swing.JLabel();
+        jlb_infoGerenteTelefono = new javax.swing.JLabel();
+        jlb_infoGerenteDNI = new javax.swing.JLabel();
+        jlb_infoGerenteDatosDNI = new javax.swing.JLabel();
+        jlb_infoGerenteDatosTelefono = new javax.swing.JLabel();
+        jlb_infoGerenteDatosApellido = new javax.swing.JLabel();
+        jlb_infoGerenteDatosNombre = new javax.swing.JLabel();
         jButtonClubes = new javax.swing.JButton();
         jButtonHistorialClubes = new javax.swing.JButton();
         jButtonTorneos = new javax.swing.JButton();
         jButtonIRPF = new javax.swing.JButton();
         jButtonNominas = new javax.swing.JButton();
-        jButtonHistorialPartidos = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButtonReservarSede = new javax.swing.JButton();
-        jButtonResponsableI = new javax.swing.JButton();
-        jButtonResultadoPartido = new javax.swing.JButton();
+        jbt_datosPersonales = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
-        Nominas.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setText("Inscribirse club");
 
-        listNominas.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                listNominasFocusGained(evt);
-            }
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
+        jScrollPane1.setViewportView(jList1);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
-        jLabel2.setText("NOMINAS");
+        jButton3.setText("inscribirse");
 
-        jButtonAtras.setText("ATRÁS");
+        jButton4.setText("volver");
 
-        javax.swing.GroupLayout NominasLayout = new javax.swing.GroupLayout(Nominas.getContentPane());
-        Nominas.getContentPane().setLayout(NominasLayout);
-        NominasLayout.setHorizontalGroup(
-            NominasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(NominasLayout.createSequentialGroup()
-                .addGroup(NominasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(NominasLayout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addGroup(NominasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(listNominas, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(NominasLayout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(jButtonAtras)))
-                .addContainerGap(67, Short.MAX_VALUE))
-        );
-        NominasLayout.setVerticalGroup(
-            NominasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NominasLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel2)
+        javax.swing.GroupLayout InscribirseClubGerenteLayout = new javax.swing.GroupLayout(InscribirseClubGerente);
+        InscribirseClubGerente.setLayout(InscribirseClubGerenteLayout);
+        InscribirseClubGerenteLayout.setHorizontalGroup(
+            InscribirseClubGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InscribirseClubGerenteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(listNominas, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
-                .addComponent(jButtonAtras)
+                .addComponent(jButton3)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InscribirseClubGerenteLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InscribirseClubGerenteLayout.createSequentialGroup()
+                .addContainerGap(98, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(97, 97, 97))
+        );
+        InscribirseClubGerenteLayout.setVerticalGroup(
+            InscribirseClubGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InscribirseClubGerenteLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGroup(InscribirseClubGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
                 .addContainerGap())
         );
 
-        jLabelIRPF.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
-        jLabelIRPF.setText("IRPF");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setText("Historial Clubes");
 
-        listIRPF.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                listIRPFFocusGained(evt);
-            }
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
+        jScrollPane2.setViewportView(jList2);
 
-        jButtonOK.setText("OK");
+        jButton5.setText("volver");
 
-        javax.swing.GroupLayout IRPFLayout = new javax.swing.GroupLayout(IRPF.getContentPane());
-        IRPF.getContentPane().setLayout(IRPFLayout);
-        IRPFLayout.setHorizontalGroup(
-            IRPFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(IRPFLayout.createSequentialGroup()
-                .addGroup(IRPFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(IRPFLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jLabelIRPF, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(IRPFLayout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(listIRPF, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(IRPFLayout.createSequentialGroup()
-                        .addGap(172, 172, 172)
-                        .addComponent(jButtonOK)))
-                .addContainerGap(64, Short.MAX_VALUE))
+        javax.swing.GroupLayout HistorialClubesGerenteLayout = new javax.swing.GroupLayout(HistorialClubesGerente);
+        HistorialClubesGerente.setLayout(HistorialClubesGerenteLayout);
+        HistorialClubesGerenteLayout.setHorizontalGroup(
+            HistorialClubesGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HistorialClubesGerenteLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(80, 80, 80))
+            .addGroup(HistorialClubesGerenteLayout.createSequentialGroup()
+                .addGroup(HistorialClubesGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HistorialClubesGerenteLayout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(HistorialClubesGerenteLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton5)))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
-        IRPFLayout.setVerticalGroup(
-            IRPFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(IRPFLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jLabelIRPF)
+        HistorialClubesGerenteLayout.setVerticalGroup(
+            HistorialClubesGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HistorialClubesGerenteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(listIRPF, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addContainerGap())
+        );
+
+        jlb_tituloInfoGerente.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloInfoGerente.setText("Informacion del Gerente");
+
+        jlb_infoGerenteNombre.setText("nombre:");
+
+        jlb_infoGerenteApellido.setText("apellido:");
+
+        jlb_infoGerenteTelefono.setText("telefono:");
+
+        jlb_infoGerenteDNI.setText("DNI/NIE:");
+
+        jlb_infoGerenteDatosDNI.setText("DNI del gerente");
+
+        jlb_infoGerenteDatosTelefono.setText("telefono del gerente");
+
+        jlb_infoGerenteDatosApellido.setText("apellido del gerente");
+
+        jlb_infoGerenteDatosNombre.setText("nombre del gerente");
+
+        javax.swing.GroupLayout DatosPersonalesLayout = new javax.swing.GroupLayout(DatosPersonales);
+        DatosPersonales.setLayout(DatosPersonalesLayout);
+        DatosPersonalesLayout.setHorizontalGroup(
+            DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DatosPersonalesLayout.createSequentialGroup()
+                .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DatosPersonalesLayout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jlb_tituloInfoGerente))
+                    .addGroup(DatosPersonalesLayout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlb_infoGerenteNombre)
+                            .addComponent(jlb_infoGerenteApellido)
+                            .addComponent(jlb_infoGerenteTelefono)
+                            .addComponent(jlb_infoGerenteDNI))
+                        .addGap(65, 65, 65)
+                        .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlb_infoGerenteDatosNombre)
+                            .addComponent(jlb_infoGerenteDatosApellido)
+                            .addComponent(jlb_infoGerenteDatosDNI)
+                            .addComponent(jlb_infoGerenteDatosTelefono))))
+                .addContainerGap(58, Short.MAX_VALUE))
+        );
+        DatosPersonalesLayout.setVerticalGroup(
+            DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DatosPersonalesLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jlb_tituloInfoGerente)
+                .addGap(31, 31, 31)
+                .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoGerenteNombre)
+                    .addComponent(jlb_infoGerenteDatosNombre))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonOK)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoGerenteApellido)
+                    .addComponent(jlb_infoGerenteDatosApellido))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoGerenteTelefono)
+                    .addComponent(jlb_infoGerenteDatosTelefono))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoGerenteDNI)
+                    .addComponent(jlb_infoGerenteDatosDNI))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButtonHistorial.setText("Historial");
-
-        jButtonClubes.setText("Clubes");
+        jButtonClubes.setText("Inscribirse Club");
         jButtonClubes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonClubesActionPerformed(evt);
@@ -152,16 +236,15 @@ public class Gerente extends javax.swing.JFrame {
 
         jButtonNominas.setText("Nominas");
 
-        jButtonHistorialPartidos.setText("Historial Partidos");
-
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("GERENTE");
 
-        jButtonReservarSede.setText("Reservar Sede");
+        jbt_datosPersonales.setText("Datos Personales");
 
-        jButtonResponsableI.setText("Responsable Infantil");
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setText("Sede del Club");
 
-        jButtonResultadoPartido.setText("Resultado Partido");
+        jButton2.setText("salir");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -175,19 +258,23 @@ public class Gerente extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonResultadoPartido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonHistorial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonClubes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonClubes, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
                             .addComponent(jButtonIRPF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonReservarSede, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jbt_datosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButtonTorneos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonHistorialClubes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonNominas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonResponsableI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonHistorialPartidos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jButtonHistorialClubes, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                            .addComponent(jButtonNominas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(13, 13, 13))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,24 +284,20 @@ public class Gerente extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonClubes)
-                    .addComponent(jButtonHistorialPartidos))
+                    .addComponent(jButtonHistorialClubes))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonHistorial)
-                    .addComponent(jButtonTorneos))
+                    .addComponent(jButtonTorneos)
+                    .addComponent(jbt_datosPersonales))
                 .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonHistorialClubes)
-                    .addComponent(jButtonResultadoPartido))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonIRPF)
                     .addComponent(jButtonNominas))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonReservarSede)
-                    .addComponent(jButtonResponsableI))
-                .addGap(34, 34, 34))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addContainerGap())
         );
 
         pack();
@@ -228,35 +311,38 @@ public class Gerente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonTorneosActionPerformed
 
-    private void listNominasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_listNominasFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_listNominasFocusGained
-
-    private void listIRPFFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_listIRPFFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_listIRPFFocusGained
-
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFrame IRPF;
-    private javax.swing.JFrame Nominas;
-    private javax.swing.JButton jButtonAtras;
+    private javax.swing.JPanel DatosPersonales;
+    private javax.swing.JPanel HistorialClubesGerente;
+    private javax.swing.JPanel InscribirseClubGerente;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButtonClubes;
-    private javax.swing.JButton jButtonHistorial;
     private javax.swing.JButton jButtonHistorialClubes;
-    private javax.swing.JButton jButtonHistorialPartidos;
     private javax.swing.JButton jButtonIRPF;
     private javax.swing.JButton jButtonNominas;
-    private javax.swing.JButton jButtonOK;
-    private javax.swing.JButton jButtonReservarSede;
-    private javax.swing.JButton jButtonResponsableI;
-    private javax.swing.JButton jButtonResultadoPartido;
     private javax.swing.JButton jButtonTorneos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabelIRPF;
-    private java.awt.List listIRPF;
-    private java.awt.List listNominas;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton jbt_datosPersonales;
+    private javax.swing.JLabel jlb_infoGerenteApellido;
+    private javax.swing.JLabel jlb_infoGerenteDNI;
+    private javax.swing.JLabel jlb_infoGerenteDatosApellido;
+    private javax.swing.JLabel jlb_infoGerenteDatosDNI;
+    private javax.swing.JLabel jlb_infoGerenteDatosNombre;
+    private javax.swing.JLabel jlb_infoGerenteDatosTelefono;
+    private javax.swing.JLabel jlb_infoGerenteNombre;
+    private javax.swing.JLabel jlb_infoGerenteTelefono;
+    private javax.swing.JLabel jlb_tituloInfoGerente;
     // End of variables declaration//GEN-END:variables
 }

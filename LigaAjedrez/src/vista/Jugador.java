@@ -27,6 +27,17 @@ public class Jugador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        InscribirseClubJugador = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jLabel2 = new javax.swing.JLabel();
+        HistorialClubesJugador = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        jLabel3 = new javax.swing.JLabel();
         Tarjeta_personal = new javax.swing.JPanel();
         jbt_titulo = new javax.swing.JLabel();
         jlb_nombre = new javax.swing.JLabel();
@@ -36,14 +47,123 @@ public class Jugador extends javax.swing.JFrame {
         jlb_categoria = new javax.swing.JLabel();
         jlb_atras = new javax.swing.JButton();
         jlb_elo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        Responsable = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jTextFieldNombreJugador = new javax.swing.JTextField();
+        jLabelNombreJugador = new javax.swing.JLabel();
+        jLabelJugadorInfantil = new javax.swing.JLabel();
+        jLabelApellidoJugador = new javax.swing.JLabel();
+        jTextFieldApellidoJugador = new javax.swing.JTextField();
+        jTextFieldApellidoRespinsable = new javax.swing.JTextField();
+        jLabelApellidoResponsable = new javax.swing.JLabel();
+        jTextFieldNombreResponsable = new javax.swing.JTextField();
+        jLabelNombreResponsable = new javax.swing.JLabel();
+        jLabelResponsable = new javax.swing.JLabel();
         jl_titulo = new javax.swing.JLabel();
         jbt_club = new javax.swing.JButton();
         jbt_torneo = new javax.swing.JButton();
-        jbt_istorial_partidos = new javax.swing.JButton();
         jbt_historial_clubes = new javax.swing.JButton();
         jbt_tarjeta = new javax.swing.JButton();
         jbt_salir = new javax.swing.JButton();
         jbt_responsable = new javax.swing.JButton();
+        jlb_categoriaJugador = new javax.swing.JLabel();
+        jlb_tipoCategoriaJugador = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+
+        jButton4.setText("volver");
+
+        jButton3.setText("inscribirse");
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setText("Inscribirse club");
+
+        javax.swing.GroupLayout InscribirseClubJugadorLayout = new javax.swing.GroupLayout(InscribirseClubJugador);
+        InscribirseClubJugador.setLayout(InscribirseClubJugadorLayout);
+        InscribirseClubJugadorLayout.setHorizontalGroup(
+            InscribirseClubJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InscribirseClubJugadorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InscribirseClubJugadorLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InscribirseClubJugadorLayout.createSequentialGroup()
+                .addContainerGap(86, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(97, 97, 97))
+        );
+        InscribirseClubJugadorLayout.setVerticalGroup(
+            InscribirseClubJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InscribirseClubJugadorLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(InscribirseClubJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
+                .addContainerGap())
+        );
+
+        jButton5.setText("volver");
+
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList2);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setText("Historial Clubes");
+
+        javax.swing.GroupLayout HistorialClubesJugadorLayout = new javax.swing.GroupLayout(HistorialClubesJugador);
+        HistorialClubesJugador.setLayout(HistorialClubesJugadorLayout);
+        HistorialClubesJugadorLayout.setHorizontalGroup(
+            HistorialClubesJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HistorialClubesJugadorLayout.createSequentialGroup()
+                .addGroup(HistorialClubesJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HistorialClubesJugadorLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(HistorialClubesJugadorLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton5)))
+                .addContainerGap(48, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HistorialClubesJugadorLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(76, 76, 76))
+        );
+        HistorialClubesJugadorLayout.setVerticalGroup(
+            HistorialClubesJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HistorialClubesJugadorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addContainerGap())
+        );
 
         jbt_titulo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jbt_titulo.setText("TARJETA PERSONAL");
@@ -61,35 +181,58 @@ public class Jugador extends javax.swing.JFrame {
         jlb_telefono.setText("Telefono:");
 
         jlb_categoria.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jlb_categoria.setText("Categotia:");
+        jlb_categoria.setText("Categoria:");
 
         jlb_atras.setText("Atrás");
 
         jlb_elo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jlb_elo.setText("Elo:");
 
+        jLabel1.setText("jLabel1");
+
+        jLabel4.setText("jLabel4");
+
+        jLabel5.setText("jLabel5");
+
+        jLabel6.setText("jLabel6");
+
+        jLabel7.setText("jLabel7");
+
+        jLabel8.setText("jLabel8");
+
         javax.swing.GroupLayout Tarjeta_personalLayout = new javax.swing.GroupLayout(Tarjeta_personal);
         Tarjeta_personal.setLayout(Tarjeta_personalLayout);
         Tarjeta_personalLayout.setHorizontalGroup(
             Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Tarjeta_personalLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jlb_atras))
             .addGroup(Tarjeta_personalLayout.createSequentialGroup()
                 .addGroup(Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Tarjeta_personalLayout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(jbt_titulo))
-                    .addGroup(Tarjeta_personalLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jlb_elo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jlb_categoria, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jlb_telefono, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jlb_dni, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jlb_apellidos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jlb_nombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(77, Short.MAX_VALUE))
+                        .addGroup(Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Tarjeta_personalLayout.createSequentialGroup()
+                                .addGap(77, 77, 77)
+                                .addComponent(jbt_titulo))
+                            .addGroup(Tarjeta_personalLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jlb_elo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jlb_categoria, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jlb_telefono, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jlb_dni, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jlb_apellidos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jlb_nombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(81, 81, 81)
+                                .addGroup(Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8))))
+                        .addGap(0, 88, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Tarjeta_personalLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jlb_atras)))
+                .addContainerGap())
         );
         Tarjeta_personalLayout.setVerticalGroup(
             Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,20 +240,126 @@ public class Jugador extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jbt_titulo)
                 .addGap(18, 18, 18)
-                .addComponent(jlb_nombre)
+                .addGroup(Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_nombre)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlb_apellidos)
+                .addGroup(Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_apellidos)
+                    .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlb_dni)
+                .addGroup(Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_dni)
+                    .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlb_telefono)
+                .addGroup(Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_telefono)
+                    .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlb_categoria)
+                .addGroup(Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_categoria)
+                    .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlb_elo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(Tarjeta_personalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_elo)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addComponent(jlb_atras)
                 .addContainerGap())
+        );
+
+        jButton2.setText("OK");
+
+        jTextFieldNombreJugador.setText("jTextField3");
+
+        jLabelNombreJugador.setText("Nombre");
+
+        jLabelJugadorInfantil.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jLabelJugadorInfantil.setText("Jugador Infantil");
+
+        jLabelApellidoJugador.setText("Apellido");
+
+        jTextFieldApellidoJugador.setText("jTextField4");
+        jTextFieldApellidoJugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldApellidoJugadorActionPerformed(evt);
+            }
+        });
+
+        jTextFieldApellidoRespinsable.setText("jTextField2");
+
+        jLabelApellidoResponsable.setText("Apellido");
+
+        jTextFieldNombreResponsable.setText("jTextField1");
+
+        jLabelNombreResponsable.setText("Nombre");
+
+        jLabelResponsable.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabelResponsable.setText("Responsable");
+
+        javax.swing.GroupLayout ResponsableLayout = new javax.swing.GroupLayout(Responsable);
+        Responsable.setLayout(ResponsableLayout);
+        ResponsableLayout.setHorizontalGroup(
+            ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ResponsableLayout.createSequentialGroup()
+                .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(ResponsableLayout.createSequentialGroup()
+                            .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(ResponsableLayout.createSequentialGroup()
+                                    .addGap(101, 101, 101)
+                                    .addComponent(jLabelNombreJugador)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jTextFieldNombreJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(56, 56, 56))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResponsableLayout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(jLabelJugadorInfantil, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(112, 112, 112)))
+                            .addComponent(jLabelApellidoJugador)
+                            .addGap(32, 32, 32)
+                            .addComponent(jTextFieldApellidoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(ResponsableLayout.createSequentialGroup()
+                            .addGap(221, 221, 221)
+                            .addComponent(jButton2)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResponsableLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(ResponsableLayout.createSequentialGroup()
+                                .addComponent(jLabelNombreResponsable)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldNombreResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(56, 56, 56))
+                            .addGroup(ResponsableLayout.createSequentialGroup()
+                                .addComponent(jLabelResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(112, 112, 112)))
+                        .addComponent(jLabelApellidoResponsable)
+                        .addGap(32, 32, 32)
+                        .addComponent(jTextFieldApellidoRespinsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
+        ResponsableLayout.setVerticalGroup(
+            ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ResponsableLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelResponsable)
+                .addGap(28, 28, 28)
+                .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelNombreResponsable)
+                    .addComponent(jLabelApellidoResponsable)
+                    .addComponent(jTextFieldNombreResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldApellidoRespinsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53)
+                .addComponent(jLabelJugadorInfantil)
+                .addGap(36, 36, 36)
+                .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelNombreJugador)
+                    .addComponent(jLabelApellidoJugador)
+                    .addComponent(jTextFieldNombreJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldApellidoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -122,21 +371,18 @@ public class Jugador extends javax.swing.JFrame {
         jbt_club.setText("Inscribirse Club");
 
         jbt_torneo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jbt_torneo.setText("Unirse Torneo");
-
-        jbt_istorial_partidos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jbt_istorial_partidos.setText("Historial Partidos");
-        jbt_istorial_partidos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbt_istorial_partidosActionPerformed(evt);
-            }
-        });
+        jbt_torneo.setText("Torneo");
 
         jbt_historial_clubes.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jbt_historial_clubes.setText("Historial Clubes");
 
         jbt_tarjeta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jbt_tarjeta.setText("Tarjeta Personal");
+        jbt_tarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_tarjetaActionPerformed(evt);
+            }
+        });
 
         jbt_salir.setText("SALIR");
 
@@ -148,31 +394,46 @@ public class Jugador extends javax.swing.JFrame {
             }
         });
 
+        jlb_categoriaJugador.setText("categoria:");
+
+        jlb_tipoCategoriaJugador.setText("tipo de categoria");
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setText("Sede del Club");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
-                        .addComponent(jl_titulo)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jbt_club, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                            .addComponent(jbt_torneo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbt_responsable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(38, 38, 38)
+                            .addComponent(jbt_torneo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jbt_istorial_partidos, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                            .addComponent(jbt_historial_clubes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbt_tarjeta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jbt_salir)))
+                            .addComponent(jbt_historial_clubes, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                            .addComponent(jbt_tarjeta, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jlb_categoriaJugador)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jlb_tipoCategoriaJugador)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbt_salir))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addComponent(jl_titulo)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(98, 98, 98)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbt_responsable, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,38 +443,74 @@ public class Jugador extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbt_club)
-                    .addComponent(jbt_istorial_partidos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbt_torneo)
                     .addComponent(jbt_historial_clubes))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbt_torneo)
+                    .addComponent(jbt_tarjeta))
+                .addGap(18, 18, 18)
+                .addComponent(jbt_responsable)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbt_tarjeta)
-                    .addComponent(jbt_responsable))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                .addComponent(jbt_salir)
+                    .addComponent(jbt_salir)
+                    .addComponent(jlb_categoriaJugador)
+                    .addComponent(jlb_tipoCategoriaJugador))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbt_istorial_partidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_istorial_partidosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbt_istorial_partidosActionPerformed
-
     private void jbt_responsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_responsableActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbt_responsableActionPerformed
 
+    private void jbt_tarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_tarjetaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt_tarjetaActionPerformed
+
+    private void jTextFieldApellidoJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldApellidoJugadorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldApellidoJugadorActionPerformed
+
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel HistorialClubesJugador;
+    private javax.swing.JPanel InscribirseClubJugador;
+    private javax.swing.JPanel Responsable;
     private javax.swing.JPanel Tarjeta_personal;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabelApellidoJugador;
+    private javax.swing.JLabel jLabelApellidoResponsable;
+    private javax.swing.JLabel jLabelJugadorInfantil;
+    private javax.swing.JLabel jLabelNombreJugador;
+    private javax.swing.JLabel jLabelNombreResponsable;
+    private javax.swing.JLabel jLabelResponsable;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextFieldApellidoJugador;
+    private javax.swing.JTextField jTextFieldApellidoRespinsable;
+    private javax.swing.JTextField jTextFieldNombreJugador;
+    private javax.swing.JTextField jTextFieldNombreResponsable;
     private javax.swing.JButton jbt_club;
     private javax.swing.JButton jbt_historial_clubes;
-    private javax.swing.JButton jbt_istorial_partidos;
     private javax.swing.JButton jbt_responsable;
     private javax.swing.JButton jbt_salir;
     private javax.swing.JButton jbt_tarjeta;
@@ -223,9 +520,11 @@ public class Jugador extends javax.swing.JFrame {
     private javax.swing.JLabel jlb_apellidos;
     private javax.swing.JButton jlb_atras;
     private javax.swing.JLabel jlb_categoria;
+    private javax.swing.JLabel jlb_categoriaJugador;
     private javax.swing.JLabel jlb_dni;
     private javax.swing.JLabel jlb_elo;
     private javax.swing.JLabel jlb_nombre;
     private javax.swing.JLabel jlb_telefono;
+    private javax.swing.JLabel jlb_tipoCategoriaJugador;
     // End of variables declaration//GEN-END:variables
 }

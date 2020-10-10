@@ -2,68 +2,174 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Container class="javax.swing.JFrame" name="Nominas">
-      <Properties>
-        <Property name="defaultCloseOperation" type="int" value="3"/>
-      </Properties>
+    <Container class="javax.swing.JPanel" name="InscribirseClubGerente">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="listNominas" alignment="0" min="-2" pref="271" max="-2" attributes="0"/>
-                              <Component id="jLabel2" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
-                          <Component id="jButtonAtras" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="67" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="251" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="98" max="32767" attributes="0"/>
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="listNominas" min="-2" pref="177" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="jButtonAtras" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="java.awt.List" name="listNominas">
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="listNominasFocusGained"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="24" style="3"/>
+              <Font name="Tahoma" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="NOMINAS"/>
+            <Property name="text" type="java.lang.String" value="Inscribirse club"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonAtras">
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JList" name="jList1">
+              <Properties>
+                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                    <StringItem index="4" value="Item 5"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ATR&#xc1;S"/>
+            <Property name="text" type="java.lang.String" value="inscribirse"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="volver"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JFrame" name="IRPF">
+    <Container class="javax.swing.JPanel" name="HistorialClubesGerente">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="255" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="54" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="25" max="32767" attributes="0"/>
+                  <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Historial Clubes"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JList" name="jList2">
+              <Properties>
+                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                    <StringItem index="4" value="Item 5"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="jButton5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="volver"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="DatosPersonales">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -71,53 +177,107 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                          <Component id="jLabelIRPF" min="-2" pref="137" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="jlb_tituloInfoGerente" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jlb_infoGerenteNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteApellido" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteDNI" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="listIRPF" min="-2" pref="271" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
-                          <Component id="jButtonOK" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jlb_infoGerenteDatosNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteDatosApellido" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteDatosDNI" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteDatosTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="64" max="32767" attributes="0"/>
+                  <EmptySpace pref="58" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="jLabelIRPF" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloInfoGerente" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_infoGerenteNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteDatosNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="listIRPF" min="-2" pref="177" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_infoGerenteApellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteDatosApellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButtonOK" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_infoGerenteTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteDatosTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_infoGerenteDNI" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteDatosDNI" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="79" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabelIRPF">
+        <Component class="javax.swing.JLabel" name="jlb_tituloInfoGerente">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="24" style="3"/>
+              <Font name="Tahoma" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="IRPF"/>
+            <Property name="text" type="java.lang.String" value="Informacion del Gerente"/>
           </Properties>
         </Component>
-        <Component class="java.awt.List" name="listIRPF">
-          <Events>
-            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="listIRPFFocusGained"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButtonOK">
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteNombre">
           <Properties>
-            <Property name="text" type="java.lang.String" value="OK"/>
+            <Property name="text" type="java.lang.String" value="nombre:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteApellido">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="apellido:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteTelefono">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="telefono:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDNI">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="DNI/NIE:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosDNI">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="DNI del gerente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosTelefono">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="telefono del gerente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosApellido">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="apellido del gerente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosNombre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="nombre del gerente"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -154,23 +314,29 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonResultadoPartido" max="32767" attributes="0"/>
-                          <Component id="jButtonHistorial" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jButtonClubes" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jButtonClubes" alignment="0" pref="117" max="32767" attributes="0"/>
                           <Component id="jButtonIRPF" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jButtonReservarSede" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jbt_datosPersonales" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jButtonTorneos" max="32767" attributes="0"/>
-                          <Component id="jButtonHistorialClubes" max="32767" attributes="0"/>
+                          <Component id="jButtonHistorialClubes" pref="131" max="32767" attributes="0"/>
                           <Component id="jButtonNominas" max="32767" attributes="0"/>
-                          <Component id="jButtonResponsableI" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jButtonHistorialPartidos" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" pref="154" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -182,42 +348,31 @@
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButtonClubes" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonHistorialPartidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonHistorialClubes" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButtonHistorial" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButtonTorneos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_datosPersonales" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButtonHistorialClubes" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonResultadoPartido" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButtonIRPF" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButtonNominas" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="9" max="32767" attributes="0"/>
+              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButtonReservarSede" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonResponsableI" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jButtonHistorial">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Historial"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="jButtonClubes">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Clubes"/>
+        <Property name="text" type="java.lang.String" value="Inscribirse Club"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonClubesActionPerformed"/>
@@ -246,11 +401,6 @@
         <Property name="text" type="java.lang.String" value="Nominas"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonHistorialPartidos">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Historial Partidos"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -259,19 +409,22 @@
         <Property name="text" type="java.lang.String" value="GERENTE"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonReservarSede">
+    <Component class="javax.swing.JButton" name="jbt_datosPersonales">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Reservar Sede"/>
+        <Property name="text" type="java.lang.String" value="Datos Personales"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonResponsableI">
+    <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Responsable Infantil"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="18" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Sede del Club"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonResultadoPartido">
+    <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Resultado Partido"/>
+        <Property name="text" type="java.lang.String" value="salir"/>
       </Properties>
     </Component>
   </SubComponents>
