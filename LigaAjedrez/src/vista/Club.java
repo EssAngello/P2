@@ -27,21 +27,46 @@ public class Club extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        InfoEntrenador = new javax.swing.JPanel();
         InfoGerente = new javax.swing.JPanel();
-        jlb_historialClubes = new javax.swing.JLabel();
-        jbt_volver = new javax.swing.JButton();
-        jlt_historialClubes = new javax.swing.JList<>();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jbt_volverInfoGerente = new javax.swing.JButton();
+        jlb_tituloInfoGerente = new javax.swing.JLabel();
+        jlb_infoGerenteNombre = new javax.swing.JLabel();
+        jlb_infoGerenteApellido = new javax.swing.JLabel();
+        jlb_infoGerenteTelefono = new javax.swing.JLabel();
+        jlb_infoGerenteDNI = new javax.swing.JLabel();
+        jlb_infoGerenteDatosNombre = new javax.swing.JLabel();
+        jlb_infoGerenteDatosApellido = new javax.swing.JLabel();
+        jlb_infoGerenteDatosTelefono = new javax.swing.JLabel();
+        jlb_infoGerenteDatosDNI = new javax.swing.JLabel();
+        jlb_infoGerenteNomina = new javax.swing.JLabel();
+        jlb_infoGerenteIRPF = new javax.swing.JLabel();
+        jlb_infoGerenteDatosNomina = new javax.swing.JLabel();
+        jlb_infoGerenteDatosIRPF = new javax.swing.JLabel();
+        InfoEntrenador = new javax.swing.JPanel();
+        jlb_historialClubes1 = new javax.swing.JLabel();
+        jbt_volverInfoEntrenador = new javax.swing.JButton();
+        jlb_tituloInfoEntrenador = new javax.swing.JLabel();
+        jlb_infoEntrenadorNombre = new javax.swing.JLabel();
+        jlb_infoEntrenadorApellido = new javax.swing.JLabel();
+        jlb_infoEntrenadorTelefono = new javax.swing.JLabel();
+        jlb_infoEntrenadorDNI = new javax.swing.JLabel();
+        jlb_infoEntrenadorDatosNombre = new javax.swing.JLabel();
+        jlb_infoEntrenadorDatosApellido = new javax.swing.JLabel();
+        jlb_infoEntrenadorDatosTelefono = new javax.swing.JLabel();
+        jlb_infoEntrenadorDatosDNI = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jlt_historialClubes1 = new javax.swing.JList<>();
+        ReservarEntrenamiento = new javax.swing.JPanel();
+        jlb_tituloReservarEntrenamiento = new javax.swing.JLabel();
+        jlb_disponibilidad = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jlt_listaDisponibilidad = new javax.swing.JList<>();
+        jbt_reservar = new javax.swing.JButton();
+        jbt_cancelarEntrenamiento = new javax.swing.JButton();
+        ConfirmacionUnirseClub = new javax.swing.JPanel();
+        jlb_tituloConfirmacionUnirseClub = new javax.swing.JLabel();
         jlb_nombreClub = new javax.swing.JLabel();
+        jlb_tituloNombreClub = new javax.swing.JLabel();
         jbt_unirse = new javax.swing.JButton();
         jbt_cancelar = new javax.swing.JButton();
         jbt_reservaEntrenamiento = new javax.swing.JButton();
@@ -54,50 +79,39 @@ public class Club extends javax.swing.JFrame {
         jbt_infoGerente = new javax.swing.JButton();
         jbt_infoEntrenador = new javax.swing.JButton();
 
-        javax.swing.GroupLayout InfoEntrenadorLayout = new javax.swing.GroupLayout(InfoEntrenador);
-        InfoEntrenador.setLayout(InfoEntrenadorLayout);
-        InfoEntrenadorLayout.setHorizontalGroup(
-            InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 442, Short.MAX_VALUE)
-        );
-        InfoEntrenadorLayout.setVerticalGroup(
-            InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 286, Short.MAX_VALUE)
-        );
-
-        jlb_historialClubes.setText("historial de clubes:");
-
-        jbt_volver.setText("volver");
-        jbt_volver.addActionListener(new java.awt.event.ActionListener() {
+        jbt_volverInfoGerente.setText("volver");
+        jbt_volverInfoGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbt_volverActionPerformed(evt);
+                jbt_volverInfoGerenteActionPerformed(evt);
             }
         });
 
-        jlt_historialClubes.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
+        jlb_tituloInfoGerente.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloInfoGerente.setText("Informacion del Gerente");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Informacion del Entrenador");
+        jlb_infoGerenteNombre.setText("nombre:");
 
-        jLabel2.setText("nombre:");
+        jlb_infoGerenteApellido.setText("apellido:");
 
-        jLabel3.setText("apellido:");
+        jlb_infoGerenteTelefono.setText("telefono:");
 
-        jLabel4.setText("telefono:");
+        jlb_infoGerenteDNI.setText("DNI/NIE:");
 
-        jLabel5.setText("DNI/NIE:");
+        jlb_infoGerenteDatosNombre.setText("nombre del gerente");
 
-        jLabel6.setText("nombre del entrenador");
+        jlb_infoGerenteDatosApellido.setText("apellido del gerente");
 
-        jLabel7.setText("apellido del entrenador");
+        jlb_infoGerenteDatosTelefono.setText("telefono del gerente");
 
-        jLabel8.setText("telefono del entrenador");
+        jlb_infoGerenteDatosDNI.setText("DNI del gerente");
 
-        jLabel9.setText("DNI del entrenador");
+        jlb_infoGerenteNomina.setText("nomina:");
+
+        jlb_infoGerenteIRPF.setText("IRPF:");
+
+        jlb_infoGerenteDatosNomina.setText("documento nomina");
+
+        jlb_infoGerenteDatosIRPF.setText("documento IRPF");
 
         javax.swing.GroupLayout InfoGerenteLayout = new javax.swing.GroupLayout(InfoGerente);
         InfoGerente.setLayout(InfoGerenteLayout);
@@ -107,62 +121,252 @@ public class Club extends javax.swing.JFrame {
                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(InfoGerenteLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jbt_volver))
+                        .addComponent(jbt_volverInfoGerente))
                     .addGroup(InfoGerenteLayout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jlb_historialClubes)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(20, 20, 20)
-                        .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jlt_historialClubes, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel8))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoGerenteLayout.createSequentialGroup()
-                .addGap(0, 106, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(90, 90, 90))
+                            .addGroup(InfoGerenteLayout.createSequentialGroup()
+                                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlb_infoGerenteNombre)
+                                    .addComponent(jlb_infoGerenteApellido)
+                                    .addComponent(jlb_infoGerenteTelefono)
+                                    .addComponent(jlb_infoGerenteDNI))
+                                .addGap(65, 65, 65)
+                                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlb_infoGerenteDatosNombre)
+                                    .addComponent(jlb_infoGerenteDatosApellido)
+                                    .addComponent(jlb_infoGerenteDatosDNI)
+                                    .addComponent(jlb_infoGerenteDatosTelefono)))
+                            .addGroup(InfoGerenteLayout.createSequentialGroup()
+                                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlb_infoGerenteNomina)
+                                    .addComponent(jlb_infoGerenteIRPF))
+                                .addGap(65, 65, 65)
+                                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlb_infoGerenteDatosNomina)
+                                    .addComponent(jlb_infoGerenteDatosIRPF)))
+                            .addComponent(jlb_tituloInfoGerente))))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         InfoGerenteLayout.setVerticalGroup(
             InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoGerenteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
                 .addGap(17, 17, 17)
-                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel9))
+                .addComponent(jlb_tituloInfoGerente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlb_historialClubes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(jlt_historialClubes)
-                .addGap(12, 12, 12)
-                .addComponent(jbt_volver)
+                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoGerenteNombre)
+                    .addComponent(jlb_infoGerenteDatosNombre))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoGerenteApellido)
+                    .addComponent(jlb_infoGerenteDatosApellido))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoGerenteTelefono)
+                    .addComponent(jlb_infoGerenteDatosTelefono))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoGerenteDNI)
+                    .addComponent(jlb_infoGerenteDatosDNI))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoGerenteNomina)
+                    .addComponent(jlb_infoGerenteDatosNomina))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoGerenteIRPF)
+                    .addComponent(jlb_infoGerenteDatosIRPF))
+                .addGap(42, 42, 42)
+                .addComponent(jbt_volverInfoGerente)
                 .addContainerGap())
+        );
+
+        jlb_historialClubes1.setText("historial de clubes:");
+
+        jbt_volverInfoEntrenador.setText("volver");
+        jbt_volverInfoEntrenador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_volverInfoEntrenadorActionPerformed(evt);
+            }
+        });
+
+        jlb_tituloInfoEntrenador.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloInfoEntrenador.setText("Informacion del Entrenador");
+
+        jlb_infoEntrenadorNombre.setText("nombre:");
+
+        jlb_infoEntrenadorApellido.setText("apellido:");
+
+        jlb_infoEntrenadorTelefono.setText("telefono:");
+
+        jlb_infoEntrenadorDNI.setText("DNI/NIE:");
+
+        jlb_infoEntrenadorDatosNombre.setText("nombre del entrenador");
+
+        jlb_infoEntrenadorDatosApellido.setText("apellido del entrenador");
+
+        jlb_infoEntrenadorDatosTelefono.setText("telefono del entrenador");
+
+        jlb_infoEntrenadorDatosDNI.setText("DNI del entrenador");
+
+        jlt_historialClubes1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jlt_historialClubes1);
+
+        javax.swing.GroupLayout InfoEntrenadorLayout = new javax.swing.GroupLayout(InfoEntrenador);
+        InfoEntrenador.setLayout(InfoEntrenadorLayout);
+        InfoEntrenadorLayout.setHorizontalGroup(
+            InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InfoEntrenadorLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlb_tituloInfoEntrenador)
+                    .addGroup(InfoEntrenadorLayout.createSequentialGroup()
+                        .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(InfoEntrenadorLayout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlb_infoEntrenadorNombre)
+                                    .addComponent(jlb_historialClubes1)
+                                    .addComponent(jlb_infoEntrenadorApellido)
+                                    .addComponent(jlb_infoEntrenadorTelefono)
+                                    .addComponent(jlb_infoEntrenadorDNI)))
+                            .addComponent(jbt_volverInfoEntrenador))
+                        .addGap(20, 20, 20)
+                        .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlb_infoEntrenadorDatosNombre)
+                            .addComponent(jlb_infoEntrenadorDatosApellido)
+                            .addComponent(jlb_infoEntrenadorDatosDNI)
+                            .addComponent(jlb_infoEntrenadorDatosTelefono))))
+                .addContainerGap(60, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoEntrenadorLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(72, 72, 72))
+        );
+        InfoEntrenadorLayout.setVerticalGroup(
+            InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InfoEntrenadorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlb_tituloInfoEntrenador)
+                .addGap(17, 17, 17)
+                .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoEntrenadorNombre)
+                    .addComponent(jlb_infoEntrenadorDatosNombre))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoEntrenadorApellido)
+                    .addComponent(jlb_infoEntrenadorDatosApellido))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoEntrenadorTelefono)
+                    .addComponent(jlb_infoEntrenadorDatosTelefono))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_infoEntrenadorDNI)
+                    .addComponent(jlb_infoEntrenadorDatosDNI))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jlb_historialClubes1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbt_volverInfoEntrenador)
+                .addContainerGap())
+        );
+
+        jlb_tituloReservarEntrenamiento.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloReservarEntrenamiento.setText("Reservar Entrenamiento");
+
+        jlb_disponibilidad.setText("Disponibilidad:");
+
+        jlt_listaDisponibilidad.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jlt_listaDisponibilidad);
+
+        jbt_reservar.setText("reservar");
+
+        jbt_cancelarEntrenamiento.setText("cancelar");
+
+        javax.swing.GroupLayout ReservarEntrenamientoLayout = new javax.swing.GroupLayout(ReservarEntrenamiento);
+        ReservarEntrenamiento.setLayout(ReservarEntrenamientoLayout);
+        ReservarEntrenamientoLayout.setHorizontalGroup(
+            ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ReservarEntrenamientoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jbt_cancelarEntrenamiento)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbt_reservar)
+                .addContainerGap())
+            .addGroup(ReservarEntrenamientoLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jlb_disponibilidad)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReservarEntrenamientoLayout.createSequentialGroup()
+                .addContainerGap(101, Short.MAX_VALUE)
+                .addGroup(ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReservarEntrenamientoLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(93, 93, 93))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReservarEntrenamientoLayout.createSequentialGroup()
+                        .addComponent(jlb_tituloReservarEntrenamiento)
+                        .addGap(115, 115, 115))))
+        );
+        ReservarEntrenamientoLayout.setVerticalGroup(
+            ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ReservarEntrenamientoLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jlb_tituloReservarEntrenamiento)
+                .addGap(17, 17, 17)
+                .addComponent(jlb_disponibilidad)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addGroup(ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbt_cancelarEntrenamiento)
+                    .addComponent(jbt_reservar))
+                .addContainerGap())
+        );
+
+        jlb_tituloConfirmacionUnirseClub.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloConfirmacionUnirseClub.setText("Te has unido al club:");
+
+        jlb_nombreClub.setText("nombre del club");
+
+        javax.swing.GroupLayout ConfirmacionUnirseClubLayout = new javax.swing.GroupLayout(ConfirmacionUnirseClub);
+        ConfirmacionUnirseClub.setLayout(ConfirmacionUnirseClubLayout);
+        ConfirmacionUnirseClubLayout.setHorizontalGroup(
+            ConfirmacionUnirseClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConfirmacionUnirseClubLayout.createSequentialGroup()
+                .addGroup(ConfirmacionUnirseClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ConfirmacionUnirseClubLayout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(jlb_tituloConfirmacionUnirseClub))
+                    .addGroup(ConfirmacionUnirseClubLayout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(jlb_nombreClub)))
+                .addContainerGap(72, Short.MAX_VALUE))
+        );
+        ConfirmacionUnirseClubLayout.setVerticalGroup(
+            ConfirmacionUnirseClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConfirmacionUnirseClubLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jlb_tituloConfirmacionUnirseClub)
+                .addGap(26, 26, 26)
+                .addComponent(jlb_nombreClub)
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlb_nombreClub.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jlb_nombreClub.setText("NOMBRE DEL CLUB");
+        jlb_tituloNombreClub.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloNombreClub.setText("NOMBRE DEL CLUB");
 
         jbt_unirse.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jbt_unirse.setText("unirse al club");
@@ -196,42 +400,44 @@ public class Club extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jbt_cancelar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbt_unirse, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbt_reservaEntrenamiento)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jbt_cancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbt_unirse, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlb_entrenador)
-                            .addComponent(jlb_gerente)
-                            .addComponent(jlb_federacion, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlb_nombreGerente)
-                            .addComponent(jlb_nombreEntrenador)
-                            .addComponent(jlb_federacionPerteneciente))
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jbt_infoEntrenador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbt_infoGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jbt_reservaEntrenamiento)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlb_entrenador)
+                                    .addComponent(jlb_gerente)
+                                    .addComponent(jlb_federacion, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlb_nombreGerente)
+                                    .addComponent(jlb_nombreEntrenador)
+                                    .addComponent(jlb_federacionPerteneciente))
+                                .addGap(38, 38, 38)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jbt_infoEntrenador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jbt_infoGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jlb_nombreClub)
-                .addGap(184, 184, 184))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jlb_tituloNombreClub)
+                .addGap(119, 119, 119))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlb_nombreClub)
-                .addGap(41, 41, 41)
+                .addGap(25, 25, 25)
+                .addComponent(jlb_tituloNombreClub)
+                .addGap(27, 27, 27)
                 .addComponent(jbt_reservaEntrenamiento)
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -249,7 +455,7 @@ public class Club extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jlb_federacionPerteneciente)
                             .addComponent(jlb_federacion))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                         .addComponent(jbt_cancelar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -264,37 +470,66 @@ public class Club extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbt_infoGerenteActionPerformed
 
-    private void jbt_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverActionPerformed
+    private void jbt_volverInfoGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInfoGerenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbt_volverActionPerformed
+    }//GEN-LAST:event_jbt_volverInfoGerenteActionPerformed
+
+    private void jbt_volverInfoEntrenadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInfoEntrenadorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt_volverInfoEntrenadorActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel ConfirmacionUnirseClub;
     private javax.swing.JPanel InfoEntrenador;
     private javax.swing.JPanel InfoGerente;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel ReservarEntrenamiento;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton jbt_cancelar;
+    private javax.swing.JButton jbt_cancelarEntrenamiento;
     private javax.swing.JButton jbt_infoEntrenador;
     private javax.swing.JButton jbt_infoGerente;
     private javax.swing.JButton jbt_reservaEntrenamiento;
+    private javax.swing.JButton jbt_reservar;
     private javax.swing.JButton jbt_unirse;
-    private javax.swing.JButton jbt_volver;
+    private javax.swing.JButton jbt_volverInfoEntrenador;
+    private javax.swing.JButton jbt_volverInfoGerente;
+    private javax.swing.JLabel jlb_disponibilidad;
     private javax.swing.JLabel jlb_entrenador;
     private javax.swing.JLabel jlb_federacion;
     private javax.swing.JLabel jlb_federacionPerteneciente;
     private javax.swing.JLabel jlb_gerente;
-    private javax.swing.JLabel jlb_historialClubes;
+    private javax.swing.JLabel jlb_historialClubes1;
+    private javax.swing.JLabel jlb_infoEntrenadorApellido;
+    private javax.swing.JLabel jlb_infoEntrenadorDNI;
+    private javax.swing.JLabel jlb_infoEntrenadorDatosApellido;
+    private javax.swing.JLabel jlb_infoEntrenadorDatosDNI;
+    private javax.swing.JLabel jlb_infoEntrenadorDatosNombre;
+    private javax.swing.JLabel jlb_infoEntrenadorDatosTelefono;
+    private javax.swing.JLabel jlb_infoEntrenadorNombre;
+    private javax.swing.JLabel jlb_infoEntrenadorTelefono;
+    private javax.swing.JLabel jlb_infoGerenteApellido;
+    private javax.swing.JLabel jlb_infoGerenteDNI;
+    private javax.swing.JLabel jlb_infoGerenteDatosApellido;
+    private javax.swing.JLabel jlb_infoGerenteDatosDNI;
+    private javax.swing.JLabel jlb_infoGerenteDatosIRPF;
+    private javax.swing.JLabel jlb_infoGerenteDatosNombre;
+    private javax.swing.JLabel jlb_infoGerenteDatosNomina;
+    private javax.swing.JLabel jlb_infoGerenteDatosTelefono;
+    private javax.swing.JLabel jlb_infoGerenteIRPF;
+    private javax.swing.JLabel jlb_infoGerenteNombre;
+    private javax.swing.JLabel jlb_infoGerenteNomina;
+    private javax.swing.JLabel jlb_infoGerenteTelefono;
     private javax.swing.JLabel jlb_nombreClub;
     private javax.swing.JLabel jlb_nombreEntrenador;
     private javax.swing.JLabel jlb_nombreGerente;
-    private javax.swing.JList<String> jlt_historialClubes;
+    private javax.swing.JLabel jlb_tituloConfirmacionUnirseClub;
+    private javax.swing.JLabel jlb_tituloInfoEntrenador;
+    private javax.swing.JLabel jlb_tituloInfoGerente;
+    private javax.swing.JLabel jlb_tituloNombreClub;
+    private javax.swing.JLabel jlb_tituloReservarEntrenamiento;
+    private javax.swing.JList<String> jlt_historialClubes1;
+    private javax.swing.JList<String> jlt_listaDisponibilidad;
     // End of variables declaration//GEN-END:variables
 }
