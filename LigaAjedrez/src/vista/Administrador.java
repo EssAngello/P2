@@ -27,21 +27,187 @@ public class Administrador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jbt_club = new javax.swing.JButton();
+        jbt_torneo = new javax.swing.JButton();
+        jbt_historial_clubes = new javax.swing.JButton();
+        jbt_tarjeta = new javax.swing.JButton();
+        jbt_responsable = new javax.swing.JButton();
+        jbt_sedeDelClub = new javax.swing.JButton();
+        jl_titulo = new javax.swing.JLabel();
+        jButtonSalir = new javax.swing.JButton();
+        jbt_crear_partido = new javax.swing.JButton();
+        jbt_crear_usuario = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jbt_club.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jbt_club.setText("Inscribirse Club");
+        jbt_club.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_clubActionPerformed(evt);
+            }
+        });
+
+        jbt_torneo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jbt_torneo.setText("Torneo");
+        jbt_torneo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_torneoActionPerformed(evt);
+            }
+        });
+
+        jbt_historial_clubes.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jbt_historial_clubes.setText("Historial Clubes");
+        jbt_historial_clubes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_historial_clubesActionPerformed(evt);
+            }
+        });
+
+        jbt_tarjeta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jbt_tarjeta.setText("Tarjeta Personal");
+        jbt_tarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_tarjetaActionPerformed(evt);
+            }
+        });
+
+        jbt_responsable.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jbt_responsable.setText("Responsable");
+        jbt_responsable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_responsableActionPerformed(evt);
+            }
+        });
+
+        jbt_sedeDelClub.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jbt_sedeDelClub.setText("Sede del Club");
+        jbt_sedeDelClub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_sedeDelClubActionPerformed(evt);
+            }
+        });
+
+        jl_titulo.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jl_titulo.setText("ADMINISTRADOR");
+
+        jButtonSalir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonSalir.setText("Salir");
+        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalirActionPerformed(evt);
+            }
+        });
+
+        jbt_crear_partido.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jbt_crear_partido.setText("Crear Partido");
+
+        jbt_crear_usuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jbt_crear_usuario.setText("Crear Usuario");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jbt_crear_partido, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jbt_tarjeta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                                            .addComponent(jbt_historial_clubes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jbt_crear_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(93, 93, 93)))
+                                .addGap(23, 23, 23))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jbt_sedeDelClub, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonSalir)
+                                .addContainerGap())))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jbt_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(63, Short.MAX_VALUE)
+                .addComponent(jl_titulo)
+                .addGap(57, 57, 57))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jbt_club, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                        .addComponent(jbt_torneo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addContainerGap(220, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jl_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jbt_historial_clubes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jbt_tarjeta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbt_responsable)
+                    .addComponent(jbt_crear_partido))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jbt_crear_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbt_sedeDelClub)
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButtonSalir)
+                        .addContainerGap())))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(85, 85, 85)
+                    .addComponent(jbt_club)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jbt_torneo)
+                    .addContainerGap(142, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbt_clubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_clubActionPerformed
+        
+    }//GEN-LAST:event_jbt_clubActionPerformed
+
+    private void jbt_torneoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_torneoActionPerformed
+
+    }//GEN-LAST:event_jbt_torneoActionPerformed
+
+    private void jbt_historial_clubesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_historial_clubesActionPerformed
+
+    }//GEN-LAST:event_jbt_historial_clubesActionPerformed
+
+    private void jbt_tarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_tarjetaActionPerformed
+
+    }//GEN-LAST:event_jbt_tarjetaActionPerformed
+
+    private void jbt_responsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_responsableActionPerformed
+
+    }//GEN-LAST:event_jbt_responsableActionPerformed
+
+    private void jbt_sedeDelClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_sedeDelClubActionPerformed
+
+    }//GEN-LAST:event_jbt_sedeDelClubActionPerformed
+
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -49,5 +215,15 @@ public class Administrador extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonSalir;
+    private javax.swing.JButton jbt_club;
+    private javax.swing.JButton jbt_crear_partido;
+    private javax.swing.JButton jbt_crear_usuario;
+    private javax.swing.JButton jbt_historial_clubes;
+    private javax.swing.JButton jbt_responsable;
+    private javax.swing.JButton jbt_sedeDelClub;
+    private javax.swing.JButton jbt_tarjeta;
+    private javax.swing.JButton jbt_torneo;
+    private javax.swing.JLabel jl_titulo;
     // End of variables declaration//GEN-END:variables
 }
