@@ -2,106 +2,98 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Container class="javax.swing.JPanel" name="InfoGerente">
+    <Container class="javax.swing.JFrame" name="InfoGerente">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="jbt_volverInfoGerente" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbt_volverInfoGerente1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jlb_infoGerenteNombre" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_infoGerenteApellido" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_infoGerenteTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_infoGerenteDNI" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoGerenteNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoGerenteApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoGerenteTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoGerenteDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jlb_infoGerenteDatosNombre" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_infoGerenteDatosApellido" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_infoGerenteDatosDNI" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_infoGerenteDatosTelefono" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoGerenteDatosNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoGerenteDatosApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoGerenteDatosDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoGerenteDatosTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jlb_infoGerenteNomina" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_infoGerenteIRPF" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoGerenteNomina1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoGerenteIRPF1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jbt_infoGerenteNomina" max="32767" attributes="0"/>
-                                      <Component id="jbt_infoGerenteIRPF" max="32767" attributes="0"/>
+                                      <Component id="jbt_infoGerenteNomina1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jbt_infoGerenteIRPF1" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="jlb_tituloInfoGerente" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_tituloInfoGerente1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="87" max="32767" attributes="0"/>
+                  <EmptySpace pref="61" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                  <Component id="jlb_tituloInfoGerente" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloInfoGerente1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_infoGerenteNombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_infoGerenteDatosNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteNombre1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteDatosNombre1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_infoGerenteApellido" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_infoGerenteDatosApellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteApellido1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteDatosApellido1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_infoGerenteTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_infoGerenteDatosTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteTelefono1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteDatosTelefono1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_infoGerenteDNI" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_infoGerenteDatosDNI" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteDNI1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteDatosDNI1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                  <EmptySpace pref="46" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_infoGerenteNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbt_infoGerenteNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteNomina1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_infoGerenteNomina1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_infoGerenteIRPF" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbt_infoGerenteIRPF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoGerenteIRPF1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_infoGerenteIRPF1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="jbt_volverInfoGerente" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_volverInfoGerente1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jbt_volverInfoGerente">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="volver"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverInfoGerenteActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_tituloInfoGerente">
+        <Component class="javax.swing.JLabel" name="jlb_tituloInfoGerente1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
@@ -109,69 +101,77 @@
             <Property name="text" type="java.lang.String" value="Informacion del Gerente"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoGerenteNombre">
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteNombre1">
           <Properties>
             <Property name="text" type="java.lang.String" value="nombre:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoGerenteApellido">
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteApellido1">
           <Properties>
             <Property name="text" type="java.lang.String" value="apellido:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoGerenteTelefono">
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteTelefono1">
           <Properties>
             <Property name="text" type="java.lang.String" value="telefono:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDNI">
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDNI1">
           <Properties>
             <Property name="text" type="java.lang.String" value="DNI/NIE:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosNombre">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="nombre del gerente"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosApellido">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="apellido del gerente"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosTelefono">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="telefono del gerente"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosDNI">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="DNI del gerente"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoGerenteNomina">
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteNomina1">
           <Properties>
             <Property name="text" type="java.lang.String" value="nomina:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoGerenteIRPF">
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteIRPF1">
           <Properties>
             <Property name="text" type="java.lang.String" value="IRPF:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jbt_infoGerenteNomina">
+        <Component class="javax.swing.JButton" name="jbt_volverInfoGerente1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="documento nomina"/>
+            <Property name="text" type="java.lang.String" value="volver"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverInfoGerente1ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jbt_infoGerenteIRPF">
+        <Component class="javax.swing.JButton" name="jbt_infoGerenteIRPF1">
           <Properties>
             <Property name="text" type="java.lang.String" value="documento IRPF"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="jbt_infoGerenteNomina1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="documento nomina"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosDNI1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="DNI del gerente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosTelefono1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="telefono del gerente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosApellido1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="apellido del gerente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosNombre1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="nombre del gerente"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="InfoEntrenador">
+    <Container class="javax.swing.JFrame" name="InfoEntrenador">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -179,35 +179,35 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jlb_tituloInfoEntrenador" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
+                      <Component id="jlb_tituloInfoEntrenador1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jlb_infoEntrenadorNombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_clubesTrabaja" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_infoEntrenadorApellido" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_infoEntrenadorTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_infoEntrenadorDNI" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoEntrenadorNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_clubesTrabaja1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoEntrenadorApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoEntrenadorTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_infoEntrenadorDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="jbt_volverInfoEntrenador" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jbt_volverInfoEntrenador1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jlb_infoEntrenadorDatosNombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_infoEntrenadorDatosApellido" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_infoEntrenadorDatosDNI" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_infoEntrenadorDatosTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoEntrenadorDatosNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoEntrenadorDatosApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoEntrenadorDatosDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoEntrenadorDatosTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="60" max="32767" attributes="0"/>
+                  <EmptySpace pref="39" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jScrollPane2" min="-2" pref="215" max="-2" attributes="0"/>
+                  <Component id="jScrollPane3" min="-2" pref="215" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -216,53 +216,98 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jlb_tituloInfoEntrenador" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloInfoEntrenador1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_infoEntrenadorNombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_infoEntrenadorDatosNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoEntrenadorNombre1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoEntrenadorDatosNombre1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_infoEntrenadorApellido" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_infoEntrenadorDatosApellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoEntrenadorApellido1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoEntrenadorDatosApellido1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_infoEntrenadorTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_infoEntrenadorDatosTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoEntrenadorTelefono1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoEntrenadorDatosTelefono1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_infoEntrenadorDNI" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_infoEntrenadorDatosDNI" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoEntrenadorDNI1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_infoEntrenadorDatosDNI1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jlb_clubesTrabaja" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_clubesTrabaja1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" min="-2" pref="92" max="-2" attributes="0"/>
+                  <Component id="jScrollPane3" min="-2" pref="92" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jbt_volverInfoEntrenador" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_volverInfoEntrenador1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jlb_clubesTrabaja">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Clubes en los que trabaja:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="jbt_volverInfoEntrenador">
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JList" name="jlt_clubesTrabaja1">
+              <Properties>
+                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                    <StringItem index="4" value="Item 5"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="jbt_volverInfoEntrenador1">
           <Properties>
             <Property name="text" type="java.lang.String" value="volver"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverInfoEntrenadorActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverInfoEntrenador1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_tituloInfoEntrenador">
+        <Component class="javax.swing.JLabel" name="jlb_clubesTrabaja1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Clubes en los que trabaja:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorDNI1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="DNI/NIE:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorTelefono1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="telefono:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorApellido1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="apellido:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorNombre1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="nombre:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_tituloInfoEntrenador1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
@@ -270,44 +315,91 @@
             <Property name="text" type="java.lang.String" value="Informacion del Entrenador"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorNombre">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="nombre:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorApellido">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="apellido:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorTelefono">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="telefono:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorDNI">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="DNI/NIE:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorDatosNombre">
+        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorDatosNombre1">
           <Properties>
             <Property name="text" type="java.lang.String" value="nombre del entrenador"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorDatosApellido">
+        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorDatosApellido1">
           <Properties>
             <Property name="text" type="java.lang.String" value="apellido del entrenador"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorDatosTelefono">
+        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorDatosTelefono1">
           <Properties>
             <Property name="text" type="java.lang.String" value="telefono del entrenador"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorDatosDNI">
+        <Component class="javax.swing.JLabel" name="jlb_infoEntrenadorDatosDNI1">
           <Properties>
             <Property name="text" type="java.lang.String" value="DNI del entrenador"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="ReservarEntrenamiento">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jbt_cancelarEntrenamiento1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jbt_reservar1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="jlb_disponibilidad1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="85" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jScrollPane2" min="-2" pref="349" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jlb_tituloReservarEntrenamiento1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloReservarEntrenamiento1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Component id="jlb_disponibilidad1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="41" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbt_cancelarEntrenamiento1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_reservar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jlb_tituloReservarEntrenamiento1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Reservar Entrenamiento"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_disponibilidad1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Disponibilidad:"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
@@ -317,7 +409,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="jlt_clubesTrabaja">
+            <Component class="javax.swing.JList" name="jlt_listaDisponibilidad1">
               <Properties>
                 <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                   <StringArray count="5">
@@ -335,106 +427,14 @@
             </Component>
           </SubComponents>
         </Container>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="ReservarEntrenamiento">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jbt_cancelarEntrenamiento" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jbt_reservar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                  <Component id="jlb_disponibilidad" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="101" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jScrollPane1" min="-2" pref="349" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jlb_tituloReservarEntrenamiento" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="jlb_tituloReservarEntrenamiento" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                  <Component id="jlb_disponibilidad" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="49" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbt_cancelarEntrenamiento" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbt_reservar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="jlb_tituloReservarEntrenamiento">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="24" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Reservar Entrenamiento"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_disponibilidad">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Disponibilidad:"/>
-          </Properties>
-        </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-          <AuxValues>
-            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-          </AuxValues>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Component class="javax.swing.JList" name="jlt_listaDisponibilidad">
-              <Properties>
-                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                  <StringArray count="5">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                    <StringItem index="4" value="Item 5"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-          </SubComponents>
-        </Container>
-        <Component class="javax.swing.JButton" name="jbt_reservar">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="reservar"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="jbt_cancelarEntrenamiento">
+        <Component class="javax.swing.JButton" name="jbt_cancelarEntrenamiento1">
           <Properties>
             <Property name="text" type="java.lang.String" value="cancelar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbt_reservar1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="reservar"/>
           </Properties>
         </Component>
       </SubComponents>

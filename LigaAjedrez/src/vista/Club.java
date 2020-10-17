@@ -27,42 +27,42 @@ public class Club extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        InfoGerente = new javax.swing.JPanel();
-        jbt_volverInfoGerente = new javax.swing.JButton();
-        jlb_tituloInfoGerente = new javax.swing.JLabel();
-        jlb_infoGerenteNombre = new javax.swing.JLabel();
-        jlb_infoGerenteApellido = new javax.swing.JLabel();
-        jlb_infoGerenteTelefono = new javax.swing.JLabel();
-        jlb_infoGerenteDNI = new javax.swing.JLabel();
-        jlb_infoGerenteDatosNombre = new javax.swing.JLabel();
-        jlb_infoGerenteDatosApellido = new javax.swing.JLabel();
-        jlb_infoGerenteDatosTelefono = new javax.swing.JLabel();
-        jlb_infoGerenteDatosDNI = new javax.swing.JLabel();
-        jlb_infoGerenteNomina = new javax.swing.JLabel();
-        jlb_infoGerenteIRPF = new javax.swing.JLabel();
-        jbt_infoGerenteNomina = new javax.swing.JButton();
-        jbt_infoGerenteIRPF = new javax.swing.JButton();
-        InfoEntrenador = new javax.swing.JPanel();
-        jlb_clubesTrabaja = new javax.swing.JLabel();
-        jbt_volverInfoEntrenador = new javax.swing.JButton();
-        jlb_tituloInfoEntrenador = new javax.swing.JLabel();
-        jlb_infoEntrenadorNombre = new javax.swing.JLabel();
-        jlb_infoEntrenadorApellido = new javax.swing.JLabel();
-        jlb_infoEntrenadorTelefono = new javax.swing.JLabel();
-        jlb_infoEntrenadorDNI = new javax.swing.JLabel();
-        jlb_infoEntrenadorDatosNombre = new javax.swing.JLabel();
-        jlb_infoEntrenadorDatosApellido = new javax.swing.JLabel();
-        jlb_infoEntrenadorDatosTelefono = new javax.swing.JLabel();
-        jlb_infoEntrenadorDatosDNI = new javax.swing.JLabel();
+        InfoGerente = new javax.swing.JFrame();
+        jlb_tituloInfoGerente1 = new javax.swing.JLabel();
+        jlb_infoGerenteNombre1 = new javax.swing.JLabel();
+        jlb_infoGerenteApellido1 = new javax.swing.JLabel();
+        jlb_infoGerenteTelefono1 = new javax.swing.JLabel();
+        jlb_infoGerenteDNI1 = new javax.swing.JLabel();
+        jlb_infoGerenteNomina1 = new javax.swing.JLabel();
+        jlb_infoGerenteIRPF1 = new javax.swing.JLabel();
+        jbt_volverInfoGerente1 = new javax.swing.JButton();
+        jbt_infoGerenteIRPF1 = new javax.swing.JButton();
+        jbt_infoGerenteNomina1 = new javax.swing.JButton();
+        jlb_infoGerenteDatosDNI1 = new javax.swing.JLabel();
+        jlb_infoGerenteDatosTelefono1 = new javax.swing.JLabel();
+        jlb_infoGerenteDatosApellido1 = new javax.swing.JLabel();
+        jlb_infoGerenteDatosNombre1 = new javax.swing.JLabel();
+        InfoEntrenador = new javax.swing.JFrame();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jlt_clubesTrabaja1 = new javax.swing.JList<>();
+        jbt_volverInfoEntrenador1 = new javax.swing.JButton();
+        jlb_clubesTrabaja1 = new javax.swing.JLabel();
+        jlb_infoEntrenadorDNI1 = new javax.swing.JLabel();
+        jlb_infoEntrenadorTelefono1 = new javax.swing.JLabel();
+        jlb_infoEntrenadorApellido1 = new javax.swing.JLabel();
+        jlb_infoEntrenadorNombre1 = new javax.swing.JLabel();
+        jlb_tituloInfoEntrenador1 = new javax.swing.JLabel();
+        jlb_infoEntrenadorDatosNombre1 = new javax.swing.JLabel();
+        jlb_infoEntrenadorDatosApellido1 = new javax.swing.JLabel();
+        jlb_infoEntrenadorDatosTelefono1 = new javax.swing.JLabel();
+        jlb_infoEntrenadorDatosDNI1 = new javax.swing.JLabel();
+        ReservarEntrenamiento = new javax.swing.JFrame();
+        jlb_tituloReservarEntrenamiento1 = new javax.swing.JLabel();
+        jlb_disponibilidad1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jlt_clubesTrabaja = new javax.swing.JList<>();
-        ReservarEntrenamiento = new javax.swing.JPanel();
-        jlb_tituloReservarEntrenamiento = new javax.swing.JLabel();
-        jlb_disponibilidad = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jlt_listaDisponibilidad = new javax.swing.JList<>();
-        jbt_reservar = new javax.swing.JButton();
-        jbt_cancelarEntrenamiento = new javax.swing.JButton();
+        jlt_listaDisponibilidad1 = new javax.swing.JList<>();
+        jbt_cancelarEntrenamiento1 = new javax.swing.JButton();
+        jbt_reservar1 = new javax.swing.JButton();
         jlb_tituloNombreClub = new javax.swing.JLabel();
         jbt_volver = new javax.swing.JButton();
         jbt_reservaEntrenamiento = new javax.swing.JButton();
@@ -75,258 +75,258 @@ public class Club extends javax.swing.JFrame {
         jbt_infoGerente = new javax.swing.JButton();
         jbt_infoEntrenador = new javax.swing.JButton();
 
-        jbt_volverInfoGerente.setText("volver");
-        jbt_volverInfoGerente.addActionListener(new java.awt.event.ActionListener() {
+        jlb_tituloInfoGerente1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloInfoGerente1.setText("Informacion del Gerente");
+
+        jlb_infoGerenteNombre1.setText("nombre:");
+
+        jlb_infoGerenteApellido1.setText("apellido:");
+
+        jlb_infoGerenteTelefono1.setText("telefono:");
+
+        jlb_infoGerenteDNI1.setText("DNI/NIE:");
+
+        jlb_infoGerenteNomina1.setText("nomina:");
+
+        jlb_infoGerenteIRPF1.setText("IRPF:");
+
+        jbt_volverInfoGerente1.setText("volver");
+        jbt_volverInfoGerente1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbt_volverInfoGerenteActionPerformed(evt);
+                jbt_volverInfoGerente1ActionPerformed(evt);
             }
         });
 
-        jlb_tituloInfoGerente.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jlb_tituloInfoGerente.setText("Informacion del Gerente");
+        jbt_infoGerenteIRPF1.setText("documento IRPF");
 
-        jlb_infoGerenteNombre.setText("nombre:");
+        jbt_infoGerenteNomina1.setText("documento nomina");
 
-        jlb_infoGerenteApellido.setText("apellido:");
+        jlb_infoGerenteDatosDNI1.setText("DNI del gerente");
 
-        jlb_infoGerenteTelefono.setText("telefono:");
+        jlb_infoGerenteDatosTelefono1.setText("telefono del gerente");
 
-        jlb_infoGerenteDNI.setText("DNI/NIE:");
+        jlb_infoGerenteDatosApellido1.setText("apellido del gerente");
 
-        jlb_infoGerenteDatosNombre.setText("nombre del gerente");
+        jlb_infoGerenteDatosNombre1.setText("nombre del gerente");
 
-        jlb_infoGerenteDatosApellido.setText("apellido del gerente");
-
-        jlb_infoGerenteDatosTelefono.setText("telefono del gerente");
-
-        jlb_infoGerenteDatosDNI.setText("DNI del gerente");
-
-        jlb_infoGerenteNomina.setText("nomina:");
-
-        jlb_infoGerenteIRPF.setText("IRPF:");
-
-        jbt_infoGerenteNomina.setText("documento nomina");
-
-        jbt_infoGerenteIRPF.setText("documento IRPF");
-
-        javax.swing.GroupLayout InfoGerenteLayout = new javax.swing.GroupLayout(InfoGerente);
-        InfoGerente.setLayout(InfoGerenteLayout);
+        javax.swing.GroupLayout InfoGerenteLayout = new javax.swing.GroupLayout(InfoGerente.getContentPane());
+        InfoGerente.getContentPane().setLayout(InfoGerenteLayout);
         InfoGerenteLayout.setHorizontalGroup(
             InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoGerenteLayout.createSequentialGroup()
                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(InfoGerenteLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jbt_volverInfoGerente))
+                        .addComponent(jbt_volverInfoGerente1))
                     .addGroup(InfoGerenteLayout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(InfoGerenteLayout.createSequentialGroup()
                                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jlb_infoGerenteNombre)
-                                    .addComponent(jlb_infoGerenteApellido)
-                                    .addComponent(jlb_infoGerenteTelefono)
-                                    .addComponent(jlb_infoGerenteDNI))
+                                    .addComponent(jlb_infoGerenteNombre1)
+                                    .addComponent(jlb_infoGerenteApellido1)
+                                    .addComponent(jlb_infoGerenteTelefono1)
+                                    .addComponent(jlb_infoGerenteDNI1))
                                 .addGap(65, 65, 65)
                                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jlb_infoGerenteDatosNombre)
-                                    .addComponent(jlb_infoGerenteDatosApellido)
-                                    .addComponent(jlb_infoGerenteDatosDNI)
-                                    .addComponent(jlb_infoGerenteDatosTelefono)))
+                                    .addComponent(jlb_infoGerenteDatosNombre1)
+                                    .addComponent(jlb_infoGerenteDatosApellido1)
+                                    .addComponent(jlb_infoGerenteDatosDNI1)
+                                    .addComponent(jlb_infoGerenteDatosTelefono1)))
                             .addGroup(InfoGerenteLayout.createSequentialGroup()
                                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jlb_infoGerenteNomina)
-                                    .addComponent(jlb_infoGerenteIRPF))
+                                    .addComponent(jlb_infoGerenteNomina1)
+                                    .addComponent(jlb_infoGerenteIRPF1))
                                 .addGap(65, 65, 65)
                                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jbt_infoGerenteNomina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jbt_infoGerenteIRPF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jlb_tituloInfoGerente))))
-                .addContainerGap(87, Short.MAX_VALUE))
+                                    .addComponent(jbt_infoGerenteNomina1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jbt_infoGerenteIRPF1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jlb_tituloInfoGerente1))))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         InfoGerenteLayout.setVerticalGroup(
             InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoGerenteLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jlb_tituloInfoGerente)
+                .addComponent(jlb_tituloInfoGerente1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_infoGerenteNombre)
-                    .addComponent(jlb_infoGerenteDatosNombre))
+                    .addComponent(jlb_infoGerenteNombre1)
+                    .addComponent(jlb_infoGerenteDatosNombre1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_infoGerenteApellido)
-                    .addComponent(jlb_infoGerenteDatosApellido))
+                    .addComponent(jlb_infoGerenteApellido1)
+                    .addComponent(jlb_infoGerenteDatosApellido1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_infoGerenteTelefono)
-                    .addComponent(jlb_infoGerenteDatosTelefono))
+                    .addComponent(jlb_infoGerenteTelefono1)
+                    .addComponent(jlb_infoGerenteDatosTelefono1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_infoGerenteDNI)
-                    .addComponent(jlb_infoGerenteDatosDNI))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                    .addComponent(jlb_infoGerenteDNI1)
+                    .addComponent(jlb_infoGerenteDatosDNI1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_infoGerenteNomina)
-                    .addComponent(jbt_infoGerenteNomina))
+                    .addComponent(jlb_infoGerenteNomina1)
+                    .addComponent(jbt_infoGerenteNomina1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(InfoGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_infoGerenteIRPF)
-                    .addComponent(jbt_infoGerenteIRPF))
+                    .addComponent(jlb_infoGerenteIRPF1)
+                    .addComponent(jbt_infoGerenteIRPF1))
                 .addGap(37, 37, 37)
-                .addComponent(jbt_volverInfoGerente)
+                .addComponent(jbt_volverInfoGerente1)
                 .addContainerGap())
         );
 
-        jlb_clubesTrabaja.setText("Clubes en los que trabaja:");
-
-        jbt_volverInfoEntrenador.setText("volver");
-        jbt_volverInfoEntrenador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbt_volverInfoEntrenadorActionPerformed(evt);
-            }
-        });
-
-        jlb_tituloInfoEntrenador.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jlb_tituloInfoEntrenador.setText("Informacion del Entrenador");
-
-        jlb_infoEntrenadorNombre.setText("nombre:");
-
-        jlb_infoEntrenadorApellido.setText("apellido:");
-
-        jlb_infoEntrenadorTelefono.setText("telefono:");
-
-        jlb_infoEntrenadorDNI.setText("DNI/NIE:");
-
-        jlb_infoEntrenadorDatosNombre.setText("nombre del entrenador");
-
-        jlb_infoEntrenadorDatosApellido.setText("apellido del entrenador");
-
-        jlb_infoEntrenadorDatosTelefono.setText("telefono del entrenador");
-
-        jlb_infoEntrenadorDatosDNI.setText("DNI del entrenador");
-
-        jlt_clubesTrabaja.setModel(new javax.swing.AbstractListModel<String>() {
+        jlt_clubesTrabaja1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(jlt_clubesTrabaja);
+        jScrollPane3.setViewportView(jlt_clubesTrabaja1);
 
-        javax.swing.GroupLayout InfoEntrenadorLayout = new javax.swing.GroupLayout(InfoEntrenador);
-        InfoEntrenador.setLayout(InfoEntrenadorLayout);
+        jbt_volverInfoEntrenador1.setText("volver");
+        jbt_volverInfoEntrenador1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_volverInfoEntrenador1ActionPerformed(evt);
+            }
+        });
+
+        jlb_clubesTrabaja1.setText("Clubes en los que trabaja:");
+
+        jlb_infoEntrenadorDNI1.setText("DNI/NIE:");
+
+        jlb_infoEntrenadorTelefono1.setText("telefono:");
+
+        jlb_infoEntrenadorApellido1.setText("apellido:");
+
+        jlb_infoEntrenadorNombre1.setText("nombre:");
+
+        jlb_tituloInfoEntrenador1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloInfoEntrenador1.setText("Informacion del Entrenador");
+
+        jlb_infoEntrenadorDatosNombre1.setText("nombre del entrenador");
+
+        jlb_infoEntrenadorDatosApellido1.setText("apellido del entrenador");
+
+        jlb_infoEntrenadorDatosTelefono1.setText("telefono del entrenador");
+
+        jlb_infoEntrenadorDatosDNI1.setText("DNI del entrenador");
+
+        javax.swing.GroupLayout InfoEntrenadorLayout = new javax.swing.GroupLayout(InfoEntrenador.getContentPane());
+        InfoEntrenador.getContentPane().setLayout(InfoEntrenadorLayout);
         InfoEntrenadorLayout.setHorizontalGroup(
             InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoEntrenadorLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlb_tituloInfoEntrenador)
+                    .addComponent(jlb_tituloInfoEntrenador1)
                     .addGroup(InfoEntrenadorLayout.createSequentialGroup()
                         .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(InfoEntrenadorLayout.createSequentialGroup()
                                 .addGap(16, 16, 16)
                                 .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jlb_infoEntrenadorNombre)
-                                    .addComponent(jlb_clubesTrabaja)
-                                    .addComponent(jlb_infoEntrenadorApellido)
-                                    .addComponent(jlb_infoEntrenadorTelefono)
-                                    .addComponent(jlb_infoEntrenadorDNI)))
-                            .addComponent(jbt_volverInfoEntrenador))
+                                    .addComponent(jlb_infoEntrenadorNombre1)
+                                    .addComponent(jlb_clubesTrabaja1)
+                                    .addComponent(jlb_infoEntrenadorApellido1)
+                                    .addComponent(jlb_infoEntrenadorTelefono1)
+                                    .addComponent(jlb_infoEntrenadorDNI1)))
+                            .addComponent(jbt_volverInfoEntrenador1))
                         .addGap(20, 20, 20)
                         .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlb_infoEntrenadorDatosNombre)
-                            .addComponent(jlb_infoEntrenadorDatosApellido)
-                            .addComponent(jlb_infoEntrenadorDatosDNI)
-                            .addComponent(jlb_infoEntrenadorDatosTelefono))))
-                .addContainerGap(60, Short.MAX_VALUE))
+                            .addComponent(jlb_infoEntrenadorDatosNombre1)
+                            .addComponent(jlb_infoEntrenadorDatosApellido1)
+                            .addComponent(jlb_infoEntrenadorDatosDNI1)
+                            .addComponent(jlb_infoEntrenadorDatosTelefono1))))
+                .addContainerGap(39, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoEntrenadorLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(101, 101, 101))
         );
         InfoEntrenadorLayout.setVerticalGroup(
             InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InfoEntrenadorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jlb_tituloInfoEntrenador)
+                .addComponent(jlb_tituloInfoEntrenador1)
                 .addGap(17, 17, 17)
                 .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_infoEntrenadorNombre)
-                    .addComponent(jlb_infoEntrenadorDatosNombre))
+                    .addComponent(jlb_infoEntrenadorNombre1)
+                    .addComponent(jlb_infoEntrenadorDatosNombre1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_infoEntrenadorApellido)
-                    .addComponent(jlb_infoEntrenadorDatosApellido))
+                    .addComponent(jlb_infoEntrenadorApellido1)
+                    .addComponent(jlb_infoEntrenadorDatosApellido1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_infoEntrenadorTelefono)
-                    .addComponent(jlb_infoEntrenadorDatosTelefono))
+                    .addComponent(jlb_infoEntrenadorTelefono1)
+                    .addComponent(jlb_infoEntrenadorDatosTelefono1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_infoEntrenadorDNI)
-                    .addComponent(jlb_infoEntrenadorDatosDNI))
+                    .addComponent(jlb_infoEntrenadorDNI1)
+                    .addComponent(jlb_infoEntrenadorDatosDNI1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlb_clubesTrabaja)
+                .addComponent(jlb_clubesTrabaja1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbt_volverInfoEntrenador)
+                .addComponent(jbt_volverInfoEntrenador1)
                 .addContainerGap())
         );
 
-        jlb_tituloReservarEntrenamiento.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jlb_tituloReservarEntrenamiento.setText("Reservar Entrenamiento");
+        jlb_tituloReservarEntrenamiento1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloReservarEntrenamiento1.setText("Reservar Entrenamiento");
 
-        jlb_disponibilidad.setText("Disponibilidad:");
+        jlb_disponibilidad1.setText("Disponibilidad:");
 
-        jlt_listaDisponibilidad.setModel(new javax.swing.AbstractListModel<String>() {
+        jlt_listaDisponibilidad1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jlt_listaDisponibilidad);
+        jScrollPane2.setViewportView(jlt_listaDisponibilidad1);
 
-        jbt_reservar.setText("reservar");
+        jbt_cancelarEntrenamiento1.setText("cancelar");
 
-        jbt_cancelarEntrenamiento.setText("cancelar");
+        jbt_reservar1.setText("reservar");
 
-        javax.swing.GroupLayout ReservarEntrenamientoLayout = new javax.swing.GroupLayout(ReservarEntrenamiento);
-        ReservarEntrenamiento.setLayout(ReservarEntrenamientoLayout);
+        javax.swing.GroupLayout ReservarEntrenamientoLayout = new javax.swing.GroupLayout(ReservarEntrenamiento.getContentPane());
+        ReservarEntrenamiento.getContentPane().setLayout(ReservarEntrenamientoLayout);
         ReservarEntrenamientoLayout.setHorizontalGroup(
             ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ReservarEntrenamientoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jbt_cancelarEntrenamiento)
+                .addComponent(jbt_cancelarEntrenamiento1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbt_reservar)
+                .addComponent(jbt_reservar1)
                 .addContainerGap())
             .addGroup(ReservarEntrenamientoLayout.createSequentialGroup()
                 .addGap(48, 48, 48)
-                .addComponent(jlb_disponibilidad)
+                .addComponent(jlb_disponibilidad1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReservarEntrenamientoLayout.createSequentialGroup()
-                .addContainerGap(101, Short.MAX_VALUE)
+                .addContainerGap(85, Short.MAX_VALUE)
                 .addGroup(ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReservarEntrenamientoLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(93, 93, 93))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReservarEntrenamientoLayout.createSequentialGroup()
-                        .addComponent(jlb_tituloReservarEntrenamiento)
+                        .addComponent(jlb_tituloReservarEntrenamiento1)
                         .addGap(115, 115, 115))))
         );
         ReservarEntrenamientoLayout.setVerticalGroup(
             ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ReservarEntrenamientoLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jlb_tituloReservarEntrenamiento)
+                .addComponent(jlb_tituloReservarEntrenamiento1)
                 .addGap(17, 17, 17)
-                .addComponent(jlb_disponibilidad)
+                .addComponent(jlb_disponibilidad1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbt_cancelarEntrenamiento)
-                    .addComponent(jbt_reservar))
+                    .addComponent(jbt_cancelarEntrenamiento1)
+                    .addComponent(jbt_reservar1))
                 .addContainerGap())
         );
 
@@ -426,62 +426,62 @@ public class Club extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbt_infoGerenteActionPerformed
 
-    private void jbt_volverInfoGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInfoGerenteActionPerformed
+    private void jbt_volverInfoGerente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInfoGerente1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbt_volverInfoGerenteActionPerformed
+    }//GEN-LAST:event_jbt_volverInfoGerente1ActionPerformed
 
-    private void jbt_volverInfoEntrenadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInfoEntrenadorActionPerformed
+    private void jbt_volverInfoEntrenador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInfoEntrenador1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbt_volverInfoEntrenadorActionPerformed
+    }//GEN-LAST:event_jbt_volverInfoEntrenador1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel InfoEntrenador;
-    private javax.swing.JPanel InfoGerente;
-    private javax.swing.JPanel ReservarEntrenamiento;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JFrame InfoEntrenador;
+    private javax.swing.JFrame InfoGerente;
+    private javax.swing.JFrame ReservarEntrenamiento;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JButton jbt_cancelarEntrenamiento;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JButton jbt_cancelarEntrenamiento1;
     private javax.swing.JButton jbt_infoEntrenador;
     private javax.swing.JButton jbt_infoGerente;
-    private javax.swing.JButton jbt_infoGerenteIRPF;
-    private javax.swing.JButton jbt_infoGerenteNomina;
+    private javax.swing.JButton jbt_infoGerenteIRPF1;
+    private javax.swing.JButton jbt_infoGerenteNomina1;
     private javax.swing.JButton jbt_reservaEntrenamiento;
-    private javax.swing.JButton jbt_reservar;
+    private javax.swing.JButton jbt_reservar1;
     private javax.swing.JButton jbt_volver;
-    private javax.swing.JButton jbt_volverInfoEntrenador;
-    private javax.swing.JButton jbt_volverInfoGerente;
-    private javax.swing.JLabel jlb_clubesTrabaja;
-    private javax.swing.JLabel jlb_disponibilidad;
+    private javax.swing.JButton jbt_volverInfoEntrenador1;
+    private javax.swing.JButton jbt_volverInfoGerente1;
+    private javax.swing.JLabel jlb_clubesTrabaja1;
+    private javax.swing.JLabel jlb_disponibilidad1;
     private javax.swing.JLabel jlb_entrenador;
     private javax.swing.JLabel jlb_federacion;
     private javax.swing.JLabel jlb_federacionPerteneciente;
     private javax.swing.JLabel jlb_gerente;
-    private javax.swing.JLabel jlb_infoEntrenadorApellido;
-    private javax.swing.JLabel jlb_infoEntrenadorDNI;
-    private javax.swing.JLabel jlb_infoEntrenadorDatosApellido;
-    private javax.swing.JLabel jlb_infoEntrenadorDatosDNI;
-    private javax.swing.JLabel jlb_infoEntrenadorDatosNombre;
-    private javax.swing.JLabel jlb_infoEntrenadorDatosTelefono;
-    private javax.swing.JLabel jlb_infoEntrenadorNombre;
-    private javax.swing.JLabel jlb_infoEntrenadorTelefono;
-    private javax.swing.JLabel jlb_infoGerenteApellido;
-    private javax.swing.JLabel jlb_infoGerenteDNI;
-    private javax.swing.JLabel jlb_infoGerenteDatosApellido;
-    private javax.swing.JLabel jlb_infoGerenteDatosDNI;
-    private javax.swing.JLabel jlb_infoGerenteDatosNombre;
-    private javax.swing.JLabel jlb_infoGerenteDatosTelefono;
-    private javax.swing.JLabel jlb_infoGerenteIRPF;
-    private javax.swing.JLabel jlb_infoGerenteNombre;
-    private javax.swing.JLabel jlb_infoGerenteNomina;
-    private javax.swing.JLabel jlb_infoGerenteTelefono;
+    private javax.swing.JLabel jlb_infoEntrenadorApellido1;
+    private javax.swing.JLabel jlb_infoEntrenadorDNI1;
+    private javax.swing.JLabel jlb_infoEntrenadorDatosApellido1;
+    private javax.swing.JLabel jlb_infoEntrenadorDatosDNI1;
+    private javax.swing.JLabel jlb_infoEntrenadorDatosNombre1;
+    private javax.swing.JLabel jlb_infoEntrenadorDatosTelefono1;
+    private javax.swing.JLabel jlb_infoEntrenadorNombre1;
+    private javax.swing.JLabel jlb_infoEntrenadorTelefono1;
+    private javax.swing.JLabel jlb_infoGerenteApellido1;
+    private javax.swing.JLabel jlb_infoGerenteDNI1;
+    private javax.swing.JLabel jlb_infoGerenteDatosApellido1;
+    private javax.swing.JLabel jlb_infoGerenteDatosDNI1;
+    private javax.swing.JLabel jlb_infoGerenteDatosNombre1;
+    private javax.swing.JLabel jlb_infoGerenteDatosTelefono1;
+    private javax.swing.JLabel jlb_infoGerenteIRPF1;
+    private javax.swing.JLabel jlb_infoGerenteNombre1;
+    private javax.swing.JLabel jlb_infoGerenteNomina1;
+    private javax.swing.JLabel jlb_infoGerenteTelefono1;
     private javax.swing.JLabel jlb_nombreEntrenador;
     private javax.swing.JLabel jlb_nombreGerente;
-    private javax.swing.JLabel jlb_tituloInfoEntrenador;
-    private javax.swing.JLabel jlb_tituloInfoGerente;
+    private javax.swing.JLabel jlb_tituloInfoEntrenador1;
+    private javax.swing.JLabel jlb_tituloInfoGerente1;
     private javax.swing.JLabel jlb_tituloNombreClub;
-    private javax.swing.JLabel jlb_tituloReservarEntrenamiento;
-    private javax.swing.JList<String> jlt_clubesTrabaja;
-    private javax.swing.JList<String> jlt_listaDisponibilidad;
+    private javax.swing.JLabel jlb_tituloReservarEntrenamiento1;
+    private javax.swing.JList<String> jlt_clubesTrabaja1;
+    private javax.swing.JList<String> jlt_listaDisponibilidad1;
     // End of variables declaration//GEN-END:variables
 }
