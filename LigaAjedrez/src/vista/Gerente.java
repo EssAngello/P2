@@ -13,6 +13,9 @@ public class Gerente extends javax.swing.JFrame {
 
     //Maricel
     private NominaGerente nomina;
+    private IRPFGerente irpf;
+    private Club club;
+    private Torneo t;
     /**
      * Creates new form Gerente
      */
@@ -50,6 +53,7 @@ public class Gerente extends javax.swing.JFrame {
         jlb_infoGerenteDatosTelefono1 = new javax.swing.JLabel();
         jlb_infoGerenteDatosApellido1 = new javax.swing.JLabel();
         jlb_infoGerenteDatosNombre1 = new javax.swing.JLabel();
+        jbt_ok = new javax.swing.JButton();
         jbt_inscribirseClub = new javax.swing.JButton();
         jbt_historialClubes = new javax.swing.JButton();
         jbt_torneos = new javax.swing.JButton();
@@ -75,6 +79,11 @@ public class Gerente extends javax.swing.JFrame {
         });
 
         jbt_inscribirse1.setText("inscribirse");
+        jbt_inscribirse1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_inscribirse1ActionPerformed(evt);
+            }
+        });
 
         jlb_tituloInscribirseClubGerente1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jlb_tituloInscribirseClubGerente1.setText("Inscribirse club");
@@ -120,6 +129,11 @@ public class Gerente extends javax.swing.JFrame {
         jScrollPane4.setViewportView(jli_historialClubes1);
 
         jbt_volverHistorial1.setText("volver");
+        jbt_volverHistorial1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_volverHistorial1ActionPerformed(evt);
+            }
+        });
 
         jlb_tituloHistorialClubes1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jlb_tituloHistorialClubes1.setText("Historial Clubes");
@@ -172,28 +186,37 @@ public class Gerente extends javax.swing.JFrame {
 
         jlb_infoGerenteDatosNombre1.setText("nombre del gerente");
 
+        jbt_ok.setText("OK");
+        jbt_ok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_okActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout DatosPersonalesLayout = new javax.swing.GroupLayout(DatosPersonales.getContentPane());
         DatosPersonales.getContentPane().setLayout(DatosPersonalesLayout);
         DatosPersonalesLayout.setHorizontalGroup(
             DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DatosPersonalesLayout.createSequentialGroup()
-                .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DatosPersonalesLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jlb_tituloInfoGerente1))
-                    .addGroup(DatosPersonalesLayout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlb_infoGerenteNombre1)
-                            .addComponent(jlb_infoGerenteApellido1)
-                            .addComponent(jlb_infoGerenteTelefono1)
-                            .addComponent(jlb_infoGerenteDNI1))
-                        .addGap(65, 65, 65)
-                        .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlb_infoGerenteDatosNombre1)
-                            .addComponent(jlb_infoGerenteDatosApellido1)
-                            .addComponent(jlb_infoGerenteDatosDNI1)
-                            .addComponent(jlb_infoGerenteDatosTelefono1))))
+                .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jbt_ok)
+                    .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(DatosPersonalesLayout.createSequentialGroup()
+                            .addGap(44, 44, 44)
+                            .addComponent(jlb_tituloInfoGerente1))
+                        .addGroup(DatosPersonalesLayout.createSequentialGroup()
+                            .addGap(77, 77, 77)
+                            .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jlb_infoGerenteNombre1)
+                                .addComponent(jlb_infoGerenteApellido1)
+                                .addComponent(jlb_infoGerenteTelefono1)
+                                .addComponent(jlb_infoGerenteDNI1))
+                            .addGap(65, 65, 65)
+                            .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jlb_infoGerenteDatosNombre1)
+                                .addComponent(jlb_infoGerenteDatosApellido1)
+                                .addComponent(jlb_infoGerenteDatosDNI1)
+                                .addComponent(jlb_infoGerenteDatosTelefono1)))))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
         DatosPersonalesLayout.setVerticalGroup(
@@ -217,7 +240,9 @@ public class Gerente extends javax.swing.JFrame {
                 .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlb_infoGerenteDNI1)
                     .addComponent(jlb_infoGerenteDatosDNI1))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(jbt_ok)
+                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -244,6 +269,11 @@ public class Gerente extends javax.swing.JFrame {
         });
 
         jbt_IRPF.setText("IRPF");
+        jbt_IRPF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_IRPFActionPerformed(evt);
+            }
+        });
 
         jbt_Nominas.setText("Nominas");
         jbt_Nominas.addActionListener(new java.awt.event.ActionListener() {
@@ -256,9 +286,19 @@ public class Gerente extends javax.swing.JFrame {
         jlb_tituloGerente.setText("GERENTE");
 
         jbt_datosPersonales.setText("Datos Personales");
+        jbt_datosPersonales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_datosPersonalesActionPerformed(evt);
+            }
+        });
 
         jbt_sedeDelClub.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbt_sedeDelClub.setText("Sede del Club");
+        jbt_sedeDelClub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_sedeDelClubActionPerformed(evt);
+            }
+        });
 
         jbt_salir.setText("salir");
         jbt_salir.addActionListener(new java.awt.event.ActionListener() {
@@ -326,16 +366,17 @@ public class Gerente extends javax.swing.JFrame {
 
     private void jbt_inscribirseClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_inscribirseClubActionPerformed
         // Maricel
-        System.out.println("SE HA PULSADO");
-        
-        InscribirseClubGerente.setSize(600, 600);
-        InscribirseClubGerente.setVisible(true);
         this.setVisible(false);
-        System.out.println("SE HA TERMINADO"); 
+        InscribirseClubGerente.setVisible(true);
+        InscribirseClubGerente.setSize(400,400);
     }//GEN-LAST:event_jbt_inscribirseClubActionPerformed
 
     private void jbt_torneosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_torneosActionPerformed
-        // TODO add your handling code here:
+        // Maricel
+        t = new Torneo(1);
+        t.setVisible(true);
+        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_jbt_torneosActionPerformed
 
     private void jbt_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_salirActionPerformed
@@ -345,20 +386,65 @@ public class Gerente extends javax.swing.JFrame {
 
     private void jbt_historialClubesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_historialClubesActionPerformed
         // Maricel
-        
+        this.setVisible(false);
         HistorialClubesGerente.setVisible(true);
+        HistorialClubesGerente.setSize(400,400);
     }//GEN-LAST:event_jbt_historialClubesActionPerformed
 
     private void jbt_NominasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_NominasActionPerformed
         // Maricel
-        nomina = new NominaGerente();
+        nomina = new NominaGerente(1);
         nomina.setVisible(true);
         this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_jbt_NominasActionPerformed
 
     private void jbt_volverInscribirse1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInscribirse1ActionPerformed
-        // TODO add your handling code here:
+        // Maricel
+        InscribirseClubGerente.setVisible(false);
+        this.setVisible(true);
     }//GEN-LAST:event_jbt_volverInscribirse1ActionPerformed
+
+    private void jbt_inscribirse1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_inscribirse1ActionPerformed
+        // Maricel
+        InscribirseClubGerente.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jbt_inscribirse1ActionPerformed
+
+    private void jbt_volverHistorial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverHistorial1ActionPerformed
+        //Maricel
+        HistorialClubesGerente.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jbt_volverHistorial1ActionPerformed
+
+    private void jbt_okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okActionPerformed
+        // Maricel
+        DatosPersonales.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jbt_okActionPerformed
+
+    private void jbt_datosPersonalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_datosPersonalesActionPerformed
+        // Maricel
+        this.setVisible(false);
+        DatosPersonales.setVisible(true);
+        DatosPersonales.setSize(400,400);
+    }//GEN-LAST:event_jbt_datosPersonalesActionPerformed
+
+    private void jbt_IRPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_IRPFActionPerformed
+        // Maricel
+        irpf = new IRPFGerente(1);
+        irpf.setVisible(true);
+        this.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_jbt_IRPFActionPerformed
+
+    private void jbt_sedeDelClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_sedeDelClubActionPerformed
+        // Maricel
+        club = new Club(1);
+        club.setVisible(true);
+        this.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_jbt_sedeDelClubActionPerformed
 
 
 
@@ -374,6 +460,7 @@ public class Gerente extends javax.swing.JFrame {
     private javax.swing.JButton jbt_historialClubes;
     private javax.swing.JButton jbt_inscribirse1;
     private javax.swing.JButton jbt_inscribirseClub;
+    private javax.swing.JButton jbt_ok;
     private javax.swing.JButton jbt_salir;
     private javax.swing.JButton jbt_sedeDelClub;
     private javax.swing.JButton jbt_torneos;

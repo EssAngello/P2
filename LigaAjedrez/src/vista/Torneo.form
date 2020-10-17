@@ -2,28 +2,28 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Container class="javax.swing.JPanel" name="InscribirseTorneo">
+    <Container class="javax.swing.JFrame" name="InscribirseTorneo">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jbt_volverInscribirse" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbt_volverInscribirse1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jbt_inscribirse" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbt_inscribirse1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                                  <Component id="jlb_torneosDisponibles" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_torneosDisponibles1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" min="-2" pref="326" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane2" min="-2" pref="326" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="65" max="32767" attributes="0"/>
@@ -33,7 +33,7 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="jlb_tituloInscribirseTorneo" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloInscribirseTorneo1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -42,18 +42,18 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="jlb_tituloInscribirseTorneo" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloInscribirseTorneo1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jlb_torneosDisponibles" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_torneosDisponibles1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" pref="100" max="-2" attributes="0"/>
                   <EmptySpace min="22" pref="89" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbt_inscribirse" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbt_volverInscribirse" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_inscribirse1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_volverInscribirse1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -61,7 +61,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jlb_tituloInscribirseTorneo">
+        <Component class="javax.swing.JLabel" name="jlb_tituloInscribirseTorneo1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
@@ -69,19 +69,19 @@
             <Property name="text" type="java.lang.String" value="Inscribirse Torneo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_torneosDisponibles">
+        <Component class="javax.swing.JLabel" name="jlb_torneosDisponibles1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Torneos disponibles:"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="jli_torneos">
+            <Component class="javax.swing.JList" name="jli_torneos1">
               <Properties>
                 <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                   <StringArray count="5">
@@ -99,70 +99,73 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jbt_volverInscribirse">
+        <Component class="javax.swing.JButton" name="jbt_volverInscribirse1">
           <Properties>
             <Property name="text" type="java.lang.String" value="volver"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverInscribirseActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverInscribirse1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jbt_inscribirse">
+        <Component class="javax.swing.JButton" name="jbt_inscribirse1">
           <Properties>
             <Property name="text" type="java.lang.String" value="inscribirse"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_inscribirseActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_inscribirse1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="ConfirmacionInscribirseTorneo">
+    <Container class="javax.swing.JFrame" name="ConfirmacionInscribirseTorneo">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="jbt_ok" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                  <Component id="jlb_texto" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="52" max="32767" attributes="0"/>
+                  <EmptySpace pref="62" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jbt_ok1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jlb_texto1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="84" max="32767" attributes="0"/>
-                  <Component id="jlb_texto" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                  <Component id="jbt_ok" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jlb_texto1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                  <Component id="jbt_ok1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jlb_texto">
+        <Component class="javax.swing.JLabel" name="jlb_texto1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Has sido inscrito correctamente al torneo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jbt_ok">
+        <Component class="javax.swing.JButton" name="jbt_ok1">
           <Properties>
             <Property name="text" type="java.lang.String" value="ok"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_okActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_ok1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="HistorialPartidas">
+    <Container class="javax.swing.JFrame" name="HistorialPartidas">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -171,15 +174,15 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jbt_volverHistorial" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbt_volverHistorial1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jbt_masDetalleHistorial" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbt_masDetalleHistorial1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jlb_tituloHistorialPartidos" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane3" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
+                              <Component id="jlb_tituloHistorialPartidos1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jScrollPane4" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="77" max="32767" attributes="0"/>
                       </Group>
@@ -192,13 +195,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jlb_tituloHistorialPartidos" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloHistorialPartidos1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="42" max="32767" attributes="0"/>
-                  <Component id="jScrollPane3" min="-2" pref="114" max="-2" attributes="0"/>
+                  <Component id="jScrollPane4" min="-2" pref="114" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbt_volverHistorial" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbt_masDetalleHistorial" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_volverHistorial1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_masDetalleHistorial1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -206,24 +209,22 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jbt_masDetalleHistorial">
+        <Component class="javax.swing.JLabel" name="jlb_tituloHistorialPartidos1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="mas detalles"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Historial Partidos"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jbt_volverHistorial">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="volver"/>
-          </Properties>
-        </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="jli_historiaPartidos">
+            <Component class="javax.swing.JList" name="jli_historiaPartidos1">
               <Properties>
                 <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                   <StringArray count="5">
@@ -241,53 +242,61 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jlb_tituloHistorialPartidos">
+        <Component class="javax.swing.JButton" name="jbt_volverHistorial1">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="24" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Historial Partidos"/>
+            <Property name="text" type="java.lang.String" value="volver"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverHistorial1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbt_masDetalleHistorial1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="mas detalles"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_masDetalleHistorial1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="DetallesHistorialPartidas">
+    <Container class="javax.swing.JFrame" name="DetallesHistorialPartidas">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="jbt_okDetalles" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_okDetalles1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="73" max="32767" attributes="0"/>
-                  <Component id="jlb_tituloDetallesPartida" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloDetallesPartida1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jlb_ganador" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlb_ganador1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jlb_ganadorlRespuesta" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlb_ganadorlRespuesta1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jlb_rival" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlb_rival1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                          <Component id="jlb_rivalRespuesta" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlb_rivalRespuesta1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jlb_fecha" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_tiempo" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_fecha1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_tiempo1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jlb_fechaRespuesta" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_tiempoRespuesta" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_fechaRespuesta1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_tiempoRespuesta1" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -299,36 +308,36 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="jlb_tituloDetallesPartida" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloDetallesPartida1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_rival" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_rivalRespuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_rival1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_rivalRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_ganador" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_ganadorlRespuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_ganador1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_ganadorlRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_fecha" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_fechaRespuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_fecha1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_fechaRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_tiempo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_tiempoRespuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_tiempo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_tiempoRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="24" max="32767" attributes="0"/>
-                  <Component id="jbt_okDetalles" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_okDetalles1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jlb_tituloDetallesPartida">
+        <Component class="javax.swing.JLabel" name="jlb_tituloDetallesPartida1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
@@ -336,54 +345,57 @@
             <Property name="text" type="java.lang.String" value="detalles partida"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_rival">
+        <Component class="javax.swing.JLabel" name="jlb_rival1">
           <Properties>
             <Property name="text" type="java.lang.String" value="rival"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_ganador">
+        <Component class="javax.swing.JLabel" name="jlb_ganador1">
           <Properties>
             <Property name="text" type="java.lang.String" value="ganador"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_fecha">
+        <Component class="javax.swing.JLabel" name="jlb_fecha1">
           <Properties>
             <Property name="text" type="java.lang.String" value="fecha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_tiempo">
+        <Component class="javax.swing.JLabel" name="jlb_tiempo1">
           <Properties>
             <Property name="text" type="java.lang.String" value="tiempo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_rivalRespuesta">
+        <Component class="javax.swing.JLabel" name="jlb_rivalRespuesta1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel12"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_ganadorlRespuesta">
+        <Component class="javax.swing.JLabel" name="jlb_ganadorlRespuesta1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel13"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_fechaRespuesta">
+        <Component class="javax.swing.JLabel" name="jlb_fechaRespuesta1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel14"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_tiempoRespuesta">
+        <Component class="javax.swing.JLabel" name="jlb_tiempoRespuesta1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel15"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jbt_okDetalles">
+        <Component class="javax.swing.JButton" name="jbt_okDetalles1">
           <Properties>
             <Property name="text" type="java.lang.String" value="ok"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_okDetalles1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="ResultadosPartida">
+    <Container class="javax.swing.JFrame" name="ResultadosPartida">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -392,26 +404,26 @@
                   <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jlb_jugador2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlb_jugador4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jtf_jugador2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtf_jugador3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jlb_jugador1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlb_jugador3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                          <Component id="jtf_jugador1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtf_jugador4" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jlb_ganadorResultado" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_tiempoResultado" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_torneo" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_ganadorResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_tiempoResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_torneo1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jComboBoxTorneo" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtf_tiempo" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                              <Component id="jtf_ganador" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxTorneo1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jtf_tiempo1" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                              <Component id="jtf_ganador1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -419,14 +431,14 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jlb_tituloResultadoPartido" min="-2" pref="280" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloResultadoPartido1" min="-2" pref="280" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jbt_volverResultadoPartido" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_volverResultadoPartido1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jbt_okResultadoPartido" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_okResultadoPartido1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -435,36 +447,36 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="jlb_tituloResultadoPartido" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloResultadoPartido1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_jugador1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_jugador1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_jugador3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_jugador4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_jugador2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_jugador2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_jugador4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_jugador3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_ganadorResultado" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_ganador" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_ganadorResultado1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_ganador1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_tiempoResultado" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_tiempo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_tiempoResultado1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_tiempo1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_torneo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jComboBoxTorneo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_torneo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboBoxTorneo1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbt_okResultadoPartido" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbt_volverResultadoPartido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_okResultadoPartido1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_volverResultadoPartido1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -472,7 +484,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jlb_tituloResultadoPartido">
+        <Component class="javax.swing.JLabel" name="jlb_tituloResultadoPartido1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="3"/>
@@ -480,32 +492,40 @@
             <Property name="text" type="java.lang.String" value="RESULTADO PARTIDO"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_jugador1">
+        <Component class="javax.swing.JLabel" name="jlb_jugador3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Jugador 1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_jugador2">
+        <Component class="javax.swing.JLabel" name="jlb_jugador4">
           <Properties>
             <Property name="text" type="java.lang.String" value="Juagador 2"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_ganadorResultado">
+        <Component class="javax.swing.JLabel" name="jlb_ganadorResultado1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ganador"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_tiempoResultado">
+        <Component class="javax.swing.JLabel" name="jlb_tiempoResultado1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Tiempo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_torneo">
+        <Component class="javax.swing.JLabel" name="jlb_torneo1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Torneo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBoxTorneo">
+        <Component class="javax.swing.JButton" name="jbt_volverResultadoPartido1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="volver"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverResultadoPartido1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBoxTorneo1">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -517,47 +537,45 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxTorneoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxTorneo1ActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtf_tiempo">
+        <Component class="javax.swing.JTextField" name="jtf_tiempo1">
           <Properties>
             <Property name="text" type="java.lang.String" value="DD/MM/YY"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_tiempoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_tiempo1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtf_ganador">
+        <Component class="javax.swing.JTextField" name="jtf_ganador1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Introduce Nombre y Apellido"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtf_jugador2">
+        <Component class="javax.swing.JTextField" name="jtf_jugador3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Introduce Nombre y Apellido"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtf_jugador1">
+        <Component class="javax.swing.JTextField" name="jtf_jugador4">
           <Properties>
             <Property name="text" type="java.lang.String" value="Introduce Nombre y Apellido"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_jugador1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_jugador4ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jbt_okResultadoPartido">
+        <Component class="javax.swing.JButton" name="jbt_okResultadoPartido1">
           <Properties>
             <Property name="text" type="java.lang.String" value="ok"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="jbt_volverResultadoPartido">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="volver"/>
-          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_okResultadoPartido1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -638,6 +656,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Inscribirse Torneo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_inscribirseTorneoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbt_historialPartidas">
       <Properties>
@@ -651,11 +672,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Resultados partida"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_resultadosPartidaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbt_volverTorneo">
       <Properties>
         <Property name="text" type="java.lang.String" value="volver"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverTorneoActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

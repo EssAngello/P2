@@ -143,11 +143,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="documento IRPF"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_infoGerenteIRPF1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbt_infoGerenteNomina1">
           <Properties>
             <Property name="text" type="java.lang.String" value="documento nomina"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_infoGerenteNomina1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_infoGerenteDatosDNI1">
           <Properties>
@@ -431,11 +437,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="cancelar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_cancelarEntrenamiento1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbt_reservar1">
           <Properties>
             <Property name="text" type="java.lang.String" value="reservar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_reservar1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -546,11 +558,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="volver"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbt_reservaEntrenamiento">
       <Properties>
         <Property name="text" type="java.lang.String" value="Reservar Entrenamiento"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_reservaEntrenamientoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jlb_entrenador">
       <Properties>
@@ -594,6 +612,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="informacion del entrenador"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_infoEntrenadorActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

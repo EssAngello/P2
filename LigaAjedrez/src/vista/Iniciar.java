@@ -11,12 +11,18 @@ package vista;
  */
 public class Iniciar extends javax.swing.JFrame {
     
+    //Maricel
     private Gerente g;
+    private Jugador j;
+    private Administrador a;
     /**
      * Creates new form NewJFrame
      */
     public Iniciar() {
         initComponents();
+        jbtg_iniciar.add(jrb_administrador);
+        jbtg_iniciar.add(jrb_gerente);
+        jbtg_iniciar.add(jrb_jugador);
     }
 
     /**
@@ -28,26 +34,27 @@ public class Iniciar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Registrarse = new javax.swing.JPanel();
-        jbt_registrarse = new javax.swing.JButton();
-        jlb_titulo = new javax.swing.JLabel();
-        jrb_infantil = new javax.swing.JRadioButton();
-        jrb_junior = new javax.swing.JRadioButton();
-        jrb_senior = new javax.swing.JRadioButton();
-        jlb_categoria = new javax.swing.JLabel();
-        jlb_nombre = new javax.swing.JLabel();
-        jlb_apellido = new javax.swing.JLabel();
-        jlb_DNI = new javax.swing.JLabel();
-        jlb_contraseña = new javax.swing.JLabel();
-        jtf_nombre = new javax.swing.JTextField();
-        jtf_apellido = new javax.swing.JTextField();
-        jtf_DNI = new javax.swing.JTextField();
-        jlb_usuario = new javax.swing.JLabel();
-        jtf_usuario = new javax.swing.JTextField();
-        jtf_contraseña = new javax.swing.JTextField();
-        jlb_telefono = new javax.swing.JLabel();
-        jtf_telefono = new javax.swing.JTextField();
-        jbt_cancelar = new javax.swing.JToggleButton();
+        Registrarse = new javax.swing.JFrame();
+        jlb_titulo1 = new javax.swing.JLabel();
+        jlb_nombre1 = new javax.swing.JLabel();
+        jtf_nombre1 = new javax.swing.JTextField();
+        jlb_DNI1 = new javax.swing.JLabel();
+        jtf_DNI1 = new javax.swing.JTextField();
+        jlb_usuario1 = new javax.swing.JLabel();
+        jlb_contraseña1 = new javax.swing.JLabel();
+        jtf_contraseña1 = new javax.swing.JTextField();
+        jtf_usuario1 = new javax.swing.JTextField();
+        jlb_categoria1 = new javax.swing.JLabel();
+        jrb_infantil1 = new javax.swing.JRadioButton();
+        jbt_cancelar1 = new javax.swing.JToggleButton();
+        jrb_junior1 = new javax.swing.JRadioButton();
+        jrb_senior1 = new javax.swing.JRadioButton();
+        jbt_registrarse1 = new javax.swing.JButton();
+        jlb_telefono1 = new javax.swing.JLabel();
+        jtf_telefono1 = new javax.swing.JTextField();
+        jtf_apellido1 = new javax.swing.JTextField();
+        jlb_apellido1 = new javax.swing.JLabel();
+        jbtg_iniciar = new javax.swing.ButtonGroup();
         jlb_usuariIniciar = new javax.swing.JLabel();
         jlb_contraseñaIniaciar = new javax.swing.JLabel();
         jtf_nombreIniciar = new javax.swing.JTextField();
@@ -55,59 +62,62 @@ public class Iniciar extends javax.swing.JFrame {
         jbt_cancelarIniciar = new javax.swing.JButton();
         jbt_okIniciar = new javax.swing.JButton();
         jbt_registrarseIniciar = new javax.swing.JButton();
+        jrb_administrador = new javax.swing.JRadioButton();
+        jrb_gerente = new javax.swing.JRadioButton();
+        jrb_jugador = new javax.swing.JRadioButton();
 
-        jbt_registrarse.setText("Registrarse");
+        jlb_titulo1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_titulo1.setText("REGISTRARSE");
+        jlb_titulo1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jlb_titulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jlb_titulo.setText("REGISTRARSE");
-        jlb_titulo.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jlb_nombre1.setText("nombre:");
 
-        jrb_infantil.setText("infantil");
-        jrb_infantil.addActionListener(new java.awt.event.ActionListener() {
+        jtf_nombre1.setText("jTextField3");
+
+        jlb_DNI1.setText("DNI/NIE:");
+
+        jtf_DNI1.setText("jTextField5");
+
+        jlb_usuario1.setText("usuario:");
+
+        jlb_contraseña1.setText("contraseña:");
+
+        jtf_contraseña1.setText("jTextField7");
+
+        jtf_usuario1.setText("jTextField6");
+
+        jlb_categoria1.setText("categoria:");
+
+        jrb_infantil1.setText("infantil");
+        jrb_infantil1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jrb_infantilActionPerformed(evt);
+                jrb_infantil1ActionPerformed(evt);
             }
         });
 
-        jrb_junior.setText("junior");
-
-        jrb_senior.setText("senior");
-
-        jlb_categoria.setText("categoria:");
-
-        jlb_nombre.setText("nombre:");
-
-        jlb_apellido.setText("apellido:");
-
-        jlb_DNI.setText("DNI/NIE:");
-
-        jlb_contraseña.setText("contraseña:");
-
-        jtf_nombre.setText("jTextField3");
-
-        jtf_apellido.setText("jTextField4");
-
-        jtf_DNI.setText("jTextField5");
-
-        jlb_usuario.setText("usuario:");
-
-        jtf_usuario.setText("jTextField6");
-
-        jtf_contraseña.setText("jTextField7");
-
-        jlb_telefono.setText("telefono:");
-
-        jtf_telefono.setText("jTextField8");
-
-        jbt_cancelar.setText("cancelar");
-        jbt_cancelar.addActionListener(new java.awt.event.ActionListener() {
+        jbt_cancelar1.setText("cancelar");
+        jbt_cancelar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbt_cancelarActionPerformed(evt);
+                jbt_cancelar1ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout RegistrarseLayout = new javax.swing.GroupLayout(Registrarse);
-        Registrarse.setLayout(RegistrarseLayout);
+        jrb_junior1.setText("junior");
+
+        jrb_senior1.setText("senior");
+
+        jbt_registrarse1.setText("Registrarse");
+
+        jlb_telefono1.setText("telefono:");
+
+        jtf_telefono1.setText("jTextField8");
+
+        jtf_apellido1.setText("jTextField4");
+
+        jlb_apellido1.setText("apellido:");
+
+        javax.swing.GroupLayout RegistrarseLayout = new javax.swing.GroupLayout(Registrarse.getContentPane());
+        Registrarse.getContentPane().setLayout(RegistrarseLayout);
         RegistrarseLayout.setHorizontalGroup(
             RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrarseLayout.createSequentialGroup()
@@ -115,89 +125,89 @@ public class Iniciar extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegistrarseLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlb_DNI)
-                            .addComponent(jlb_nombre))
+                            .addComponent(jlb_DNI1)
+                            .addComponent(jlb_nombre1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_DNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_DNI1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(RegistrarseLayout.createSequentialGroup()
                                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jlb_contraseña)
-                                    .addComponent(jlb_usuario))
+                                    .addComponent(jlb_contraseña1)
+                                    .addComponent(jlb_usuario1))
                                 .addGap(18, 18, 18)
                                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtf_usuario, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                                    .addComponent(jtf_contraseña)))))
+                                    .addComponent(jtf_usuario1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                                    .addComponent(jtf_contraseña1)))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegistrarseLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegistrarseLayout.createSequentialGroup()
                                 .addGap(21, 21, 21)
-                                .addComponent(jrb_infantil)
+                                .addComponent(jrb_infantil1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jrb_junior)
+                                .addComponent(jrb_junior1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jrb_senior))
-                            .addComponent(jlb_categoria, javax.swing.GroupLayout.Alignment.LEADING)))
+                                .addComponent(jrb_senior1))
+                            .addComponent(jlb_categoria1, javax.swing.GroupLayout.Alignment.LEADING)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegistrarseLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jbt_cancelar)))
+                        .addComponent(jbt_cancelar1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrarseLayout.createSequentialGroup()
-                        .addComponent(jbt_registrarse)
+                        .addComponent(jbt_registrarse1)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrarseLayout.createSequentialGroup()
                         .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlb_apellido)
-                            .addComponent(jlb_telefono))
+                            .addComponent(jlb_apellido1)
+                            .addComponent(jlb_telefono1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtf_telefono1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_apellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(61, 61, 61))))
             .addGroup(RegistrarseLayout.createSequentialGroup()
                 .addGap(148, 148, 148)
-                .addComponent(jlb_titulo)
+                .addComponent(jlb_titulo1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         RegistrarseLayout.setVerticalGroup(
             RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrarseLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jlb_titulo)
+                .addComponent(jlb_titulo1)
                 .addGap(18, 18, 18)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_nombre)
-                    .addComponent(jlb_apellido)
-                    .addComponent(jtf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtf_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlb_nombre1)
+                    .addComponent(jlb_apellido1)
+                    .addComponent(jtf_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_apellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_DNI)
-                    .addComponent(jtf_DNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlb_telefono)
-                    .addComponent(jtf_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlb_DNI1)
+                    .addComponent(jtf_DNI1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlb_telefono1)
+                    .addComponent(jtf_telefono1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_usuario)
-                    .addComponent(jtf_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlb_usuario1)
+                    .addComponent(jtf_usuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlb_contraseña)
-                    .addComponent(jtf_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlb_contraseña1)
+                    .addComponent(jtf_contraseña1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jlb_categoria)
+                .addComponent(jlb_categoria1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jrb_infantil)
-                    .addComponent(jrb_junior)
-                    .addComponent(jrb_senior))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                    .addComponent(jrb_infantil1)
+                    .addComponent(jrb_junior1)
+                    .addComponent(jrb_senior1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbt_registrarse)
-                    .addComponent(jbt_cancelar))
+                    .addComponent(jbt_registrarse1)
+                    .addComponent(jbt_cancelar1))
                 .addContainerGap())
         );
 
@@ -244,19 +254,33 @@ public class Iniciar extends javax.swing.JFrame {
             }
         });
 
+        jrb_administrador.setText("ADMINISTRADOR");
+
+        jrb_gerente.setText("GERENTE");
+
+        jrb_jugador.setText("JUGADOR");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jrb_administrador)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jrb_gerente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jrb_jugador)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jbt_cancelarIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(58, 58, 58)
                         .addComponent(jbt_okIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlb_usuariIniciar)
                             .addComponent(jlb_contraseñaIniaciar))
@@ -286,7 +310,12 @@ public class Iniciar extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbt_cancelarIniciar)
                     .addComponent(jbt_okIniciar))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jrb_administrador)
+                    .addComponent(jrb_gerente)
+                    .addComponent(jrb_jugador))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         pack();
@@ -309,20 +338,36 @@ public class Iniciar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbt_registrarseIniciarActionPerformed
 
-    private void jrb_infantilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_infantilActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jrb_infantilActionPerformed
-
-    private void jbt_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbt_cancelarActionPerformed
-
     private void jbt_okIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okIniciarActionPerformed
         // Maricel
-        this.setVisible(false);
-        g = new Gerente();
-        g.setVisible(true);
+        if(jrb_gerente.isSelected()){
+            this.setVisible(false);
+            g = new Gerente();
+            g.setVisible(true);
+            dispose();
+        }
+        else if(jrb_jugador.isSelected()){
+            this.setVisible(false);
+            j = new Jugador();
+            j.setVisible(true);
+            dispose();
+        }
+        else if (jrb_administrador.isSelected()){
+            this.setVisible(false);
+            a = new Administrador();
+            a.setVisible(true);
+            dispose();
+        }
+            
     }//GEN-LAST:event_jbt_okIniciarActionPerformed
+
+    private void jrb_infantil1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_infantil1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrb_infantil1ActionPerformed
+
+    private void jbt_cancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt_cancelar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -361,32 +406,36 @@ public class Iniciar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Registrarse;
-    private javax.swing.JToggleButton jbt_cancelar;
+    private javax.swing.JFrame Registrarse;
+    private javax.swing.JToggleButton jbt_cancelar1;
     private javax.swing.JButton jbt_cancelarIniciar;
     private javax.swing.JButton jbt_okIniciar;
-    private javax.swing.JButton jbt_registrarse;
+    private javax.swing.JButton jbt_registrarse1;
     private javax.swing.JButton jbt_registrarseIniciar;
-    private javax.swing.JLabel jlb_DNI;
-    private javax.swing.JLabel jlb_apellido;
-    private javax.swing.JLabel jlb_categoria;
-    private javax.swing.JLabel jlb_contraseña;
+    private javax.swing.ButtonGroup jbtg_iniciar;
+    private javax.swing.JLabel jlb_DNI1;
+    private javax.swing.JLabel jlb_apellido1;
+    private javax.swing.JLabel jlb_categoria1;
+    private javax.swing.JLabel jlb_contraseña1;
     private javax.swing.JLabel jlb_contraseñaIniaciar;
-    private javax.swing.JLabel jlb_nombre;
-    private javax.swing.JLabel jlb_telefono;
-    private javax.swing.JLabel jlb_titulo;
+    private javax.swing.JLabel jlb_nombre1;
+    private javax.swing.JLabel jlb_telefono1;
+    private javax.swing.JLabel jlb_titulo1;
     private javax.swing.JLabel jlb_usuariIniciar;
-    private javax.swing.JLabel jlb_usuario;
-    private javax.swing.JRadioButton jrb_infantil;
-    private javax.swing.JRadioButton jrb_junior;
-    private javax.swing.JRadioButton jrb_senior;
-    private javax.swing.JTextField jtf_DNI;
-    private javax.swing.JTextField jtf_apellido;
-    private javax.swing.JTextField jtf_contraseña;
+    private javax.swing.JLabel jlb_usuario1;
+    private javax.swing.JRadioButton jrb_administrador;
+    private javax.swing.JRadioButton jrb_gerente;
+    private javax.swing.JRadioButton jrb_infantil1;
+    private javax.swing.JRadioButton jrb_jugador;
+    private javax.swing.JRadioButton jrb_junior1;
+    private javax.swing.JRadioButton jrb_senior1;
+    private javax.swing.JTextField jtf_DNI1;
+    private javax.swing.JTextField jtf_apellido1;
+    private javax.swing.JTextField jtf_contraseña1;
     private javax.swing.JTextField jtf_contraseñaIniciar;
-    private javax.swing.JTextField jtf_nombre;
+    private javax.swing.JTextField jtf_nombre1;
     private javax.swing.JTextField jtf_nombreIniciar;
-    private javax.swing.JTextField jtf_telefono;
-    private javax.swing.JTextField jtf_usuario;
+    private javax.swing.JTextField jtf_telefono1;
+    private javax.swing.JTextField jtf_usuario1;
     // End of variables declaration//GEN-END:variables
 }

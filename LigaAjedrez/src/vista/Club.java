@@ -10,12 +10,20 @@ package vista;
  * @author juan2
  */
 public class Club extends javax.swing.JFrame {
-
+    
+    //Maricel
+    //Este entero me dice si viene del gerente(1) o jugador(2) y el 0 no es nada
+    private int origen;
+    private Gerente g;
+    private Jugador j;
+    private NominaGerente nomina;
+    private IRPFGerente irpf;
     /**
      * Creates new form Club
      */
-    public Club() {
+    public Club(int i) {
         initComponents();
+        this.origen = i;
     }
 
     /**
@@ -98,8 +106,18 @@ public class Club extends javax.swing.JFrame {
         });
 
         jbt_infoGerenteIRPF1.setText("documento IRPF");
+        jbt_infoGerenteIRPF1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_infoGerenteIRPF1ActionPerformed(evt);
+            }
+        });
 
         jbt_infoGerenteNomina1.setText("documento nomina");
+        jbt_infoGerenteNomina1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_infoGerenteNomina1ActionPerformed(evt);
+            }
+        });
 
         jlb_infoGerenteDatosDNI1.setText("DNI del gerente");
 
@@ -287,8 +305,18 @@ public class Club extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jlt_listaDisponibilidad1);
 
         jbt_cancelarEntrenamiento1.setText("cancelar");
+        jbt_cancelarEntrenamiento1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_cancelarEntrenamiento1ActionPerformed(evt);
+            }
+        });
 
         jbt_reservar1.setText("reservar");
+        jbt_reservar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_reservar1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ReservarEntrenamientoLayout = new javax.swing.GroupLayout(ReservarEntrenamiento.getContentPane());
         ReservarEntrenamiento.getContentPane().setLayout(ReservarEntrenamientoLayout);
@@ -336,8 +364,18 @@ public class Club extends javax.swing.JFrame {
         jlb_tituloNombreClub.setText("NOMBRE DEL CLUB");
 
         jbt_volver.setText("volver");
+        jbt_volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_volverActionPerformed(evt);
+            }
+        });
 
         jbt_reservaEntrenamiento.setText("Reservar Entrenamiento");
+        jbt_reservaEntrenamiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_reservaEntrenamientoActionPerformed(evt);
+            }
+        });
 
         jlb_entrenador.setText("entrenador:");
 
@@ -359,6 +397,11 @@ public class Club extends javax.swing.JFrame {
         });
 
         jbt_infoEntrenador.setText("informacion del entrenador");
+        jbt_infoEntrenador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_infoEntrenadorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -423,16 +466,81 @@ public class Club extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbt_infoGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoGerenteActionPerformed
-        // TODO add your handling code here:
+        // Maricel
+        this.setVisible(false);
+        InfoGerente.setVisible(true);
+        InfoGerente.setSize(400,400);
     }//GEN-LAST:event_jbt_infoGerenteActionPerformed
 
     private void jbt_volverInfoGerente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInfoGerente1ActionPerformed
-        // TODO add your handling code here:
+        //Maricel
+        InfoGerente.setVisible(false);
+        this.setVisible(true);
     }//GEN-LAST:event_jbt_volverInfoGerente1ActionPerformed
 
     private void jbt_volverInfoEntrenador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInfoEntrenador1ActionPerformed
-        // TODO add your handling code here:
+        //Maricel
+        InfoEntrenador.setVisible(false);
+        this.setVisible(true);
     }//GEN-LAST:event_jbt_volverInfoEntrenador1ActionPerformed
+
+    private void jbt_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverActionPerformed
+        // Maricel
+        if(origen == 2){
+            j = new Jugador();
+            this.setVisible(false);
+            j.setVisible(true);
+            dispose();
+        }
+        else if(origen == 1){
+            g = new Gerente();
+            this.setVisible(false);
+            g.setVisible(true);
+            dispose();
+        }
+    }//GEN-LAST:event_jbt_volverActionPerformed
+
+    private void jbt_reservaEntrenamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_reservaEntrenamientoActionPerformed
+        // Maricel
+        this.setVisible(false);
+        ReservarEntrenamiento.setVisible(true);
+        ReservarEntrenamiento.setSize(400,400);
+    }//GEN-LAST:event_jbt_reservaEntrenamientoActionPerformed
+
+    private void jbt_infoEntrenadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoEntrenadorActionPerformed
+        // Maricel
+        this.setVisible(false);
+        InfoEntrenador.setVisible(true);
+        InfoEntrenador.setSize(400,400);
+    }//GEN-LAST:event_jbt_infoEntrenadorActionPerformed
+
+    private void jbt_cancelarEntrenamiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelarEntrenamiento1ActionPerformed
+        // Maricel
+        ReservarEntrenamiento.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jbt_cancelarEntrenamiento1ActionPerformed
+
+    private void jbt_reservar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_reservar1ActionPerformed
+        // Maricel
+        ReservarEntrenamiento.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jbt_reservar1ActionPerformed
+
+    private void jbt_infoGerenteNomina1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoGerenteNomina1ActionPerformed
+        // Maricel
+        nomina = new NominaGerente(3);
+        nomina.setVisible(true);
+        this.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_jbt_infoGerenteNomina1ActionPerformed
+
+    private void jbt_infoGerenteIRPF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoGerenteIRPF1ActionPerformed
+        // Maricel
+        irpf = new IRPFGerente(3);
+        irpf.setVisible(true);
+        this.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_jbt_infoGerenteIRPF1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

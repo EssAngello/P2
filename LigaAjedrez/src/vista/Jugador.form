@@ -2,26 +2,26 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Container class="javax.swing.JPanel" name="InscribirseClubJugador">
+    <Container class="javax.swing.JFrame" name="InscribirseClubJugador">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jbt_volver" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_volver1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jbt_inscribirse" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_inscribirse1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="251" max="-2" attributes="0"/>
+                  <Component id="jScrollPane3" min="-2" pref="251" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="86" max="32767" attributes="0"/>
-                  <Component id="jlb_tituloInscribirseClub" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="119" max="32767" attributes="0"/>
+                  <Component id="jlb_tituloInscribirseClub1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -30,13 +30,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                  <Component id="jlb_tituloInscribirseClub" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloInscribirseClub1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                  <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="56" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbt_inscribirse" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbt_volver" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_inscribirse1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_volver1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -44,24 +44,22 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jbt_volver">
+        <Component class="javax.swing.JLabel" name="jlb_tituloInscribirseClub1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="volver"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Inscribirse club"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jbt_inscribirse">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="inscribirse"/>
-          </Properties>
-        </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="jli_clubes">
+            <Component class="javax.swing.JList" name="jli_clubes1">
               <Properties>
                 <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                   <StringArray count="5">
@@ -79,37 +77,45 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jlb_tituloInscribirseClub">
+        <Component class="javax.swing.JButton" name="jbt_volver1">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="24" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Inscribirse club"/>
+            <Property name="text" type="java.lang.String" value="volver"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volver1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbt_inscribirse1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="inscribirse"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_inscribirse1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="HistorialClubesJugador">
+    <Container class="javax.swing.JFrame" name="HistorialClubesJugador">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" min="-2" pref="255" max="-2" attributes="0"/>
+                          <Component id="jScrollPane4" min="-2" pref="255" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jbt_volverHistorial" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbt_volverHistorial1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="48" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="jlb_tituloHistorial" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloHistorial1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -118,30 +124,25 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jlb_tituloHistorial" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_tituloHistorial1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="22" max="32767" attributes="0"/>
-                  <Component id="jbt_volverHistorial" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_volverHistorial1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jbt_volverHistorial">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="volver"/>
-          </Properties>
-        </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="jli_historialClubes">
+            <Component class="javax.swing.JList" name="jli_historialClubes1">
               <Properties>
                 <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                   <StringArray count="5">
@@ -159,7 +160,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jlb_tituloHistorial">
+        <Component class="javax.swing.JLabel" name="jlb_tituloHistorial1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
@@ -167,39 +168,47 @@
             <Property name="text" type="java.lang.String" value="Historial Clubes"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="jbt_volverHistorial1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="volver"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverHistorial1ActionPerformed"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="Tarjeta_personal">
+    <Container class="javax.swing.JFrame" name="Tarjeta_personal">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                                  <Component id="jbt_titulo" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jbt_titulo1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jlb_elo" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jlb_categoria" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jlb_telefono" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jlb_dni" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jlb_apellidos" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jlb_nombre" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jlb_elo1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jlb_categoria1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jlb_telefono1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jlb_dni1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jlb_apellidos1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jlb_nombre1" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jlb_nombreRespuesta" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_apellidoRespuesta" min="-2" max="-2" attributes="0"/>
-                                      <Component id="JLB_dniRespuesta" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_telefonoRespuesta" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_categoriaRespuesta" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_eloRespuesta" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_nombreRespuesta1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_apellidoRespuesta1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="JLB_dniRespuesta1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_telefonoRespuesta1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_categoriaRespuesta1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_eloRespuesta1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -207,7 +216,7 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="jb_atras" min="-2" max="-2" attributes="0"/>
+                          <Component id="jb_atras1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -218,46 +227,46 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jbt_titulo" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_titulo1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_nombreRespuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_nombre1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_nombreRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_apellidos" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_apellidoRespuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_apellidos1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_apellidoRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_dni" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="JLB_dniRespuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_dni1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JLB_dniRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_telefono" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_telefonoRespuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_telefono1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_telefonoRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_categoria" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_categoriaRespuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_categoria1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_categoriaRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_elo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_eloRespuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_elo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_eloRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="11" max="32767" attributes="0"/>
-                  <Component id="jb_atras" min="-2" max="-2" attributes="0"/>
+                  <Component id="jb_atras1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jbt_titulo">
+        <Component class="javax.swing.JLabel" name="jbt_titulo1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -265,7 +274,7 @@
             <Property name="text" type="java.lang.String" value="TARJETA PERSONAL"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_nombre">
+        <Component class="javax.swing.JLabel" name="jlb_nombre1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -273,7 +282,7 @@
             <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_apellidos">
+        <Component class="javax.swing.JLabel" name="jlb_apellidos1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -281,7 +290,7 @@
             <Property name="text" type="java.lang.String" value="Apellidos:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_dni">
+        <Component class="javax.swing.JLabel" name="jlb_dni1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -289,7 +298,7 @@
             <Property name="text" type="java.lang.String" value="DNI/NIE:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_telefono">
+        <Component class="javax.swing.JLabel" name="jlb_telefono1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -297,7 +306,7 @@
             <Property name="text" type="java.lang.String" value="Telefono:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_categoria">
+        <Component class="javax.swing.JLabel" name="jlb_categoria1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -305,12 +314,7 @@
             <Property name="text" type="java.lang.String" value="Categoria:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jb_atras">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Atr&#xe1;s"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_elo">
+        <Component class="javax.swing.JLabel" name="jlb_elo1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -318,39 +322,47 @@
             <Property name="text" type="java.lang.String" value="Elo:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_nombreRespuesta">
+        <Component class="javax.swing.JLabel" name="jlb_nombreRespuesta1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_apellidoRespuesta">
+        <Component class="javax.swing.JLabel" name="jlb_apellidoRespuesta1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="JLB_dniRespuesta">
+        <Component class="javax.swing.JLabel" name="JLB_dniRespuesta1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel5"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_telefonoRespuesta">
+        <Component class="javax.swing.JLabel" name="jlb_telefonoRespuesta1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel6"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_categoriaRespuesta">
+        <Component class="javax.swing.JLabel" name="jlb_categoriaRespuesta1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel7"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_eloRespuesta">
+        <Component class="javax.swing.JLabel" name="jlb_eloRespuesta1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel8"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="jb_atras1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Atr&#xe1;s"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jb_atras1ActionPerformed"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="Responsable">
+    <Container class="javax.swing.JFrame" name="Responsable">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -362,43 +374,43 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
-                                      <Component id="jlb_nombreJugador" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_nombreJugador1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jtf_nombreJugador" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jtf_nombreJugador1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jlb_JugadorInfantil" min="-2" pref="124" max="-2" attributes="0"/>
+                                      <Component id="jlb_JugadorInfantil1" min="-2" pref="124" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="jlb_apellidoJugador" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_apellidoJugador1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jtf_apellidoJugador" min="-2" max="-2" attributes="0"/>
+                              <Component id="jtf_apellidoJugador1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
-                              <Component id="jbt_okResponsable" min="-2" max="-2" attributes="0"/>
+                              <Component id="jbt_okResponsable1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jlb_nombreResponsable" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_nombreResponsable1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jtf_nombreResponsable" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jtf_nombreResponsable1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jlb_Responsable" min="-2" pref="127" max="-2" attributes="0"/>
+                                  <Component id="jlb_Responsable1" min="-2" pref="127" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="jlb_apellidoResponsable" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlb_apellidoResponsable1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="jtf_apellidoResponsable" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtf_apellidoResponsable1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="48" max="32767" attributes="0"/>
@@ -409,93 +421,96 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jlb_Responsable" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_Responsable1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_nombreResponsable" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_apellidoResponsable" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_nombreResponsable" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_apellidoResponsable" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_nombreResponsable1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_apellidoResponsable1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_nombreResponsable1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_apellidoResponsable1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                  <Component id="jlb_JugadorInfantil" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlb_JugadorInfantil1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_nombreJugador" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_apellidoJugador" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_nombreJugador" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_apellidoJugador" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_nombreJugador1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_apellidoJugador1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_nombreJugador1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_apellidoJugador1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="jbt_okResponsable" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbt_okResponsable1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jbt_okResponsable">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="OK"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jtf_nombreJugador">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField3"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_nombreJugador">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_JugadorInfantil">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="3"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Jugador Infantil"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_apellidoJugador">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Apellido"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jtf_apellidoJugador">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField4"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_apellidoJugadorActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jtf_apellidoResponsable">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField2"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_apellidoResponsable">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Apellido"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jtf_nombreResponsable">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField1"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_nombreResponsable">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jlb_Responsable">
+        <Component class="javax.swing.JLabel" name="jlb_Responsable1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="3"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Responsable"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_nombreResponsable1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nombre"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_nombreResponsable1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jTextField1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_apellidoResponsable1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Apellido"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_apellidoResponsable1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jTextField2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_apellidoJugador1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jTextField4"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_apellidoJugador1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_apellidoJugador1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Apellido"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbt_okResponsable1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="OK"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_okResponsable1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_nombreJugador1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jTextField3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_nombreJugador1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nombre"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_JugadorInfantil1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="3"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Jugador Infantil"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -609,6 +624,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Inscribirse Club"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_clubActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbt_torneo">
       <Properties>
@@ -617,6 +635,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Torneo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_torneoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbt_historial_clubes">
       <Properties>
@@ -625,6 +646,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Historial Clubes"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_historial_clubesActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbt_tarjeta">
       <Properties>
@@ -641,6 +665,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="SALIR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_salirActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbt_responsable">
       <Properties>
@@ -670,6 +697,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Sede del Club"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_sedeDelClubActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

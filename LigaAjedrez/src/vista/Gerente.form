@@ -81,6 +81,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="inscribirse"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_inscribirse1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_tituloInscribirseClubGerente1">
           <Properties>
@@ -159,6 +162,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="volver"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverHistorial1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_tituloHistorialClubes1">
           <Properties>
@@ -176,25 +182,28 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                          <Component id="jlb_tituloInfoGerente1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jlb_infoGerenteNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_infoGerenteApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_infoGerenteTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_infoGerenteDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jbt_ok" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                              <Component id="jlb_tituloInfoGerente1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jlb_infoGerenteDatosNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_infoGerenteDatosApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_infoGerenteDatosDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_infoGerenteDatosTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jlb_infoGerenteNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_infoGerenteApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_infoGerenteTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_infoGerenteDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jlb_infoGerenteDatosNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_infoGerenteDatosApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_infoGerenteDatosDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_infoGerenteDatosTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
@@ -227,7 +236,9 @@
                       <Component id="jlb_infoGerenteDNI1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jlb_infoGerenteDatosDNI1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="50" max="32767" attributes="0"/>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                  <Component id="jbt_ok" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -280,6 +291,14 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="nombre del gerente"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbt_ok">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="OK"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_okActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -399,6 +418,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="IRPF"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_IRPFActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbt_Nominas">
       <Properties>
@@ -420,6 +442,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Datos Personales"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_datosPersonalesActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbt_sedeDelClub">
       <Properties>
@@ -428,6 +453,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Sede del Club"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_sedeDelClubActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbt_salir">
       <Properties>

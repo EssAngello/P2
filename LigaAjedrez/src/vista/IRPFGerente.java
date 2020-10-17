@@ -11,11 +11,17 @@ package vista;
  */
 public class IRPFGerente extends javax.swing.JFrame {
 
+    //Maricel
+    private Gerente g;
+    private Club c;
+    //Este entero me dice si viene del gerente(1) o club(3)
+    private int origen;
     /**
      * Creates new form IRPFGerente
      */
-    public IRPFGerente() {
+    public IRPFGerente(int i) {
         initComponents();
+        this.origen = i;
     }
 
     /**
@@ -38,6 +44,11 @@ public class IRPFGerente extends javax.swing.JFrame {
         jlb_tituloIRPF.setText("IRPF");
 
         jbt_ok.setText("OK");
+        jbt_ok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_okActionPerformed(evt);
+            }
+        });
 
         jli_IRPF.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -81,6 +92,22 @@ public class IRPFGerente extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbt_okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okActionPerformed
+        // Maricel
+        if(origen == 1){
+            g = new Gerente();
+            this.setVisible(false);
+            g.setVisible(true);
+            dispose();
+        }
+        else if (origen == 3){
+            c = new Club(0);
+            this.setVisible(false);
+            c.setVisible(true);
+            dispose();
+        }
+    }//GEN-LAST:event_jbt_okActionPerformed
 
     /**
      * @param args the command line arguments
