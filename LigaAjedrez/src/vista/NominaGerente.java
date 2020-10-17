@@ -10,7 +10,7 @@ package vista;
  * @author juan2
  */
 public class NominaGerente extends javax.swing.JFrame {
-
+    private Gerente g;
     /**
      * Creates new form NominaGerente
      */
@@ -27,24 +27,29 @@ public class NominaGerente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jButtonAtras = new javax.swing.JButton();
+        jlb_tituloNominas = new javax.swing.JLabel();
+        jbt_atras = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jli_nominas = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
-        jLabel2.setText("NOMINAS");
+        jlb_tituloNominas.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jlb_tituloNominas.setText("NOMINAS");
 
-        jButtonAtras.setText("ATRÁS");
+        jbt_atras.setText("ATRÁS");
+        jbt_atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_atrasActionPerformed(evt);
+            }
+        });
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jli_nominas.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(jli_nominas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -58,10 +63,10 @@ public class NominaGerente extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(118, 118, 118)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlb_tituloNominas, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(98, 98, 98)
-                            .addComponent(jButtonAtras)))
+                            .addComponent(jbt_atras)))
                     .addContainerGap(119, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -73,14 +78,22 @@ public class NominaGerente extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(21, 21, 21)
-                    .addComponent(jLabel2)
+                    .addComponent(jlb_tituloNominas)
                     .addGap(206, 206, 206)
-                    .addComponent(jButtonAtras)
+                    .addComponent(jbt_atras)
                     .addContainerGap(21, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbt_atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_atrasActionPerformed
+        // Maricel
+        System.out.println("SE HA PULSADO");
+        g = new Gerente();
+        this.setVisible(false);
+        g.setVisible(true);
+    }//GEN-LAST:event_jbt_atrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,9 +101,9 @@ public class NominaGerente extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAtras;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jbt_atras;
+    private javax.swing.JLabel jlb_tituloNominas;
+    private javax.swing.JList<String> jli_nominas;
     // End of variables declaration//GEN-END:variables
 }

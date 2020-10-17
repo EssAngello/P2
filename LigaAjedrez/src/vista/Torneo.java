@@ -28,75 +28,75 @@ public class Torneo extends javax.swing.JFrame {
     private void initComponents() {
 
         InscribirseTorneo = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jlb_tituloInscribirseTorneo = new javax.swing.JLabel();
+        jlb_torneosDisponibles = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jli_torneos = new javax.swing.JList<>();
+        jbt_volverInscribirse = new javax.swing.JButton();
+        jbt_inscribirse = new javax.swing.JButton();
         ConfirmacionInscribirseTorneo = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
+        jlb_texto = new javax.swing.JLabel();
+        jbt_ok = new javax.swing.JButton();
         HistorialPartidas = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        jbt_masDetalleHistorial = new javax.swing.JButton();
+        jbt_volverHistorial = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
-        jLabel16 = new javax.swing.JLabel();
+        jli_historiaPartidos = new javax.swing.JList<>();
+        jlb_tituloHistorialPartidos = new javax.swing.JLabel();
         DetallesHistorialPartidas = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jButton11 = new javax.swing.JButton();
+        jlb_tituloDetallesPartida = new javax.swing.JLabel();
+        jlb_rival = new javax.swing.JLabel();
+        jlb_ganador = new javax.swing.JLabel();
+        jlb_fecha = new javax.swing.JLabel();
+        jlb_tiempo = new javax.swing.JLabel();
+        jlb_rivalRespuesta = new javax.swing.JLabel();
+        jlb_ganadorlRespuesta = new javax.swing.JLabel();
+        jlb_fechaRespuesta = new javax.swing.JLabel();
+        jlb_tiempoRespuesta = new javax.swing.JLabel();
+        jbt_okDetalles = new javax.swing.JButton();
         ResultadosPartida = new javax.swing.JPanel();
-        jLabelPartido = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jlb_tituloResultadoPartido = new javax.swing.JLabel();
+        jlb_jugador1 = new javax.swing.JLabel();
+        jlb_jugador2 = new javax.swing.JLabel();
+        jlb_ganadorResultado = new javax.swing.JLabel();
+        jlb_tiempoResultado = new javax.swing.JLabel();
+        jlb_torneo = new javax.swing.JLabel();
         jComboBoxTorneo = new javax.swing.JComboBox<>();
-        jTextFieldTiempo = new javax.swing.JTextField();
-        jTextFieldGanador = new javax.swing.JTextField();
-        jTextFieldJugador2 = new javax.swing.JTextField();
-        jTextJugador1 = new javax.swing.JTextField();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jtf_tiempo = new javax.swing.JTextField();
+        jtf_ganador = new javax.swing.JTextField();
+        jtf_jugador2 = new javax.swing.JTextField();
+        jtf_jugador1 = new javax.swing.JTextField();
+        jbt_okResultadoPartido = new javax.swing.JButton();
+        jbt_volverResultadoPartido = new javax.swing.JButton();
+        jlb_tituloTorneo = new javax.swing.JLabel();
+        jbt_inscribirseTorneo = new javax.swing.JButton();
+        jbt_historialPartidas = new javax.swing.JButton();
+        jbt_resultadosPartida = new javax.swing.JButton();
+        jbt_volverTorneo = new javax.swing.JButton();
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setText("Inscribirse Torneo");
+        jlb_tituloInscribirseTorneo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloInscribirseTorneo.setText("Inscribirse Torneo");
 
-        jLabel3.setText("Torneos disponibles:");
+        jlb_torneosDisponibles.setText("Torneos disponibles:");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jli_torneos.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(jli_torneos);
 
-        jButton4.setText("volver");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jbt_volverInscribirse.setText("volver");
+        jbt_volverInscribirse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jbt_volverInscribirseActionPerformed(evt);
             }
         });
 
-        jButton5.setText("inscribirse");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jbt_inscribirse.setText("inscribirse");
+        jbt_inscribirse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jbt_inscribirseActionPerformed(evt);
             }
         });
 
@@ -108,14 +108,14 @@ public class Torneo extends javax.swing.JFrame {
                 .addGroup(InscribirseTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(InscribirseTorneoLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton4)
+                        .addComponent(jbt_volverInscribirse)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5))
+                        .addComponent(jbt_inscribirse))
                     .addGroup(InscribirseTorneoLayout.createSequentialGroup()
                         .addGroup(InscribirseTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(InscribirseTorneoLayout.createSequentialGroup()
                                 .addGap(55, 55, 55)
-                                .addComponent(jLabel3))
+                                .addComponent(jlb_torneosDisponibles))
                             .addGroup(InscribirseTorneoLayout.createSequentialGroup()
                                 .addGap(73, 73, 73)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -123,33 +123,33 @@ public class Torneo extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InscribirseTorneoLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addComponent(jlb_tituloInscribirseTorneo)
                 .addGap(121, 121, 121))
         );
         InscribirseTorneoLayout.setVerticalGroup(
             InscribirseTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InscribirseTorneoLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(jLabel2)
+                .addComponent(jlb_tituloInscribirseTorneo)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
+                .addComponent(jlb_torneosDisponibles)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 89, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InscribirseTorneoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(InscribirseTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton4))
+                    .addComponent(jbt_inscribirse)
+                    .addComponent(jbt_volverInscribirse))
                 .addContainerGap())
         );
 
-        jLabel4.setText("Has sido inscrito correctamente al torneo");
+        jlb_texto.setText("Has sido inscrito correctamente al torneo");
 
-        jButton6.setText("ok");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        jbt_ok.setText("ok");
+        jbt_ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                jbt_okActionPerformed(evt);
             }
         });
 
@@ -159,36 +159,36 @@ public class Torneo extends javax.swing.JFrame {
             ConfirmacionInscribirseTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConfirmacionInscribirseTorneoLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                .addComponent(jbt_ok)
                 .addContainerGap())
             .addGroup(ConfirmacionInscribirseTorneoLayout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addComponent(jLabel4)
+                .addComponent(jlb_texto)
                 .addContainerGap(52, Short.MAX_VALUE))
         );
         ConfirmacionInscribirseTorneoLayout.setVerticalGroup(
             ConfirmacionInscribirseTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConfirmacionInscribirseTorneoLayout.createSequentialGroup()
                 .addContainerGap(84, Short.MAX_VALUE)
-                .addComponent(jLabel4)
+                .addComponent(jlb_texto)
                 .addGap(56, 56, 56)
-                .addComponent(jButton6)
+                .addComponent(jbt_ok)
                 .addContainerGap())
         );
 
-        jButton7.setText("mas detalles");
+        jbt_masDetalleHistorial.setText("mas detalles");
 
-        jButton8.setText("volver");
+        jbt_volverHistorial.setText("volver");
 
-        jList3.setModel(new javax.swing.AbstractListModel<String>() {
+        jli_historiaPartidos.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane3.setViewportView(jList3);
+        jScrollPane3.setViewportView(jli_historiaPartidos);
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel16.setText("Historial Partidos");
+        jlb_tituloHistorialPartidos.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloHistorialPartidos.setText("Historial Partidos");
 
         javax.swing.GroupLayout HistorialPartidasLayout = new javax.swing.GroupLayout(HistorialPartidas);
         HistorialPartidas.setLayout(HistorialPartidasLayout);
@@ -198,13 +198,13 @@ public class Torneo extends javax.swing.JFrame {
                 .addGroup(HistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(HistorialPartidasLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton8)
+                        .addComponent(jbt_volverHistorial)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton7))
+                        .addComponent(jbt_masDetalleHistorial))
                     .addGroup(HistorialPartidasLayout.createSequentialGroup()
                         .addGap(74, 74, 74)
                         .addGroup(HistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel16)
+                            .addComponent(jlb_tituloHistorialPartidos)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 77, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -213,36 +213,36 @@ public class Torneo extends javax.swing.JFrame {
             HistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HistorialPartidasLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel16)
+                .addComponent(jlb_tituloHistorialPartidos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addGroup(HistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton8)
-                    .addComponent(jButton7))
+                    .addComponent(jbt_volverHistorial)
+                    .addComponent(jbt_masDetalleHistorial))
                 .addContainerGap())
         );
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setText("detalles partida");
+        jlb_tituloDetallesPartida.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloDetallesPartida.setText("detalles partida");
 
-        jLabel7.setText("rival");
+        jlb_rival.setText("rival");
 
-        jLabel8.setText("ganador");
+        jlb_ganador.setText("ganador");
 
-        jLabel10.setText("fecha");
+        jlb_fecha.setText("fecha");
 
-        jLabel11.setText("tiempo");
+        jlb_tiempo.setText("tiempo");
 
-        jLabel12.setText("jLabel12");
+        jlb_rivalRespuesta.setText("jLabel12");
 
-        jLabel13.setText("jLabel13");
+        jlb_ganadorlRespuesta.setText("jLabel13");
 
-        jLabel14.setText("jLabel14");
+        jlb_fechaRespuesta.setText("jLabel14");
 
-        jLabel15.setText("jLabel15");
+        jlb_tiempoRespuesta.setText("jLabel15");
 
-        jButton11.setText("ok");
+        jbt_okDetalles.setText("ok");
 
         javax.swing.GroupLayout DetallesHistorialPartidasLayout = new javax.swing.GroupLayout(DetallesHistorialPartidas);
         DetallesHistorialPartidas.setLayout(DetallesHistorialPartidasLayout);
@@ -250,71 +250,71 @@ public class Torneo extends javax.swing.JFrame {
             DetallesHistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DetallesHistorialPartidasLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton11)
+                .addComponent(jbt_okDetalles)
                 .addGap(21, 21, 21))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DetallesHistorialPartidasLayout.createSequentialGroup()
                 .addContainerGap(73, Short.MAX_VALUE)
-                .addComponent(jLabel6)
+                .addComponent(jlb_tituloDetallesPartida)
                 .addGap(69, 69, 69))
             .addGroup(DetallesHistorialPartidasLayout.createSequentialGroup()
                 .addGap(84, 84, 84)
                 .addGroup(DetallesHistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DetallesHistorialPartidasLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
+                        .addComponent(jlb_ganador)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel13))
+                        .addComponent(jlb_ganadorlRespuesta))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DetallesHistorialPartidasLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
+                        .addComponent(jlb_rival)
                         .addGap(77, 77, 77)
-                        .addComponent(jLabel12))
+                        .addComponent(jlb_rivalRespuesta))
                     .addGroup(DetallesHistorialPartidasLayout.createSequentialGroup()
                         .addGroup(DetallesHistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11))
+                            .addComponent(jlb_fecha)
+                            .addComponent(jlb_tiempo))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(DetallesHistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(jlb_fechaRespuesta, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jlb_tiempoRespuesta, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         DetallesHistorialPartidasLayout.setVerticalGroup(
             DetallesHistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DetallesHistorialPartidasLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel6)
+                .addComponent(jlb_tituloDetallesPartida)
                 .addGap(18, 18, 18)
                 .addGroup(DetallesHistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel12))
+                    .addComponent(jlb_rival)
+                    .addComponent(jlb_rivalRespuesta))
                 .addGap(18, 18, 18)
                 .addGroup(DetallesHistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel13))
+                    .addComponent(jlb_ganador)
+                    .addComponent(jlb_ganadorlRespuesta))
                 .addGap(18, 18, 18)
                 .addGroup(DetallesHistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel14))
+                    .addComponent(jlb_fecha)
+                    .addComponent(jlb_fechaRespuesta))
                 .addGap(18, 18, 18)
                 .addGroup(DetallesHistorialPartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel15))
+                    .addComponent(jlb_tiempo)
+                    .addComponent(jlb_tiempoRespuesta))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addComponent(jButton11)
+                .addComponent(jbt_okDetalles)
                 .addContainerGap())
         );
 
-        jLabelPartido.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
-        jLabelPartido.setText("RESULTADO PARTIDO");
+        jlb_tituloResultadoPartido.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jlb_tituloResultadoPartido.setText("RESULTADO PARTIDO");
 
-        jLabel17.setText("Jugador 1");
+        jlb_jugador1.setText("Jugador 1");
 
-        jLabel18.setText("Juagador 2");
+        jlb_jugador2.setText("Juagador 2");
 
-        jLabel19.setText("Ganador");
+        jlb_ganadorResultado.setText("Ganador");
 
-        jLabel20.setText("Tiempo");
+        jlb_tiempoResultado.setText("Tiempo");
 
-        jLabel5.setText("Torneo");
+        jlb_torneo.setText("Torneo");
 
         jComboBoxTorneo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBoxTorneo.addActionListener(new java.awt.event.ActionListener() {
@@ -323,22 +323,27 @@ public class Torneo extends javax.swing.JFrame {
             }
         });
 
-        jTextFieldTiempo.setText("DD/MM/YY");
-
-        jTextFieldGanador.setText("Introduce Nombre y Apellido");
-
-        jTextFieldJugador2.setText("Introduce Nombre y Apellido");
-
-        jTextJugador1.setText("Introduce Nombre y Apellido");
-        jTextJugador1.addActionListener(new java.awt.event.ActionListener() {
+        jtf_tiempo.setText("DD/MM/YY");
+        jtf_tiempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextJugador1ActionPerformed(evt);
+                jtf_tiempoActionPerformed(evt);
             }
         });
 
-        jButton13.setText("ok");
+        jtf_ganador.setText("Introduce Nombre y Apellido");
 
-        jButton14.setText("volver");
+        jtf_jugador2.setText("Introduce Nombre y Apellido");
+
+        jtf_jugador1.setText("Introduce Nombre y Apellido");
+        jtf_jugador1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtf_jugador1ActionPerformed(evt);
+            }
+        });
+
+        jbt_okResultadoPartido.setText("ok");
+
+        jbt_volverResultadoPartido.setText("volver");
 
         javax.swing.GroupLayout ResultadosPartidaLayout = new javax.swing.GroupLayout(ResultadosPartida);
         ResultadosPartida.setLayout(ResultadosPartidaLayout);
@@ -348,84 +353,84 @@ public class Torneo extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addGroup(ResultadosPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(ResultadosPartidaLayout.createSequentialGroup()
-                        .addComponent(jLabel18)
+                        .addComponent(jlb_jugador2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextFieldJugador2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtf_jugador2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ResultadosPartidaLayout.createSequentialGroup()
-                        .addComponent(jLabel17)
+                        .addComponent(jlb_jugador1)
                         .addGap(84, 84, 84)
-                        .addComponent(jTextJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtf_jugador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ResultadosPartidaLayout.createSequentialGroup()
                         .addGroup(ResultadosPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel19)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel5))
+                            .addComponent(jlb_ganadorResultado)
+                            .addComponent(jlb_tiempoResultado)
+                            .addComponent(jlb_torneo))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(ResultadosPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jComboBoxTorneo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldGanador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jtf_tiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_ganador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(57, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResultadosPartidaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlb_tituloResultadoPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResultadosPartidaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton14)
+                .addComponent(jbt_volverResultadoPartido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton13)
+                .addComponent(jbt_okResultadoPartido)
                 .addContainerGap())
         );
         ResultadosPartidaLayout.setVerticalGroup(
             ResultadosPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ResultadosPartidaLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(jLabelPartido)
+                .addComponent(jlb_tituloResultadoPartido)
                 .addGap(32, 32, 32)
                 .addGroup(ResultadosPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(jTextJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlb_jugador1)
+                    .addComponent(jtf_jugador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ResultadosPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(jTextFieldJugador2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlb_jugador2)
+                    .addComponent(jtf_jugador2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ResultadosPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel19)
-                    .addComponent(jTextFieldGanador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlb_ganadorResultado)
+                    .addComponent(jtf_ganador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ResultadosPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20)
-                    .addComponent(jTextFieldTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlb_tiempoResultado)
+                    .addComponent(jtf_tiempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ResultadosPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(jlb_torneo)
                     .addComponent(jComboBoxTorneo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ResultadosPartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton13)
-                    .addComponent(jButton14))
+                    .addComponent(jbt_okResultadoPartido)
+                    .addComponent(jbt_volverResultadoPartido))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Torneo");
+        jlb_tituloTorneo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_tituloTorneo.setText("Torneo");
 
-        jButton1.setText("Inscribirse Torneo");
+        jbt_inscribirseTorneo.setText("Inscribirse Torneo");
 
-        jButton12.setText("historial partidas");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        jbt_historialPartidas.setText("Historial partidas");
+        jbt_historialPartidas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                jbt_historialPartidasActionPerformed(evt);
             }
         });
 
-        jButton2.setText("resultados partida");
+        jbt_resultadosPartida.setText("Resultados partida");
 
-        jButton3.setText("volver");
+        jbt_volverTorneo.setText("volver");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -435,60 +440,64 @@ public class Torneo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(98, 98, 98)
-                        .addComponent(jLabel1))
+                        .addComponent(jlb_tituloTorneo))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3))
+                        .addComponent(jbt_volverTorneo))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(76, 76, 76)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                            .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jbt_inscribirseTorneo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbt_historialPartidas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbt_resultadosPartida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1)
+                .addComponent(jlb_tituloTorneo)
                 .addGap(34, 34, 34)
-                .addComponent(jButton1)
+                .addComponent(jbt_inscribirseTorneo)
                 .addGap(18, 18, 18)
-                .addComponent(jButton12)
+                .addComponent(jbt_historialPartidas)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(jbt_resultadosPartida)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(jbt_volverTorneo)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jbt_volverInscribirseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInscribirseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_jbt_volverInscribirseActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void jbt_inscribirseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_inscribirseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_jbt_inscribirseActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jbt_okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_jbt_okActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void jbt_historialPartidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_historialPartidasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_jbt_historialPartidasActionPerformed
 
     private void jComboBoxTorneoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTorneoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxTorneoActionPerformed
 
-    private void jTextJugador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextJugador1ActionPerformed
+    private void jtf_jugador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_jugador1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextJugador1ActionPerformed
+    }//GEN-LAST:event_jtf_jugador1ActionPerformed
+
+    private void jtf_tiempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_tiempoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtf_tiempoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -501,46 +510,46 @@ public class Torneo extends javax.swing.JFrame {
     private javax.swing.JPanel HistorialPartidas;
     private javax.swing.JPanel InscribirseTorneo;
     private javax.swing.JPanel ResultadosPartida;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JComboBox<String> jComboBoxTorneo;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabelPartido;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextFieldGanador;
-    private javax.swing.JTextField jTextFieldJugador2;
-    private javax.swing.JTextField jTextFieldTiempo;
-    private javax.swing.JTextField jTextJugador1;
+    private javax.swing.JButton jbt_historialPartidas;
+    private javax.swing.JButton jbt_inscribirse;
+    private javax.swing.JButton jbt_inscribirseTorneo;
+    private javax.swing.JButton jbt_masDetalleHistorial;
+    private javax.swing.JButton jbt_ok;
+    private javax.swing.JButton jbt_okDetalles;
+    private javax.swing.JButton jbt_okResultadoPartido;
+    private javax.swing.JButton jbt_resultadosPartida;
+    private javax.swing.JButton jbt_volverHistorial;
+    private javax.swing.JButton jbt_volverInscribirse;
+    private javax.swing.JButton jbt_volverResultadoPartido;
+    private javax.swing.JButton jbt_volverTorneo;
+    private javax.swing.JLabel jlb_fecha;
+    private javax.swing.JLabel jlb_fechaRespuesta;
+    private javax.swing.JLabel jlb_ganador;
+    private javax.swing.JLabel jlb_ganadorResultado;
+    private javax.swing.JLabel jlb_ganadorlRespuesta;
+    private javax.swing.JLabel jlb_jugador1;
+    private javax.swing.JLabel jlb_jugador2;
+    private javax.swing.JLabel jlb_rival;
+    private javax.swing.JLabel jlb_rivalRespuesta;
+    private javax.swing.JLabel jlb_texto;
+    private javax.swing.JLabel jlb_tiempo;
+    private javax.swing.JLabel jlb_tiempoRespuesta;
+    private javax.swing.JLabel jlb_tiempoResultado;
+    private javax.swing.JLabel jlb_tituloDetallesPartida;
+    private javax.swing.JLabel jlb_tituloHistorialPartidos;
+    private javax.swing.JLabel jlb_tituloInscribirseTorneo;
+    private javax.swing.JLabel jlb_tituloResultadoPartido;
+    private javax.swing.JLabel jlb_tituloTorneo;
+    private javax.swing.JLabel jlb_torneo;
+    private javax.swing.JLabel jlb_torneosDisponibles;
+    private javax.swing.JList<String> jli_historiaPartidos;
+    private javax.swing.JList<String> jli_torneos;
+    private javax.swing.JTextField jtf_ganador;
+    private javax.swing.JTextField jtf_jugador1;
+    private javax.swing.JTextField jtf_jugador2;
+    private javax.swing.JTextField jtf_tiempo;
     // End of variables declaration//GEN-END:variables
 }

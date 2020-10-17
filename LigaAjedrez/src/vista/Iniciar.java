@@ -10,7 +10,8 @@ package vista;
  * @author aange
  */
 public class Iniciar extends javax.swing.JFrame {
-
+    
+    private Gerente g;
     /**
      * Creates new form NewJFrame
      */
@@ -47,14 +48,13 @@ public class Iniciar extends javax.swing.JFrame {
         jlb_telefono = new javax.swing.JLabel();
         jtf_telefono = new javax.swing.JTextField();
         jbt_cancelar = new javax.swing.JToggleButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        jlb_usuariIniciar = new javax.swing.JLabel();
+        jlb_contraseñaIniaciar = new javax.swing.JLabel();
+        jtf_nombreIniciar = new javax.swing.JTextField();
+        jtf_contraseñaIniciar = new javax.swing.JTextField();
+        jbt_cancelarIniciar = new javax.swing.JButton();
+        jbt_okIniciar = new javax.swing.JButton();
+        jbt_registrarseIniciar = new javax.swing.JButton();
 
         jbt_registrarse.setText("Registrarse");
 
@@ -203,41 +203,44 @@ public class Iniciar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Usuario");
+        jlb_usuariIniciar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlb_usuariIniciar.setText("Usuario");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Password");
+        jlb_contraseñaIniaciar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlb_contraseñaIniaciar.setText("Password");
 
-        jTextField1.setText("Introduce el nombre del usuario");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jtf_nombreIniciar.setText("Introduce el nombre del usuario");
+        jtf_nombreIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jtf_nombreIniciarActionPerformed(evt);
             }
         });
 
-        jTextField2.setText("Introduce la contraseña");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jtf_contraseñaIniciar.setText("Introduce la contraseña");
+        jtf_contraseñaIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jtf_contraseñaIniciarActionPerformed(evt);
             }
         });
 
-        jButton1.setText("CANCEL");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbt_cancelarIniciar.setText("CANCEL");
+        jbt_cancelarIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbt_cancelarIniciarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("OK");
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/usr.png"))); // NOI18N
-
-        jButton3.setText("Registrarse");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jbt_okIniciar.setText("OK");
+        jbt_okIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jbt_okIniciarActionPerformed(evt);
+            }
+        });
+
+        jbt_registrarseIniciar.setText("Registrarse");
+        jbt_registrarseIniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_registrarseIniciarActionPerformed(evt);
             }
         });
 
@@ -249,64 +252,62 @@ public class Iniciar extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbt_cancelarIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(58, 58, 58)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbt_okIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
+                            .addComponent(jlb_usuariIniciar)
+                            .addComponent(jlb_contraseñaIniaciar))
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_contraseñaIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_nombreIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
-                                .addComponent(jButton3)))))
+                                .addGap(0, 157, Short.MAX_VALUE)
+                                .addComponent(jbt_registrarseIniciar)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
-                    .addComponent(jLabel1))
-                .addGap(18, 18, 18)
+                .addComponent(jbt_registrarseIniciar)
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlb_usuariIniciar)
+                    .addComponent(jtf_nombreIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlb_contraseñaIniaciar)
+                    .addComponent(jtf_contraseñaIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jbt_cancelarIniciar)
+                    .addComponent(jbt_okIniciar))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jtf_nombreIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_nombreIniciarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jtf_nombreIniciarActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jtf_contraseñaIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_contraseñaIniciarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jtf_contraseñaIniciarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jbt_cancelarIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelarIniciarActionPerformed
+        // Maricel
+        System.exit(0);
+    }//GEN-LAST:event_jbt_cancelarIniciarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jbt_registrarseIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_registrarseIniciarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jbt_registrarseIniciarActionPerformed
 
     private void jrb_infantilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_infantilActionPerformed
         // TODO add your handling code here:
@@ -315,6 +316,13 @@ public class Iniciar extends javax.swing.JFrame {
     private void jbt_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbt_cancelarActionPerformed
+
+    private void jbt_okIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okIniciarActionPerformed
+        // Maricel
+        this.setVisible(false);
+        g = new Gerente();
+        g.setVisible(true);
+    }//GEN-LAST:event_jbt_okIniciarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -354,23 +362,20 @@ public class Iniciar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Registrarse;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JToggleButton jbt_cancelar;
+    private javax.swing.JButton jbt_cancelarIniciar;
+    private javax.swing.JButton jbt_okIniciar;
     private javax.swing.JButton jbt_registrarse;
+    private javax.swing.JButton jbt_registrarseIniciar;
     private javax.swing.JLabel jlb_DNI;
     private javax.swing.JLabel jlb_apellido;
     private javax.swing.JLabel jlb_categoria;
     private javax.swing.JLabel jlb_contraseña;
+    private javax.swing.JLabel jlb_contraseñaIniaciar;
     private javax.swing.JLabel jlb_nombre;
     private javax.swing.JLabel jlb_telefono;
     private javax.swing.JLabel jlb_titulo;
+    private javax.swing.JLabel jlb_usuariIniciar;
     private javax.swing.JLabel jlb_usuario;
     private javax.swing.JRadioButton jrb_infantil;
     private javax.swing.JRadioButton jrb_junior;
@@ -378,7 +383,9 @@ public class Iniciar extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_DNI;
     private javax.swing.JTextField jtf_apellido;
     private javax.swing.JTextField jtf_contraseña;
+    private javax.swing.JTextField jtf_contraseñaIniciar;
     private javax.swing.JTextField jtf_nombre;
+    private javax.swing.JTextField jtf_nombreIniciar;
     private javax.swing.JTextField jtf_telefono;
     private javax.swing.JTextField jtf_usuario;
     // End of variables declaration//GEN-END:variables

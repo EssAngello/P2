@@ -27,24 +27,24 @@ public class IRPFGerente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabelIRPF = new javax.swing.JLabel();
-        jButtonOK = new javax.swing.JButton();
+        jlb_tituloIRPF = new javax.swing.JLabel();
+        jbt_ok = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jli_IRPF = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabelIRPF.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
-        jLabelIRPF.setText("IRPF");
+        jlb_tituloIRPF.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jlb_tituloIRPF.setText("IRPF");
 
-        jButtonOK.setText("OK");
+        jbt_ok.setText("OK");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jli_IRPF.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(jli_IRPF);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -58,10 +58,10 @@ public class IRPFGerente extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(110, 110, 110)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabelIRPF, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlb_tituloIRPF, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(133, 133, 133)
-                            .addComponent(jButtonOK)))
+                            .addComponent(jbt_ok)))
                     .addContainerGap(110, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -73,9 +73,9 @@ public class IRPFGerente extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(25, 25, 25)
-                    .addComponent(jLabelIRPF)
+                    .addComponent(jlb_tituloIRPF)
                     .addGap(197, 197, 197)
-                    .addComponent(jButtonOK)
+                    .addComponent(jbt_ok)
                     .addContainerGap(26, Short.MAX_VALUE)))
         );
 
@@ -87,9 +87,9 @@ public class IRPFGerente extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonOK;
-    private javax.swing.JLabel jLabelIRPF;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jbt_ok;
+    private javax.swing.JLabel jlb_tituloIRPF;
+    private javax.swing.JList<String> jli_IRPF;
     // End of variables declaration//GEN-END:variables
 }
