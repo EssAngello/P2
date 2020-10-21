@@ -13,15 +13,11 @@ public class IRPFGerente extends javax.swing.JFrame {
 
     //Maricel
     private Gerente g;
-    private Club c;
-    //Este entero me dice si viene del gerente(1) o club(3)
-    private int origen;
     /**
      * Creates new form IRPFGerente
      */
-    public IRPFGerente(int i) {
+    public IRPFGerente() {
         initComponents();
-        this.origen = i;
     }
 
     /**
@@ -95,18 +91,10 @@ public class IRPFGerente extends javax.swing.JFrame {
 
     private void jbt_okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okActionPerformed
         // Maricel
-        if(origen == 1){
             g = new Gerente();
             this.setVisible(false);
             g.setVisible(true);
             dispose();
-        }
-        else if (origen == 3){
-            c = new Club(0);
-            this.setVisible(false);
-            c.setVisible(true);
-            dispose();
-        }
     }//GEN-LAST:event_jbt_okActionPerformed
 
     /**

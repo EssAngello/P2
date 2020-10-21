@@ -150,6 +150,7 @@ public class Administrador extends javax.swing.JFrame {
         jButtonPartido = new javax.swing.JButton();
         jButtonReservar = new javax.swing.JButton();
         jButtonResponsable = new javax.swing.JButton();
+        jButtonSalir = new javax.swing.JButton();
 
         jRadioButtonJugador.setText("Jugador");
 
@@ -1063,6 +1064,13 @@ public class Administrador extends javax.swing.JFrame {
 
         jButtonResponsable.setText("RESPONSABLE");
 
+        jButtonSalir.setText("SALIR");
+        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1087,6 +1095,10 @@ public class Administrador extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButtonResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(43, 43, 43))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButtonSalir)
+                .addGap(164, 164, 164))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(54, 54, 54)
@@ -1108,7 +1120,9 @@ public class Administrador extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonReservar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonSalir)
+                .addContainerGap(24, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(82, 82, 82)
@@ -1146,6 +1160,10 @@ public class Administrador extends javax.swing.JFrame {
     private void jButtonVer5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVer5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonVer5ActionPerformed
+
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1203,6 +1221,7 @@ public class Administrador extends javax.swing.JFrame {
     private javax.swing.JButton jButtonPartido;
     private javax.swing.JButton jButtonReservar;
     private javax.swing.JButton jButtonResponsable;
+    private javax.swing.JButton jButtonSalir;
     private javax.swing.JButton jButtonSiguiente;
     private javax.swing.JButton jButtonTorneo;
     private javax.swing.JButton jButtonUser;

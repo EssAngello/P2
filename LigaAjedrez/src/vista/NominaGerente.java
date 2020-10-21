@@ -12,15 +12,11 @@ package vista;
 public class NominaGerente extends javax.swing.JFrame {
     //Maricel
     private Gerente g;
-    private Club c;
-    //Este entero me dice si viene del gerente(1) o club(3)
-    private int origen;
     /**
      * Creates new form NominaGerente
      */
-    public NominaGerente(int i) {
+    public NominaGerente() {
         initComponents();
-        this.origen = i;
     }
 
     /**
@@ -94,18 +90,10 @@ public class NominaGerente extends javax.swing.JFrame {
 
     private void jbt_atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_atrasActionPerformed
         // Maricel
-        if(origen == 1){
             g = new Gerente();
             this.setVisible(false);
             g.setVisible(true);
             dispose();
-        }
-        else if (origen == 3){
-            c = new Club(0);
-            this.setVisible(false);
-            c.setVisible(true);
-            dispose();
-        }
     }//GEN-LAST:event_jbt_atrasActionPerformed
 
     /**

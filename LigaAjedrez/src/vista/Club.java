@@ -16,8 +16,6 @@ public class Club extends javax.swing.JFrame {
     private int origen;
     private Gerente g;
     private Jugador j;
-    private NominaGerente nomina;
-    private IRPFGerente irpf;
     /**
      * Creates new form Club
      */
@@ -71,6 +69,16 @@ public class Club extends javax.swing.JFrame {
         jlt_listaDisponibilidad1 = new javax.swing.JList<>();
         jbt_cancelarEntrenamiento1 = new javax.swing.JButton();
         jbt_reservar1 = new javax.swing.JButton();
+        NominaGerenteClub = new javax.swing.JFrame();
+        jlb_tituloNominas = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jli_nominas = new javax.swing.JList<>();
+        jbt_atras_nomina = new javax.swing.JButton();
+        IRPFGerenteClub = new javax.swing.JFrame();
+        jlb_tituloIRPF = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jli_IRPF = new javax.swing.JList<>();
+        jbt_ok = new javax.swing.JButton();
         jlb_tituloNombreClub = new javax.swing.JLabel();
         jbt_volver = new javax.swing.JButton();
         jbt_reservaEntrenamiento = new javax.swing.JButton();
@@ -358,6 +366,103 @@ public class Club extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jlb_tituloNominas.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jlb_tituloNominas.setText("NOMINAS");
+
+        jli_nominas.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jli_nominas);
+
+        jbt_atras_nomina.setText("ATRÁS");
+        jbt_atras_nomina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_atras_nominaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout NominaGerenteClubLayout = new javax.swing.GroupLayout(NominaGerenteClub.getContentPane());
+        NominaGerenteClub.getContentPane().setLayout(NominaGerenteClubLayout);
+        NominaGerenteClubLayout.setHorizontalGroup(
+            NominaGerenteClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NominaGerenteClubLayout.createSequentialGroup()
+                .addGroup(NominaGerenteClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(NominaGerenteClubLayout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(NominaGerenteClubLayout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(jlb_tituloNominas, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(95, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NominaGerenteClubLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jbt_atras_nomina)
+                .addGap(194, 194, 194))
+        );
+        NominaGerenteClubLayout.setVerticalGroup(
+            NominaGerenteClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NominaGerenteClubLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jlb_tituloNominas)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(jbt_atras_nomina)
+                .addContainerGap())
+        );
+
+        jlb_tituloIRPF.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jlb_tituloIRPF.setText("IRPF");
+
+        jli_IRPF.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(jli_IRPF);
+
+        jbt_ok.setText("OK");
+        jbt_ok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_okActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout IRPFGerenteClubLayout = new javax.swing.GroupLayout(IRPFGerenteClub.getContentPane());
+        IRPFGerenteClub.getContentPane().setLayout(IRPFGerenteClubLayout);
+        IRPFGerenteClubLayout.setHorizontalGroup(
+            IRPFGerenteClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(IRPFGerenteClubLayout.createSequentialGroup()
+                .addGap(175, 175, 175)
+                .addComponent(jbt_ok)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IRPFGerenteClubLayout.createSequentialGroup()
+                .addContainerGap(136, Short.MAX_VALUE)
+                .addComponent(jlb_tituloIRPF, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(127, 127, 127))
+            .addGroup(IRPFGerenteClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(IRPFGerenteClubLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        IRPFGerenteClubLayout.setVerticalGroup(
+            IRPFGerenteClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IRPFGerenteClubLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jlb_tituloIRPF)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
+                .addComponent(jbt_ok)
+                .addContainerGap())
+            .addGroup(IRPFGerenteClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(IRPFGerenteClubLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jlb_tituloNombreClub.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -528,32 +633,48 @@ public class Club extends javax.swing.JFrame {
 
     private void jbt_infoGerenteNomina1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoGerenteNomina1ActionPerformed
         // Maricel
-        nomina = new NominaGerente(3);
-        nomina.setVisible(true);
+        NominaGerenteClub.setVisible(true);
+        NominaGerenteClub.setSize(400,400);
         this.setVisible(false);
-        dispose();
     }//GEN-LAST:event_jbt_infoGerenteNomina1ActionPerformed
 
     private void jbt_infoGerenteIRPF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoGerenteIRPF1ActionPerformed
         // Maricel
-        irpf = new IRPFGerente(3);
-        irpf.setVisible(true);
+        IRPFGerenteClub.setVisible(true);
+        IRPFGerenteClub.setSize(600,600);
         this.setVisible(false);
-        dispose();
     }//GEN-LAST:event_jbt_infoGerenteIRPF1ActionPerformed
+
+    private void jbt_atras_nominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_atras_nominaActionPerformed
+        // Maricel
+        NominaGerenteClub.setVisible(false);
+        InfoGerente.setVisible(true);
+    }//GEN-LAST:event_jbt_atras_nominaActionPerformed
+
+    private void jbt_okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okActionPerformed
+        // Maricel
+        IRPFGerenteClub.setVisible(false);
+        InfoGerente.setVisible(true);
+    }//GEN-LAST:event_jbt_okActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFrame IRPFGerenteClub;
     private javax.swing.JFrame InfoEntrenador;
     private javax.swing.JFrame InfoGerente;
+    private javax.swing.JFrame NominaGerenteClub;
     private javax.swing.JFrame ReservarEntrenamiento;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JButton jbt_atras_nomina;
     private javax.swing.JButton jbt_cancelarEntrenamiento1;
     private javax.swing.JButton jbt_infoEntrenador;
     private javax.swing.JButton jbt_infoGerente;
     private javax.swing.JButton jbt_infoGerenteIRPF1;
     private javax.swing.JButton jbt_infoGerenteNomina1;
+    private javax.swing.JButton jbt_ok;
     private javax.swing.JButton jbt_reservaEntrenamiento;
     private javax.swing.JButton jbt_reservar1;
     private javax.swing.JButton jbt_volver;
@@ -585,10 +706,14 @@ public class Club extends javax.swing.JFrame {
     private javax.swing.JLabel jlb_infoGerenteTelefono1;
     private javax.swing.JLabel jlb_nombreEntrenador;
     private javax.swing.JLabel jlb_nombreGerente;
+    private javax.swing.JLabel jlb_tituloIRPF;
     private javax.swing.JLabel jlb_tituloInfoEntrenador1;
     private javax.swing.JLabel jlb_tituloInfoGerente1;
     private javax.swing.JLabel jlb_tituloNombreClub;
+    private javax.swing.JLabel jlb_tituloNominas;
     private javax.swing.JLabel jlb_tituloReservarEntrenamiento1;
+    private javax.swing.JList<String> jli_IRPF;
+    private javax.swing.JList<String> jli_nominas;
     private javax.swing.JList<String> jlt_clubesTrabaja1;
     private javax.swing.JList<String> jlt_listaDisponibilidad1;
     // End of variables declaration//GEN-END:variables

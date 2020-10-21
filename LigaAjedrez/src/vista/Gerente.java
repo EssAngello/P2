@@ -393,7 +393,7 @@ public class Gerente extends javax.swing.JFrame {
 
     private void jbt_NominasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_NominasActionPerformed
         // Maricel
-        nomina = new NominaGerente(1);
+        nomina = new NominaGerente();
         nomina.setVisible(true);
         this.setVisible(false);
         dispose();
@@ -432,7 +432,7 @@ public class Gerente extends javax.swing.JFrame {
 
     private void jbt_IRPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_IRPFActionPerformed
         // Maricel
-        irpf = new IRPFGerente(1);
+        irpf = new IRPFGerente();
         irpf.setVisible(true);
         this.setVisible(false);
         dispose();
