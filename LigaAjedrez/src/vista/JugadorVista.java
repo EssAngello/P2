@@ -13,7 +13,7 @@ public class JugadorVista extends javax.swing.JFrame {
 
     //Maricel
     private Club club;
-    private Torneo t;
+    private TorneoVista t;
     /**
      * Creates new form Jugador
      */
@@ -536,7 +536,7 @@ public class JugadorVista extends javax.swing.JFrame {
 
     private void jbt_torneoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_torneoActionPerformed
         //Maricel
-        t = new Torneo(2);
+        t = new TorneoVista(2);
         t.setVisible(true);
         this.setVisible(false);
         dispose();

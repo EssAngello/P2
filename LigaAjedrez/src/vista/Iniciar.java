@@ -116,6 +116,11 @@ public class Iniciar extends javax.swing.JFrame {
         jrb_senior1.setText("senior");
 
         jbt_registrarse1.setText("Registrarse");
+        jbt_registrarse1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_registrarse1ActionPerformed(evt);
+            }
+        });
 
         jlb_telefono1.setText("telefono:");
 
@@ -344,7 +349,10 @@ public class Iniciar extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_cancelarIniciarActionPerformed
 
     private void jbt_registrarseIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_registrarseIniciarActionPerformed
-        // TODO add your handling code here:
+        //Maricel
+        this.setVisible(false);
+        Registrarse.setVisible(true);
+        Registrarse.setSize(500,350);
     }//GEN-LAST:event_jbt_registrarseIniciarActionPerformed
 
     private void jbt_okIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okIniciarActionPerformed
@@ -387,8 +395,17 @@ public class Iniciar extends javax.swing.JFrame {
     }//GEN-LAST:event_jrb_infantil1ActionPerformed
 
     private void jbt_cancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelar1ActionPerformed
-        // TODO add your handling code here:
+        //Maricel
+        Registrarse.setVisible(false);
+        this.setVisible(true);
     }//GEN-LAST:event_jbt_cancelar1ActionPerformed
+
+    private void jbt_registrarse1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_registrarse1ActionPerformed
+        // Maricel
+        
+        Registrarse.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jbt_registrarse1ActionPerformed
 
     /**
      * @param args the command line arguments
