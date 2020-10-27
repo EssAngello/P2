@@ -9,12 +9,12 @@ package vista;
  *
  * @author juan2
  */
-public class Administrador extends javax.swing.JFrame {
+public class AdministradorVista extends javax.swing.JFrame {
 
     /**
      * Creates new form Administrador
      */
-    public Administrador() {
+    public AdministradorVista() {
         initComponents();
     }
 

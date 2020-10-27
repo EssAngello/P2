@@ -9,7 +9,7 @@ package vista;
  *
  * @author aurel
  */
-public class Jugador extends javax.swing.JFrame {
+public class JugadorVista extends javax.swing.JFrame {
 
     //Maricel
     private Club club;
@@ -17,7 +17,7 @@ public class Jugador extends javax.swing.JFrame {
     /**
      * Creates new form Jugador
      */
-    public Jugador() {
+    public JugadorVista() {
         initComponents();
     }
 

@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package vista;
-
+import javax.swing.JOptionPane;
+import modelo.Jugador;
+import modelo.Administrador;
 /**
  *
  * @author aange
@@ -12,9 +14,14 @@ package vista;
 public class Iniciar extends javax.swing.JFrame {
     
     //Maricel
-    private Gerente g;
-    private Jugador j;
-    private Administrador a;
+    //Vistas
+    private GerenteVista g;
+    private JugadorVista j;
+    private AdministradorVista a;
+    //Modelos
+    private Jugador ju;
+    private Administrador admin;
+    private String user, passwd;
     /**
      * Creates new form NewJFrame
      */
@@ -23,6 +30,8 @@ public class Iniciar extends javax.swing.JFrame {
         jbtg_iniciar.add(jrb_administrador);
         jbtg_iniciar.add(jrb_gerente);
         jbtg_iniciar.add(jrb_jugador);
+        ju = new Jugador();
+        admin = new Administrador();
     }
 
     /**
@@ -340,23 +349,35 @@ public class Iniciar extends javax.swing.JFrame {
 
     private void jbt_okIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okIniciarActionPerformed
         // Maricel
+        user = jtf_nombreIniciar.getText();
+        passwd = jtf_contraseñaIniciar.getText();
+        
         if(jrb_gerente.isSelected()){
-            this.setVisible(false);
-            g = new Gerente();
-            g.setVisible(true);
-            dispose();
+            if(ju.identificarse(user, passwd)){
+                this.setVisible(false);
+                g = new GerenteVista();
+                g.setVisible(true);
+                dispose();
+            }
         }
         else if(jrb_jugador.isSelected()){
-            this.setVisible(false);
-            j = new Jugador();
-            j.setVisible(true);
-            dispose();
+            if(ju.identificarse(user, passwd)){
+                this.setVisible(false);
+                j = new JugadorVista();
+                j.setVisible(true);
+                dispose();
+            }
         }
         else if (jrb_administrador.isSelected()){
-            this.setVisible(false);
-            a = new Administrador();
-            a.setVisible(true);
-            dispose();
+            if(admin.identificarse(user, passwd)){
+                this.setVisible(false);
+                a = new AdministradorVista();
+                a.setVisible(true);
+                dispose();
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "NO HAS SELECCIONADO EL TIPO DE USUARIO QUE ERES");
         }
             
     }//GEN-LAST:event_jbt_okIniciarActionPerformed

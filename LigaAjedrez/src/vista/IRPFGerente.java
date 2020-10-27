@@ -12,7 +12,7 @@ package vista;
 public class IRPFGerente extends javax.swing.JFrame {
 
     //Maricel
-    private Gerente g;
+    private GerenteVista g;
     /**
      * Creates new form IRPFGerente
      */
@@ -91,7 +91,7 @@ public class IRPFGerente extends javax.swing.JFrame {
 
     private void jbt_okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okActionPerformed
         // Maricel
-            g = new Gerente();
+            g = new GerenteVista();
             this.setVisible(false);
             g.setVisible(true);
             dispose();

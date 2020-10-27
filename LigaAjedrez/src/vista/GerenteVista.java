@@ -9,7 +9,7 @@ package vista;
  *
  * @author aange
  */
-public class Gerente extends javax.swing.JFrame {
+public class GerenteVista extends javax.swing.JFrame {
 
     //Maricel
     private NominaGerente nomina;
@@ -19,7 +19,7 @@ public class Gerente extends javax.swing.JFrame {
     /**
      * Creates new form Gerente
      */
-    public Gerente() {
+    public GerenteVista() {
         initComponents();
     }
 

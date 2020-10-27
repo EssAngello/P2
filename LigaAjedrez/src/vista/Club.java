@@ -14,8 +14,8 @@ public class Club extends javax.swing.JFrame {
     //Maricel
     //Este entero me dice si viene del gerente(1) o jugador(2) y el 0 no es nada
     private int origen;
-    private Gerente g;
-    private Jugador j;
+    private GerenteVista g;
+    private JugadorVista j;
     /**
      * Creates new form Club
      */
@@ -592,13 +592,13 @@ public class Club extends javax.swing.JFrame {
     private void jbt_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverActionPerformed
         // Maricel
         if(origen == 2){
-            j = new Jugador();
+            j = new JugadorVista();
             this.setVisible(false);
             j.setVisible(true);
             dispose();
         }
         else if(origen == 1){
-            g = new Gerente();
+            g = new GerenteVista();
             this.setVisible(false);
             g.setVisible(true);
             dispose();

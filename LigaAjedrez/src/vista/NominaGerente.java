@@ -11,7 +11,7 @@ package vista;
  */
 public class NominaGerente extends javax.swing.JFrame {
     //Maricel
-    private Gerente g;
+    private GerenteVista g;
     /**
      * Creates new form NominaGerente
      */
@@ -90,7 +90,7 @@ public class NominaGerente extends javax.swing.JFrame {
 
     private void jbt_atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_atrasActionPerformed
         // Maricel
-            g = new Gerente();
+            g = new GerenteVista();
             this.setVisible(false);
             g.setVisible(true);
             dispose();
