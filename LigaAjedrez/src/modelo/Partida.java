@@ -7,14 +7,20 @@ package modelo;
 
 import java.util.*;
 
-import modelo.Partida;
+import modelo.Jugador;
+import modelo.Torneo;
 /**
  *
  * @author juan2
  */
-public class Torneo {
-    
-    public Torneo(){
+public class Partida {
+    protected Jugador jugador1;
+    protected Jugador jugador2;
+    protected Jugador ganador;
+    protected Date tiempo;
+    protected Torneo torneo;
+            
+    public Partida(){
         
     }
 }

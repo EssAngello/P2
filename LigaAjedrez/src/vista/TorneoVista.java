@@ -5,11 +5,17 @@
  */
 package vista;
 
+import java.util.*;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+
+import modelo.Torneo;
+import modelo.AppAjedrez;
 /**
  *
  * @author juan2
  */
-public class Torneo extends javax.swing.JFrame {
+public class TorneoVista extends javax.swing.JFrame {
     //Este entero me dice si viene del gerente o jugador
     private int origen;
     private GerenteVista g;
@@ -17,7 +23,7 @@ public class Torneo extends javax.swing.JFrame {
     /**
      * Creates new form Torneo
      */
-    public Torneo(int i) {
+    public TorneoVista(int i) {
         initComponents();
         this.origen = i;
     }
@@ -328,7 +334,7 @@ public class Torneo extends javax.swing.JFrame {
 
         jlb_jugador3.setText("Jugador 1");
 
-        jlb_jugador4.setText("Juagador 2");
+        jlb_jugador4.setText("Jugador 2");
 
         jlb_ganadorResultado1.setText("Ganador");
 
@@ -530,10 +536,20 @@ public class Torneo extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_volverInscribirse1ActionPerformed
 
     private void jbt_inscribirse1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_inscribirse1ActionPerformed
-        // Maricel
-        InscribirseTorneo.setVisible(false);
-        ConfirmacionInscribirseTorneo.setVisible(true);
-        ConfirmacionInscribirseTorneo.setSize(400,400);
+        
+        torneoObj = (Object)jli_torneos1.getSelectedValue();
+
+        if(torneoObj == null)
+        {
+            JOptionPane.showMessageDialog(this,"Has de seleccionar un torneo");
+        }
+        else
+        {
+            InscribirseTorneo.setVisible(false);
+            ConfirmacionInscribirseTorneo.setVisible(true);
+            ConfirmacionInscribirseTorneo.setSize(400,400);
+        }
+
     }//GEN-LAST:event_jbt_inscribirse1ActionPerformed
 
     private void jComboBoxTorneo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTorneo1ActionPerformed
@@ -565,6 +581,20 @@ public class Torneo extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_volverTorneoActionPerformed
 
     private void jbt_inscribirseTorneoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_inscribirseTorneoActionPerformed
+        DefaultListModel modeloListaTorneos = new DefaultListModel();
+        jli_torneos1.setModel(modeloListaTorneos);
+        
+        listaTorneos = appAjedrez.consultarTorneosDisponibles();
+
+        if(!listaTorneos.isEmpty()){
+            for(Object torneo:listaTorneos){
+                modeloListaTorneos.addElement(torneo);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No hay torneos disponibles");
+        }
+
         // Maricel
         this.setVisible(false);
         InscribirseTorneo.setVisible(true);
@@ -668,4 +698,7 @@ public class Torneo extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_jugador4;
     private javax.swing.JTextField jtf_tiempo1;
     // End of variables declaration//GEN-END:variables
+    protected AppAjedrez appAjedrez;
+    private ArrayList listaTorneos;
+    private Object torneoObj;
 }
