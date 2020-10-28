@@ -16,6 +16,7 @@ public class Jugador {
     private String user, passwd, nombre, apellido, telefono, DNI, categoria;
     private String res_nom = "";
     private String res_apell = "";
+    private Club club;
     
     public Jugador (String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
        this.user = user;
@@ -100,6 +101,12 @@ public class Jugador {
 
     public void setRes_apell(String res_apell) {
         this.res_apell = res_apell;
+    }
+    
+    public void InscribirseClub(Club c)
+    {
+        c.inscribirseClub(this);
+        this.club=c;
     }
     
 }
