@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 
 import modelo.Torneo;
 import modelo.AppAjedrez;
+import modelo.Jugador;
 /**
  *
  * @author juan2
@@ -20,12 +21,14 @@ public class TorneoVista extends javax.swing.JFrame {
     private int origen;
     private GerenteVista g;
     private JugadorVista j;
+    private Jugador jugador;
     /**
      * Creates new form Torneo
      */
-    public TorneoVista(int i) {
+    public TorneoVista(int i,Jugador j) {
         initComponents();
         this.origen = i;
+        this.jugador = j;
     }
 
     /**
@@ -567,13 +570,13 @@ public class TorneoVista extends javax.swing.JFrame {
     private void jbt_volverTorneoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverTorneoActionPerformed
         // Maricel
         if(origen == 2){
-            j = new JugadorVista();
+            j = new JugadorVista(jugador);
             this.setVisible(false);
             j.setVisible(true);
             dispose();
         }
         else if(origen == 1){
-            g = new GerenteVista();
+            g = new GerenteVista(jugador);
             this.setVisible(false);
             g.setVisible(true);
             dispose();

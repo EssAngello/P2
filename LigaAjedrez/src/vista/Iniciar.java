@@ -6,6 +6,7 @@
 package vista;
 import javax.swing.JOptionPane;
 import modelo.AppAjedrez;
+import modelo.Jugador;
 import modelo.Administrador;
 /**
  *
@@ -22,6 +23,7 @@ public class Iniciar extends javax.swing.JFrame {
     private AppAjedrez app;
     private Administrador admin;
     private String user, passwd, nombre, apellido, telefono, DNI, categoria;
+    private Jugador inicio_jugador;
     /**
      * Creates new form NewJFrame
      */
@@ -371,19 +373,19 @@ public class Iniciar extends javax.swing.JFrame {
         // Maricel
         user = jtf_nombreIniciar.getText();
         passwd = jtf_contraseñaIniciar.getText();
-        
+        inicio_jugador = app.identificarJugadorGerente(user, passwd);
         if(jrb_gerente.isSelected()){
-            if(app.identificarJugadorGerente(user, passwd)){
+            if(inicio_jugador != null){
                 this.setVisible(false);
-                g = new GerenteVista();
+                g = new GerenteVista(inicio_jugador);
                 g.setVisible(true);
                 dispose();
             }
         }
         else if(jrb_jugador.isSelected()){
-            if(app.identificarJugadorGerente(user, passwd)){
+            if(inicio_jugador != null){
                 this.setVisible(false);
-                j = new JugadorVista();
+                j = new JugadorVista(inicio_jugador);
                 j.setVisible(true);
                 dispose();
             }

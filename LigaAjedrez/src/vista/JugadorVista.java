@@ -5,6 +5,7 @@
  */
 package vista;
 
+import modelo.Jugador; 
 /**
  *
  * @author aurel
@@ -14,11 +15,13 @@ public class JugadorVista extends javax.swing.JFrame {
     //Maricel
     private ClubVista club;
     private TorneoVista t;
+    private Jugador jugador;
     /**
      * Creates new form Jugador
      */
-    public JugadorVista() {
+    public JugadorVista(Jugador j) {
         initComponents();
+        this.jugador = j;
     }
 
     /**
@@ -536,7 +539,7 @@ public class JugadorVista extends javax.swing.JFrame {
 
     private void jbt_torneoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_torneoActionPerformed
         //Maricel
-        t = new TorneoVista(2);
+        t = new TorneoVista(2,jugador);
         t.setVisible(true);
         this.setVisible(false);
         dispose();
@@ -549,7 +552,7 @@ public class JugadorVista extends javax.swing.JFrame {
 
     private void jbt_sedeDelClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_sedeDelClubActionPerformed
         // Mricel
-        club = new ClubVista(2);
+        club = new ClubVista(2,jugador);
         club.setVisible(true);
         this.setVisible(false);
         dispose();

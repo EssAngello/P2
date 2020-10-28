@@ -5,6 +5,8 @@
  */
 package vista;
 
+import modelo.Jugador;
+
 /**
  *
  * @author juan2
@@ -12,11 +14,13 @@ package vista;
 public class NominaGerente extends javax.swing.JFrame {
     //Maricel
     private GerenteVista g;
+    private Jugador jugador;
     /**
      * Creates new form NominaGerente
      */
-    public NominaGerente() {
+    public NominaGerente(Jugador j) {
         initComponents();
+        this.jugador = j;
     }
 
     /**
@@ -90,7 +94,7 @@ public class NominaGerente extends javax.swing.JFrame {
 
     private void jbt_atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_atrasActionPerformed
         // Maricel
-            g = new GerenteVista();
+            g = new GerenteVista(jugador);
             this.setVisible(false);
             g.setVisible(true);
             dispose();

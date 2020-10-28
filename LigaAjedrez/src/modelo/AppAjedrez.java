@@ -19,9 +19,11 @@ public class AppAjedrez {
     protected ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
     protected ArrayList<Gerente> gerentes = new ArrayList<Gerente>();
     Jugador j1 = new Jugador("Maricel","123456","Maricel","Olaru","123456789","X9356742C","senior");
+    private Jugador datos_jugador;
     public AppAjedrez(){
         //Añadimos jugadores por la fuerza para comprobar//
         jugadores.add(j1);
+        datos_jugador = null;
     }
     
     public ArrayList<Torneo> consultarTorneosDisponibles(){
@@ -36,13 +38,13 @@ public class AppAjedrez {
         return torneosDisponibles;
     }
     
-    public boolean identificarJugadorGerente(String u, String p){
-        boolean respuesta = false;
+    public Jugador identificarJugadorGerente(String u, String p){
         for(Jugador aux : jugadores){
-            if(respuesta == false)
-                respuesta = aux.identificarse(u, p);
+            if(aux.identificarse(u, p) == true){
+                datos_jugador = aux;
+            }
         }
-        return respuesta;
+        return datos_jugador;
     }
     public void registrarse(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
         boolean comprobar = false;

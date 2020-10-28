@@ -5,6 +5,8 @@
  */
 package vista;
 
+import modelo.Jugador;
+
 /**
  *
  * @author aange
@@ -16,11 +18,13 @@ public class GerenteVista extends javax.swing.JFrame {
     private IRPFGerente irpf;
     private ClubVista club;
     private TorneoVista t;
+    private Jugador jugador;
     /**
      * Creates new form Gerente
      */
-    public GerenteVista() {
+    public GerenteVista(Jugador j) {
         initComponents();
+        this.jugador = j;
     }
 
     /**
@@ -373,7 +377,7 @@ public class GerenteVista extends javax.swing.JFrame {
 
     private void jbt_torneosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_torneosActionPerformed
         // Maricel
-        t = new TorneoVista(1);
+        t = new TorneoVista(1,jugador);
         t.setVisible(true);
         this.setVisible(false);
         dispose();
@@ -393,7 +397,7 @@ public class GerenteVista extends javax.swing.JFrame {
 
     private void jbt_NominasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_NominasActionPerformed
         // Maricel
-        nomina = new NominaGerente();
+        nomina = new NominaGerente(jugador);
         nomina.setVisible(true);
         this.setVisible(false);
         dispose();
@@ -432,7 +436,7 @@ public class GerenteVista extends javax.swing.JFrame {
 
     private void jbt_IRPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_IRPFActionPerformed
         // Maricel
-        irpf = new IRPFGerente();
+        irpf = new IRPFGerente(jugador);
         irpf.setVisible(true);
         this.setVisible(false);
         dispose();
@@ -440,7 +444,7 @@ public class GerenteVista extends javax.swing.JFrame {
 
     private void jbt_sedeDelClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_sedeDelClubActionPerformed
         // Maricel
-        club = new ClubVista(1);
+        club = new ClubVista(1,jugador);
         club.setVisible(true);
         this.setVisible(false);
         dispose();

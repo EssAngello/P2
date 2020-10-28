@@ -5,6 +5,8 @@
  */
 package vista;
 
+import modelo.Jugador;
+
 /**
  *
  * @author juan2
@@ -13,11 +15,13 @@ public class IRPFGerente extends javax.swing.JFrame {
 
     //Maricel
     private GerenteVista g;
+    private Jugador jugador;
     /**
      * Creates new form IRPFGerente
      */
-    public IRPFGerente() {
+    public IRPFGerente(Jugador j) {
         initComponents();
+        this.jugador = j;
     }
 
     /**
@@ -91,7 +95,7 @@ public class IRPFGerente extends javax.swing.JFrame {
 
     private void jbt_okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okActionPerformed
         // Maricel
-            g = new GerenteVista();
+            g = new GerenteVista(jugador);
             this.setVisible(false);
             g.setVisible(true);
             dispose();
