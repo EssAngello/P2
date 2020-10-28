@@ -67,15 +67,15 @@ public class JugadorVista extends javax.swing.JFrame {
         Responsable = new javax.swing.JFrame();
         jlb_Responsable1 = new javax.swing.JLabel();
         jlb_nombreResponsable1 = new javax.swing.JLabel();
-        jtf_nombreResponsable1 = new javax.swing.JTextField();
         jlb_apellidoResponsable1 = new javax.swing.JLabel();
-        jtf_apellidoResponsable1 = new javax.swing.JTextField();
-        jtf_apellidoJugador1 = new javax.swing.JTextField();
         jlb_apellidoJugador1 = new javax.swing.JLabel();
         jbt_okResponsable1 = new javax.swing.JButton();
-        jtf_nombreJugador1 = new javax.swing.JTextField();
         jlb_nombreJugador1 = new javax.swing.JLabel();
         jlb_JugadorInfantil1 = new javax.swing.JLabel();
+        jlb_responsable_nombre = new javax.swing.JLabel();
+        jlb_responsable_apellido = new javax.swing.JLabel();
+        jlb_jugador_nombre = new javax.swing.JLabel();
+        jlb_jugador_apellido = new javax.swing.JLabel();
         jl_titulo = new javax.swing.JLabel();
         jbt_club = new javax.swing.JButton();
         jbt_torneo = new javax.swing.JButton();
@@ -304,18 +304,7 @@ public class JugadorVista extends javax.swing.JFrame {
 
         jlb_nombreResponsable1.setText("Nombre");
 
-        jtf_nombreResponsable1.setText("jTextField1");
-
         jlb_apellidoResponsable1.setText("Apellido");
-
-        jtf_apellidoResponsable1.setText("jTextField2");
-
-        jtf_apellidoJugador1.setText("jTextField4");
-        jtf_apellidoJugador1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_apellidoJugador1ActionPerformed(evt);
-            }
-        });
 
         jlb_apellidoJugador1.setText("Apellido");
 
@@ -326,12 +315,18 @@ public class JugadorVista extends javax.swing.JFrame {
             }
         });
 
-        jtf_nombreJugador1.setText("jTextField3");
-
         jlb_nombreJugador1.setText("Nombre");
 
         jlb_JugadorInfantil1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jlb_JugadorInfantil1.setText("Jugador Infantil");
+
+        jlb_responsable_nombre.setText("jLabel1");
+
+        jlb_responsable_apellido.setText("jLabel1");
+
+        jlb_jugador_nombre.setText("jLabel1");
+
+        jlb_jugador_apellido.setText("jLabel2");
 
         javax.swing.GroupLayout ResponsableLayout = new javax.swing.GroupLayout(Responsable.getContentPane());
         Responsable.getContentPane().setLayout(ResponsableLayout);
@@ -339,61 +334,62 @@ public class JugadorVista extends javax.swing.JFrame {
             ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ResponsableLayout.createSequentialGroup()
                 .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(ResponsableLayout.createSequentialGroup()
-                            .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(ResponsableLayout.createSequentialGroup()
-                                    .addGap(101, 101, 101)
-                                    .addComponent(jlb_nombreJugador1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jtf_nombreJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(56, 56, 56))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResponsableLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(jlb_JugadorInfantil1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(112, 112, 112)))
-                            .addComponent(jlb_apellidoJugador1)
-                            .addGap(32, 32, 32)
-                            .addComponent(jtf_apellidoJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(ResponsableLayout.createSequentialGroup()
-                            .addGap(221, 221, 221)
-                            .addComponent(jbt_okResponsable1)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResponsableLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(ResponsableLayout.createSequentialGroup()
-                                .addComponent(jlb_nombreResponsable1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jtf_nombreResponsable1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(56, 56, 56))
-                            .addGroup(ResponsableLayout.createSequentialGroup()
-                                .addComponent(jlb_Responsable1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(112, 112, 112)))
-                        .addComponent(jlb_apellidoResponsable1)
-                        .addGap(32, 32, 32)
-                        .addComponent(jtf_apellidoResponsable1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(48, Short.MAX_VALUE))
+                    .addGroup(ResponsableLayout.createSequentialGroup()
+                        .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResponsableLayout.createSequentialGroup()
+                                .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(ResponsableLayout.createSequentialGroup()
+                                        .addGap(78, 78, 78)
+                                        .addComponent(jlb_nombreJugador1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jlb_jugador_nombre)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResponsableLayout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(jlb_JugadorInfantil1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(112, 112, 112)))
+                                .addComponent(jlb_apellidoJugador1))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResponsableLayout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(ResponsableLayout.createSequentialGroup()
+                                        .addComponent(jlb_nombreResponsable1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jlb_responsable_nombre)
+                                        .addGap(81, 81, 81))
+                                    .addGroup(ResponsableLayout.createSequentialGroup()
+                                        .addComponent(jlb_Responsable1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(112, 112, 112)))
+                                .addComponent(jlb_apellidoResponsable1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlb_responsable_apellido)
+                            .addComponent(jlb_jugador_apellido)))
+                    .addGroup(ResponsableLayout.createSequentialGroup()
+                        .addGap(186, 186, 186)
+                        .addComponent(jbt_okResponsable1)))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
         ResponsableLayout.setVerticalGroup(
             ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ResponsableLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jlb_Responsable1)
-                .addGap(28, 28, 28)
+                .addGap(31, 31, 31)
                 .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlb_nombreResponsable1)
                     .addComponent(jlb_apellidoResponsable1)
-                    .addComponent(jtf_nombreResponsable1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtf_apellidoResponsable1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53)
+                    .addComponent(jlb_responsable_nombre)
+                    .addComponent(jlb_responsable_apellido))
+                .addGap(56, 56, 56)
                 .addComponent(jlb_JugadorInfantil1)
-                .addGap(36, 36, 36)
+                .addGap(39, 39, 39)
                 .addGroup(ResponsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlb_nombreJugador1)
                     .addComponent(jlb_apellidoJugador1)
-                    .addComponent(jtf_nombreJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtf_apellidoJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
+                    .addComponent(jlb_jugador_nombre)
+                    .addComponent(jlb_jugador_apellido))
+                .addGap(40, 40, 40)
                 .addComponent(jbt_okResponsable1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -526,6 +522,10 @@ public class JugadorVista extends javax.swing.JFrame {
 
     private void jbt_responsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_responsableActionPerformed
         // Maricel
+        jlb_responsable_nombre.setText(jugador.getRes_nom());
+        jlb_responsable_apellido.setText(jugador.getRes_apell());
+        jlb_jugador_nombre.setText(jugador.getNombre());
+        jlb_jugador_apellido.setText(jugador.getApellido());
         this.setVisible(false);
         Responsable.setVisible(true);
         Responsable.setSize(400,400);
@@ -533,6 +533,12 @@ public class JugadorVista extends javax.swing.JFrame {
 
     private void jbt_tarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_tarjetaActionPerformed
         // Maricel
+        jlb_nombreRespuesta1.setText(jugador.getNombre());
+        jlb_apellidoRespuesta1.setText(jugador.getApellido());
+        JLB_dniRespuesta1.setText(jugador.getDNI());
+        jlb_telefonoRespuesta1.setText(jugador.getTelefono());
+        jlb_categoriaRespuesta1.setText(jugador.getCategoria());
+        //Falta el elo
         this.setVisible(false);
         Tarjeta_personal.setVisible(true);
         Tarjeta_personal.setSize(400,400);
@@ -665,10 +671,14 @@ public class JugadorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jlb_dni1;
     private javax.swing.JLabel jlb_elo1;
     private javax.swing.JLabel jlb_eloRespuesta1;
+    private javax.swing.JLabel jlb_jugador_apellido;
+    private javax.swing.JLabel jlb_jugador_nombre;
     private javax.swing.JLabel jlb_nombre1;
     private javax.swing.JLabel jlb_nombreJugador1;
     private javax.swing.JLabel jlb_nombreResponsable1;
     private javax.swing.JLabel jlb_nombreRespuesta1;
+    private javax.swing.JLabel jlb_responsable_apellido;
+    private javax.swing.JLabel jlb_responsable_nombre;
     private javax.swing.JLabel jlb_telefono1;
     private javax.swing.JLabel jlb_telefonoRespuesta1;
     private javax.swing.JLabel jlb_tipoCategoriaJugador;
@@ -676,10 +686,6 @@ public class JugadorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jlb_tituloInscribirseClub1;
     private javax.swing.JList<String> jli_clubes1;
     private javax.swing.JList<String> jli_historialClubes1;
-    private javax.swing.JTextField jtf_apellidoJugador1;
-    private javax.swing.JTextField jtf_apellidoResponsable1;
-    private javax.swing.JTextField jtf_nombreJugador1;
-    private javax.swing.JTextField jtf_nombreResponsable1;
     // End of variables declaration//GEN-END:variables
     private ArrayList listaClubes;
     protected AppAjedrez appAjedrez;

@@ -367,53 +367,56 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
-                                      <Component id="jlb_nombreJugador1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jtf_nombreJugador1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                                          <Component id="jlb_nombreJugador1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jlb_jugador_nombre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jlb_JugadorInfantil1" min="-2" pref="124" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jlb_JugadorInfantil1" min="-2" pref="124" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jlb_apellidoJugador1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jlb_apellidoJugador1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="jtf_apellidoJugador1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jlb_nombreResponsable1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jlb_responsable_nombre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jlb_Responsable1" min="-2" pref="127" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="jlb_apellidoResponsable1" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
-                              <Component id="jbt_okResponsable1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jlb_responsable_apellido" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_jugador_apellido" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jlb_nombreResponsable1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jtf_nombreResponsable1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jlb_Responsable1" min="-2" pref="127" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="jlb_apellidoResponsable1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="jtf_apellidoResponsable1" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
+                          <Component id="jbt_okResponsable1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="48" max="32767" attributes="0"/>
+                  <EmptySpace pref="95" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -422,23 +425,23 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jlb_Responsable1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlb_nombreResponsable1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jlb_apellidoResponsable1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_nombreResponsable1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_apellidoResponsable1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_responsable_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_responsable_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                   <Component id="jlb_JugadorInfantil1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlb_nombreJugador1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jlb_apellidoJugador1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_nombreJugador1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_apellidoJugador1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_jugador_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_jugador_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jbt_okResponsable1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -459,28 +462,10 @@
             <Property name="text" type="java.lang.String" value="Nombre"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtf_nombreResponsable1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField1"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="jlb_apellidoResponsable1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellido"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jtf_apellidoResponsable1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField2"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jtf_apellidoJugador1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField4"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_apellidoJugador1ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_apellidoJugador1">
           <Properties>
@@ -495,11 +480,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_okResponsable1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtf_nombreJugador1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField3"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="jlb_nombreJugador1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre"/>
@@ -511,6 +491,26 @@
               <Font name="Tahoma" size="14" style="3"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Jugador Infantil"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_responsable_nombre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_responsable_apellido">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_jugador_nombre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_jugador_apellido">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel2"/>
           </Properties>
         </Component>
       </SubComponents>
