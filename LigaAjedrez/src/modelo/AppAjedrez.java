@@ -10,6 +10,7 @@ import java.util.*;
 import modelo.Torneo;
 import modelo.Jugador;
 import modelo.Gerente;
+import modelo.Club;
 /**
  *
  * @author juan2
@@ -18,12 +19,19 @@ public class AppAjedrez {
     protected ArrayList<Torneo> torneos = new ArrayList<Torneo>();
     protected ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
     protected ArrayList<Gerente> gerentes = new ArrayList<Gerente>();
+    protected ArrayList<Club> clubes = new ArrayList<Club>();
     Jugador j1 = new Jugador("Maricel","123456","Maricel","Olaru","123456789","X9356742C","senior");
     private Jugador datos_jugador;
     public AppAjedrez(){
         //Añadimos jugadores por la fuerza para comprobar//
         jugadores.add(j1);
         datos_jugador = null;
+    }
+    
+    public ArrayList<Club> consultarClubes(){
+        ArrayList<Club> listaClubes = new ArrayList(clubes);
+        
+        return listaClubes;
     }
     
     public ArrayList<Torneo> consultarTorneosDisponibles(){

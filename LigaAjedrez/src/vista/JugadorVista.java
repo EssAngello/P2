@@ -5,6 +5,10 @@
  */
 package vista;
 
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import modelo.AppAjedrez;
 import modelo.Jugador; 
 /**
  *
@@ -578,6 +582,19 @@ public class JugadorVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_volverHistorial1ActionPerformed
 
     private void jbt_clubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_clubActionPerformed
+        DefaultListModel modeloListaClubes = new DefaultListModel();
+        jli_clubes1.setModel(modeloListaClubes);
+
+        listaClubes = appAjedrez.consultarClubes();
+        
+        if(!listaClubes.isEmpty()){
+            for(Object club:listaClubes){
+                modeloListaClubes.addElement(club);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No hay torneos disponibles");
+        }
         // Maricel
         this.setVisible(false);
         InscribirseClubJugador.setVisible(true);
@@ -654,4 +671,6 @@ public class JugadorVista extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_nombreJugador1;
     private javax.swing.JTextField jtf_nombreResponsable1;
     // End of variables declaration//GEN-END:variables
+    private ArrayList listaClubes;
+    protected AppAjedrez appAjedrez;
 }

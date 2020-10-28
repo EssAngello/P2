@@ -5,10 +5,17 @@
  */
 package modelo;
 
+import modelo.Jugador;
 /**
  *
  * @author juan2
  */
 public class Club {
+    public Club(){
+        
+    }
     
+    public void inscribirseClub(){
+        
+    }
 }
