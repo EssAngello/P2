@@ -11,7 +11,7 @@ package modelo;
  */
 public class Gerente extends Jugador{
     
-    public Gerente(){
-       super();
+    public Gerente(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
+        super( user,  passwd, nombre, apellido, telefono, DNI, categoria);
     }
 }

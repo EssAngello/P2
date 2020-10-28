@@ -14,7 +14,7 @@ public class GerenteVista extends javax.swing.JFrame {
     //Maricel
     private NominaGerente nomina;
     private IRPFGerente irpf;
-    private Club club;
+    private ClubVista club;
     private TorneoVista t;
     /**
      * Creates new form Gerente
@@ -440,7 +440,7 @@ public class GerenteVista extends javax.swing.JFrame {
 
     private void jbt_sedeDelClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_sedeDelClubActionPerformed
         // Maricel
-        club = new Club(1);
+        club = new ClubVista(1);
         club.setVisible(true);
         this.setVisible(false);
         dispose();

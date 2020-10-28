@@ -5,7 +5,7 @@
  */
 package vista;
 import javax.swing.JOptionPane;
-import modelo.Jugador;
+import modelo.AppAjedrez;
 import modelo.Administrador;
 /**
  *
@@ -19,9 +19,9 @@ public class Iniciar extends javax.swing.JFrame {
     private JugadorVista j;
     private AdministradorVista a;
     //Modelos
-    private Jugador ju;
+    private AppAjedrez app;
     private Administrador admin;
-    private String user, passwd;
+    private String user, passwd, nombre, apellido, telefono, DNI, categoria;
     /**
      * Creates new form NewJFrame
      */
@@ -30,7 +30,8 @@ public class Iniciar extends javax.swing.JFrame {
         jbtg_iniciar.add(jrb_administrador);
         jbtg_iniciar.add(jrb_gerente);
         jbtg_iniciar.add(jrb_jugador);
-        ju = new Jugador();
+        app = new AppAjedrez();
+        //Esto se elimina mas tarde administrador
         admin = new Administrador();
     }
 
@@ -361,7 +362,7 @@ public class Iniciar extends javax.swing.JFrame {
         passwd = jtf_contraseñaIniciar.getText();
         
         if(jrb_gerente.isSelected()){
-            if(ju.identificarse(user, passwd)){
+            if(app.identificarJugadorGerente(user, passwd)){
                 this.setVisible(false);
                 g = new GerenteVista();
                 g.setVisible(true);
@@ -369,7 +370,7 @@ public class Iniciar extends javax.swing.JFrame {
             }
         }
         else if(jrb_jugador.isSelected()){
-            if(ju.identificarse(user, passwd)){
+            if(app.identificarJugadorGerente(user, passwd)){
                 this.setVisible(false);
                 j = new JugadorVista();
                 j.setVisible(true);
@@ -385,7 +386,7 @@ public class Iniciar extends javax.swing.JFrame {
             }
         }
         else{
-            JOptionPane.showMessageDialog(null, "NO HAS SELECCIONADO EL TIPO DE USUARIO QUE ERES");
+            JOptionPane.showMessageDialog(null, "No has seleccionado el tipo de usuario que eres");
         }
             
     }//GEN-LAST:event_jbt_okIniciarActionPerformed
@@ -402,7 +403,28 @@ public class Iniciar extends javax.swing.JFrame {
 
     private void jbt_registrarse1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_registrarse1ActionPerformed
         // Maricel
+        user = jtf_usuario1.getText();
+        passwd = jtf_contraseña1.getSelectedText();
+        nombre = jtf_nombre1.getText();
+        apellido = jtf_apellido1.getText();
+        telefono = jtf_telefono1.getText();
+        DNI = jtf_DNI1.getText();
         
+        if(jrb_infantil1.isSelected()){
+            categoria = "infantil";
+            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria);
+        }
+        else if(jrb_junior1.isSelected()){
+            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria);
+            categoria = "junior";
+        }
+        else if(jrb_senior1.isSelected()){
+            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria);
+            categoria = "senior";
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "No has seleccionado la categoria, debes seleccionar");
+        }
         Registrarse.setVisible(false);
         this.setVisible(true);
     }//GEN-LAST:event_jbt_registrarse1ActionPerformed

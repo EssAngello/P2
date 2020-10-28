@@ -12,7 +12,7 @@ package vista;
 public class JugadorVista extends javax.swing.JFrame {
 
     //Maricel
-    private Club club;
+    private ClubVista club;
     private TorneoVista t;
     /**
      * Creates new form Jugador
@@ -549,7 +549,7 @@ public class JugadorVista extends javax.swing.JFrame {
 
     private void jbt_sedeDelClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_sedeDelClubActionPerformed
         // Mricel
-        club = new Club(2);
+        club = new ClubVista(2);
         club.setVisible(true);
         this.setVisible(false);
         dispose();

@@ -9,7 +9,7 @@ package vista;
  *
  * @author juan2
  */
-public class Club extends javax.swing.JFrame {
+public class ClubVista extends javax.swing.JFrame {
     
     //Maricel
     //Este entero me dice si viene del gerente(1) o jugador(2) y el 0 no es nada
@@ -19,7 +19,7 @@ public class Club extends javax.swing.JFrame {
     /**
      * Creates new form Club
      */
-    public Club(int i) {
+    public ClubVista(int i) {
         initComponents();
         this.origen = i;
     }
