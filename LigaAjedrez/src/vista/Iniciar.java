@@ -22,7 +22,8 @@ public class Iniciar extends javax.swing.JFrame {
     //Modelos
     private AppAjedrez app;
     private Administrador admin;
-    private String user, passwd, nombre, apellido, telefono, DNI, categoria;
+    private String user, passwd, nombre, apellido, telefono, DNI, categoria,
+            res_nom, res_apell;
     private Jugador inicio_jugador;
     /**
      * Creates new form NewJFrame
@@ -32,6 +33,9 @@ public class Iniciar extends javax.swing.JFrame {
         jbtg_iniciar.add(jrb_administrador);
         jbtg_iniciar.add(jrb_gerente);
         jbtg_iniciar.add(jrb_jugador);
+        jbtg_categoria.add(jrb_infantil1);
+        jbtg_categoria.add(jrb_junior1);
+        jbtg_categoria.add(jrb_senior1);
         app = new AppAjedrez();
         //Esto se elimina mas tarde administrador
         admin = new Administrador();
@@ -67,7 +71,13 @@ public class Iniciar extends javax.swing.JFrame {
         jtf_apellido1 = new javax.swing.JTextField();
         jlb_apellido1 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
+        jlb_res_res = new javax.swing.JLabel();
+        jlb_res_nom = new javax.swing.JLabel();
+        jtf_res_nom = new javax.swing.JTextField();
+        jtf_res_apellido = new javax.swing.JTextField();
+        jlb_res_apellido = new javax.swing.JLabel();
         jbtg_iniciar = new javax.swing.ButtonGroup();
+        jbtg_categoria = new javax.swing.ButtonGroup();
         jlb_usuariIniciar = new javax.swing.JLabel();
         jlb_contraseñaIniaciar = new javax.swing.JLabel();
         jtf_nombreIniciar = new javax.swing.JTextField();
@@ -116,8 +126,18 @@ public class Iniciar extends javax.swing.JFrame {
         });
 
         jrb_junior1.setText("junior");
+        jrb_junior1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrb_junior1ActionPerformed(evt);
+            }
+        });
 
         jrb_senior1.setText("senior");
+        jrb_senior1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrb_senior1ActionPerformed(evt);
+            }
+        });
 
         jbt_registrarse1.setText("Registrarse");
         jbt_registrarse1.addActionListener(new java.awt.event.ActionListener() {
@@ -140,6 +160,16 @@ public class Iniciar extends javax.swing.JFrame {
                 jRadioButton1ActionPerformed(evt);
             }
         });
+
+        jlb_res_res.setText("Responsable:");
+
+        jlb_res_nom.setText("Nombre:");
+
+        jtf_res_nom.setText("jTextField1");
+
+        jtf_res_apellido.setText("jTextField2");
+
+        jlb_res_apellido.setText("Apellido:");
 
         javax.swing.GroupLayout RegistrarseLayout = new javax.swing.GroupLayout(Registrarse.getContentPane());
         Registrarse.getContentPane().setLayout(RegistrarseLayout);
@@ -180,7 +210,7 @@ public class Iniciar extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegistrarseLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jbt_cancelar1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrarseLayout.createSequentialGroup()
                         .addComponent(jbt_registrarse1)
@@ -195,8 +225,21 @@ public class Iniciar extends javax.swing.JFrame {
                             .addComponent(jtf_apellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(61, 61, 61))))
             .addGroup(RegistrarseLayout.createSequentialGroup()
-                .addGap(148, 148, 148)
-                .addComponent(jlb_titulo1)
+                .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(RegistrarseLayout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(jlb_titulo1))
+                    .addGroup(RegistrarseLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jlb_res_nom)
+                            .addComponent(jlb_res_res))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jtf_res_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jlb_res_apellido)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jtf_res_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         RegistrarseLayout.setVerticalGroup(
@@ -232,7 +275,15 @@ public class Iniciar extends javax.swing.JFrame {
                     .addComponent(jrb_junior1)
                     .addComponent(jrb_senior1)
                     .addComponent(jRadioButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jlb_res_res)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_res_nom)
+                    .addComponent(jtf_res_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_res_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlb_res_apellido))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbt_registrarse1)
                     .addComponent(jbt_cancelar1))
@@ -365,8 +416,13 @@ public class Iniciar extends javax.swing.JFrame {
     private void jbt_registrarseIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_registrarseIniciarActionPerformed
         //Maricel
         this.setVisible(false);
+        jlb_res_res.setVisible(false);
+        jlb_res_nom.setVisible(false);
+        jlb_res_apellido.setVisible(false);
+        jtf_res_nom.setVisible(false);
+        jtf_res_apellido.setVisible(false);
         Registrarse.setVisible(true);
-        Registrarse.setSize(500,350);
+        Registrarse.setSize(600,450);
     }//GEN-LAST:event_jbt_registrarseIniciarActionPerformed
 
     private void jbt_okIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okIniciarActionPerformed
@@ -405,7 +461,12 @@ public class Iniciar extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_okIniciarActionPerformed
 
     private void jrb_infantil1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_infantil1ActionPerformed
-        // TODO add your handling code here:
+        // Maricel
+            jlb_res_res.setVisible(true);
+            jlb_res_nom.setVisible(true);
+            jlb_res_apellido.setVisible(true);
+            jtf_res_nom.setVisible(true);
+            jtf_res_apellido.setVisible(true);
     }//GEN-LAST:event_jrb_infantil1ActionPerformed
 
     private void jbt_cancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelar1ActionPerformed
@@ -425,15 +486,17 @@ public class Iniciar extends javax.swing.JFrame {
         
         if(jrb_infantil1.isSelected()){
             categoria = "infantil";
-            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria);
+            res_nom = jtf_res_nom.getText();
+            res_apell = jtf_res_apellido.getText();
+            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, res_nom, res_apell);
         }
         else if(jrb_junior1.isSelected()){
             categoria = "junior";
-            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria);   
+            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, "", "");   
         }
         else if(jrb_senior1.isSelected()){
             categoria = "senior";
-            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria);
+            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, "", "");
         }
         else{
             JOptionPane.showMessageDialog(null, "No has seleccionado la categoria, debes seleccionar");
@@ -445,6 +508,24 @@ public class Iniciar extends javax.swing.JFrame {
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jrb_junior1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_junior1ActionPerformed
+        //Maricel
+        jlb_res_res.setVisible(false);
+        jlb_res_nom.setVisible(false);
+        jlb_res_apellido.setVisible(false);
+        jtf_res_nom.setVisible(false);
+        jtf_res_apellido.setVisible(false);
+    }//GEN-LAST:event_jrb_junior1ActionPerformed
+
+    private void jrb_senior1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_senior1ActionPerformed
+        //Maricel
+        jlb_res_res.setVisible(false);
+        jlb_res_nom.setVisible(false);
+        jlb_res_apellido.setVisible(false);
+        jtf_res_nom.setVisible(false);
+        jtf_res_apellido.setVisible(false);
+    }//GEN-LAST:event_jrb_senior1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -490,6 +571,7 @@ public class Iniciar extends javax.swing.JFrame {
     private javax.swing.JButton jbt_okIniciar;
     private javax.swing.JButton jbt_registrarse1;
     private javax.swing.JButton jbt_registrarseIniciar;
+    private javax.swing.ButtonGroup jbtg_categoria;
     private javax.swing.ButtonGroup jbtg_iniciar;
     private javax.swing.JLabel jlb_DNI1;
     private javax.swing.JLabel jlb_apellido1;
@@ -497,6 +579,9 @@ public class Iniciar extends javax.swing.JFrame {
     private javax.swing.JLabel jlb_contraseña1;
     private javax.swing.JLabel jlb_contraseñaIniaciar;
     private javax.swing.JLabel jlb_nombre1;
+    private javax.swing.JLabel jlb_res_apellido;
+    private javax.swing.JLabel jlb_res_nom;
+    private javax.swing.JLabel jlb_res_res;
     private javax.swing.JLabel jlb_telefono1;
     private javax.swing.JLabel jlb_titulo1;
     private javax.swing.JLabel jlb_usuariIniciar;
@@ -513,6 +598,8 @@ public class Iniciar extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_contraseñaIniciar;
     private javax.swing.JTextField jtf_nombre1;
     private javax.swing.JTextField jtf_nombreIniciar;
+    private javax.swing.JTextField jtf_res_apellido;
+    private javax.swing.JTextField jtf_res_nom;
     private javax.swing.JTextField jtf_telefono1;
     private javax.swing.JTextField jtf_usuario1;
     // End of variables declaration//GEN-END:variables

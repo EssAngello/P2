@@ -54,7 +54,7 @@ public class AppAjedrez {
         }
         return datos_jugador;
     }
-    public void registrarse(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
+   public void registrarse(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria, String res_nom, String res_apell){
         boolean comprobar = false;
 
         for(Jugador aux2 : jugadores){
@@ -64,6 +64,8 @@ public class AppAjedrez {
         }
         if(comprobar == false){
             Jugador aux = new Jugador (user, passwd, nombre, apellido, telefono, DNI, categoria);
+	    aux.setRes_nom(res_nom);
+	    aux.setRes_apell(res_apell);
             jugadores.add(aux);
         }
     }

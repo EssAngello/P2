@@ -14,6 +14,8 @@ import javax.swing.JOptionPane;
 public class Jugador {
     //Contiene usuario y contraseña 
     private String user, passwd, nombre, apellido, telefono, DNI, categoria;
+    private String res_nom = "";
+    private String res_apell = "";
     
     public Jugador (String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
        this.user = user;
@@ -59,4 +61,45 @@ public class Jugador {
         
         return comprobacion;
     }
+
+    public String getUser() {
+        return user;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public String getDNI() {
+        return DNI;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public String getRes_nom() {
+        return res_nom;
+    }
+
+    public String getRes_apell() {
+        return res_apell;
+    }
+
+    public void setRes_nom(String res_nom) {
+        this.res_nom = res_nom;
+    }
+
+    public void setRes_apell(String res_apell) {
+        this.res_apell = res_apell;
+    }
+    
 }
