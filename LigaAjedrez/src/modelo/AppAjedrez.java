@@ -53,7 +53,6 @@ public class AppAjedrez {
             }
         }
         if(comprobar == false){
-            System.out.print("Registrado");
             Jugador aux = new Jugador (user, passwd, nombre, apellido, telefono, DNI, categoria);
             jugadores.add(aux);
         }
