@@ -20,7 +20,7 @@ public class AppAjedrez {
     protected ArrayList<Gerente> gerentes = new ArrayList<Gerente>();
     Jugador j1 = new Jugador("Maricel","123456","Maricel","Olaru","123456789","X9356742C","senior");
     public AppAjedrez(){
-        //Añadimos jugadores por la fuerza para comprobar////
+        //Añadimos jugadores por la fuerza para comprobar//
         jugadores.add(j1);
     }
     
@@ -39,12 +39,23 @@ public class AppAjedrez {
     public boolean identificarJugadorGerente(String u, String p){
         boolean respuesta = false;
         for(Jugador aux : jugadores){
-            respuesta = aux.identificarse(u, p);
+            if(respuesta == false)
+                respuesta = aux.identificarse(u, p);
         }
         return respuesta;
     }
     public void registrarse(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
-        Jugador aux = new Jugador (user, passwd, nombre, apellido, telefono, DNI, categoria);
-        jugadores.add(aux);
+        boolean comprobar = false;
+
+        for(Jugador aux2 : jugadores){
+            if(comprobar == false){
+                comprobar =aux2.comprobarExistencia(user, passwd, DNI);
+            }
+        }
+        if(comprobar == false){
+            System.out.print("Registrado");
+            Jugador aux = new Jugador (user, passwd, nombre, apellido, telefono, DNI, categoria);
+            jugadores.add(aux);
+        }
     }
 }

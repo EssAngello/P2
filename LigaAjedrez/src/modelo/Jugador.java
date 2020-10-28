@@ -20,17 +20,8 @@ public class Jugador {
        this.passwd = passwd;
        this.nombre = nombre;
        this.apellido = apellido;
-       if(telefono.length() == 9){
-            this.telefono = telefono;
-       }
-       else
-           JOptionPane.showMessageDialog(null, "Numero de digitos incorrectos, debes poner 9");
-       
-       if(DNI.length() == 9){
-            this.DNI = DNI;
-       }
-       else
-           JOptionPane.showMessageDialog(null, "DNI incorrecto, debes incluir 8 digitos y 1 letra");
+       this.telefono = telefono;
+       this.DNI = DNI;
        this.categoria = categoria;
     }
     public boolean identificarse(String u, String p){
@@ -38,20 +29,34 @@ public class Jugador {
         
         if(u.equals(user)){
             if(p.equals(passwd)){
+                System.out.println("He entrado");
                 comprobacion = true;
             }
             else{
-                JOptionPane.showMessageDialog(null, "La contraseña introducida es incorrecta");
+                JOptionPane.showMessageDialog(null, "El usuario o contraseña es incorrecta");
             }
-        }else
-        {
-            System.out.print(u);
-            JOptionPane.showMessageDialog(null, "El usuario introducido no existe");
         }
+        
         
         return comprobacion;
     }
-    public void comprobarValoresCorrectos(){
+    public boolean comprobarExistencia(String user, String passwd,String DNI){
+        boolean comprobacion = true;
+        if(this.user == user){
+            JOptionPane.showMessageDialog(null, "El usuario introducido ya existe, prueba con otro");
+            comprobacion = true;
+        }
+        else if(this.passwd == passwd){
+            JOptionPane.showMessageDialog(null, "El password introducido ya existe, prueba con otro");
+            comprobacion = true;
+        }
+        else if(this.DNI == DNI){
+            JOptionPane.showMessageDialog(null, "El DNI introducido ya existe, prueba con otro");
+            comprobacion = true;
+        }
+        else
+            comprobacion = false;
         
+        return comprobacion;
     }
 }
