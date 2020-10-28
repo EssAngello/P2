@@ -5,17 +5,21 @@
  */
 package modelo;
 
+import java.util.ArrayList;
 import modelo.Jugador;
 /**
  *
  * @author juan2
  */
 public class Club {
-    public Club(){
-        
+    protected ArrayList<Jugador> jugadoresClub = new ArrayList<Jugador>();
+    private String nombreClub;
+    
+    public Club(String nombre){
+        this.nombreClub = nombre;
     }
     
-    public void inscribirseClub(){
-        
+    public void inscribirseClub(Jugador jugador){
+        jugadoresClub.add(jugador);
     }
 }

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import modelo.AppAjedrez;
+import modelo.Club;
 import modelo.Jugador; 
 /**
  *
@@ -17,7 +18,7 @@ import modelo.Jugador;
 public class JugadorVista extends javax.swing.JFrame {
 
     //Maricel
-    private ClubVista club;
+    private ClubVista clubVista;
     private TorneoVista t;
     private Jugador jugador;
     /**
@@ -556,8 +557,8 @@ public class JugadorVista extends javax.swing.JFrame {
 
     private void jbt_sedeDelClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_sedeDelClubActionPerformed
         // Mricel
-        club = new ClubVista(2,jugador);
-        club.setVisible(true);
+        clubVista = new ClubVista(2,jugador);
+        clubVista.setVisible(true);
         this.setVisible(false);
         dispose();
     }//GEN-LAST:event_jbt_sedeDelClubActionPerformed
@@ -608,9 +609,18 @@ public class JugadorVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_volver1ActionPerformed
 
     private void jbt_inscribirse1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_inscribirse1ActionPerformed
-        // Maricel
-        InscribirseClubJugador.setVisible(false);
-        this.setVisible(true);
+        clubObject = (Object)jli_clubes1.getSelectedValue();
+        
+        if(clubObject == null){
+            JOptionPane.showMessageDialog(this,"Selecciona un club");
+        }
+        //else{
+            Club club = (Club)clubObject;
+            club.inscribirseClub(jugador);
+            InscribirseClubJugador.setVisible(false);
+            this.setVisible(true);
+        //}
+
     }//GEN-LAST:event_jbt_inscribirse1ActionPerformed
 
     private void jbt_okResponsable1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okResponsable1ActionPerformed
@@ -673,4 +683,5 @@ public class JugadorVista extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     private ArrayList listaClubes;
     protected AppAjedrez appAjedrez;
+    protected Object clubObject;
 }
