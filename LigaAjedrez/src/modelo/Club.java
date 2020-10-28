@@ -12,14 +12,86 @@ import modelo.Jugador;
  * @author juan2
  */
 public class Club {
+    protected ArrayList<String> entrenamientos = new ArrayList<String>();
     protected ArrayList<Jugador> jugadoresClub = new ArrayList<Jugador>();
-    private String nombreClub;
     
-    public Club(String nombre){
+    private Entrenador entrenador;
+    private Gerente gerente;
+    private String nombreClub;
+    private String federacion;
+    
+    public Club(String nombre, String federacion, Entrenador e, Gerente g){
         this.nombreClub = nombre;
+        this.entrenador=e;
+        this.gerente=g;
+        this.federacion=federacion;
+        entrenador.setClubTrabaja(this);
     }
     
     public void inscribirseClub(Jugador jugador){
         jugadoresClub.add(jugador);
     }
+    
+    public String getNombreGerente()
+    {
+        return this.gerente.getNombre();
+    }
+    
+    public String getApellidoGerente()
+    {
+        return this.gerente.getApellido();
+    }
+    
+    public String getTlfGerente()
+    {
+        return this.gerente.getTelefono();
+    }
+    
+    public String getDNIGerente()
+    {
+        return this.gerente.getDNI();
+    }
+    
+    public String getNombreEntrenador()
+    {
+        return this.entrenador.getNombre();
+    }
+    
+    public String getApellidoEntrenador()
+    {
+        return this.entrenador.getApellido();
+    }
+    
+    public String getTlfEntrenador()
+    {
+        return this.entrenador.getTelefono();
+    }
+    
+    public String getDNIEntrenador()
+    {
+        return this.entrenador.getDNI();
+    }
+    
+    public ArrayList<Club> getClubesEntrenador()
+    {
+        return this.entrenador.getClubes();
+    }
+    
+    public String getNombre()
+    {
+        return this.nombreClub;
+    }
+    
+    public String getNombreFederacion()
+    {
+        return this.federacion;
+    }
+    
+    public ArrayList<String> getEntrenamientos()
+    {
+        return this.entrenamientos;
+    }
+    
+    
+    
 }
