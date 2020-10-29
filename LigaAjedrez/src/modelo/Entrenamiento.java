@@ -12,8 +12,10 @@ import java.util.Date;
  * @author aange
  */
 public class Entrenamiento {
-    Date fecha;
-    Club club;
+    private Date fecha;
+    private Club club;
+    
+    private int numparticipantes;
     
     public Entrenamiento(Club club, int dia,int mes,int anyo, int hora, int minuto, int segundo)
     {
@@ -23,5 +25,7 @@ public class Entrenamiento {
         fecha = new Date(anyo, mes, dia, hora, minuto, segundo);
         
     }
+    
+    
     
 }
