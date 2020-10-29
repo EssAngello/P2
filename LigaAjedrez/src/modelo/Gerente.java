@@ -10,8 +10,12 @@ package modelo;
  * @author aurel
  */
 public class Gerente extends Jugador{
+    private int IRPF, nomina;
+ 
     
     public Gerente(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
         super( user,  passwd, nombre, apellido, telefono, DNI, categoria);
     }
+    
+    
 }
