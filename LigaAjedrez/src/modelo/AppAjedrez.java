@@ -71,4 +71,9 @@ public class AppAjedrez {
     
      
    }
+   
+   public void eliminarJugador(Jugador j)
+   {
+       jugadores.remove(j);
+   }
 }

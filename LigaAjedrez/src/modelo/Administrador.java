@@ -39,5 +39,10 @@ public class Administrador {
     public void craerJugador(String user, String passwd, String nombre, String apellido, String telefono, String dni, String categoria)
     {
         app.registrarse(user, passwd, nombre, apellido, telefono, dni, categoria, dni, apellido);
-    }        
+    }  
+    
+    public void eliminarJugador(Jugador j)
+    {
+        app.eliminarJugador(j);
+    }
 }
