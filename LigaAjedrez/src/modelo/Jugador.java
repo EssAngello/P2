@@ -182,5 +182,10 @@ public class Jugador {
         return this.club.getEntrenamientos();
     }
     
+    public Club getClub()
+    {
+        return this.club;
+    }
+    
     
 }
