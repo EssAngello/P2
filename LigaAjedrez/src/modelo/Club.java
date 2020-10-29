@@ -12,7 +12,7 @@ import modelo.Jugador;
  * @author juan2
  */
 public class Club {
-    protected ArrayList<String> entrenamientos = new ArrayList<String>();
+    protected ArrayList<Entrenamiento> entrenamientos = new ArrayList<Entrenamiento>();
     protected ArrayList<Jugador> jugadoresClub = new ArrayList<Jugador>();
     
     private Entrenador entrenador;
@@ -92,11 +92,18 @@ public class Club {
         return this.federacion;
     }
     
-    public ArrayList<String> getEntrenamientos()
+    public ArrayList<Entrenamiento> getEntrenamientos()
     {
         return this.entrenamientos;
     }
     
-    
+    public void setDefaultEntrenamientos(){
+        Entrenamiento entrenamiento1 = new Entrenamiento(this,2020,10,31,9,0,0);
+        Entrenamiento entrenamiento2 = new Entrenamiento(this,2020,10,31,11,0,0);
+        Entrenamiento entrenamiento3 = new Entrenamiento(this,2020,10,31,11,0,0);
+        entrenamientos.add(entrenamiento1);
+        entrenamientos.add(entrenamiento2);
+        entrenamientos.add(entrenamiento3);
+    }
     
 }

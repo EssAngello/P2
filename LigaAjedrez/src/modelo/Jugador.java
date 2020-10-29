@@ -165,7 +165,10 @@ public class Jugador {
         return this.club.getNombreFederacion();
     }
     
-    
+    public ArrayList getEntrenamientosClub()
+    {
+        return this.club.getEntrenamientos();
+    }
     
     
 }

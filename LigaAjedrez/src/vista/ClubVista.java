@@ -621,6 +621,17 @@ public class ClubVista extends javax.swing.JFrame {
         this.setVisible(false);
         ReservarEntrenamiento.setVisible(true);
         ReservarEntrenamiento.setSize(400,400);
+        //Angello
+        listmodel2.removeAllElements();
+        entrenamientosSede.removeAll(entrenamientosSede);
+        entrenamientosSede = jugador.getEntrenamientosClub();
+        for(Object c: entrenamientosSede)
+        {
+            String entrenamiento = c.toString();
+            listmodel.addElement(c);
+        }
+        
+        jlt_listaDisponibilidad1.setModel(listmodel2);
     }//GEN-LAST:event_jbt_reservaEntrenamientoActionPerformed
 
     private void jbt_infoEntrenadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoEntrenadorActionPerformed
@@ -745,5 +756,7 @@ public class ClubVista extends javax.swing.JFrame {
     private javax.swing.JList<String> jlt_listaDisponibilidad1;
     // End of variables declaration//GEN-END:variables
     ArrayList<Object> clubesEntrenador = new ArrayList();
+     ArrayList<Object> entrenamientosSede = new ArrayList();
     DefaultListModel listmodel = new DefaultListModel();
+    DefaultListModel listmodel2 = new DefaultListModel();
 }
