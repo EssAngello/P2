@@ -15,7 +15,6 @@ public class GerenteVista extends javax.swing.JFrame {
 
     //Maricel
     private NominaGerente nomina;
-    private IRPFGerente irpf;
     private ClubVista club;
     private TorneoVista t;
     private Jugador jugador;
@@ -58,10 +57,11 @@ public class GerenteVista extends javax.swing.JFrame {
         jlb_infoGerenteDatosApellido1 = new javax.swing.JLabel();
         jlb_infoGerenteDatosNombre1 = new javax.swing.JLabel();
         jbt_ok = new javax.swing.JButton();
+        jLabelIRPF = new javax.swing.JLabel();
+        jLabelIRPF2 = new javax.swing.JLabel();
         jbt_inscribirseClub = new javax.swing.JButton();
         jbt_historialClubes = new javax.swing.JButton();
         jbt_torneos = new javax.swing.JButton();
-        jbt_IRPF = new javax.swing.JButton();
         jbt_Nominas = new javax.swing.JButton();
         jlb_tituloGerente = new javax.swing.JLabel();
         jbt_datosPersonales = new javax.swing.JButton();
@@ -197,31 +197,38 @@ public class GerenteVista extends javax.swing.JFrame {
             }
         });
 
+        jLabelIRPF.setText("IRPF :");
+
+        jLabelIRPF2.setText("IRPF del gerente");
+
         javax.swing.GroupLayout DatosPersonalesLayout = new javax.swing.GroupLayout(DatosPersonales.getContentPane());
         DatosPersonales.getContentPane().setLayout(DatosPersonalesLayout);
         DatosPersonalesLayout.setHorizontalGroup(
             DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DatosPersonalesLayout.createSequentialGroup()
-                .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jbt_ok)
-                    .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(DatosPersonalesLayout.createSequentialGroup()
-                            .addGap(44, 44, 44)
-                            .addComponent(jlb_tituloInfoGerente1))
-                        .addGroup(DatosPersonalesLayout.createSequentialGroup()
-                            .addGap(77, 77, 77)
-                            .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jlb_infoGerenteNombre1)
-                                .addComponent(jlb_infoGerenteApellido1)
-                                .addComponent(jlb_infoGerenteTelefono1)
-                                .addComponent(jlb_infoGerenteDNI1))
-                            .addGap(65, 65, 65)
-                            .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jlb_infoGerenteDatosNombre1)
-                                .addComponent(jlb_infoGerenteDatosApellido1)
-                                .addComponent(jlb_infoGerenteDatosDNI1)
-                                .addComponent(jlb_infoGerenteDatosTelefono1)))))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DatosPersonalesLayout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jlb_tituloInfoGerente1))
+                    .addGroup(DatosPersonalesLayout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlb_infoGerenteNombre1)
+                            .addComponent(jlb_infoGerenteApellido1)
+                            .addComponent(jlb_infoGerenteTelefono1)
+                            .addComponent(jlb_infoGerenteDNI1)
+                            .addComponent(jLabelIRPF))
+                        .addGap(65, 65, 65)
+                        .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DatosPersonalesLayout.createSequentialGroup()
+                                .addComponent(jLabelIRPF2)
+                                .addGap(70, 70, 70)
+                                .addComponent(jbt_ok))
+                            .addComponent(jlb_infoGerenteDatosNombre1)
+                            .addComponent(jlb_infoGerenteDatosApellido1)
+                            .addComponent(jlb_infoGerenteDatosDNI1)
+                            .addComponent(jlb_infoGerenteDatosTelefono1))))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         DatosPersonalesLayout.setVerticalGroup(
             DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,9 +251,17 @@ public class GerenteVista extends javax.swing.JFrame {
                 .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlb_infoGerenteDNI1)
                     .addComponent(jlb_infoGerenteDatosDNI1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addComponent(jbt_ok)
-                .addContainerGap())
+                .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DatosPersonalesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                        .addComponent(jbt_ok)
+                        .addContainerGap())
+                    .addGroup(DatosPersonalesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelIRPF)
+                            .addComponent(jLabelIRPF2))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -269,13 +284,6 @@ public class GerenteVista extends javax.swing.JFrame {
         jbt_torneos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbt_torneosActionPerformed(evt);
-            }
-        });
-
-        jbt_IRPF.setText("IRPF");
-        jbt_IRPF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbt_IRPFActionPerformed(evt);
             }
         });
 
@@ -324,7 +332,6 @@ public class GerenteVista extends javax.swing.JFrame {
                         .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jbt_inscribirseClub, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
-                            .addComponent(jbt_IRPF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jbt_datosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -355,9 +362,7 @@ public class GerenteVista extends javax.swing.JFrame {
                     .addComponent(jbt_torneos)
                     .addComponent(jbt_datosPersonales))
                 .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbt_IRPF)
-                    .addComponent(jbt_Nominas))
+                .addComponent(jbt_Nominas)
                 .addGap(18, 18, 18)
                 .addComponent(jbt_sedeDelClub)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
@@ -434,14 +439,6 @@ public class GerenteVista extends javax.swing.JFrame {
         DatosPersonales.setSize(400,400);
     }//GEN-LAST:event_jbt_datosPersonalesActionPerformed
 
-    private void jbt_IRPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_IRPFActionPerformed
-        // Maricel
-        irpf = new IRPFGerente(jugador);
-        irpf.setVisible(true);
-        this.setVisible(false);
-        dispose();
-    }//GEN-LAST:event_jbt_IRPFActionPerformed
-
     private void jbt_sedeDelClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_sedeDelClubActionPerformed
         // Maricel
         club = new ClubVista(1,jugador);
@@ -456,9 +453,10 @@ public class GerenteVista extends javax.swing.JFrame {
     private javax.swing.JFrame DatosPersonales;
     private javax.swing.JFrame HistorialClubesGerente;
     private javax.swing.JFrame InscribirseClubGerente;
+    private javax.swing.JLabel jLabelIRPF;
+    private javax.swing.JLabel jLabelIRPF2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JButton jbt_IRPF;
     private javax.swing.JButton jbt_Nominas;
     private javax.swing.JButton jbt_datosPersonales;
     private javax.swing.JButton jbt_historialClubes;

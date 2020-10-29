@@ -182,32 +182,35 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jbt_ok" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                              <Component id="jlb_tituloInfoGerente1" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="jlb_tituloInfoGerente1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jlb_infoGerenteNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelIRPF" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jlb_infoGerenteNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jlb_infoGerenteApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jlb_infoGerenteTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jlb_infoGerenteDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jLabelIRPF2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="jbt_ok" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jlb_infoGerenteDatosNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jlb_infoGerenteDatosApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jlb_infoGerenteDatosDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jlb_infoGerenteDatosTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jlb_infoGerenteDatosNombre1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteDatosApellido1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteDatosDNI1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_infoGerenteDatosTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="63" max="32767" attributes="0"/>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -236,9 +239,21 @@
                       <Component id="jlb_infoGerenteDNI1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jlb_infoGerenteDatosDNI1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="16" max="32767" attributes="0"/>
-                  <Component id="jbt_ok" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace pref="16" max="32767" attributes="0"/>
+                          <Component id="jbt_ok" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabelIRPF" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelIRPF2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -300,6 +315,16 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_okActionPerformed"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JLabel" name="jLabelIRPF">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="IRPF :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelIRPF2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="IRPF del gerente"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
   </NonVisualComponents>
@@ -335,7 +360,6 @@
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jbt_inscribirseClub" alignment="0" pref="117" max="32767" attributes="0"/>
-                          <Component id="jbt_IRPF" alignment="0" max="32767" attributes="0"/>
                           <Component id="jbt_datosPersonales" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
@@ -376,10 +400,7 @@
                   <Component id="jbt_datosPersonales" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jbt_IRPF" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jbt_Nominas" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="jbt_Nominas" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jbt_sedeDelClub" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="9" max="32767" attributes="0"/>
@@ -412,14 +433,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_torneosActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jbt_IRPF">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="IRPF"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_IRPFActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbt_Nominas">
