@@ -68,5 +68,7 @@ public class AppAjedrez {
 	    aux.setRes_apell(res_apell);
             jugadores.add(aux);
         }
-    }
+    
+     
+   }
 }

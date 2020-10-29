@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
  * @author juan2
  */
 public class Administrador {
+    protected AppAjedrez app;
     private Hashtable<String, String> ht;
     public Administrador (){
         ht = new Hashtable<String, String>();
@@ -34,4 +35,9 @@ public class Administrador {
         }
         return comprobacion;
     }
+    
+    public void craerJugador(String user, String passwd, String nombre, String apellido, String telefono, String dni, String categoria)
+    {
+        app.registrarse(user, passwd, nombre, apellido, telefono, dni, categoria, dni, apellido);
+    }        
 }
