@@ -32,7 +32,7 @@ public class AppAjedrez {
         entrenadores.add(e);
         gerentes.add(g);
         clubes.add(club);
-        club.inscribirseClub(j1);
+        j1.InscribirseClub(club);
         datos_jugador = null;
     }
     
