@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import modelo.AppAjedrez;
 import modelo.Jugador;
 import modelo.Administrador;
+import modelo.Gerente;
 /**
  *
  * @author aange
@@ -25,6 +26,7 @@ public class Iniciar extends javax.swing.JFrame {
     private String user, passwd, nombre, apellido, telefono, DNI, categoria,
             res_nom, res_apell;
     private Jugador inicio_jugador;
+    private Gerente gerente_inicio;
     /**
      * Creates new form NewJFrame
      */

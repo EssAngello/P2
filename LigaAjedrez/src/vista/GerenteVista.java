@@ -433,7 +433,7 @@ public class GerenteVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_okActionPerformed
 
     private void jbt_datosPersonalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_datosPersonalesActionPerformed
-        // Maricel
+        //Maricel
         this.setVisible(false);
         DatosPersonales.setVisible(true);
         DatosPersonales.setSize(400,400);
