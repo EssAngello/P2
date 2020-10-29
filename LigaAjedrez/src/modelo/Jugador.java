@@ -5,8 +5,11 @@
  */
 package modelo;
 
+import modelo.Partida;
+
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -18,6 +21,7 @@ public class Jugador {
     private String res_nom = "";
     private String res_apell = "";
     private Club club;
+    protected ArrayList<Partida> historialPartidas = new ArrayList<Partida>();
     
     public Jugador (String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
        this.user = user;
@@ -28,6 +32,7 @@ public class Jugador {
        this.DNI = DNI;
        this.categoria = categoria;
     }
+    
     public boolean identificarse(String u, String p){
         boolean comprobacion = false;
         
@@ -44,6 +49,7 @@ public class Jugador {
         
         return comprobacion;
     }
+    
     public boolean comprobarExistencia(String user, String passwd,String DNI){
         boolean comprobacion = true;
         if(this.user == user){
@@ -63,7 +69,13 @@ public class Jugador {
         
         return comprobacion;
     }
+    
+    public ArrayList<Partida> getHistorialPartidas(){
+        ArrayList<Partida> listaHistorialPartidas = new ArrayList(historialPartidas);
+        return listaHistorialPartidas;
+    }
 
+    
     public String getUser() {
         return user;
     }

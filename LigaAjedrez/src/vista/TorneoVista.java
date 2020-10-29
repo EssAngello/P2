@@ -5,13 +5,16 @@
  */
 package vista;
 
+import java.text.*;
 import java.util.*;
+import java.util.regex.Pattern;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
 import modelo.Torneo;
 import modelo.AppAjedrez;
 import modelo.Jugador;
+import modelo.Partida;
 /**
  *
  * @author juan2
@@ -526,6 +529,19 @@ public class TorneoVista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbt_historialPartidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_historialPartidasActionPerformed
+        DefaultListModel modeloListaHistorialPartidos = new DefaultListModel();
+        jli_historiaPartidos1.setModel(modeloListaHistorialPartidos);
+        
+        listaHistorialPartidas = jugador.getHistorialPartidas();
+
+        if(!listaTorneos.isEmpty()){
+            for(Object historial:listaHistorialPartidas){
+                modeloListaHistorialPartidos.addElement(historial);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No hay partidas");
+        }
         // Maricel
         this.setVisible(false);
         HistorialPartidas.setVisible(true);
@@ -636,6 +652,28 @@ public class TorneoVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_volverHistorial1ActionPerformed
 
     private void jbt_masDetalleHistorial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_masDetalleHistorial1ActionPerformed
+        partidaObj = (Object)jli_historiaPartidos1.getSelectedValue();
+        
+        if(partidaObj == null){
+            JOptionPane.showMessageDialog(this,"Selecciona una partida");
+        }
+        //else{
+            Partida partida = (Partida)partidaObj;
+            detallesPartida = partida.detallesPartida();
+            
+            String barra_separar = Pattern.quote("|");
+            String[] detalles = detallesPartida.split(barra_separar);
+            jlb_rivalRespuesta1.setText(detalles[0]);
+            jlb_ganadorlRespuesta1.setText(detalles[1]);
+            
+            //separo Date en fecha y hora
+            DateFormat hourFormat = new SimpleDateFormat("HH:mm:ss");
+            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            jlb_fechaRespuesta1.setText(hourFormat.format(detalles[2]));
+            jlb_tiempoRespuesta1.setText(dateFormat.format(detalles[2]));
+        //}
+
+
         // Maricel
         HistorialPartidas.setVisible(false);
         DetallesHistorialPartidas.setVisible(true);
@@ -703,5 +741,8 @@ public class TorneoVista extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     protected AppAjedrez appAjedrez;
     private ArrayList listaTorneos;
+    private ArrayList listaHistorialPartidas;
     private Object torneoObj;
+    private Object partidaObj;
+    private String detallesPartida;
 }

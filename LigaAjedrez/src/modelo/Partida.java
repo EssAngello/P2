@@ -14,13 +14,17 @@ import modelo.Torneo;
  * @author juan2
  */
 public class Partida {
-    protected Jugador jugador1;
-    protected Jugador jugador2;
+    protected Jugador jugador;
+    protected Jugador rival;
     protected Jugador ganador;
     protected Date tiempo;
     protected Torneo torneo;
             
     public Partida(){
         
+    }
+    
+    public String detallesPartida(){
+        return rival + "|" + ganador + "|" + tiempo;
     }
 }
