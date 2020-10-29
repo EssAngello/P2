@@ -19,12 +19,19 @@ public class AppAjedrez {
     protected ArrayList<Torneo> torneos = new ArrayList<Torneo>();
     protected ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
     protected ArrayList<Gerente> gerentes = new ArrayList<Gerente>();
+    protected ArrayList<Entrenador> entrenadores = new ArrayList<Entrenador>();
     protected ArrayList<Club> clubes = new ArrayList<Club>();
     Jugador j1 = new Jugador("Maricel","123456","Maricel","Olaru","123456789","X9356742C","senior");
+    Entrenador e = new Entrenador("Jose", "123456", "Jose", "Mourinho", "123456789", "X1234567L", "senior");
+    Gerente g = new Gerente("Ali", "123456","Ali", "baba", "123456789", "X1234566L", "senior");
+    Club club = new Club("TSM", "Federacion de Valencia", e, g);
     private Jugador datos_jugador;
     public AppAjedrez(){
         //Añadimos jugadores por la fuerza para comprobar//
         jugadores.add(j1);
+        entrenadores.add(e);
+        gerentes.add(g);
+        clubes.add(club);
         datos_jugador = null;
     }
     

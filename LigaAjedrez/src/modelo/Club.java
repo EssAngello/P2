@@ -15,8 +15,8 @@ public class Club {
     protected ArrayList<Entrenamiento> entrenamientos = new ArrayList<Entrenamiento>();
     protected ArrayList<Jugador> jugadoresClub = new ArrayList<Jugador>();
     
-    private Entrenador entrenador;
-    private Gerente gerente;
+    private Entrenador entrenador = null;
+    private Gerente gerente = null;
     private String nombreClub;
     private String federacion;
     
