@@ -31,6 +31,14 @@ public class Club {
     public void inscribirseClub(Jugador jugador){
         jugadoresClub.add(jugador);
     }
+    public boolean darseBaja(Jugador jugador){
+        boolean res = false; 
+        for(Jugador aux : jugadoresClub){
+            if (!res)
+                res =jugadoresClub.remove(jugador);
+        }
+        return res;           
+    }
     
     public String getNombreGerente()
     {
