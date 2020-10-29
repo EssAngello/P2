@@ -28,6 +28,7 @@ public class JugadorVista extends javax.swing.JFrame {
     public JugadorVista(Jugador j) {
         initComponents();
         this.jugador = j;
+        club = jugador.comprobarClub();
     }
 
     /**
@@ -659,7 +660,10 @@ public class JugadorVista extends javax.swing.JFrame {
         if(aux == 0)
         {
             if(club.darseBaja(jugador) == false){
-                JOptionPane.showMessageDialog(this,"No estas inscrito en ningun club ningun club");
+                JOptionPane.showMessageDialog(this,"No estas inscrito en ningun club");
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Te has dado de alta");
             }
         }
         

@@ -20,7 +20,7 @@ public class Jugador {
     private String user, passwd, nombre, apellido, telefono, DNI, categoria;
     private String res_nom = "";
     private String res_apell = "";
-    private Club club;
+    private Club club = null;
     protected ArrayList<Partida> historialPartidas = new ArrayList<Partida>();
     
     public Jugador (String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
@@ -38,7 +38,6 @@ public class Jugador {
         
         if(u.equals(user)){
             if(p.equals(passwd)){
-                System.out.println("He entrado");
                 comprobacion = true;
             }
             else{
@@ -74,7 +73,11 @@ public class Jugador {
         ArrayList<Partida> listaHistorialPartidas = new ArrayList(historialPartidas);
         return listaHistorialPartidas;
     }
-
+    
+    public Club comprobarClub()
+    {
+        return club;
+    }
     
     public String getUser() {
         return user;

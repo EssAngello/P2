@@ -33,10 +33,7 @@ public class Club {
     }
     public boolean darseBaja(Jugador jugador){
         boolean res = false; 
-        for(Jugador aux : jugadoresClub){
-            if (!res)
-                res =jugadoresClub.remove(jugador);
-        }
+        res =jugadoresClub.remove(jugador);
         return res;           
     }
     
