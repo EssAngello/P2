@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -108,5 +109,63 @@ public class Jugador {
         c.inscribirseClub(this);
         this.club=c;
     }
+    
+    public String getNombreClub()
+    {
+        return this.club.getNombre();
+    }
+    
+    public String getNombreGerente()
+    {
+        return this.club.getNombreGerente();
+    }
+    
+    public String getApellidoGerente()
+    {
+        return this.club.getApellidoGerente();
+    }
+    
+    public String getTelefonoGerente()
+    {
+        return this.club.getTlfGerente();
+    }
+    
+    public ArrayList getNombresClubesEntrenador()
+    {
+        return this.club.getNombreClubesEntrenador();
+    }
+    
+    public String getDNIGerente()
+    {
+        return this.club.getDNIGerente();
+    }
+    
+    public String getNombreEntrenador()
+    {
+        return this.club.getNombreEntrenador();
+    }
+    
+    public String getApellidoEntrenador()
+    {
+        return this.club.getApellidoEntrenador();
+    }
+    
+    public String getTelefonoEntrenador()
+    {
+        return this.club.getTlfEntrenador();
+    }
+    
+    public String getDNIEntrenador()
+    {
+        return this.club.getDNIEntrenador();
+    }
+    
+    public String getNombreFederacion()
+    {
+        return this.club.getNombreFederacion();
+    }
+    
+    
+    
     
 }

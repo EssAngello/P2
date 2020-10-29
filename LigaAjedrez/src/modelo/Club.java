@@ -72,9 +72,14 @@ public class Club {
         return this.entrenador.getDNI();
     }
     
-    public ArrayList<Club> getClubesEntrenador()
+    public ArrayList<String> getNombreClubesEntrenador()
     {
-        return this.entrenador.getClubes();
+        ArrayList<String> nombresclubes = new ArrayList<String>();
+        for(Club c:entrenador.getClubes())
+        {
+            nombresclubes.add(c.getNombre());
+        }
+        return nombresclubes;
     }
     
     public String getNombre()

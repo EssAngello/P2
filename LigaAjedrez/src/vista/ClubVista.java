@@ -5,6 +5,9 @@
  */
 package vista;
 
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import modelo.Club;
 import modelo.Jugador;
 /**
  *
@@ -25,6 +28,11 @@ public class ClubVista extends javax.swing.JFrame {
         initComponents();
         this.origen = i;
         this.jugador = j;
+        //Angello
+        jlb_tituloNombreClub.setText(jugador.getNombreClub());
+        jlb_nombreGerente.setText(jugador.getNombreGerente());
+        jlb_nombreEntrenador.setText(jugador.getNombreEntrenador());
+        jlb_federacionPerteneciente.setText(jugador.getNombreFederacion());
     }
 
     /**
@@ -207,11 +215,6 @@ public class ClubVista extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jlt_clubesTrabaja1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane3.setViewportView(jlt_clubesTrabaja1);
 
         jbt_volverInfoEntrenador1.setText("volver");
@@ -246,6 +249,10 @@ public class ClubVista extends javax.swing.JFrame {
         InfoEntrenador.getContentPane().setLayout(InfoEntrenadorLayout);
         InfoEntrenadorLayout.setHorizontalGroup(
             InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoEntrenadorLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(InfoEntrenadorLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,10 +275,6 @@ public class ClubVista extends javax.swing.JFrame {
                             .addComponent(jlb_infoEntrenadorDatosDNI1)
                             .addComponent(jlb_infoEntrenadorDatosTelefono1))))
                 .addContainerGap(39, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InfoEntrenadorLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(101, 101, 101))
         );
         InfoEntrenadorLayout.setVerticalGroup(
             InfoEntrenadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,7 +301,7 @@ public class ClubVista extends javax.swing.JFrame {
                 .addComponent(jlb_clubesTrabaja1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addComponent(jbt_volverInfoEntrenador1)
                 .addContainerGap())
         );
@@ -578,6 +581,11 @@ public class ClubVista extends javax.swing.JFrame {
         this.setVisible(false);
         InfoGerente.setVisible(true);
         InfoGerente.setSize(400,400);
+        //Angello
+        jlb_infoGerenteDatosNombre1.setText(jugador.getNombreGerente());
+        jlb_infoGerenteDatosApellido1.setText(jugador.getApellidoGerente());
+        jlb_infoGerenteDatosTelefono1.setText(jugador.getTelefonoGerente());
+        jlb_infoGerenteDatosDNI1.setText(jugador.getDNIGerente());
     }//GEN-LAST:event_jbt_infoGerenteActionPerformed
 
     private void jbt_volverInfoGerente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInfoGerente1ActionPerformed
@@ -620,6 +628,22 @@ public class ClubVista extends javax.swing.JFrame {
         this.setVisible(false);
         InfoEntrenador.setVisible(true);
         InfoEntrenador.setSize(400,400);
+        //Angello
+        listmodel.removeAllElements();
+        jlb_infoEntrenadorDatosNombre1.setText(jugador.getNombreEntrenador());
+        jlb_infoEntrenadorDatosApellido1.setText(jugador.getApellidoEntrenador());
+        jlb_infoEntrenadorDatosTelefono1.setText(jugador.getTelefonoEntrenador());
+        jlb_infoEntrenadorDatosDNI1.setText(jugador.getDNIEntrenador());
+        clubesEntrenador.removeAll(clubesEntrenador);
+        clubesEntrenador = jugador.getNombresClubesEntrenador();
+        for(Object c: clubesEntrenador)
+        {
+            String nombreCLub = c.toString();
+            listmodel.addElement(c);
+        }
+        
+        jlt_clubesTrabaja1.setModel(listmodel);
+        
     }//GEN-LAST:event_jbt_infoEntrenadorActionPerformed
 
     private void jbt_cancelarEntrenamiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelarEntrenamiento1ActionPerformed
@@ -720,4 +744,6 @@ public class ClubVista extends javax.swing.JFrame {
     private javax.swing.JList<String> jlt_clubesTrabaja1;
     private javax.swing.JList<String> jlt_listaDisponibilidad1;
     // End of variables declaration//GEN-END:variables
+    ArrayList<Object> clubesEntrenador = new ArrayList();
+    DefaultListModel listmodel = new DefaultListModel();
 }
