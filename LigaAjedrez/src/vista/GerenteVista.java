@@ -5,6 +5,9 @@
  */
 package vista;
 
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import modelo.Gerente;
 import modelo.Jugador;
 
 /**
@@ -17,13 +20,18 @@ public class GerenteVista extends javax.swing.JFrame {
     private NominaGerente nomina;
     private ClubVista club;
     private TorneoVista t;
-    private Jugador jugador;
+    private Gerente gerente;
     /**
      * Creates new form Gerente
      */
     public GerenteVista(Jugador j) {
         initComponents();
-        this.jugador = j;
+        this.gerente = (Gerente)j;
+        jlb_infoGerenteDatosNombre1.setText(gerente.getNombre());
+        jlb_infoGerenteDatosApellido1.setText(gerente.getApellido());
+        jlb_infoGerenteDatosTelefono1.setText(gerente.getTelefono());
+        jlb_infoGerenteDatosDNI1.setText(gerente.getDNI());
+        
     }
 
     /**
@@ -57,8 +65,11 @@ public class GerenteVista extends javax.swing.JFrame {
         jlb_infoGerenteDatosApellido1 = new javax.swing.JLabel();
         jlb_infoGerenteDatosNombre1 = new javax.swing.JLabel();
         jbt_ok = new javax.swing.JButton();
-        jLabelIRPF = new javax.swing.JLabel();
-        jLabelIRPF2 = new javax.swing.JLabel();
+        IRPFGerente = new javax.swing.JFrame();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
         jbt_inscribirseClub = new javax.swing.JButton();
         jbt_historialClubes = new javax.swing.JButton();
         jbt_torneos = new javax.swing.JButton();
@@ -67,6 +78,7 @@ public class GerenteVista extends javax.swing.JFrame {
         jbt_datosPersonales = new javax.swing.JButton();
         jbt_sedeDelClub = new javax.swing.JButton();
         jbt_salir = new javax.swing.JButton();
+        jButtonIRPF = new javax.swing.JButton();
 
         jli_clubes1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -197,10 +209,6 @@ public class GerenteVista extends javax.swing.JFrame {
             }
         });
 
-        jLabelIRPF.setText("IRPF :");
-
-        jLabelIRPF2.setText("IRPF del gerente");
-
         javax.swing.GroupLayout DatosPersonalesLayout = new javax.swing.GroupLayout(DatosPersonales.getContentPane());
         DatosPersonales.getContentPane().setLayout(DatosPersonalesLayout);
         DatosPersonalesLayout.setHorizontalGroup(
@@ -216,13 +224,11 @@ public class GerenteVista extends javax.swing.JFrame {
                             .addComponent(jlb_infoGerenteNombre1)
                             .addComponent(jlb_infoGerenteApellido1)
                             .addComponent(jlb_infoGerenteTelefono1)
-                            .addComponent(jlb_infoGerenteDNI1)
-                            .addComponent(jLabelIRPF))
+                            .addComponent(jlb_infoGerenteDNI1))
                         .addGap(65, 65, 65)
                         .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DatosPersonalesLayout.createSequentialGroup()
-                                .addComponent(jLabelIRPF2)
-                                .addGap(70, 70, 70)
+                                .addGap(151, 151, 151)
                                 .addComponent(jbt_ok))
                             .addComponent(jlb_infoGerenteDatosNombre1)
                             .addComponent(jlb_infoGerenteDatosApellido1)
@@ -251,17 +257,50 @@ public class GerenteVista extends javax.swing.JFrame {
                 .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlb_infoGerenteDNI1)
                     .addComponent(jlb_infoGerenteDatosDNI1))
-                .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DatosPersonalesLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                        .addComponent(jbt_ok)
-                        .addContainerGap())
-                    .addGroup(DatosPersonalesLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelIRPF)
-                            .addComponent(jLabelIRPF2))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(jbt_ok)
+                .addContainerGap())
+        );
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabel1.setText("IRPFs");
+
+        jButton1.setText("Atras");
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        javax.swing.GroupLayout IRPFGerenteLayout = new javax.swing.GroupLayout(IRPFGerente.getContentPane());
+        IRPFGerente.getContentPane().setLayout(IRPFGerenteLayout);
+        IRPFGerenteLayout.setHorizontalGroup(
+            IRPFGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(IRPFGerenteLayout.createSequentialGroup()
+                .addGroup(IRPFGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(IRPFGerenteLayout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(jButton1))
+                    .addGroup(IRPFGerenteLayout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(jLabel1))
+                    .addGroup(IRPFGerenteLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(63, Short.MAX_VALUE))
+        );
+        IRPFGerenteLayout.setVerticalGroup(
+            IRPFGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(IRPFGerenteLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(jButton1)
+                .addGap(29, 29, 29))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -319,6 +358,13 @@ public class GerenteVista extends javax.swing.JFrame {
             }
         });
 
+        jButtonIRPF.setText("IRPF");
+        jButtonIRPF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIRPFActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -332,7 +378,8 @@ public class GerenteVista extends javax.swing.JFrame {
                         .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jbt_inscribirseClub, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
-                            .addComponent(jbt_datosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jbt_datosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonIRPF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jbt_torneos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -362,7 +409,9 @@ public class GerenteVista extends javax.swing.JFrame {
                     .addComponent(jbt_torneos)
                     .addComponent(jbt_datosPersonales))
                 .addGap(3, 3, 3)
-                .addComponent(jbt_Nominas)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbt_Nominas)
+                    .addComponent(jButtonIRPF))
                 .addGap(18, 18, 18)
                 .addComponent(jbt_sedeDelClub)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
@@ -382,7 +431,7 @@ public class GerenteVista extends javax.swing.JFrame {
 
     private void jbt_torneosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_torneosActionPerformed
         // Maricel
-        t = new TorneoVista(1,jugador);
+        t = new TorneoVista(1,gerente);
         t.setVisible(true);
         this.setVisible(false);
         dispose();
@@ -402,7 +451,7 @@ public class GerenteVista extends javax.swing.JFrame {
 
     private void jbt_NominasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_NominasActionPerformed
         // Maricel
-        nomina = new NominaGerente(jugador);
+        nomina = new NominaGerente(gerente);
         nomina.setVisible(true);
         this.setVisible(false);
         dispose();
@@ -441,20 +490,41 @@ public class GerenteVista extends javax.swing.JFrame {
 
     private void jbt_sedeDelClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_sedeDelClubActionPerformed
         // Maricel
-        club = new ClubVista(1,jugador);
+        club = new ClubVista(1,gerente);
         club.setVisible(true);
         this.setVisible(false);
         dispose();
     }//GEN-LAST:event_jbt_sedeDelClubActionPerformed
+
+    private void jButtonIRPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIRPFActionPerformed
+        // TODO add your handling code here:
+        
+        listmodel.removeAllElements();
+        irpfs.removeAll(irpfs);
+        irpfs = gerente.getIrpfs();
+        for(Object x: irpfs)
+        {
+            String str = x.toString();
+            listmodel.addElement(str);
+        }
+        jList1.setModel(listmodel);
+        this.setVisible(false);
+        IRPFGerente.setVisible(true);
+        IRPFGerente.setSize(400,400);
+    }//GEN-LAST:event_jButtonIRPFActionPerformed
 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame DatosPersonales;
     private javax.swing.JFrame HistorialClubesGerente;
+    private javax.swing.JFrame IRPFGerente;
     private javax.swing.JFrame InscribirseClubGerente;
-    private javax.swing.JLabel jLabelIRPF;
-    private javax.swing.JLabel jLabelIRPF2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonIRPF;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JButton jbt_Nominas;
@@ -483,4 +553,6 @@ public class GerenteVista extends javax.swing.JFrame {
     private javax.swing.JList<String> jli_clubes1;
     private javax.swing.JList<String> jli_historialClubes1;
     // End of variables declaration//GEN-END:variables
+    ArrayList<Object> irpfs = new ArrayList<Object>();
+    DefaultListModel listmodel = new DefaultListModel();
 }

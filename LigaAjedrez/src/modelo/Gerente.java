@@ -19,4 +19,12 @@ public class Gerente extends Jugador{
         super( user,  passwd, nombre, apellido, telefono, DNI, categoria);
     }
     
+    public ArrayList getIrpfs() {
+        return irpfs;
+    }
+
+    public ArrayList<Integer> getNominas() {
+        return nominas;
+    }
+    
 }
