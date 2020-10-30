@@ -596,6 +596,7 @@ public class JugadorVista extends javax.swing.JFrame {
 
     private void jbt_historial_clubesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_historial_clubesActionPerformed
         // Maricel
+        //SIN HACER
         this.setVisible(false);
         HistorialClubesJugador.setVisible(true);
         HistorialClubesJugador.setSize(400,400);
@@ -640,6 +641,8 @@ public class JugadorVista extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"Selecciona un club");
         }
         //else{
+        
+            //falta asignarle el club a la clase jugador
             club = (Club)clubObject;
             club.inscribirseClub(jugador);
             InscribirseClubJugador.setVisible(false);
@@ -660,6 +663,7 @@ public class JugadorVista extends javax.swing.JFrame {
         if(aux == 0)
         {
             if(club.darseBaja(jugador) == false){
+                //faltaria quitarle el club a la clase jugador
                 JOptionPane.showMessageDialog(this,"No estas inscrito en ningun club");
             }
             else{

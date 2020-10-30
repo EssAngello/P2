@@ -557,7 +557,8 @@ public class TorneoVista extends javax.swing.JFrame {
     private void jbt_inscribirse1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_inscribirse1ActionPerformed
         
         torneoObj = (Object)jli_torneos1.getSelectedValue();
-
+        
+        //FALTA LA INSCRIBIRSE EN UN TORNEO
         if(torneoObj == null)
         {
             JOptionPane.showMessageDialog(this,"Has de seleccionar un torneo");
@@ -627,6 +628,7 @@ public class TorneoVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_ok1ActionPerformed
 
     private void jbt_resultadosPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_resultadosPartidaActionPerformed
+
         // Maricel
         this.setVisible(false);
         ResultadosPartida.setVisible(true);
@@ -640,6 +642,7 @@ public class TorneoVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_volverResultadoPartido1ActionPerformed
 
     private void jbt_okResultadoPartido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okResultadoPartido1ActionPerformed
+        //FALTA
         // Maricel
         ResultadosPartida.setVisible(false);
         this.setVisible(true);

@@ -65,6 +65,8 @@ public class AppAjedrez {
    public void registrarse(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria, String res_nom, String res_apell){
         boolean comprobar = false;
 
+        //Añadir registrarse un gerente
+        
         for(Jugador aux2 : jugadores){
             if(comprobar == false){
                 comprobar =aux2.comprobarExistencia(user, passwd, DNI);

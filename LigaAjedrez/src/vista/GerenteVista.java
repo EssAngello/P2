@@ -423,6 +423,7 @@ public class GerenteVista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbt_inscribirseClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_inscribirseClubActionPerformed
+        //FALTA
         // Maricel
         this.setVisible(false);
         InscribirseClubGerente.setVisible(true);
@@ -443,6 +444,7 @@ public class GerenteVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_salirActionPerformed
 
     private void jbt_historialClubesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_historialClubesActionPerformed
+        //FALTA
         // Maricel
         this.setVisible(false);
         HistorialClubesGerente.setVisible(true);
@@ -450,6 +452,7 @@ public class GerenteVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_historialClubesActionPerformed
 
     private void jbt_NominasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_NominasActionPerformed
+        //FALTA
         // Maricel
         nomina = new NominaGerente(gerente);
         nomina.setVisible(true);
@@ -482,6 +485,7 @@ public class GerenteVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_okActionPerformed
 
     private void jbt_datosPersonalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_datosPersonalesActionPerformed
+        //FALTA
         //Maricel
         this.setVisible(false);
         DatosPersonales.setVisible(true);
@@ -498,7 +502,7 @@ public class GerenteVista extends javax.swing.JFrame {
 
     private void jButtonIRPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIRPFActionPerformed
         // TODO add your handling code here:
-        
+        //POR COMPLETAR
         listmodel.removeAllElements();
         irpfs.removeAll(irpfs);
         irpfs = gerente.getIrpfs();

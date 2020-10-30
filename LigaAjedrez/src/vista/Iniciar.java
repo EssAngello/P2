@@ -433,6 +433,7 @@ public class Iniciar extends javax.swing.JFrame {
         passwd = jtf_contraseñaIniciar.getText();
         inicio_jugador = app.identificarJugadorGerente(user, passwd);
         if(jrb_gerente.isSelected()){
+            //aqui falta consultar gerentes en lugar de jugadores
             if(inicio_jugador != null){
                 this.setVisible(false);
                 g = new GerenteVista(inicio_jugador);
