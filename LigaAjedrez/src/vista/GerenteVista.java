@@ -491,7 +491,7 @@ public class GerenteVista extends javax.swing.JFrame {
         jlb_infoGerenteDatosDNI1.setText(gerente.getDNI());
         this.setVisible(false);
         DatosPersonales.setVisible(true);
-        DatosPersonales.setSize(400,400);
+        DatosPersonales.setSize(400,300);
     }//GEN-LAST:event_jbt_datosPersonalesActionPerformed
 
     private void jbt_sedeDelClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_sedeDelClubActionPerformed

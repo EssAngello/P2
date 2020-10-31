@@ -40,7 +40,6 @@ public class ClubVista extends javax.swing.JFrame {
         initComponents();
         this.origen = i;
         this.gerente = g;
-        System.out.println("Estoy en gerente");
         //Angello
         /*
         jlb_tituloNombreClub.setText(jugador.getNombreClub());
