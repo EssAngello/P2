@@ -34,11 +34,15 @@ public class TorneoVista extends javax.swing.JFrame {
         initComponents();
         this.origen = i;
         this.jugador = j;
+        btg_ganador.add(jbt_ganadorJ1);
+        btg_ganador.add(jbt_ganadorJ2);
     }
     public TorneoVista(int i,Gerente g) {
         initComponents();
         this.origen = i;
         this.gerente = g;
+        btg_ganador.add(jbt_ganadorJ1);
+        btg_ganador.add(jbt_ganadorJ2);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -91,6 +95,7 @@ public class TorneoVista extends javax.swing.JFrame {
         jbt_okResultadoPartido1 = new javax.swing.JButton();
         jbt_ganadorJ1 = new javax.swing.JRadioButton();
         jbt_ganadorJ2 = new javax.swing.JRadioButton();
+        btg_ganador = new javax.swing.ButtonGroup();
         jlb_tituloTorneo = new javax.swing.JLabel();
         jbt_inscribirseTorneo = new javax.swing.JButton();
         jbt_historialPartidas = new javax.swing.JButton();
@@ -725,6 +730,7 @@ public class TorneoVista extends javax.swing.JFrame {
     private javax.swing.JFrame HistorialPartidas;
     private javax.swing.JFrame InscribirseTorneo;
     private javax.swing.JFrame ResultadosPartida;
+    private javax.swing.ButtonGroup btg_ganador;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JRadioButton jbt_ganadorJ1;
