@@ -534,9 +534,9 @@ public class TorneoVista extends javax.swing.JFrame {
         
         listaHistorialPartidas = jugador.getHistorialPartidas();
 
-        if(!listaTorneos.isEmpty()){
-            for(Object historial:listaHistorialPartidas){
-                modeloListaHistorialPartidos.addElement(historial);
+        if(!listaHistorialPartidas.isEmpty()){
+            for(Object historialPartido:listaHistorialPartidas){
+                modeloListaHistorialPartidos.addElement(historialPartido);
             }
         }
         else{

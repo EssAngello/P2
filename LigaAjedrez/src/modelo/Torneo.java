@@ -8,11 +8,14 @@ package modelo;
 import java.util.*;
 
 import modelo.Partida;
+import modelo.Jugador;
 /**
  *
  * @author juan2
  */
 public class Torneo {
+    protected ArrayList<Partida> partidasTorneo = new ArrayList<Partida>();
+    protected ArrayList<Jugador> jugadoresTorneo = new ArrayList<Jugador>();
     
     public Torneo(){
         

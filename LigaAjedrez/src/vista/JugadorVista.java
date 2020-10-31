@@ -595,8 +595,19 @@ public class JugadorVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_atras1ActionPerformed
 
     private void jbt_historial_clubesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_historial_clubesActionPerformed
-        // Maricel
-        //SIN HACER
+        DefaultListModel modeloListaHistorialClubes = new DefaultListModel();
+        jli_historialClubes1.setModel(modeloListaHistorialClubes);
+        
+        listaHistorialClubes = jugador.getHistorialClubes();
+
+        if(!listaHistorialClubes.isEmpty()){
+            for(Object historialClub :listaHistorialClubes){
+                modeloListaHistorialClubes.addElement(historialClub);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No hay partidas");
+        }
         this.setVisible(false);
         HistorialClubesJugador.setVisible(true);
         HistorialClubesJugador.setSize(400,400);
@@ -729,4 +740,5 @@ public class JugadorVista extends javax.swing.JFrame {
     private ArrayList listaClubes;
     protected AppAjedrez appAjedrez;
     protected Object clubObject;
+    protected ArrayList listaHistorialClubes;
 }

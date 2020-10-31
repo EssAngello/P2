@@ -6,6 +6,7 @@
 package modelo;
 
 import modelo.Partida;
+import modelo.Club;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -22,6 +23,7 @@ public class Jugador {
     protected String res_apell = "";
     protected Club club = null;
     protected ArrayList<Partida> historialPartidas = new ArrayList<Partida>();
+    protected ArrayList<Club> historialClubes = new ArrayList<Club>();
     
     public Jugador (String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
        this.user = user;
@@ -72,6 +74,10 @@ public class Jugador {
     public ArrayList<Partida> getHistorialPartidas(){
         ArrayList<Partida> listaHistorialPartidas = new ArrayList(historialPartidas);
         return listaHistorialPartidas;
+    }
+    public ArrayList<Club> getHistorialClubes(){
+        ArrayList<Club> listaHistorialClubes = new ArrayList(historialClubes);
+        return listaHistorialClubes;
     }
     
     public Club comprobarClub()
