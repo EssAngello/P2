@@ -25,8 +25,7 @@ public class AppAjedrez {
     Entrenador e = new Entrenador("Jose", "123456", "Jose", "Mourinho", "123456789", "X1234567L", "senior");
     Gerente g = new Gerente("Ali", "123456","Ali", "baba", "123456789", "X1234566L", "senior");
     Club club = new Club("TSM", "Federacion de Valencia", e, g);
-    private Jugador datos_jugador;      //esta no puede ser una variable global
-    private Gerente datos_gerente;
+    
     public AppAjedrez(){
         //Añadimos jugadores por la fuerza para comprobar//
         jugadores.add(j1);
@@ -34,8 +33,6 @@ public class AppAjedrez {
         gerentes.add(g);
         clubes.add(club);
         j1.InscribirseClub(club);
-        datos_jugador = null;
-        datos_gerente = null;
     }
     
     public ArrayList<Club> consultarClubes(){
@@ -68,7 +65,8 @@ public class AppAjedrez {
         return torneosDisponibles;
     }
     
-    public Jugador identificarJugador(String u, String p){        
+    public Jugador identificarJugador(String u, String p){ 
+        Jugador datos_jugador = null;      
         for(Jugador aux : jugadores){
             if(aux.identificarse(u, p) == true){
                 datos_jugador = aux;
@@ -77,7 +75,8 @@ public class AppAjedrez {
         return datos_jugador;
     }
     
-    public Gerente identificarGerente(String u, String p){  
+    public Gerente identificarGerente(String u, String p){ 
+        Gerente datos_gerente = null;
         for(Gerente aux2 : gerentes){
             if(aux2.identificarse(u, p) == true){
                 datos_gerente = aux2;
