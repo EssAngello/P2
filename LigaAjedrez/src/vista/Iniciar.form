@@ -44,7 +44,7 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jrb_senior1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jrb_serGerente" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -53,7 +53,7 @@
                           <Component id="jbt_cancelar1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                  <EmptySpace pref="35" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="jbt_registrarse1" min="-2" max="-2" attributes="0"/>
@@ -133,7 +133,7 @@
                       <Component id="jrb_infantil1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jrb_junior1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jrb_senior1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jrb_serGerente" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jlb_res_res" min="-2" max="-2" attributes="0"/>
@@ -269,12 +269,12 @@
             <Property name="text" type="java.lang.String" value="apellido:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+        <Component class="javax.swing.JRadioButton" name="jrb_serGerente">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Gerente"/>
+            <Property name="text" type="java.lang.String" value="gerente"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrb_serGerenteActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_res_res">

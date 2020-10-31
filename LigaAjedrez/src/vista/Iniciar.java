@@ -38,6 +38,7 @@ public class Iniciar extends javax.swing.JFrame {
         jbtg_categoria.add(jrb_infantil1);
         jbtg_categoria.add(jrb_junior1);
         jbtg_categoria.add(jrb_senior1);
+        jbtg_categoria.add(jrb_serGerente);
         app = new AppAjedrez();
         //Esto se elimina mas tarde administrador
         admin = new Administrador();
@@ -72,7 +73,7 @@ public class Iniciar extends javax.swing.JFrame {
         jtf_telefono1 = new javax.swing.JTextField();
         jtf_apellido1 = new javax.swing.JTextField();
         jlb_apellido1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        jrb_serGerente = new javax.swing.JRadioButton();
         jlb_res_res = new javax.swing.JLabel();
         jlb_res_nom = new javax.swing.JLabel();
         jtf_res_nom = new javax.swing.JTextField();
@@ -156,10 +157,10 @@ public class Iniciar extends javax.swing.JFrame {
 
         jlb_apellido1.setText("apellido:");
 
-        jRadioButton1.setText("Gerente");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        jrb_serGerente.setText("gerente");
+        jrb_serGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                jrb_serGerenteActionPerformed(evt);
             }
         });
 
@@ -208,11 +209,11 @@ public class Iniciar extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jrb_senior1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton1))))
+                                .addComponent(jrb_serGerente))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegistrarseLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jbt_cancelar1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrarseLayout.createSequentialGroup()
                         .addComponent(jbt_registrarse1)
@@ -276,7 +277,7 @@ public class Iniciar extends javax.swing.JFrame {
                     .addComponent(jrb_infantil1)
                     .addComponent(jrb_junior1)
                     .addComponent(jrb_senior1)
-                    .addComponent(jRadioButton1))
+                    .addComponent(jrb_serGerente))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jlb_res_res)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -501,6 +502,9 @@ public class Iniciar extends javax.swing.JFrame {
             categoria = "senior";
             app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, "", "");
         }
+        else if(jrb_serGerente.isSelected()){
+            app.registrarseGerente(user, passwd, nombre, apellido, telefono, DNI);
+        }
         else{
             JOptionPane.showMessageDialog(null, "No has seleccionado la categoria, debes seleccionar");
         }
@@ -508,9 +512,9 @@ public class Iniciar extends javax.swing.JFrame {
         this.setVisible(true);
     }//GEN-LAST:event_jbt_registrarse1ActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void jrb_serGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_serGerenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_jrb_serGerenteActionPerformed
 
     private void jrb_junior1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_junior1ActionPerformed
         //Maricel
@@ -568,7 +572,6 @@ public class Iniciar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame Registrarse;
-    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JToggleButton jbt_cancelar1;
     private javax.swing.JButton jbt_cancelarIniciar;
     private javax.swing.JButton jbt_okIniciar;
@@ -595,6 +598,7 @@ public class Iniciar extends javax.swing.JFrame {
     private javax.swing.JRadioButton jrb_jugador;
     private javax.swing.JRadioButton jrb_junior1;
     private javax.swing.JRadioButton jrb_senior1;
+    private javax.swing.JRadioButton jrb_serGerente;
     private javax.swing.JTextField jtf_DNI1;
     private javax.swing.JTextField jtf_apellido1;
     private javax.swing.JTextField jtf_contraseña1;

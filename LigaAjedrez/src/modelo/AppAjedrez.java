@@ -75,9 +75,7 @@ public class AppAjedrez {
     }
    public void registrarse(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria, String res_nom, String res_apell){
         boolean comprobar = false;
-
-        //Añadir registrarse un gerente
-        
+      
         for(Jugador aux2 : jugadores){
             if(comprobar == false){
                 comprobar =aux2.comprobarExistencia(user, passwd, DNI);
@@ -89,10 +87,20 @@ public class AppAjedrez {
 	    aux.setRes_apell(res_apell);
             jugadores.add(aux);
         }
-    
-     
    }
-   
+   public void registrarseGerente(String user, String passwd,String nombre,String apellido,String telefono,String DNI){
+       boolean comprobar = false;
+      
+        for(Gerente aux2 : gerentes){
+            if(comprobar == false){
+                comprobar =aux2.comprobarExistencia(user, passwd, DNI);
+            }
+        }
+        if(comprobar == false){
+            Gerente aux = new Gerente (user, passwd, nombre, apellido, telefono, DNI, "senior");
+            gerentes.add(aux);
+        }
+   }
    public void eliminarJugador(Jugador j)
    {
        jugadores.remove(j);
