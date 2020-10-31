@@ -25,14 +25,7 @@ public class GerenteVista extends javax.swing.JFrame {
      */
     public GerenteVista(Gerente g) {
         initComponents();
-        this.gerente = g;
-        /*
-        jlb_infoGerenteDatosNombre1.setText(gerente.getNombre());
-        jlb_infoGerenteDatosApellido1.setText(gerente.getApellido());
-        jlb_infoGerenteDatosTelefono1.setText(gerente.getTelefono());
-        jlb_infoGerenteDatosDNI1.setText(gerente.getDNI());
-        */
-        
+        this.gerente = g;     
     }
 
     /**
@@ -486,8 +479,11 @@ public class GerenteVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_okActionPerformed
 
     private void jbt_datosPersonalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_datosPersonalesActionPerformed
-        //FALTA
         //Maricel
+        jlb_infoGerenteDatosNombre1.setText(gerente.getNombre());
+        jlb_infoGerenteDatosApellido1.setText(gerente.getApellido());
+        jlb_infoGerenteDatosTelefono1.setText(gerente.getTelefono());
+        jlb_infoGerenteDatosDNI1.setText(gerente.getDNI());
         this.setVisible(false);
         DatosPersonales.setVisible(true);
         DatosPersonales.setSize(400,400);

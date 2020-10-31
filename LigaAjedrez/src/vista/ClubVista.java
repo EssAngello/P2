@@ -7,7 +7,6 @@ package vista;
 
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
-import modelo.Club;
 import modelo.Gerente;
 import modelo.Jugador;
 /**
@@ -31,16 +30,17 @@ public class ClubVista extends javax.swing.JFrame {
         this.origen = i;
         this.jugador = j;
         //Angello
-        /*
-        jlb_tituloNombreClub.setText(jugador.getNombreClub());
+        //ESTO HAY QUE ARREGLARLO PARA QUE PONGA LOS DATOS BIEN 
+        /*jlb_tituloNombreClub.setText(jugador.getNombreClub());
         jlb_nombreGerente.setText(jugador.getNombreGerente());
         jlb_nombreEntrenador.setText(jugador.getNombreEntrenador());
         jlb_federacionPerteneciente.setText(jugador.getNombreFederacion());*/
     }
-    public ClubVista(int i, Gerente j) {
+    public ClubVista(int i, Gerente g) {
         initComponents();
         this.origen = i;
-        this.jugador = j;
+        this.gerente = g;
+        System.out.println("Estoy en gerente");
         //Angello
         /*
         jlb_tituloNombreClub.setText(jugador.getNombreClub());
@@ -624,7 +624,7 @@ public class ClubVista extends javax.swing.JFrame {
             dispose();
         }
         else if(origen == 1){
-            g = new GerenteVista();
+            g = new GerenteVista(gerente);
             this.setVisible(false);
             g.setVisible(true);
             dispose();

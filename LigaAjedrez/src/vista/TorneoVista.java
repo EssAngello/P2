@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 
 import modelo.Torneo;
 import modelo.AppAjedrez;
+import modelo.Gerente;
 import modelo.Jugador;
 import modelo.Partida;
 /**
@@ -25,6 +26,7 @@ public class TorneoVista extends javax.swing.JFrame {
     private GerenteVista g;
     private JugadorVista j;
     private Jugador jugador;
+    private Gerente gerente;
     /**
      * Creates new form Torneo
      */
@@ -33,7 +35,11 @@ public class TorneoVista extends javax.swing.JFrame {
         this.origen = i;
         this.jugador = j;
     }
-
+    public TorneoVista(int i,Gerente g) {
+        initComponents();
+        this.origen = i;
+        this.gerente = g;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -593,7 +599,7 @@ public class TorneoVista extends javax.swing.JFrame {
             dispose();
         }
         else if(origen == 1){
-            g = new GerenteVista(jugador);
+            g = new GerenteVista(gerente);
             this.setVisible(false);
             g.setVisible(true);
             dispose();
