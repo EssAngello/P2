@@ -26,6 +26,7 @@ public class AppAjedrez {
     Gerente g = new Gerente("Ali", "123456","Ali", "baba", "123456789", "X1234566L", "senior");
     Club club = new Club("TSM", "Federacion de Valencia", e, g);
     private Jugador datos_jugador;
+    private Gerente datos_gerente;
     public AppAjedrez(){
         //Añadimos jugadores por la fuerza para comprobar//
         jugadores.add(j1);
@@ -34,6 +35,7 @@ public class AppAjedrez {
         clubes.add(club);
         j1.InscribirseClub(club);
         datos_jugador = null;
+        datos_gerente = null;
     }
     
     public ArrayList<Club> consultarClubes(){
@@ -54,13 +56,22 @@ public class AppAjedrez {
         return torneosDisponibles;
     }
     
-    public Jugador identificarJugadorGerente(String u, String p){
+    public Jugador identificarJugador(String u, String p){        
         for(Jugador aux : jugadores){
             if(aux.identificarse(u, p) == true){
                 datos_jugador = aux;
             }
-        }
+        }   
         return datos_jugador;
+    }
+    
+    public Gerente identificarGerente(String u, String p){  
+        for(Gerente aux2 : gerentes){
+            if(aux2.identificarse(u, p) == true){
+                datos_gerente = aux2;
+            }
+        }
+        return datos_gerente;
     }
    public void registrarse(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria, String res_nom, String res_apell){
         boolean comprobar = false;

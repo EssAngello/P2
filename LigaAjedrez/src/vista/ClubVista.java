@@ -8,6 +8,7 @@ package vista;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import modelo.Club;
+import modelo.Gerente;
 import modelo.Jugador;
 /**
  *
@@ -21,6 +22,7 @@ public class ClubVista extends javax.swing.JFrame {
     private GerenteVista g;
     private JugadorVista j;
     private Jugador jugador;
+    private Gerente gerente;
     /**
      * Creates new form Club
      */
@@ -29,11 +31,24 @@ public class ClubVista extends javax.swing.JFrame {
         this.origen = i;
         this.jugador = j;
         //Angello
+        /*
         jlb_tituloNombreClub.setText(jugador.getNombreClub());
         jlb_nombreGerente.setText(jugador.getNombreGerente());
         jlb_nombreEntrenador.setText(jugador.getNombreEntrenador());
-        jlb_federacionPerteneciente.setText(jugador.getNombreFederacion());
+        jlb_federacionPerteneciente.setText(jugador.getNombreFederacion());*/
     }
+    public ClubVista(int i, Gerente j) {
+        initComponents();
+        this.origen = i;
+        this.jugador = j;
+        //Angello
+        /*
+        jlb_tituloNombreClub.setText(jugador.getNombreClub());
+        jlb_nombreGerente.setText(jugador.getNombreGerente());
+        jlb_nombreEntrenador.setText(jugador.getNombreEntrenador());
+        jlb_federacionPerteneciente.setText(jugador.getNombreFederacion());*/
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -609,7 +624,7 @@ public class ClubVista extends javax.swing.JFrame {
             dispose();
         }
         else if(origen == 1){
-            g = new GerenteVista(jugador);
+            g = new GerenteVista();
             this.setVisible(false);
             g.setVisible(true);
             dispose();

@@ -431,17 +431,17 @@ public class Iniciar extends javax.swing.JFrame {
         // Maricel
         user = jtf_nombreIniciar.getText();
         passwd = jtf_contraseñaIniciar.getText();
-        inicio_jugador = app.identificarJugadorGerente(user, passwd);
         if(jrb_gerente.isSelected()){
-            //aqui falta consultar gerentes en lugar de jugadores
-            if(inicio_jugador != null){
+            gerente_inicio = app.identificarGerente(user, passwd);
+            if(gerente_inicio != null){
                 this.setVisible(false);
-                g = new GerenteVista(inicio_jugador);
+                g = new GerenteVista(gerente_inicio);
                 g.setVisible(true);
                 dispose();
             }
         }
         else if(jrb_jugador.isSelected()){
+            inicio_jugador = app.identificarJugador(user, passwd);
             if(inicio_jugador != null){
                 this.setVisible(false);
                 j = new JugadorVista(inicio_jugador);

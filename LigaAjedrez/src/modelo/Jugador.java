@@ -17,10 +17,10 @@ import javax.swing.JOptionPane;
  */
 public class Jugador {
     //Contiene usuario y contraseña 
-    private String user, passwd, nombre, apellido, telefono, DNI, categoria;
-    private String res_nom = "";
-    private String res_apell = "";
-    private Club club = null;
+    protected String user, passwd, nombre, apellido, telefono, DNI, categoria;
+    protected String res_nom = "";
+    protected String res_apell = "";
+    protected Club club = null;
     protected ArrayList<Partida> historialPartidas = new ArrayList<Partida>();
     
     public Jugador (String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
@@ -117,6 +117,10 @@ public class Jugador {
 
     public void setRes_apell(String res_apell) {
         this.res_apell = res_apell;
+    }
+
+    public void setClub(Club club) {
+        this.club = club;
     }
     
     public void InscribirseClub(Club c)

@@ -8,7 +8,6 @@ package vista;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import modelo.Gerente;
-import modelo.Jugador;
 
 /**
  *
@@ -24,13 +23,15 @@ public class GerenteVista extends javax.swing.JFrame {
     /**
      * Creates new form Gerente
      */
-    public GerenteVista(Jugador j) {
+    public GerenteVista(Gerente g) {
         initComponents();
-        this.gerente = (Gerente)j;
+        this.gerente = g;
+        /*
         jlb_infoGerenteDatosNombre1.setText(gerente.getNombre());
         jlb_infoGerenteDatosApellido1.setText(gerente.getApellido());
         jlb_infoGerenteDatosTelefono1.setText(gerente.getTelefono());
         jlb_infoGerenteDatosDNI1.setText(gerente.getDNI());
+        */
         
     }
 

@@ -32,7 +32,8 @@ public class Club {
         jugadoresClub.add(jugador);
     }
     public boolean darseBaja(Jugador jugador){
-        boolean res = false; 
+        boolean res = false;
+        jugador.setClub(null);
         res =jugadoresClub.remove(jugador);
         return res;           
     }
