@@ -20,8 +20,9 @@ public class Partida {
     protected Date tiempo;
     protected Torneo torneo;
             
-    public Partida(){
-        
+    public Partida(Jugador jugador, Jugador rival){
+        this.jugador = jugador;
+        this.rival = rival;
     }
     
     public String detallesPartida(){

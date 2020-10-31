@@ -402,32 +402,28 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jlb_jugador4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jtf_jugador3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Component id="jlb_ganadorResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlb_tiempoResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlb_torneo1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlb_jugador4" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jlb_jugador3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                          <Component id="jtf_jugador4" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jlb_ganadorResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_tiempoResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_torneo1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jComboBoxTorneo1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtf_tiempo1" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                              <Component id="jtf_ganador1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="jlb_jugador3" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="57" max="32767" attributes="0"/>
+                  <EmptySpace min="76" pref="76" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jtf_jugador4" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_jugador3" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="jbt_ganadorJ1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jbt_ganadorJ2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jtf_tiempo1" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                      <Component id="jcb_Torneo1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="68" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
@@ -461,7 +457,8 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlb_ganadorResultado1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_ganador1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_ganadorJ1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_ganadorJ2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -471,7 +468,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlb_torneo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jComboBoxTorneo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcb_Torneo1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -494,12 +491,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_jugador3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Jugador 1"/>
+            <Property name="text" type="java.lang.String" value="Usuario jugador 1"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_jugador4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Jugador 2"/>
+            <Property name="text" type="java.lang.String" value="Usuario jugador 2"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_ganadorResultado1">
@@ -525,7 +522,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_volverResultadoPartido1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBoxTorneo1">
+        <Component class="javax.swing.JComboBox" name="jcb_Torneo1">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -537,7 +534,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxTorneo1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcb_Torneo1ActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -551,19 +548,14 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_tiempo1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtf_ganador1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Introduce Nombre y Apellido"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="jtf_jugador3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Introduce Nombre y Apellido"/>
+            <Property name="text" type="java.lang.String" value="User 2"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtf_jugador4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Introduce Nombre y Apellido"/>
+            <Property name="text" type="java.lang.String" value="User 1"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_jugador4ActionPerformed"/>
@@ -575,6 +567,19 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_okResultadoPartido1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jbt_ganadorJ1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Jugador 1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jbt_ganadorJ2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Jugador 2"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_ganadorJ2ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

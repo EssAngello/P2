@@ -80,6 +80,13 @@ public class Jugador {
         return listaHistorialClubes;
     }
     
+    public void InscribirseClub(Club c)
+    {
+        c.inscribirseClub(this);
+        historialClubes.add(c);
+        this.club=c;
+    }
+    
     public Club comprobarClub()
     {
         return club;
@@ -129,11 +136,7 @@ public class Jugador {
         this.club = club;
     }
     
-    public void InscribirseClub(Club c)
-    {
-        c.inscribirseClub(this);
-        this.club=c;
-    }
+
     
     public String getNombreClub()
     {

@@ -17,7 +17,13 @@ public class Torneo {
     protected ArrayList<Partida> partidasTorneo = new ArrayList<Partida>();
     protected ArrayList<Jugador> jugadoresTorneo = new ArrayList<Jugador>();
     
+    
+    //FALTA SABER COMO SE GENERAN LAS PARTIDAS DE LOS TORNEOS
     public Torneo(){
         
+    }
+    
+    public void InscribirseTorneo(Jugador jugador){
+        jugadoresTorneo.add(jugador);
     }
 }

@@ -652,10 +652,9 @@ public class JugadorVista extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"Selecciona un club");
         }
         //else{
-        
-            //falta asignarle el club a la clase jugador
             club = (Club)clubObject;
             club.inscribirseClub(jugador);
+            jugador.InscribirseClub(club);
             InscribirseClubJugador.setVisible(false);
             this.setVisible(true);
         //}
