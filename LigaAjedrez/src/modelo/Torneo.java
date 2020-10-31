@@ -26,4 +26,8 @@ public class Torneo {
     public void InscribirseTorneo(Jugador jugador){
         jugadoresTorneo.add(jugador);
     }
+    
+    public void introducirResultadosPartida(Partida partida){
+        partidasTorneo.add(partida);
+    }
 }

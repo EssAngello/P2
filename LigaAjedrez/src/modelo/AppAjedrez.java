@@ -25,7 +25,7 @@ public class AppAjedrez {
     Entrenador e = new Entrenador("Jose", "123456", "Jose", "Mourinho", "123456789", "X1234567L", "senior");
     Gerente g = new Gerente("Ali", "123456","Ali", "baba", "123456789", "X1234566L", "senior");
     Club club = new Club("TSM", "Federacion de Valencia", e, g);
-    private Jugador datos_jugador;
+    private Jugador datos_jugador;      //esta no puede ser una variable global
     private Gerente datos_gerente;
     public AppAjedrez(){
         //Añadimos jugadores por la fuerza para comprobar//
@@ -42,6 +42,18 @@ public class AppAjedrez {
         ArrayList<Club> listaClubes = new ArrayList(clubes);
         
         return listaClubes;
+    }
+    
+    public Jugador buscarJugadorUser(String user){
+        Jugador jugador_aux = null;
+        
+        for(Jugador jugador : jugadores){
+            if(jugador.comprobarUser(user) == true){
+                jugador_aux = jugador;
+            }
+        }  
+        
+        return jugador_aux;
     }
     
     public ArrayList<Torneo> consultarTorneosDisponibles(){

@@ -649,6 +649,12 @@ public class TorneoVista extends javax.swing.JFrame {
 
     private void jbt_resultadosPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_resultadosPartidaActionPerformed
         //Tengo q añadir la lista de torneos al combobox
+        listaTorneos = appAjedrez.consultarTorneosDisponibles();
+        if(!listaTorneos.isEmpty()){
+            for(Object torneo:listaTorneos){
+                //Aqui insertar los torneos al combobox
+            }
+        }
         // Maricel
         this.setVisible(false);
         ResultadosPartida.setVisible(true);
@@ -662,8 +668,54 @@ public class TorneoVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_volverResultadoPartido1ActionPerformed
 
     private void jbt_okResultadoPartido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okResultadoPartido1ActionPerformed
+        boolean comprobarFecha = true;
+        Jugador ganador = null;
+
+        
         String jugador1 = jtf_jugador4.getText();
-        String jugador2 = jtf_jugador3.getText();
+        String jugador2 = jtf_jugador3.getText();     
+        Jugador j1 = appAjedrez.buscarJugadorUser(jugador1);
+        Jugador j2 = appAjedrez.buscarJugadorUser(jugador2);
+        
+        
+        if(jbt_ganadorJ1.isSelected()){
+            ganador = j1;
+        }
+        else if(jbt_ganadorJ2.isSelected()){
+            ganador = j2;
+        }
+        
+        SimpleDateFormat cambioFecha = new SimpleDateFormat("dd/MM/yyyy");
+        String fechaAux = jtf_tiempo1.getText();
+        try {
+            fecha = cambioFecha.parse(fechaAux);
+        } 
+        catch (ParseException ex) {
+            System.out.print(ex);
+            comprobarFecha = false;
+        }
+        
+        //Aqui se pone el objeto seleccionado por el combobox;
+        torneo = null;
+        
+        if(j1 != null && j2 != null){
+            if(comprobarFecha == true){
+                Partida partida = new Partida(j1,j2,ganador,fecha,torneo);
+                torneo.introducirResultadosPartida(partida);
+                j1.añadirPartidaHistorial(partida);
+                j2.añadirPartidaHistorial(partida);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "fecha no valida");
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "usuario incorrecto");
+        }
+        
+        
+        
+        
         /*
         Con las variables creo un tipo partida
         luego se lo paso al torneo, y a cada jugador para
@@ -780,4 +832,6 @@ public class TorneoVista extends javax.swing.JFrame {
     private Object torneoObj;
     private Object partidaObj;
     private String detallesPartida;
+    private Date fecha = null;
+    Torneo torneo;
 }

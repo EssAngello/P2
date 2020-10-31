@@ -51,6 +51,16 @@ public class Jugador {
         return comprobacion;
     }
     
+    public boolean comprobarUser(String user){
+        boolean comprobacion = false;
+        
+        if(this.user == user){
+            comprobacion = true;
+        }
+        
+        return comprobacion;
+    }
+    
     public boolean comprobarExistencia(String user, String passwd,String DNI){
         boolean comprobacion = true;
         if(this.user == user){
@@ -69,6 +79,10 @@ public class Jugador {
             comprobacion = false;
         
         return comprobacion;
+    }
+    
+    public void añadirPartidaHistorial(Partida partida){
+        historialPartidas.add(partida);
     }
     
     public ArrayList<Partida> getHistorialPartidas(){

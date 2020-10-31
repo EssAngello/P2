@@ -19,11 +19,15 @@ public class Partida {
     protected Jugador ganador;
     protected Date tiempo;
     protected Torneo torneo;
-            
-    public Partida(Jugador jugador, Jugador rival){
+
+    public Partida(Jugador jugador, Jugador rival, Jugador ganador, Date tiempo, Torneo torneo) {
         this.jugador = jugador;
         this.rival = rival;
+        this.ganador = ganador;
+        this.tiempo = tiempo;
+        this.torneo = torneo;
     }
+           
     
     public String detallesPartida(){
         return rival + "|" + ganador + "|" + tiempo;
