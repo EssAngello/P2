@@ -7,6 +7,7 @@ package vista;
 
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import modelo.Gerente;
 import modelo.Jugador;
 /**
@@ -330,6 +331,11 @@ public class ClubVista extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+        jlt_listaDisponibilidad1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlt_listaDisponibilidad1MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jlt_listaDisponibilidad1);
 
         jbt_cancelarEntrenamiento1.setText("cancelar");
@@ -414,12 +420,11 @@ public class ClubVista extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(NominaGerenteClubLayout.createSequentialGroup()
                         .addGap(160, 160, 160)
-                        .addComponent(jlb_tituloNominas, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jlb_tituloNominas, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(NominaGerenteClubLayout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(jbt_atras_nomina)))
                 .addContainerGap(95, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NominaGerenteClubLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jbt_atras_nomina)
-                .addGap(194, 194, 194))
         );
         NominaGerenteClubLayout.setVerticalGroup(
             NominaGerenteClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -681,12 +686,39 @@ public class ClubVista extends javax.swing.JFrame {
 
     private void jbt_reservar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_reservar1ActionPerformed
         // Maricel
+        
+        
+        if(!entrenamientosSede.isEmpty()&&num!="")
+        {
+            for(Object c: entrenamientosSede)
+            {
+                if(c.toString()== num)
+                {
+                    jugador.apuntarseEntrenamiento(c);
+                } 
+            }
+            this.setVisible(false);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this,"El numero de entrenamiento seleccionados es 0, no puedes reservar Entrenamiento");
+        }
+
         ReservarEntrenamiento.setVisible(false);
         this.setVisible(true);
     }//GEN-LAST:event_jbt_reservar1ActionPerformed
 
     private void jbt_infoGerenteNomina1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoGerenteNomina1ActionPerformed
         // Maricel
+        listmodel3.removeAllElements();
+        nominas.removeAll(nominas);
+        nominas = gerente.getNominas();
+        for(Object x: nominas)
+        {
+            String str = x.toString();
+            listmodel3.addElement(str);
+        }
+        jli_nominas.setModel(listmodel3);
         NominaGerenteClub.setVisible(true);
         NominaGerenteClub.setSize(400,400);
         this.setVisible(false);
@@ -694,6 +726,15 @@ public class ClubVista extends javax.swing.JFrame {
 
     private void jbt_infoGerenteIRPF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoGerenteIRPF1ActionPerformed
         // Maricel
+        listmodel4.removeAllElements();
+        irpfs.removeAll(irpfs);
+        irpfs = gerente.getIrpfs();
+        for(Object x: irpfs)
+        {
+            String str = x.toString();
+            listmodel4.addElement(str);
+        }
+        jli_IRPF.setModel(listmodel4);
         IRPFGerenteClub.setVisible(true);
         IRPFGerenteClub.setSize(600,600);
         this.setVisible(false);
@@ -710,6 +751,11 @@ public class ClubVista extends javax.swing.JFrame {
         IRPFGerenteClub.setVisible(false);
         InfoGerente.setVisible(true);
     }//GEN-LAST:event_jbt_okActionPerformed
+
+    private void jlt_listaDisponibilidad1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlt_listaDisponibilidad1MouseClicked
+        // TODO add your handling code here:
+        num = jlt_listaDisponibilidad1.getSelectedValue();
+    }//GEN-LAST:event_jlt_listaDisponibilidad1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -772,7 +818,12 @@ public class ClubVista extends javax.swing.JFrame {
     private javax.swing.JList<String> jlt_listaDisponibilidad1;
     // End of variables declaration//GEN-END:variables
     ArrayList<Object> clubesEntrenador = new ArrayList();
-     ArrayList<Object> entrenamientosSede = new ArrayList();
+    ArrayList<Object> entrenamientosSede = new ArrayList();
+    ArrayList<Object> nominas = new ArrayList<Object>(); 
+    ArrayList<Object> irpfs = new ArrayList<Object>();
     DefaultListModel listmodel = new DefaultListModel();
     DefaultListModel listmodel2 = new DefaultListModel();
+    DefaultListModel listmodel3 = new DefaultListModel();
+    DefaultListModel listmodel4 = new DefaultListModel();
+    private String num = "";
 }

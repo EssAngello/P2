@@ -23,7 +23,7 @@ public class Gerente extends Jugador{
         return irpfs;
     }
 
-    public ArrayList<Integer> getNominas() {
+    public ArrayList getNominas() {
         return nominas;
     }
     

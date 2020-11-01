@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -12,10 +13,11 @@ import java.util.Date;
  * @author aange
  */
 public class Entrenamiento {
+    ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
     private Date fecha;
     private Club club;
     
-    private int numparticipantes;
+    private int numparticipantes=0;
     
     public Entrenamiento(Club club, int dia,int mes,int anyo, int hora, int minuto, int segundo)
     {
@@ -23,6 +25,20 @@ public class Entrenamiento {
         mes = mes - 1;
         this.club=club;
         fecha = new Date(anyo, mes, dia, hora, minuto, segundo);
+        
+    }
+    
+    @Override
+    public String toString()
+    {
+        String cadena = this.fecha.toString()+"  numero de plazas ocupadas: " + String.valueOf(numparticipantes)+"/2";
+        return cadena;
+    }
+    
+    public void apuntarJugador(Jugador j)
+    {
+        jugadores.add(j);
+        numparticipantes++;
         
     }
     

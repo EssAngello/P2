@@ -16,6 +16,7 @@ import modelo.Jugador;
 public class Torneo {
     protected ArrayList<Partida> partidasTorneo = new ArrayList<Partida>();
     protected ArrayList<Jugador> jugadoresTorneo = new ArrayList<Jugador>();
+    String nombre = "";
     
     
     //FALTA SABER COMO SE GENERAN LAS PARTIDAS DE LOS TORNEOS
@@ -29,5 +30,11 @@ public class Torneo {
     
     public void introducirResultadosPartida(Partida partida){
         partidasTorneo.add(partida);
+    }
+    
+    @Override
+    public String toString()
+    {
+        return this.nombre;
     }
 }

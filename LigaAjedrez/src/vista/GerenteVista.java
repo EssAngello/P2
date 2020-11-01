@@ -16,7 +16,6 @@ import modelo.Gerente;
 public class GerenteVista extends javax.swing.JFrame {
 
     //Maricel
-    private NominaGerente nomina;
     private ClubVista club;
     private TorneoVista t;
     private Gerente gerente;
@@ -64,6 +63,11 @@ public class GerenteVista extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
+        NominaGerente = new javax.swing.JFrame();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jListNominas = new javax.swing.JList<>();
+        jButtonAtras = new javax.swing.JButton();
         jbt_inscribirseClub = new javax.swing.JButton();
         jbt_historialClubes = new javax.swing.JButton();
         jbt_torneos = new javax.swing.JButton();
@@ -302,6 +306,52 @@ public class GerenteVista extends javax.swing.JFrame {
                 .addGap(29, 29, 29))
         );
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabel2.setText("Nominas");
+
+        jListNominas.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jListNominas);
+
+        jButtonAtras.setText("Atras");
+        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtrasActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout NominaGerenteLayout = new javax.swing.GroupLayout(NominaGerente.getContentPane());
+        NominaGerente.getContentPane().setLayout(NominaGerenteLayout);
+        NominaGerenteLayout.setHorizontalGroup(
+            NominaGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NominaGerenteLayout.createSequentialGroup()
+                .addGroup(NominaGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(NominaGerenteLayout.createSequentialGroup()
+                        .addGap(152, 152, 152)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(NominaGerenteLayout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(NominaGerenteLayout.createSequentialGroup()
+                        .addGap(162, 162, 162)
+                        .addComponent(jButtonAtras)))
+                .addContainerGap(78, Short.MAX_VALUE))
+        );
+        NominaGerenteLayout.setVerticalGroup(
+            NominaGerenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NominaGerenteLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(jButtonAtras)
+                .addGap(28, 28, 28))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jbt_inscribirseClub.setText("Inscribirse Club");
@@ -453,8 +503,17 @@ public class GerenteVista extends javax.swing.JFrame {
     private void jbt_NominasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_NominasActionPerformed
         //FALTA
         // Maricel
-        nomina = new NominaGerente(gerente);
-        nomina.setVisible(true);
+        listmodel2.removeAllElements();
+        nominas.removeAll(nominas);
+        nominas = gerente.getNominas();
+        for(Object x: nominas)
+        {
+            String str = x.toString();
+            listmodel2.addElement(str);
+        }
+        jList1.setModel(listmodel2);
+        NominaGerente.setVisible(true);
+        NominaGerente.setSize(400,400);
         this.setVisible(false);
         dispose();
     }//GEN-LAST:event_jbt_NominasActionPerformed
@@ -523,6 +582,10 @@ public class GerenteVista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAtrasActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -530,11 +593,16 @@ public class GerenteVista extends javax.swing.JFrame {
     private javax.swing.JFrame HistorialClubesGerente;
     private javax.swing.JFrame IRPFGerente;
     private javax.swing.JFrame InscribirseClubGerente;
+    private javax.swing.JFrame NominaGerente;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonAtras;
     private javax.swing.JButton jButtonIRPF;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jListNominas;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JButton jbt_Nominas;
@@ -564,5 +632,7 @@ public class GerenteVista extends javax.swing.JFrame {
     private javax.swing.JList<String> jli_historialClubes1;
     // End of variables declaration//GEN-END:variables
     ArrayList<Object> irpfs = new ArrayList<Object>();
+    ArrayList<Object> nominas = new ArrayList<Object>();
     DefaultListModel listmodel = new DefaultListModel();
+    DefaultListModel listmodel2 = new DefaultListModel();
 }

@@ -368,6 +368,11 @@ public class TorneoVista extends javax.swing.JFrame {
         });
 
         jcb_Torneo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcb_Torneo1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jcb_Torneo1MouseClicked(evt);
+            }
+        });
         jcb_Torneo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcb_Torneo1ActionPerformed(evt);
@@ -653,6 +658,7 @@ public class TorneoVista extends javax.swing.JFrame {
         if(!listaTorneos.isEmpty()){
             for(Object torneo:listaTorneos){
                 //Aqui insertar los torneos al combobox
+                jcb_Torneo1.addItem(torneo.toString());
             }
         }
         // Maricel
@@ -668,62 +674,71 @@ public class TorneoVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_volverResultadoPartido1ActionPerformed
 
     private void jbt_okResultadoPartido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okResultadoPartido1ActionPerformed
-        boolean comprobarFecha = true;
-        Jugador ganador = null;
+        int indice = jcb_Torneo1.getSelectedIndex();
+        if(indice!=-1)
+        {
+            boolean comprobarFecha = true;
+            Jugador ganador = null;
 
-        
-        String jugador1 = jtf_jugador4.getText();
-        String jugador2 = jtf_jugador3.getText();     
-        Jugador j1 = appAjedrez.buscarJugadorUser(jugador1);
-        Jugador j2 = appAjedrez.buscarJugadorUser(jugador2);
-        
-        
-        if(jbt_ganadorJ1.isSelected()){
-            ganador = j1;
-        }
-        else if(jbt_ganadorJ2.isSelected()){
-            ganador = j2;
-        }
-        
-        SimpleDateFormat cambioFecha = new SimpleDateFormat("dd/MM/yyyy");
-        String fechaAux = jtf_tiempo1.getText();
-        try {
-            fecha = cambioFecha.parse(fechaAux);
-        } 
-        catch (ParseException ex) {
-            System.out.print(ex);
-            comprobarFecha = false;
-        }
-        
-        //Aqui se pone el objeto seleccionado por el combobox;
-        torneo = null;
-        
-        if(j1 != null && j2 != null){
-            if(comprobarFecha == true){
-                Partida partida = new Partida(j1,j2,ganador,fecha,torneo);
-                torneo.introducirResultadosPartida(partida);
-                j1.añadirPartidaHistorial(partida);
-                j2.añadirPartidaHistorial(partida);
+
+            String jugador1 = jtf_jugador4.getText();
+            String jugador2 = jtf_jugador3.getText();     
+            Jugador j1 = appAjedrez.buscarJugadorUser(jugador1);
+            Jugador j2 = appAjedrez.buscarJugadorUser(jugador2);
+
+
+            if(jbt_ganadorJ1.isSelected()){
+                ganador = j1;
+            }
+            else if(jbt_ganadorJ2.isSelected()){
+                ganador = j2;
+            }
+
+            SimpleDateFormat cambioFecha = new SimpleDateFormat("dd/MM/yyyy");
+            String fechaAux = jtf_tiempo1.getText();
+            try {
+                fecha = cambioFecha.parse(fechaAux);
+            } 
+            catch (ParseException ex) {
+                System.out.print(ex);
+                comprobarFecha = false;
+            }
+
+            //Aqui se pone el objeto seleccionado por el combobox;
+            torneo = (Torneo) listaTorneos.get(indice);
+
+            if(j1 != null && j2 != null){
+                if(comprobarFecha == true){
+                    Partida partida = new Partida(j1,j2,ganador,fecha,torneo);
+                    torneo.introducirResultadosPartida(partida);
+                    j1.añadirPartidaHistorial(partida);
+                    j2.añadirPartidaHistorial(partida);
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "fecha no valida");
+                }
             }
             else{
-                JOptionPane.showMessageDialog(null, "fecha no valida");
+                JOptionPane.showMessageDialog(null, "usuario incorrecto");
             }
+
+
+
+
+            /*
+            Con las variables creo un tipo partida
+            luego se lo paso al torneo, y a cada jugador para
+            que se guarde en el historial de partidas
+            */
+            // Maricel
+            ResultadosPartida.setVisible(false);
+            this.setVisible(true);
         }
-        else{
-            JOptionPane.showMessageDialog(null, "usuario incorrecto");
+        else
+        {
+            JOptionPane.showMessageDialog(this,"No has seleccionado ningun torneo");
         }
         
-        
-        
-        
-        /*
-        Con las variables creo un tipo partida
-        luego se lo paso al torneo, y a cada jugador para
-        que se guarde en el historial de partidas
-        */
-        // Maricel
-        ResultadosPartida.setVisible(false);
-        this.setVisible(true);
     }//GEN-LAST:event_jbt_okResultadoPartido1ActionPerformed
 
     private void jbt_volverHistorial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverHistorial1ActionPerformed
@@ -770,6 +785,11 @@ public class TorneoVista extends javax.swing.JFrame {
     private void jbt_ganadorJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_ganadorJ2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbt_ganadorJ2ActionPerformed
+
+    private void jcb_Torneo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jcb_Torneo1MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jcb_Torneo1MouseClicked
 
     /**
      * @param args the command line arguments

@@ -18,6 +18,7 @@ import javax.swing.JOptionPane;
  */
 public class Jugador {
     //Contiene usuario y contraseña 
+    Entrenamiento e;
     protected String user, passwd, nombre, apellido, telefono, DNI, categoria;
     protected String res_nom = "";
     protected String res_apell = "";
@@ -215,6 +216,13 @@ public class Jugador {
     public Club getClub()
     {
         return this.club;
+    }
+    
+    public void apuntarseEntrenamiento(Object o)
+    {
+        Entrenamiento ent = (Entrenamiento)o;
+        this.e = ent;
+        ent.apuntarJugador(this);
     }
     
     
