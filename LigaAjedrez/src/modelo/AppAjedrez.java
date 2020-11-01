@@ -33,6 +33,7 @@ public class AppAjedrez {
         gerentes.add(g);
         clubes.add(club);
         j1.InscribirseClub(club);
+        club.setDefaultEntrenamientos();
     }
     
     public ArrayList<Club> consultarClubes(){

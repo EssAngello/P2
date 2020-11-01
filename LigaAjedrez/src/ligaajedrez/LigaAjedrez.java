@@ -5,6 +5,8 @@
  */
 package ligaajedrez;
 
+import vista.Iniciar;
+
 /**
  *
  * @author aange

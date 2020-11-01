@@ -356,25 +356,21 @@ public class ClubVista extends javax.swing.JFrame {
         ReservarEntrenamiento.getContentPane().setLayout(ReservarEntrenamientoLayout);
         ReservarEntrenamientoLayout.setHorizontalGroup(
             ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ReservarEntrenamientoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jbt_cancelarEntrenamiento1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbt_reservar1)
-                .addContainerGap())
-            .addGroup(ReservarEntrenamientoLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jlb_disponibilidad1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReservarEntrenamientoLayout.createSequentialGroup()
-                .addContainerGap(85, Short.MAX_VALUE)
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(jlb_tituloReservarEntrenamiento1)
+                .addGap(115, 115, 115))
+            .addGroup(ReservarEntrenamientoLayout.createSequentialGroup()
+                .addGap(78, 78, 78)
                 .addGroup(ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReservarEntrenamientoLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(93, 93, 93))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReservarEntrenamientoLayout.createSequentialGroup()
-                        .addComponent(jlb_tituloReservarEntrenamiento1)
-                        .addGap(115, 115, 115))))
+                    .addComponent(jlb_disponibilidad1)
+                    .addGroup(ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(ReservarEntrenamientoLayout.createSequentialGroup()
+                            .addComponent(jbt_cancelarEntrenamiento1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbt_reservar1))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ReservarEntrenamientoLayout.setVerticalGroup(
             ReservarEntrenamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -639,27 +635,35 @@ public class ClubVista extends javax.swing.JFrame {
         //POR COMPLETAR MUCHISIMO
         //DEBEN ESTAR ORDENADOS POR FECHA Y HORA TENIENDO EN CUANTA 2H DE DIFERENCIA
         // Maricel
-        this.setVisible(false);
-        ReservarEntrenamiento.setVisible(true);
-        ReservarEntrenamiento.setSize(400,400);
         //Angello
+        System.out.println("ESTAMOS DENTRito");
+        DefaultListModel listmodel2 = new DefaultListModel();
+        System.out.println("ESTAMOS DENTROO");
         listmodel2.removeAllElements();
+        System.out.println("ESTAMOS DENTRO1");
         entrenamientosSede.removeAll(entrenamientosSede);
+        System.out.println("ESTAMOS DENTRO2");
         entrenamientosSede = jugador.getEntrenamientosClub();
+        System.out.println("ESTAMOS DENTRO3");
         for(Object c: entrenamientosSede)
         {
+            System.out.println("HOLA");
             String entrenamiento = c.toString();
-            listmodel.addElement(c);
+            listmodel2.addElement(entrenamiento);
         }
         
         jlt_listaDisponibilidad1.setModel(listmodel2);
+        this.setVisible(false);
+        ReservarEntrenamiento.setVisible(true);
+        ReservarEntrenamiento.setSize(400,400);
+        
     }//GEN-LAST:event_jbt_reservaEntrenamientoActionPerformed
 
     private void jbt_infoEntrenadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoEntrenadorActionPerformed
         // Maricel
         this.setVisible(false);
         InfoEntrenador.setVisible(true);
-        InfoEntrenador.setSize(400,400);
+        InfoEntrenador.setSize(600,600);
         //Angello
         listmodel.removeAllElements();
         jlb_infoEntrenadorDatosNombre1.setText(jugador.getNombreEntrenador());
@@ -822,7 +826,6 @@ public class ClubVista extends javax.swing.JFrame {
     ArrayList<Object> nominas = new ArrayList<Object>(); 
     ArrayList<Object> irpfs = new ArrayList<Object>();
     DefaultListModel listmodel = new DefaultListModel();
-    DefaultListModel listmodel2 = new DefaultListModel();
     DefaultListModel listmodel3 = new DefaultListModel();
     DefaultListModel listmodel4 = new DefaultListModel();
     private String num = "";

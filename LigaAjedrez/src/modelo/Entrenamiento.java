@@ -31,7 +31,7 @@ public class Entrenamiento implements Comparable<Entrenamiento> {
     @Override
     public String toString()
     {
-        String cadena = this.fecha.toString()+"  numero de plazas ocupadas: " + String.valueOf(numparticipantes)+"/2";
+        String cadena =  String.valueOf(fecha) + "numero de plazas ocupadas: " + String.valueOf(numparticipantes)+"/2";
         return cadena;
     }
     
