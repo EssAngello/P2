@@ -6,6 +6,7 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import modelo.Jugador;
 /**
  *
@@ -103,6 +104,12 @@ public class Club {
         return this.entrenamientos;
     }
     
+    public void addEntrenamiento(Entrenamiento e)
+    {
+        entrenamientos.add(e);
+        Collections.sort(entrenamientos);
+    }
+    
     public void setDefaultEntrenamientos(){
         Entrenamiento entrenamiento1 = new Entrenamiento(this,2020,10,31,9,0,0);
         Entrenamiento entrenamiento2 = new Entrenamiento(this,2020,10,31,11,0,0);
@@ -110,6 +117,7 @@ public class Club {
         entrenamientos.add(entrenamiento1);
         entrenamientos.add(entrenamiento2);
         entrenamientos.add(entrenamiento3);
+        Collections.sort(entrenamientos);
     }
     
 }

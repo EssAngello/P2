@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author aange
  */
-public class Entrenamiento {
+public class Entrenamiento implements Comparable<Entrenamiento> {
     ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
     private Date fecha;
     private Club club;
@@ -40,6 +40,16 @@ public class Entrenamiento {
         jugadores.add(j);
         numparticipantes++;
         
+    }
+    
+    public Date getDateTime()
+    {
+        return fecha;
+    }
+
+    @Override
+    public int compareTo(Entrenamiento t) {
+        return getDateTime().compareTo(t.getDateTime());
     }
     
     
