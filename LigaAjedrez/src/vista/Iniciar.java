@@ -440,6 +440,8 @@ public class Iniciar extends javax.swing.JFrame {
                 g.setVisible(true);
                 dispose();
             }
+            else
+                JOptionPane.showMessageDialog(null, "No eres gerente");
         }
         else if(jrb_jugador.isSelected()){
             inicio_jugador = app.identificarJugador(user, passwd);
@@ -449,6 +451,8 @@ public class Iniciar extends javax.swing.JFrame {
                 j.setVisible(true);
                 dispose();
             }
+            else 
+                JOptionPane.showMessageDialog(null, "No eres jugador");
         }
         else if (jrb_administrador.isSelected()){
             if(admin.identificarse(user, passwd)){
@@ -457,6 +461,8 @@ public class Iniciar extends javax.swing.JFrame {
                 a.setVisible(true);
                 dispose();
             }
+            else
+                JOptionPane.showMessageDialog(null, "No eres administrador");
         }
         else{
             JOptionPane.showMessageDialog(null, "No has seleccionado el tipo de usuario que eres");

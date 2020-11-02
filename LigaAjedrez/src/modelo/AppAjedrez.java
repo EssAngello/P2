@@ -5,6 +5,9 @@
  */
 package modelo;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.*;
 
 import modelo.Torneo;
@@ -21,19 +24,24 @@ public class AppAjedrez {
     protected ArrayList<Gerente> gerentes = new ArrayList<Gerente>();
     protected ArrayList<Entrenador> entrenadores = new ArrayList<Entrenador>();
     protected ArrayList<Club> clubes = new ArrayList<Club>();
-    Jugador j1 = new Jugador("Maricel","123456","Maricel","Olaru","123456789","X9356742C","senior");
+    //Jugador j1 = new Jugador("Maricel","123456","Maricel","Olaru","123456789","X9356742C","senior");
     Entrenador e = new Entrenador("Jose", "123456", "Jose", "Mourinho", "123456789", "X1234567L", "senior");
     Gerente g = new Gerente("Ali", "123456","Ali", "baba", "123456789", "X1234566L", "senior");
     Club club = new Club("TSM", "Federacion de Valencia", e, g);
-    
+    //Ficheros
+    String ficheroJugadores = "jugadores.txt";
+    String gerentesJugadores = "gerentes.txt";
     public AppAjedrez(){
         //Añadimos jugadores por la fuerza para comprobar//
-        jugadores.add(j1);
+        //jugadores.add(j1);
         entrenadores.add(e);
         gerentes.add(g);
         clubes.add(club);
-        j1.InscribirseClub(club);
+        //j1.InscribirseClub(club);
         club.setDefaultEntrenamientos();
+        //Hay pasarle el fichero y el tipo jugador = 0 gerente = 1
+        ficheroJugador(ficheroJugadores, 0);
+        ficheroJugador(gerentesJugadores, 1);
     }
     
     public ArrayList<Club> consultarClubes(){
@@ -116,5 +124,59 @@ public class AppAjedrez {
    public void eliminarJugador(Jugador j)
    {
        jugadores.remove(j);
+   }
+   
+   public void ficheroJugador(String fichero, int tipo){
+       String nombreFichero = "./src/modelo/";
+       BufferedReader br = null;
+       nombreFichero = nombreFichero + fichero;
+        try {
+           //Crear un objeto BufferedReader al que se le pasa 
+           //   un objeto FileReader con el nombre del fichero
+           br = new BufferedReader(new FileReader(nombreFichero));
+           //Leer la primera línea, guardando en un String
+           String texto = br.readLine();
+           //Repetir mientras no se llegue al final del fichero
+           while(texto != null)
+           {
+               //Hacer lo que sea con la línea leída
+               String[] parts =texto.split(",");
+               String part1 = parts[0]; 
+               String part2 = parts[1];
+               String part3 = parts[2]; 
+               String part4 = parts[3];
+               String part5 = parts[4]; 
+               String part6 = parts[5];
+               String part7 = parts[6];
+               if(tipo == 0){
+                Jugador j1 = new Jugador(part1,part2,part3,part4,part5,part6,part7);
+                jugadores.add(j1);
+               }
+               else if (tipo == 1){
+                Gerente g = new Gerente(part1,part2,part3,part4,part5,part6,part7);
+                gerentes.add(g);
+               }
+               //Leer la siguiente línea
+               texto = br.readLine();
+           }
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("Error: Fichero no encontrado");
+            System.out.println(e.getMessage());
+        }
+        catch(Exception e) {
+            System.out.println("Error de lectura del fichero");
+            System.out.println(e.getMessage());
+        }
+        finally {
+            try {
+                if(br != null)
+                    br.close();
+            }
+            catch (Exception e) {
+                System.out.println("Error al cerrar el fichero");
+                System.out.println(e.getMessage());
+            }
+        }
    }
 }
