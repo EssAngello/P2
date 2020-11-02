@@ -149,6 +149,8 @@ public class AppAjedrez {
                String part6 = parts[5];
                String part7 = parts[6];
                if(tipo == 0){
+                   //OTRA FORMA PASRLE TODO EL ARRAY AL CONSTRUCTOR Y QUE LA CLASE ASIGNE TODA LA INFORMACION
+                   // ASI PUEDES ANYADIR TAMBIEN LOS OTROS ATRIBUTOS, CREAR OTRO CONSTRUCTOR
                 Jugador j1 = new Jugador(part1,part2,part3,part4,part5,part6,part7);
                 jugadores.add(j1);
                }
