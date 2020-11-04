@@ -561,14 +561,14 @@ public class TorneoVista extends javax.swing.JFrame {
             for(Object historialPartido:listaHistorialPartidas){
                 modeloListaHistorialPartidos.addElement(historialPartido);
             }
+            // Maricel
+            this.setVisible(false);
+            HistorialPartidas.setVisible(true);
+            HistorialPartidas.setSize(400,400);
         }
         else{
             JOptionPane.showMessageDialog(this, "No hay partidas");
         }
-        // Maricel
-        this.setVisible(false);
-        HistorialPartidas.setVisible(true);
-        HistorialPartidas.setSize(400,400);
     }//GEN-LAST:event_jbt_historialPartidasActionPerformed
 
     private void jbt_volverInscribirse1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInscribirse1ActionPerformed

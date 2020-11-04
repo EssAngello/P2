@@ -31,22 +31,21 @@ public class ClubVista extends javax.swing.JFrame {
         this.origen = i;
         this.jugador = j;
         //Angello
-        //ESTO HAY QUE ARREGLARLO PARA QUE PONGA LOS DATOS BIEN 
-        /*jlb_tituloNombreClub.setText(jugador.getNombreClub());
+        jlb_tituloNombreClub.setText(jugador.getNombreClub());
         jlb_nombreGerente.setText(jugador.getNombreGerente());
         jlb_nombreEntrenador.setText(jugador.getNombreEntrenador());
-        jlb_federacionPerteneciente.setText(jugador.getNombreFederacion());*/
+        jlb_federacionPerteneciente.setText(jugador.getNombreFederacion());
     }
     public ClubVista(int i, Gerente g) {
         initComponents();
         this.origen = i;
         this.gerente = g;
         //Angello
-        /*
-        jlb_tituloNombreClub.setText(jugador.getNombreClub());
-        jlb_nombreGerente.setText(jugador.getNombreGerente());
-        jlb_nombreEntrenador.setText(jugador.getNombreEntrenador());
-        jlb_federacionPerteneciente.setText(jugador.getNombreFederacion());*/
+        
+        jlb_tituloNombreClub.setText(gerente.getNombreClub());
+        jlb_nombreGerente.setText(gerente.getNombreGerente());
+        jlb_nombreEntrenador.setText(gerente.getNombreEntrenador());
+        jlb_federacionPerteneciente.setText(gerente.getNombreFederacion());
     }
 
 
@@ -636,18 +635,18 @@ public class ClubVista extends javax.swing.JFrame {
         //DEBEN ESTAR ORDENADOS POR FECHA Y HORA TENIENDO EN CUANTA 2H DE DIFERENCIA
         // Maricel
         //Angello
-        System.out.println("ESTAMOS DENTRito");
+
         DefaultListModel listmodel2 = new DefaultListModel();
-        System.out.println("ESTAMOS DENTROO");
+
         listmodel2.removeAllElements();
-        System.out.println("ESTAMOS DENTRO1");
+
         entrenamientosSede.removeAll(entrenamientosSede);
-        System.out.println("ESTAMOS DENTRO2");
+
         entrenamientosSede = jugador.getEntrenamientosClub();
-        System.out.println("ESTAMOS DENTRO3");
+
         for(Object c: entrenamientosSede)
         {
-            System.out.println("HOLA");
+
             String entrenamiento = c.toString();
             listmodel2.addElement(entrenamiento);
         }

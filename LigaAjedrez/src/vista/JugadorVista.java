@@ -673,7 +673,6 @@ public class JugadorVista extends javax.swing.JFrame {
         if(aux == 0)
         {
             if(club.darseBaja(jugador) == false){
-                //faltaria quitarle el club a la clase jugador HECHO
                 JOptionPane.showMessageDialog(this,"No estas inscrito en ningun club");
             }
             else{

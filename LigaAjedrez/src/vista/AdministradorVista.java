@@ -1055,6 +1055,11 @@ public class AdministradorVista extends javax.swing.JFrame {
         jButtonClub.setText("CLUB");
 
         jButtonUser.setText("USER");
+        jButtonUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonUserActionPerformed(evt);
+            }
+        });
 
         jButtonTorneo.setText("TORNEO");
 
@@ -1164,6 +1169,10 @@ public class AdministradorVista extends javax.swing.JFrame {
     private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonSalirActionPerformed
+
+    private void jButtonUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonUserActionPerformed
 
     /**
      * @param args the command line arguments

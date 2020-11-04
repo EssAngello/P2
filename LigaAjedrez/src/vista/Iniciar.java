@@ -454,6 +454,7 @@ public class Iniciar extends javax.swing.JFrame {
             else 
                 JOptionPane.showMessageDialog(null, "No eres jugador");
         }
+        //Maricel 
         else if (jrb_administrador.isSelected()){
             if(admin.identificarse(user, passwd)){
                 this.setVisible(false);
