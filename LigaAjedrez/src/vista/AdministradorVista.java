@@ -160,9 +160,19 @@ public class AdministradorVista extends javax.swing.JFrame {
 
         jButtonVer.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonVer.setText("Ver");
+        jButtonVer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVerActionPerformed(evt);
+            }
+        });
 
         jButtonEliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonEliminar.setText("Eliminar");
+        jButtonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarActionPerformed(evt);
+            }
+        });
 
         jButtonCrear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonCrear.setText("Crear");
@@ -218,9 +228,19 @@ public class AdministradorVista extends javax.swing.JFrame {
 
         jButtonEliminar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonEliminar1.setText("Eliminar");
+        jButtonEliminar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminar1ActionPerformed(evt);
+            }
+        });
 
         jButtonCrear1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonCrear1.setText("Crear");
+        jButtonCrear1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrear1ActionPerformed(evt);
+            }
+        });
 
         jLabelTorneo.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabelTorneo.setText("Torneo");
@@ -258,12 +278,27 @@ public class AdministradorVista extends javax.swing.JFrame {
 
         jButtonVer2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonVer2.setText("Ver");
+        jButtonVer2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVer2ActionPerformed(evt);
+            }
+        });
 
         jButtonEliminar2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonEliminar2.setText("Eliminar");
+        jButtonEliminar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminar2ActionPerformed(evt);
+            }
+        });
 
         jButtonCrear2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonCrear2.setText("Crear");
+        jButtonCrear2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrear2ActionPerformed(evt);
+            }
+        });
 
         jLabelClub.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabelClub.setText("Club");
@@ -304,9 +339,19 @@ public class AdministradorVista extends javax.swing.JFrame {
 
         jButtonCrear3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonCrear3.setText("Crear");
+        jButtonCrear3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrear3ActionPerformed(evt);
+            }
+        });
 
         jButtonEliminar3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonEliminar3.setText("Eliminar");
+        jButtonEliminar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminar3ActionPerformed(evt);
+            }
+        });
 
         jButtonApuntar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonApuntar.setText("Apuntar Resultado");
@@ -362,8 +407,18 @@ public class AdministradorVista extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jListSeleccionarClub);
 
         jButtonAtras.setText("Atras");
+        jButtonAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtrasActionPerformed(evt);
+            }
+        });
 
         jButtonSiguiente.setText("Siguiente");
+        jButtonSiguiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSiguienteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ReservarLayout = new javax.swing.GroupLayout(Reservar.getContentPane());
         Reservar.getContentPane().setLayout(ReservarLayout);
@@ -414,6 +469,11 @@ public class AdministradorVista extends javax.swing.JFrame {
         jButtonBuscar.setText("Buscar");
 
         jButtonAtras2.setText("Atras");
+        jButtonAtras2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtras2ActionPerformed(evt);
+            }
+        });
 
         jButtonVer3.setText("Ver");
         jButtonVer3.addActionListener(new java.awt.event.ActionListener() {
@@ -465,6 +525,11 @@ public class AdministradorVista extends javax.swing.JFrame {
         );
 
         jButtonAtras3.setText("Atras");
+        jButtonAtras3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtras3ActionPerformed(evt);
+            }
+        });
 
         jButtonEliminar4.setText("Eliminar");
         jButtonEliminar4.addActionListener(new java.awt.event.ActionListener() {
@@ -536,8 +601,18 @@ public class AdministradorVista extends javax.swing.JFrame {
         jScrollPane4.setViewportView(jList1);
 
         jButtonAtras4.setText("Atras");
+        jButtonAtras4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtras4ActionPerformed(evt);
+            }
+        });
 
         jButtonEliminar5.setText("Eliminar");
+        jButtonEliminar5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminar5ActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabel6.setText("Eliminar Torneo");
@@ -599,8 +674,18 @@ public class AdministradorVista extends javax.swing.JFrame {
         jTextField2.setText("Nombre");
 
         jButtonAtras6.setText("Atras");
+        jButtonAtras6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtras6ActionPerformed(evt);
+            }
+        });
 
         jButtonCrear4.setText("Crear");
+        jButtonCrear4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrear4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout TorneoCrearLayout = new javax.swing.GroupLayout(TorneoCrear.getContentPane());
         TorneoCrear.getContentPane().setLayout(TorneoCrearLayout);
@@ -651,6 +736,11 @@ public class AdministradorVista extends javax.swing.JFrame {
         );
 
         jButtonAtras5.setText("Atras");
+        jButtonAtras5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtras5ActionPerformed(evt);
+            }
+        });
 
         jButtonVer4.setText("Ver");
         jButtonVer4.addActionListener(new java.awt.event.ActionListener() {
@@ -699,6 +789,11 @@ public class AdministradorVista extends javax.swing.JFrame {
         );
 
         jButtonAtras7.setText("Atras");
+        jButtonAtras7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtras7ActionPerformed(evt);
+            }
+        });
 
         jButtonEliminar6.setText("Eliminar");
         jButtonEliminar6.addActionListener(new java.awt.event.ActionListener() {
@@ -766,8 +861,18 @@ public class AdministradorVista extends javax.swing.JFrame {
         jTextFieldFederacion.setText("Federacion");
 
         jButtonAtras8.setText("Atras");
+        jButtonAtras8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtras8ActionPerformed(evt);
+            }
+        });
 
         jButtonCrear5.setText("Crear");
+        jButtonCrear5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrear5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ClubCrearLayout = new javax.swing.GroupLayout(ClubCrear.getContentPane());
         ClubCrear.getContentPane().setLayout(ClubCrearLayout);
@@ -857,8 +962,18 @@ public class AdministradorVista extends javax.swing.JFrame {
         jScrollPane7.setViewportView(jListTorneo);
 
         jButtonAtras9.setText("Atras");
+        jButtonAtras9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtras9ActionPerformed(evt);
+            }
+        });
 
         jButtonCrear6.setText("Crear");
+        jButtonCrear6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrear6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PartidoCrearLayout = new javax.swing.GroupLayout(PartidoCrear.getContentPane());
         PartidoCrear.getContentPane().setLayout(PartidoCrearLayout);
@@ -929,8 +1044,13 @@ public class AdministradorVista extends javax.swing.JFrame {
         );
 
         jButtonAtras10.setText("Atras");
+        jButtonAtras10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtras10ActionPerformed(evt);
+            }
+        });
 
-        jButtonVer5.setText("Ver");
+        jButtonVer5.setText("Eliminar");
         jButtonVer5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonVer5ActionPerformed(evt);
@@ -994,6 +1114,11 @@ public class AdministradorVista extends javax.swing.JFrame {
         jLabel23.setText("Eliminado con Exito!");
 
         jButtonOk.setText("Ok");
+        jButtonOk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonOkActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout EliminadoExitoLayout = new javax.swing.GroupLayout(EliminadoExito.getContentPane());
         EliminadoExito.getContentPane().setLayout(EliminadoExitoLayout);
@@ -1023,6 +1148,11 @@ public class AdministradorVista extends javax.swing.JFrame {
         jLabel24.setText("Creado con Exito!");
 
         jButtonOk1.setText("Ok");
+        jButtonOk1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonOk1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout CreadoExitoLayout = new javax.swing.GroupLayout(CreadoExito.getContentPane());
         CreadoExito.getContentPane().setLayout(CreadoExitoLayout);
@@ -1053,6 +1183,11 @@ public class AdministradorVista extends javax.swing.JFrame {
         jl_titulo.setText("ADMINISTRADOR");
 
         jButtonClub.setText("CLUB");
+        jButtonClub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClubActionPerformed(evt);
+            }
+        });
 
         jButtonUser.setText("USER");
         jButtonUser.addActionListener(new java.awt.event.ActionListener() {
@@ -1062,10 +1197,25 @@ public class AdministradorVista extends javax.swing.JFrame {
         });
 
         jButtonTorneo.setText("TORNEO");
+        jButtonTorneo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTorneoActionPerformed(evt);
+            }
+        });
 
         jButtonPartido.setText("PARTIDO");
+        jButtonPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPartidoActionPerformed(evt);
+            }
+        });
 
         jButtonReservar.setText("RESERVAR. E");
+        jButtonReservar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonReservarActionPerformed(evt);
+            }
+        });
 
         jButtonResponsable.setText("RESPONSABLE");
 
@@ -1147,7 +1297,9 @@ public class AdministradorVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonVer3ActionPerformed
 
     private void jButtonEliminar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar4ActionPerformed
-        // TODO add your handling code here:
+        // Maricel
+        UserEliminar.setVisible(false);
+        EliminadoExito.setVisible(true);
     }//GEN-LAST:event_jButtonEliminar4ActionPerformed
 
     private void jComboBoxCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCategoriaActionPerformed
@@ -1159,20 +1311,206 @@ public class AdministradorVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonVer4ActionPerformed
 
     private void jButtonEliminar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar6ActionPerformed
-        // TODO add your handling code here:
+        // Maricel
+        ClubEliminar.setVisible(false);
+        EliminadoExito.setVisible(true);
     }//GEN-LAST:event_jButtonEliminar6ActionPerformed
 
     private void jButtonVer5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVer5ActionPerformed
-        // TODO add your handling code here:
+        // Maricel
+        PartidoEliminar.setVisible(false);
+        EliminadoExito.setVisible(true);
     }//GEN-LAST:event_jButtonVer5ActionPerformed
 
     private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
-        // TODO add your handling code here:
+        // Maricel
+        System.exit(0);
     }//GEN-LAST:event_jButtonSalirActionPerformed
 
     private void jButtonUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUserActionPerformed
-        // TODO add your handling code here:
+        // Maricel
+        this.setVisible(false);
+        User.setVisible(true);
     }//GEN-LAST:event_jButtonUserActionPerformed
+
+    private void jButtonVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerActionPerformed
+        // Maricel
+        User.setVisible(false);
+        UserVer.setVisible(true);
+    }//GEN-LAST:event_jButtonVerActionPerformed
+
+    private void jButtonAtras2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras2ActionPerformed
+        // Maricel
+        User.setVisible(true);
+        UserVer.setVisible(false);
+    }//GEN-LAST:event_jButtonAtras2ActionPerformed
+
+    private void jButtonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarActionPerformed
+        // Maricel
+        User.setVisible(false);
+        UserEliminar.setVisible(true);
+    }//GEN-LAST:event_jButtonEliminarActionPerformed
+
+    private void jButtonAtras3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras3ActionPerformed
+        // Maricel
+        User.setVisible(true);
+        UserEliminar.setVisible(false);
+    }//GEN-LAST:event_jButtonAtras3ActionPerformed
+
+    private void jButtonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOkActionPerformed
+        EliminadoExito.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jButtonOkActionPerformed
+
+    private void jButtonTorneoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTorneoActionPerformed
+        // Maricel
+        this.setVisible(false);
+        Torneo.setVisible(true);
+    }//GEN-LAST:event_jButtonTorneoActionPerformed
+
+    private void jButtonEliminar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar1ActionPerformed
+        // Maricel
+        Torneo.setVisible(false);
+        TorneoEliminar.setVisible(true);
+    }//GEN-LAST:event_jButtonEliminar1ActionPerformed
+
+    private void jButtonAtras4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras4ActionPerformed
+        // Maricel
+        Torneo.setVisible(true);
+        TorneoEliminar.setVisible(false);
+    }//GEN-LAST:event_jButtonAtras4ActionPerformed
+
+    private void jButtonEliminar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar5ActionPerformed
+        // Maricel
+        TorneoEliminar.setVisible(false);
+        EliminadoExito.setVisible(true);
+    }//GEN-LAST:event_jButtonEliminar5ActionPerformed
+
+    private void jButtonCrear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear1ActionPerformed
+        // Maricel
+        Torneo.setVisible(false);
+        TorneoCrear.setVisible(true);
+    }//GEN-LAST:event_jButtonCrear1ActionPerformed
+
+    private void jButtonAtras6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras6ActionPerformed
+        // Maricel
+        Torneo.setVisible(true);
+        TorneoCrear.setVisible(false);
+    }//GEN-LAST:event_jButtonAtras6ActionPerformed
+
+    private void jButtonCrear4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear4ActionPerformed
+        TorneoCrear.setVisible(false);
+        CreadoExito.setVisible(true);
+    }//GEN-LAST:event_jButtonCrear4ActionPerformed
+
+    private void jButtonOk1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOk1ActionPerformed
+        // Maricel
+        this.setVisible(true);
+        CreadoExito.setVisible(false);
+    }//GEN-LAST:event_jButtonOk1ActionPerformed
+
+    private void jButtonClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClubActionPerformed
+        // Maricel
+        this.setVisible(false);
+        Club.setVisible(true);
+    }//GEN-LAST:event_jButtonClubActionPerformed
+
+    private void jButtonVer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVer2ActionPerformed
+        // Maricel
+        Club.setVisible(false);
+        ClubVer.setVisible(true);
+    }//GEN-LAST:event_jButtonVer2ActionPerformed
+
+    private void jButtonAtras5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras5ActionPerformed
+        // Maricel
+        Club.setVisible(true);
+        ClubVer.setVisible(false);
+    }//GEN-LAST:event_jButtonAtras5ActionPerformed
+
+    private void jButtonEliminar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar2ActionPerformed
+        // Maricel
+        Club.setVisible(false);
+        ClubEliminar.setVisible(true);
+    }//GEN-LAST:event_jButtonEliminar2ActionPerformed
+
+    private void jButtonAtras7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras7ActionPerformed
+        // Maricel
+        Club.setVisible(true);
+        ClubEliminar.setVisible(false);
+    }//GEN-LAST:event_jButtonAtras7ActionPerformed
+
+    private void jButtonCrear2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear2ActionPerformed
+        // Maricel
+        Club.setVisible(false);
+        ClubCrear.setVisible(true);
+    }//GEN-LAST:event_jButtonCrear2ActionPerformed
+
+    private void jButtonAtras8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras8ActionPerformed
+        // Maricel
+        Club.setVisible(true);
+        ClubCrear.setVisible(false);
+    }//GEN-LAST:event_jButtonAtras8ActionPerformed
+
+    private void jButtonCrear5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear5ActionPerformed
+        // Maricel
+        CreadoExito.setVisible(true);
+        ClubCrear.setVisible(false);
+    }//GEN-LAST:event_jButtonCrear5ActionPerformed
+
+    private void jButtonPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPartidoActionPerformed
+        // Maricel
+        Partido.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButtonPartidoActionPerformed
+
+    private void jButtonCrear3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear3ActionPerformed
+        // Maricel
+        Partido.setVisible(false);
+        PartidoCrear.setVisible(true);
+    }//GEN-LAST:event_jButtonCrear3ActionPerformed
+
+    private void jButtonAtras9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras9ActionPerformed
+        // Maricel
+        Partido.setVisible(true);
+        PartidoCrear.setVisible(false);
+      
+    }//GEN-LAST:event_jButtonAtras9ActionPerformed
+
+    private void jButtonCrear6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear6ActionPerformed
+        // Maricel
+        PartidoCrear.setVisible(false);
+        CreadoExito.setVisible(true);
+    }//GEN-LAST:event_jButtonCrear6ActionPerformed
+
+    private void jButtonEliminar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar3ActionPerformed
+        // Maricel
+        Partido.setVisible(false);
+        PartidoEliminar.setVisible(true);
+    }//GEN-LAST:event_jButtonEliminar3ActionPerformed
+
+    private void jButtonAtras10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras10ActionPerformed
+        // Maricel
+        Partido.setVisible(true);
+        PartidoEliminar.setVisible(false);
+    }//GEN-LAST:event_jButtonAtras10ActionPerformed
+
+    private void jButtonReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReservarActionPerformed
+        // Maricel
+        this.setVisible(false);
+        Reservar.setVisible(true);
+    }//GEN-LAST:event_jButtonReservarActionPerformed
+
+    private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed
+        // Maricel
+        this.setVisible(true);
+        Reservar.setVisible(false);
+    }//GEN-LAST:event_jButtonAtrasActionPerformed
+
+    private void jButtonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSiguienteActionPerformed
+        // Maricel
+        Reservar.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jButtonSiguienteActionPerformed
 
     /**
      * @param args the command line arguments

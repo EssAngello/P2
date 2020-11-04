@@ -579,11 +579,15 @@ public class GerenteVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonIRPFActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        // Maricel
+        IRPFGerente.setVisible(false);
+        this.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtrasActionPerformed
-        // TODO add your handling code here:
+        // Maricel
+        NominaGerente.setVisible(false);
+        this.setVisible(true);
     }//GEN-LAST:event_jButtonAtrasActionPerformed
 
 
