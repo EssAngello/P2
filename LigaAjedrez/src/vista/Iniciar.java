@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package vista;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import modelo.AppAjedrez;
 import modelo.Jugador;
@@ -24,9 +27,10 @@ public class Iniciar extends javax.swing.JFrame {
     private AppAjedrez app;
     private Administrador admin;
     private String user, passwd, nombre, apellido, telefono, DNI, categoria,
-            res_nom, res_apell;
+            res_nom, res_apell, res_DNI;
     private Jugador inicio_jugador;
     private Gerente gerente_inicio;
+    private Date fecha = null;
     /**
      * Creates new form NewJFrame
      */
@@ -79,6 +83,9 @@ public class Iniciar extends javax.swing.JFrame {
         jtf_res_nom = new javax.swing.JTextField();
         jtf_res_apellido = new javax.swing.JTextField();
         jlb_res_apellido = new javax.swing.JLabel();
+        jlb_dniResponsable = new javax.swing.JLabel();
+        jtf_dniResponsable = new javax.swing.JTextField();
+        jtf_fecha_naci = new javax.swing.JTextField();
         jbtg_iniciar = new javax.swing.ButtonGroup();
         jbtg_categoria = new javax.swing.ButtonGroup();
         jlb_usuariIniciar = new javax.swing.JLabel();
@@ -98,19 +105,11 @@ public class Iniciar extends javax.swing.JFrame {
 
         jlb_nombre1.setText("nombre:");
 
-        jtf_nombre1.setText("jTextField3");
-
         jlb_DNI1.setText("DNI/NIE:");
-
-        jtf_DNI1.setText("jTextField5");
 
         jlb_usuario1.setText("usuario:");
 
         jlb_contraseña1.setText("contraseña:");
-
-        jtf_contraseña1.setText("jTextField7");
-
-        jtf_usuario1.setText("jTextField6");
 
         jlb_categoria1.setText("categoria:");
 
@@ -151,10 +150,6 @@ public class Iniciar extends javax.swing.JFrame {
 
         jlb_telefono1.setText("telefono:");
 
-        jtf_telefono1.setText("jTextField8");
-
-        jtf_apellido1.setText("jTextField4");
-
         jlb_apellido1.setText("apellido:");
 
         jrb_serGerente.setText("gerente");
@@ -168,11 +163,11 @@ public class Iniciar extends javax.swing.JFrame {
 
         jlb_res_nom.setText("Nombre:");
 
-        jtf_res_nom.setText("jTextField1");
-
-        jtf_res_apellido.setText("jTextField2");
-
         jlb_res_apellido.setText("Apellido:");
+
+        jlb_dniResponsable.setText("DNI:");
+
+        jtf_fecha_naci.setText("DD/MM/YY");
 
         javax.swing.GroupLayout RegistrarseLayout = new javax.swing.GroupLayout(Registrarse.getContentPane());
         Registrarse.getContentPane().setLayout(RegistrarseLayout);
@@ -186,64 +181,70 @@ public class Iniciar extends javax.swing.JFrame {
                             .addComponent(jlb_DNI1)
                             .addComponent(jlb_nombre1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jtf_DNI1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlb_contraseña1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlb_usuario1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_nombre1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_DNI1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(RegistrarseLayout.createSequentialGroup()
+                                .addGap(162, 162, 162)
                                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jlb_contraseña1)
-                                    .addComponent(jlb_usuario1))
+                                    .addComponent(jlb_apellido1)
+                                    .addComponent(jlb_telefono1)))
+                            .addGroup(RegistrarseLayout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jtf_usuario1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                                    .addComponent(jtf_contraseña1)))))
+                                    .addComponent(jtf_contraseña1))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_fecha_naci, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jtf_telefono1, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
+                                .addComponent(jtf_apellido1))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegistrarseLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlb_categoria1)
                             .addGroup(RegistrarseLayout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addComponent(jrb_infantil1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jrb_junior1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jrb_senior1)
+                                .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(RegistrarseLayout.createSequentialGroup()
+                                        .addGap(21, 21, 21)
+                                        .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jlb_res_apellido)
+                                            .addGroup(RegistrarseLayout.createSequentialGroup()
+                                                .addComponent(jrb_infantil1)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jrb_junior1)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jrb_senior1))))
+                                    .addGroup(RegistrarseLayout.createSequentialGroup()
+                                        .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jlb_res_nom)
+                                            .addComponent(jlb_res_res))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jtf_res_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jrb_serGerente))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegistrarseLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jbt_cancelar1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrarseLayout.createSequentialGroup()
-                        .addComponent(jbt_registrarse1)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrarseLayout.createSequentialGroup()
-                        .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlb_apellido1)
-                            .addComponent(jlb_telefono1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtf_telefono1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_apellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(61, 61, 61))))
+                                .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jrb_serGerente)
+                                    .addGroup(RegistrarseLayout.createSequentialGroup()
+                                        .addComponent(jtf_res_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(42, 42, 42)
+                                        .addComponent(jlb_dniResponsable)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jtf_dniResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addGap(103, 103, 103))
             .addGroup(RegistrarseLayout.createSequentialGroup()
-                .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(RegistrarseLayout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(jlb_titulo1))
-                    .addGroup(RegistrarseLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jlb_res_nom)
-                            .addComponent(jlb_res_res))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jtf_res_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jlb_res_apellido)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jtf_res_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(148, 148, 148)
+                .addComponent(jlb_titulo1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(RegistrarseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jbt_cancelar1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbt_registrarse1)
+                .addGap(52, 52, 52))
         );
         RegistrarseLayout.setVerticalGroup(
             RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -269,7 +270,8 @@ public class Iniciar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlb_contraseña1)
-                    .addComponent(jtf_contraseña1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtf_contraseña1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_fecha_naci, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jlb_categoria1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -285,7 +287,9 @@ public class Iniciar extends javax.swing.JFrame {
                     .addComponent(jlb_res_nom)
                     .addComponent(jtf_res_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtf_res_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlb_res_apellido))
+                    .addComponent(jlb_res_apellido)
+                    .addComponent(jlb_dniResponsable)
+                    .addComponent(jtf_dniResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(RegistrarseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbt_registrarse1)
@@ -424,6 +428,8 @@ public class Iniciar extends javax.swing.JFrame {
         jlb_res_apellido.setVisible(false);
         jtf_res_nom.setVisible(false);
         jtf_res_apellido.setVisible(false);
+        jtf_dniResponsable.setVisible(false);
+        jlb_dniResponsable.setVisible(false);
         Registrarse.setVisible(true);
         Registrarse.setSize(600,450);
     }//GEN-LAST:event_jbt_registrarseIniciarActionPerformed
@@ -473,11 +479,13 @@ public class Iniciar extends javax.swing.JFrame {
 
     private void jrb_infantil1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_infantil1ActionPerformed
         // Maricel
+            jlb_dniResponsable.setVisible(true);
             jlb_res_res.setVisible(true);
             jlb_res_nom.setVisible(true);
             jlb_res_apellido.setVisible(true);
             jtf_res_nom.setVisible(true);
             jtf_res_apellido.setVisible(true);
+            jtf_dniResponsable.setVisible(true);
     }//GEN-LAST:event_jrb_infantil1ActionPerformed
 
     private void jbt_cancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelar1ActionPerformed
@@ -494,20 +502,31 @@ public class Iniciar extends javax.swing.JFrame {
         apellido = jtf_apellido1.getText();
         telefono = jtf_telefono1.getText();
         DNI = jtf_DNI1.getText();
+
+        //falta por hacer que sea por tiempo
+        SimpleDateFormat cambioFecha = new SimpleDateFormat("dd/MM/yyyy");
+        String fechaAux = jtf_fecha_naci.getText();
+        try {
+            fecha = cambioFecha.parse(fechaAux);
+        } 
+        catch (ParseException ex) {
+            System.out.print(ex);
+        }
         
         if(jrb_infantil1.isSelected()){
             categoria = "infantil";
             res_nom = jtf_res_nom.getText();
             res_apell = jtf_res_apellido.getText();
-            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, res_nom, res_apell);
+            res_DNI = jtf_dniResponsable.getText();
+            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, res_nom, res_apell,res_DNI);
         }
         else if(jrb_junior1.isSelected()){
             categoria = "junior";
-            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, "", "");   
+            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, "", "", "");   
         }
         else if(jrb_senior1.isSelected()){
             categoria = "senior";
-            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, "", "");
+            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, "", "", "");
         }
         else if(jrb_serGerente.isSelected()){
             app.registrarseGerente(user, passwd, nombre, apellido, telefono, DNI);
@@ -520,7 +539,13 @@ public class Iniciar extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_registrarse1ActionPerformed
 
     private void jrb_serGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_serGerenteActionPerformed
-        // TODO add your handling code here:
+        jlb_res_res.setVisible(false);
+        jlb_res_nom.setVisible(false);
+        jlb_res_apellido.setVisible(false);
+        jtf_res_nom.setVisible(false);
+        jtf_res_apellido.setVisible(false);
+        jtf_dniResponsable.setVisible(false);
+        jlb_dniResponsable.setVisible(false);
     }//GEN-LAST:event_jrb_serGerenteActionPerformed
 
     private void jrb_junior1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_junior1ActionPerformed
@@ -530,6 +555,8 @@ public class Iniciar extends javax.swing.JFrame {
         jlb_res_apellido.setVisible(false);
         jtf_res_nom.setVisible(false);
         jtf_res_apellido.setVisible(false);
+        jtf_dniResponsable.setVisible(false);
+        jlb_dniResponsable.setVisible(false);
     }//GEN-LAST:event_jrb_junior1ActionPerformed
 
     private void jrb_senior1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_senior1ActionPerformed
@@ -539,6 +566,8 @@ public class Iniciar extends javax.swing.JFrame {
         jlb_res_apellido.setVisible(false);
         jtf_res_nom.setVisible(false);
         jtf_res_apellido.setVisible(false);
+        jtf_dniResponsable.setVisible(false);
+        jlb_dniResponsable.setVisible(false);
     }//GEN-LAST:event_jrb_senior1ActionPerformed
 
     /**
@@ -591,6 +620,7 @@ public class Iniciar extends javax.swing.JFrame {
     private javax.swing.JLabel jlb_categoria1;
     private javax.swing.JLabel jlb_contraseña1;
     private javax.swing.JLabel jlb_contraseñaIniaciar;
+    private javax.swing.JLabel jlb_dniResponsable;
     private javax.swing.JLabel jlb_nombre1;
     private javax.swing.JLabel jlb_res_apellido;
     private javax.swing.JLabel jlb_res_nom;
@@ -610,6 +640,8 @@ public class Iniciar extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_apellido1;
     private javax.swing.JTextField jtf_contraseña1;
     private javax.swing.JTextField jtf_contraseñaIniciar;
+    private javax.swing.JTextField jtf_dniResponsable;
+    private javax.swing.JTextField jtf_fecha_naci;
     private javax.swing.JTextField jtf_nombre1;
     private javax.swing.JTextField jtf_nombreIniciar;
     private javax.swing.JTextField jtf_res_apellido;

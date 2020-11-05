@@ -22,6 +22,7 @@ public class Jugador {
     protected String user, passwd, nombre, apellido, telefono, DNI, categoria;
     protected String res_nom = "";
     protected String res_apell = "";
+    protected String res_DNI = "";
     protected Club club = null;
     protected ArrayList<Partida> historialPartidas = new ArrayList<Partida>();
     protected ArrayList<Club> historialClubes = new ArrayList<Club>();
@@ -139,6 +140,10 @@ public class Jugador {
         return res_apell;
     }
 
+    public String getRes_DNI() {
+        return res_DNI;
+    }
+    
     public void setRes_nom(String res_nom) {
         this.res_nom = res_nom;
     }
@@ -147,6 +152,10 @@ public class Jugador {
         this.res_apell = res_apell;
     }
 
+    public void setRes_DNI(String res_DNI) {
+        this.res_DNI = res_DNI;
+    }
+    
     public void setClub(Club club) {
         this.club = club;
     }

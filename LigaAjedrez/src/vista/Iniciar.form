@@ -16,19 +16,34 @@
                               <Component id="jlb_nombre1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jtf_DNI1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jlb_contraseña1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jlb_usuario1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jtf_nombre1" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jtf_nombre1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtf_DNI1" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jlb_contraseña1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jlb_usuario1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_apellido1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_telefono1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jtf_usuario1" alignment="0" pref="140" max="32767" attributes="0"/>
                                       <Component id="jtf_contraseña1" alignment="0" max="32767" attributes="0"/>
                                   </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jtf_fecha_naci" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jtf_telefono1" pref="74" max="32767" attributes="0"/>
+                                  <Component id="jtf_apellido1" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -37,63 +52,57 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jlb_categoria1" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                  <Component id="jrb_infantil1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jrb_junior1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jrb_senior1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jlb_res_apellido" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jrb_infantil1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jrb_junior1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jrb_senior1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jlb_res_nom" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jlb_res_res" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jtf_res_nom" min="-2" pref="74" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jrb_serGerente" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jrb_serGerente" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jtf_res_apellido" min="-2" pref="81" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                          <Component id="jlb_dniResponsable" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jtf_dniResponsable" min="-2" pref="68" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jbt_cancelar1" min="-2" max="-2" attributes="0"/>
-                      </Group>
                   </Group>
-                  <EmptySpace pref="35" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jbt_registrarse1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jlb_apellido1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_telefono1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jtf_telefono1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtf_apellido1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
-                          <Component id="jlb_titulo1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jlb_res_nom" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_res_res" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jtf_res_nom" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jlb_res_apellido" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jtf_res_apellido" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
+                  <Component id="jlb_titulo1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jbt_cancelar1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jbt_registrarse1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -125,6 +134,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlb_contraseña1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jtf_contraseña1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_fecha_naci" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jlb_categoria1" min="-2" max="-2" attributes="0"/>
@@ -143,6 +153,8 @@
                       <Component id="jtf_res_nom" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jtf_res_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jlb_res_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_dniResponsable" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_dniResponsable" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="19" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -170,9 +182,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtf_nombre1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField3"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_DNI1">
           <Properties>
@@ -180,9 +189,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtf_DNI1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField5"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_usuario1">
           <Properties>
@@ -195,14 +201,8 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtf_contrase&#xf1;a1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField7"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtf_usuario1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField6"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_categoria1">
           <Properties>
@@ -255,14 +255,8 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtf_telefono1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField8"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtf_apellido1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField4"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_apellido1">
           <Properties>
@@ -288,18 +282,24 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtf_res_nom">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField1"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtf_res_apellido">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField2"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_res_apellido">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellido:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_dniResponsable">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="DNI:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_dniResponsable">
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_fecha_naci">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="DD/MM/YY"/>
           </Properties>
         </Component>
       </SubComponents>

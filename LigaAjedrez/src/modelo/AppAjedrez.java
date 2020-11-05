@@ -93,7 +93,7 @@ public class AppAjedrez {
         }
         return datos_gerente;
     }
-   public void registrarse(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria, String res_nom, String res_apell){
+   public void registrarse(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria, String res_nom, String res_apell,String responsable_DNI){
         boolean comprobar = false;
       
         for(Jugador aux2 : jugadores){
@@ -105,6 +105,7 @@ public class AppAjedrez {
             Jugador aux = new Jugador (user, passwd, nombre, apellido, telefono, DNI, categoria);
 	    aux.setRes_nom(res_nom);
 	    aux.setRes_apell(res_apell);
+            aux.setRes_DNI(responsable_DNI);
             jugadores.add(aux);
         }
    }
