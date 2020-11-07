@@ -114,19 +114,7 @@ public class AppAjedrez {
             jugadores.add(aux);
         }
    }
-   public void registrarseGerente(String user, String passwd,String nombre,String apellido,String telefono,String DNI){
-       boolean comprobar = false;
-      
-        for(Gerente aux2 : gerentes){
-            if(comprobar == false){
-                comprobar =aux2.comprobarExistencia(user, passwd, DNI);
-            }
-        }
-        if(comprobar == false){
-            Gerente aux = new Gerente (user, passwd, nombre, apellido, telefono, DNI, "senior");
-            gerentes.add(aux);
-        }
-   }
+  
    public void eliminarJugador(Jugador j)
    {
        jugadores.remove(j);

@@ -27,7 +27,7 @@ public class Club {
         this.entrenador=e;
         this.gerente=g;
         this.federacion=federacion;
-        entrenador.setClubTrabaja(this);
+//        entrenador.setClubTrabaja(this);
     }
     
     public void inscribirseClubJugador(Jugador jugador){
