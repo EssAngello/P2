@@ -24,7 +24,6 @@ public class Iniciar extends javax.swing.JFrame {
     private AdministradorVista a;
     //Modelos
     private AppAjedrez app;
-    private Administrador admin;
     private String user, passwd, nombre, apellido, telefono, DNI, categoria,
             res_nom, res_apell, res_DNI;
     private Jugador inicio_jugador;
@@ -38,8 +37,6 @@ public class Iniciar extends javax.swing.JFrame {
         jbtg_iniciar.add(jrb_gerente);
         jbtg_iniciar.add(jrb_jugador);
         app = new AppAjedrez();
-        //Esto se elimina mas tarde administrador
-        admin = new Administrador();
     }
 
     /**
@@ -406,9 +403,9 @@ public class Iniciar extends javax.swing.JFrame {
         }
         //Maricel 
         else if (jrb_administrador.isSelected()){
-            if(admin.identificarse(user, passwd)){
+            if(app.identificarAdmin(user, passwd)){
                 this.setVisible(false);
-                a = new AdministradorVista();
+                a = new AdministradorVista(app);
                 a.setVisible(true);
                 dispose();
             }
@@ -428,50 +425,50 @@ public class Iniciar extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_cancelar1ActionPerformed
 
     private void jbt_registrarse1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_registrarse1ActionPerformed
-        // Maricel
+        // Maricel 
         user = jtf_usuario1.getText();
         passwd = jtf_contraseña1.getText();
         nombre = jtf_nombre1.getText();
         apellido = jtf_apellido1.getText();
         telefono = jtf_telefono1.getText();
         DNI = jtf_DNI1.getText();
-
-        //falta por hacer que sea por tiempo
+        
+        int año =  0;
 
         String fecha = jtf_fecha_naci.getText();
         //Cojo el año
         String[] partes =fecha.split("/");
         if(partes[2].length() == 2){
-            int año = Integer.parseInt(partes[2]);
-            año = 2000 - (1900 + año);
+            año = Integer.parseInt(partes[2]);
+            año = 2020 - (1900 + año);
             System.out.println(año);
         }
         else if(partes[2].length() == 4){
-            int año = Integer.parseInt(partes[2]);
-            año = 2000 -  año;
+            año = Integer.parseInt(partes[2]);
+            año = 2020 -  año;
             System.out.println(año);
         }
         else
             System.out.println("ERROR AL INTRODUCIR AÑO");
-        /*
-        if(jrb_infantil1.isSelected()){
+        
+        if(año <= 15){
             categoria = "infantil";
             res_nom = jtf_res_nom.getText();
             res_apell = jtf_res_apellido.getText();
             res_DNI = jtf_dniResponsable.getText();
             app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, res_nom, res_apell,res_DNI);
         }
-        else if(jrb_junior1.isSelected()){
+        else if((16 == año)||(17 == año)){
             categoria = "junior";
             app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, "", "", "");   
         }
-        else if(jrb_senior1.isSelected()){
+        else if(año >= 18){
             categoria = "senior";
             app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, "", "", "");
         }
-        else{
+        else if(año == 0){
             JOptionPane.showMessageDialog(null, "No has introducido fecha nacimiento");
-        }*/
+        }
         Registrarse.setVisible(false);
         this.setVisible(true);
     }//GEN-LAST:event_jbt_registrarse1ActionPerformed

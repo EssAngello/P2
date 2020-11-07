@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import modelo.AppAjedrez;
+import modelo.Jugador;
 import modelo.Partida;
 import modelo.Torneo;
 /**
@@ -24,8 +25,9 @@ public class AdministradorVista extends javax.swing.JFrame {
     /**
      * Creates new form Administrador
      */
-    public AdministradorVista() {
+    public AdministradorVista(AppAjedrez app) {
         initComponents();
+        this.appAjedrez = app;
     }
 
     /**
@@ -167,6 +169,22 @@ public class AdministradorVista extends javax.swing.JFrame {
         CreadoExito = new javax.swing.JFrame();
         jLabel24 = new javax.swing.JLabel();
         jButtonOk1 = new javax.swing.JButton();
+        cambiar_responsable = new javax.swing.JFrame();
+        jlb_tituloResponsable = new javax.swing.JLabel();
+        jlb_subtitulo_responsable = new javax.swing.JLabel();
+        jtf_nombre_infa = new javax.swing.JTextField();
+        jtf_apellido_infa = new javax.swing.JTextField();
+        jlb_nom_infa = new javax.swing.JLabel();
+        jlb_apell_infa = new javax.swing.JLabel();
+        jlb_subtitulo_responsable2 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jbt_aceptar_res = new javax.swing.JButton();
+        jbt_cancelar_res = new javax.swing.JButton();
+        jtf_nuevo_nombre_res = new javax.swing.JTextField();
+        jtf_nuevo_apellido_res = new javax.swing.JTextField();
+        jtf_nuevo_DNI_res = new javax.swing.JTextField();
         jl_titulo = new javax.swing.JLabel();
         jButtonClub = new javax.swing.JButton();
         jButtonUser = new javax.swing.JButton();
@@ -1332,6 +1350,115 @@ public class AdministradorVista extends javax.swing.JFrame {
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
+        jlb_tituloResponsable.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jlb_tituloResponsable.setText("Cambiar responsable infantil");
+
+        jlb_subtitulo_responsable.setText("Introduzca las datos del infantil:");
+
+        jlb_nom_infa.setText("Nombre:");
+
+        jlb_apell_infa.setText("Apellido:");
+
+        jlb_subtitulo_responsable2.setText("Intraduzca el nuevo responsablr:");
+
+        jLabel30.setText("Nombre:");
+
+        jLabel31.setText("Apellido:");
+
+        jLabel32.setText("DNI:");
+
+        jbt_aceptar_res.setText("Aceptar");
+        jbt_aceptar_res.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_aceptar_resActionPerformed(evt);
+            }
+        });
+
+        jbt_cancelar_res.setText("Cancelar");
+        jbt_cancelar_res.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_cancelar_resActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout cambiar_responsableLayout = new javax.swing.GroupLayout(cambiar_responsable.getContentPane());
+        cambiar_responsable.getContentPane().setLayout(cambiar_responsableLayout);
+        cambiar_responsableLayout.setHorizontalGroup(
+            cambiar_responsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cambiar_responsableLayout.createSequentialGroup()
+                .addGroup(cambiar_responsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cambiar_responsableLayout.createSequentialGroup()
+                        .addGroup(cambiar_responsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(cambiar_responsableLayout.createSequentialGroup()
+                                .addGap(56, 56, 56)
+                                .addComponent(jlb_tituloResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(cambiar_responsableLayout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(cambiar_responsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlb_subtitulo_responsable2)
+                                    .addGroup(cambiar_responsableLayout.createSequentialGroup()
+                                        .addGroup(cambiar_responsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(cambiar_responsableLayout.createSequentialGroup()
+                                                .addComponent(jLabel30)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jtf_nuevo_nombre_res, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(cambiar_responsableLayout.createSequentialGroup()
+                                                .addComponent(jlb_nom_infa)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jtf_nombre_infa, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(cambiar_responsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(cambiar_responsableLayout.createSequentialGroup()
+                                                .addComponent(jlb_apell_infa)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jtf_apellido_infa, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(cambiar_responsableLayout.createSequentialGroup()
+                                                .addComponent(jLabel31)
+                                                .addGap(2, 2, 2)
+                                                .addComponent(jtf_nuevo_apellido_res, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel32)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jtf_nuevo_DNI_res, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jlb_subtitulo_responsable))))
+                        .addGap(0, 39, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cambiar_responsableLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jbt_cancelar_res)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbt_aceptar_res)))
+                .addContainerGap())
+        );
+        cambiar_responsableLayout.setVerticalGroup(
+            cambiar_responsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cambiar_responsableLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jlb_tituloResponsable)
+                .addGap(35, 35, 35)
+                .addComponent(jlb_subtitulo_responsable)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(cambiar_responsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtf_nombre_infa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_apellido_infa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlb_nom_infa)
+                    .addComponent(jlb_apell_infa))
+                .addGap(46, 46, 46)
+                .addComponent(jlb_subtitulo_responsable2)
+                .addGap(18, 18, 18)
+                .addGroup(cambiar_responsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(jLabel31)
+                    .addComponent(jLabel32)
+                    .addComponent(jtf_nuevo_nombre_res, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_nuevo_apellido_res, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_nuevo_DNI_res, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addGroup(cambiar_responsableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbt_aceptar_res)
+                    .addComponent(jbt_cancelar_res))
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jl_titulo.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -1373,6 +1500,11 @@ public class AdministradorVista extends javax.swing.JFrame {
         });
 
         jButtonResponsable.setText("RESPONSABLE");
+        jButtonResponsable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonResponsableActionPerformed(evt);
+            }
+        });
 
         jButtonSalir.setText("SALIR");
         jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -1584,9 +1716,9 @@ public class AdministradorVista extends javax.swing.JFrame {
     private void jButtonCrear4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear4ActionPerformed
         
         //La categoria se coge de un combobox, asiq angello...
-        categoria = ;
-        Torneo t = new Torneo(jTextField2.getText(), Integer.parseInt(jTextField1.getText()), categoria);
-        appAjedrez.crearTorneo(t);
+        //categoria = ;
+        //Torneo t = new Torneo(jTextField2.getText(), Integer.parseInt(jTextField1.getText()), categoria);
+        //appAjedrez.crearTorneo(t);
         
         TorneoCrear.setVisible(false);
         CreadoExito.setVisible(true);
@@ -1757,6 +1889,36 @@ public class AdministradorVista extends javax.swing.JFrame {
         DatosTorneo.setVisible(false);
     }//GEN-LAST:event_jbt_okTorneoActionPerformed
 
+    private void jButtonResponsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResponsableActionPerformed
+        // Maricel
+        cambiar_responsable.setVisible(true);
+        cambiar_responsable.setSize(400,400);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButtonResponsableActionPerformed
+
+    private void jbt_cancelar_resActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelar_resActionPerformed
+        // Maricel
+        cambiar_responsable.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jbt_cancelar_resActionPerformed
+
+    private void jbt_aceptar_resActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_aceptar_resActionPerformed
+        // Maricel
+        Jugador j = appAjedrez.buscarJugadorUser(jtf_nombre_infa.getText());
+        //AQUI DEBO COMPROBAR LA EXISTENCIA DEL USER PRO HAY UNA PERO SOLO CON NOMBRE HABLARLO CON ANGELLO
+        if(j == null){
+            JOptionPane.showMessageDialog(this, "No exite el jugador infantil");
+        }
+        else{
+            j.setRes_nom(jtf_nuevo_nombre_res.getText());
+            j.setRes_apell(jtf_nuevo_apellido_res.getText());
+            j.setRes_DNI(jtf_nuevo_DNI_res.getText());
+            JOptionPane.showMessageDialog(this, "Modificacion realizada");
+            cambiar_responsable.setVisible(false);
+            this.setVisible(true);
+        }
+    }//GEN-LAST:event_jbt_aceptar_resActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1781,6 +1943,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JFrame User;
     private javax.swing.JFrame UserEliminar;
     private javax.swing.JFrame UserVer;
+    private javax.swing.JFrame cambiar_responsable;
     private javax.swing.JButton jButtonApuntar;
     private javax.swing.JButton jButtonAtras;
     private javax.swing.JButton jButtonAtras10;
@@ -1847,6 +2010,9 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1892,15 +2058,27 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldNombreClub;
     private javax.swing.JTextField jTextFieldTiempo;
     private javax.swing.JTextField jTextFieldTorneo;
+    private javax.swing.JButton jbt_aceptar_res;
+    private javax.swing.JButton jbt_cancelar_res;
     private javax.swing.JToggleButton jbt_okTorneo;
     private javax.swing.JLabel jl_titulo;
+    private javax.swing.JLabel jlb_apell_infa;
     private javax.swing.JLabel jlb_categoriaTorneo;
     private javax.swing.JLabel jlb_datosCategoriaTorneo;
     private javax.swing.JLabel jlb_datosNumJugadoresTorneo;
+    private javax.swing.JLabel jlb_nom_infa;
     private javax.swing.JLabel jlb_nombreTorneo;
     private javax.swing.JLabel jlb_numJugadoresTorneo;
+    private javax.swing.JLabel jlb_subtitulo_responsable;
+    private javax.swing.JLabel jlb_subtitulo_responsable2;
+    private javax.swing.JLabel jlb_tituloResponsable;
     private javax.swing.JList<String> jli_torneos;
     private javax.swing.JList<String> jli_torneos2;
+    private javax.swing.JTextField jtf_apellido_infa;
+    private javax.swing.JTextField jtf_nombre_infa;
+    private javax.swing.JTextField jtf_nuevo_DNI_res;
+    private javax.swing.JTextField jtf_nuevo_apellido_res;
+    private javax.swing.JTextField jtf_nuevo_nombre_res;
     // End of variables declaration//GEN-END:variables
     protected AppAjedrez appAjedrez;
     private ArrayList listaTorneos;

@@ -24,6 +24,10 @@ public class AppAjedrez {
     protected ArrayList<Gerente> gerentes = new ArrayList<Gerente>();
     protected ArrayList<Entrenador> entrenadores = new ArrayList<Entrenador>();
     protected ArrayList<Club> clubes = new ArrayList<Club>();
+    protected ArrayList<Administrador> admin = new ArrayList<Administrador>();
+    
+    Administrador admi = new Administrador ("root","root");
+    
     Jugador j1 = new Jugador("Maricel","123456","Maricel","Olaru","123456789","X9356742C","senior");
     Entrenador e = new Entrenador("Jose", "123456", "Jose", "Mourinho", "123456789", "X1234567L", "senior");
     Gerente g = new Gerente("Ali", "123456","Ali", "baba", "123456789", "X1234566L", "senior");
@@ -34,7 +38,8 @@ public class AppAjedrez {
     String ficheroJugadores = "jugadores.txt";
     String gerentesJugadores = "gerentes.txt";
     public AppAjedrez(){
-        //Añadimos jugadores por la fuerza para comprobar//
+        //Añadimos jugadores por la fuerza para comprobar/
+        admin.add(admi);
         jugadores.add(j1);
         entrenadores.add(e);
         gerentes.add(g);
@@ -78,7 +83,7 @@ public class AppAjedrez {
         
         return jugador_aux;
     }
-    
+   
     public ArrayList<Torneo> consultarTorneosDisponibles(){
         ArrayList<Torneo> torneosDisponibles = new ArrayList(torneos);
         /* Esto lo usaremos si hay alguna condicion para que los torneos esten libres
@@ -110,6 +115,17 @@ public class AppAjedrez {
         }
         return datos_gerente;
     }
+    
+    public boolean identificarAdmin(String u, String p){
+        boolean comprobar = false;
+        for(Administrador aux3 : admin){
+            if(aux3.identificarse(u, p) == true){
+                comprobar = true;
+            }
+        }
+        return comprobar;
+    }
+    
    public void registrarse(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria, String res_nom, String res_apell,String responsable_DNI){
         boolean comprobar = false;
       

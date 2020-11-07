@@ -13,30 +13,29 @@ import javax.swing.JOptionPane;
  * @author juan2
  */
 public class Administrador {
-    protected AppAjedrez app;
     private Hashtable<String, String> ht;
-    public Administrador (){
-        ht = new Hashtable<String, String>();
-        ht.put("Root", "root");
+    String user,pasw;
+    
+    public Administrador (String user, String pasw){
+        this.user = user;
+        this.pasw = pasw;
     }
+    
     public boolean identificarse(String u, String p){
         boolean comprobacion = false;
         
-        if(ht.get(u) == null){
-            JOptionPane.showMessageDialog(null, "ESTE ADMINISTRADOR NO EXISTE");
-        }
-        else{
-            if(ht.get(u).equals(p)){
+        if(u.equals(user)){
+            if(p.equals(pasw)){
                 comprobacion = true;
             }
             else{
-                JOptionPane.showMessageDialog(null, "LA CONTRASEÑA INTRODUCIDA ES INCORRECTA");
+                JOptionPane.showMessageDialog(null, "El usuario o contraseña es incorrecta");
             }
         }
         return comprobacion;
     }
     
-    public void craerJugador(String user, String passwd, String nombre, String apellido, String telefono, String dni, String categoria)
+  /*  public void craerJugador(String user, String passwd, String nombre, String apellido, String telefono, String dni, String categoria)
     {
         //app.registrarse(user, passwd, nombre, apellido, telefono, dni, categoria, dni, apellido);
     }  
@@ -45,4 +44,5 @@ public class Administrador {
     {
         app.eliminarJugador(j);
     }
+*/
 }
