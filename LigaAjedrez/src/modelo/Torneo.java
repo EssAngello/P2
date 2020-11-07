@@ -6,6 +6,7 @@
 package modelo;
 
 import java.util.*;
+import javax.swing.JOptionPane;
 
 import modelo.Partida;
 import modelo.Jugador;
@@ -17,19 +18,30 @@ public class Torneo {
     protected ArrayList<Partida> partidasTorneo = new ArrayList<Partida>();
     protected ArrayList<Jugador> jugadoresTorneo = new ArrayList<Jugador>();
     String nombre = "";
-    
+    int num_jugadores;
+    String categoria;
+    int contador = 0;
     
     //FALTA SABER COMO SE GENERAN LAS PARTIDAS DE LOS TORNEOS
-    public Torneo(String nombre){
+    public Torneo(String nombre, int num_jugadores, String categoria){
         this.nombre = nombre;
+        this.num_jugadores = num_jugadores;
+        this.categoria = categoria;
     }
     
     public void InscribirseTorneo(Jugador jugador){
-        jugadoresTorneo.add(jugador);
+        if(contador < num_jugadores)
+            jugadoresTorneo.add(jugador);
+        else
+            JOptionPane.showMessageDialog(null, "Torneo Lleno");
     }
     
     public void introducirResultadosPartida(Partida partida){
         partidasTorneo.add(partida);
+    }
+    
+    public String detallesTorneo(){
+        return nombre + "|" + num_jugadores + "|" + categoria;
     }
     
     @Override

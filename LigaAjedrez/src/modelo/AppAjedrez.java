@@ -29,7 +29,7 @@ public class AppAjedrez {
     Gerente g = new Gerente("Ali", "123456","Ali", "baba", "123456789", "X1234566L", "senior");
     Club club1 = new Club("TSM", "Federacion de Valencia", e, g);
     Club club2 = new Club("FAZE", "Federacion de Madrid", null, null);
-    Torneo torneo1 = new Torneo("Torneo calabacin");
+    Torneo torneo1 = new Torneo("Torneo calabacin", 3, "senior");
     //Ficheros
     String ficheroJugadores = "jugadores.txt";
     String gerentesJugadores = "gerentes.txt";
@@ -47,6 +47,18 @@ public class AppAjedrez {
         
         clubes.add(club2);
         torneos.add(torneo1);
+    }
+    
+    public void crearTorneo(Torneo t){
+        torneos.add(t);
+    }
+    
+    public void eliminarTorneo(Torneo t){
+        for(Torneo torneo:torneos){
+            if(torneo == t){
+                torneos.remove(t);
+            }
+        }
     }
     
     public ArrayList<Club> consultarClubes(){

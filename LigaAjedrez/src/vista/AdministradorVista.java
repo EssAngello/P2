@@ -5,12 +5,22 @@
  */
 package vista;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.regex.Pattern;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import modelo.AppAjedrez;
+import modelo.Partida;
+import modelo.Torneo;
 /**
  *
  * @author juan2
  */
 public class AdministradorVista extends javax.swing.JFrame {
 
+    
     /**
      * Creates new form Administrador
      */
@@ -74,10 +84,23 @@ public class AdministradorVista extends javax.swing.JFrame {
         jTextFieldNombre1 = new javax.swing.JTextField();
         jButtonBuscar1 = new javax.swing.JButton();
         TorneoVer = new javax.swing.JFrame();
+        jLabelVerTorneo = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jli_torneos = new javax.swing.JList<>();
+        jButtonAtras11 = new javax.swing.JButton();
+        jButtonVer7 = new javax.swing.JButton();
+        DatosTorneo = new javax.swing.JFrame();
+        jlb_nombreTorneo = new javax.swing.JLabel();
+        jlb_numJugadoresTorneo = new javax.swing.JLabel();
+        jlb_categoriaTorneo = new javax.swing.JLabel();
+        jlb_datosNumJugadoresTorneo = new javax.swing.JLabel();
+        jlb_datosCategoriaTorneo = new javax.swing.JLabel();
+        jbt_okTorneo = new javax.swing.JToggleButton();
         TorneoEliminar = new javax.swing.JFrame();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jli_torneos2 = new javax.swing.JList<>();
         jButtonAtras4 = new javax.swing.JButton();
         jButtonEliminar5 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -597,25 +620,140 @@ public class AdministradorVista extends javax.swing.JFrame {
                 .addGap(42, 42, 42))
         );
 
-        javax.swing.GroupLayout TorneoVerLayout = new javax.swing.GroupLayout(TorneoVer.getContentPane());
-        TorneoVer.getContentPane().setLayout(TorneoVerLayout);
-        TorneoVerLayout.setHorizontalGroup(
-            TorneoVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        TorneoVerLayout.setVerticalGroup(
-            TorneoVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jLabelVerTorneo.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabelVerTorneo.setText("Ver Torneo");
 
-        jLabel3.setText("Lista de torneos:");
+        jLabel26.setText("Lista de torneos:");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jli_torneos.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane4.setViewportView(jList1);
+        jScrollPane9.setViewportView(jli_torneos);
+
+        jButtonAtras11.setText("Atras");
+        jButtonAtras11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtras11ActionPerformed(evt);
+            }
+        });
+
+        jButtonVer7.setText("ver");
+        jButtonVer7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVer7ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout TorneoVerLayout = new javax.swing.GroupLayout(TorneoVer.getContentPane());
+        TorneoVer.getContentPane().setLayout(TorneoVerLayout);
+        TorneoVerLayout.setHorizontalGroup(
+            TorneoVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TorneoVerLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(TorneoVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel26)
+                    .addGroup(TorneoVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(TorneoVerLayout.createSequentialGroup()
+                            .addComponent(jButtonAtras11)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonVer7))
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(53, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TorneoVerLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelVerTorneo)
+                .addGap(142, 142, 142))
+        );
+        TorneoVerLayout.setVerticalGroup(
+            TorneoVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TorneoVerLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabelVerTorneo, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(TorneoVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonAtras11)
+                    .addComponent(jButtonVer7))
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+
+        jlb_nombreTorneo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jlb_nombreTorneo.setText("nombre torneo");
+
+        jlb_numJugadoresTorneo.setText("Num max jugadores");
+
+        jlb_categoriaTorneo.setText("categoria");
+
+        jlb_datosNumJugadoresTorneo.setText("jLabel25");
+
+        jlb_datosCategoriaTorneo.setText("jLabel27");
+
+        jbt_okTorneo.setText("ok");
+        jbt_okTorneo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_okTorneoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout DatosTorneoLayout = new javax.swing.GroupLayout(DatosTorneo.getContentPane());
+        DatosTorneo.getContentPane().setLayout(DatosTorneoLayout);
+        DatosTorneoLayout.setHorizontalGroup(
+            DatosTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DatosTorneoLayout.createSequentialGroup()
+                .addGroup(DatosTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DatosTorneoLayout.createSequentialGroup()
+                        .addGroup(DatosTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(DatosTorneoLayout.createSequentialGroup()
+                                .addGap(61, 61, 61)
+                                .addComponent(jlb_nombreTorneo))
+                            .addGroup(DatosTorneoLayout.createSequentialGroup()
+                                .addGap(25, 25, 25)
+                                .addGroup(DatosTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(DatosTorneoLayout.createSequentialGroup()
+                                        .addComponent(jlb_categoriaTorneo)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jlb_datosCategoriaTorneo))
+                                    .addGroup(DatosTorneoLayout.createSequentialGroup()
+                                        .addComponent(jlb_numJugadoresTorneo)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jlb_datosNumJugadoresTorneo)))))
+                        .addGap(0, 69, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosTorneoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jbt_okTorneo)))
+                .addContainerGap())
+        );
+        DatosTorneoLayout.setVerticalGroup(
+            DatosTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DatosTorneoLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jlb_nombreTorneo)
+                .addGap(53, 53, 53)
+                .addGroup(DatosTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_numJugadoresTorneo)
+                    .addComponent(jlb_datosNumJugadoresTorneo))
+                .addGap(18, 18, 18)
+                .addGroup(DatosTorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_categoriaTorneo)
+                    .addComponent(jlb_datosCategoriaTorneo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addComponent(jbt_okTorneo)
+                .addContainerGap())
+        );
+
+        jLabel3.setText("Lista de torneos:");
+
+        jli_torneos2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(jli_torneos2);
 
         jButtonAtras4.setText("Atras");
         jButtonAtras4.addActionListener(new java.awt.event.ActionListener() {
@@ -1387,6 +1525,20 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButtonEliminar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar1ActionPerformed
         // Maricel
+        DefaultListModel modeloListaTorneos2 = new DefaultListModel();
+        jli_torneos2.setModel(modeloListaTorneos2);
+        
+        listaTorneos = appAjedrez.consultarTorneosDisponibles();
+
+        if(!listaTorneos.isEmpty()){
+            for(Object torneo:listaTorneos){
+                modeloListaTorneos2.addElement(torneo);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No hay torneos disponibles");
+        }
+        
         Torneo.setVisible(false);
         TorneoEliminar.setVisible(true);
     }//GEN-LAST:event_jButtonEliminar1ActionPerformed
@@ -1399,8 +1551,22 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButtonEliminar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar5ActionPerformed
         // Maricel
-        TorneoEliminar.setVisible(false);
-        EliminadoExito.setVisible(true);
+        torneoObj = (Object)jli_torneos2.getSelectedValue();
+        
+        if(torneoObj == null)
+        {
+            JOptionPane.showMessageDialog(this,"Has de seleccionar un torneo");
+        }
+        else
+        {
+            Torneo torneo = (Torneo)torneoObj;
+            appAjedrez.eliminarTorneo(torneo);
+                    
+            TorneoEliminar.setVisible(false);
+            EliminadoExito.setVisible(true);
+        }
+        
+
     }//GEN-LAST:event_jButtonEliminar5ActionPerformed
 
     private void jButtonCrear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear1ActionPerformed
@@ -1416,6 +1582,12 @@ public class AdministradorVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonAtras6ActionPerformed
 
     private void jButtonCrear4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear4ActionPerformed
+        
+        //La categoria se coge de un combobox, asiq angello...
+        categoria = ;
+        Torneo t = new Torneo(jTextField2.getText(), Integer.parseInt(jTextField1.getText()), categoria);
+        appAjedrez.crearTorneo(t);
+        
         TorneoCrear.setVisible(false);
         CreadoExito.setVisible(true);
     }//GEN-LAST:event_jButtonCrear4ActionPerformed
@@ -1531,9 +1703,59 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButtonVer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVer1ActionPerformed
         // TODO add your handling code here:
+        DefaultListModel modeloListaTorneos = new DefaultListModel();
+        jli_torneos.setModel(modeloListaTorneos);
+        
+        listaTorneos = appAjedrez.consultarTorneosDisponibles();
+
+        if(!listaTorneos.isEmpty()){
+            for(Object torneo:listaTorneos){
+                modeloListaTorneos.addElement(torneo);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No hay torneos disponibles");
+        }
+        
         Torneo.setVisible(false);
         TorneoVer.setVisible(true);
     }//GEN-LAST:event_jButtonVer1ActionPerformed
+
+    private void jButtonAtras11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras11ActionPerformed
+        // TODO add your handling code here:
+        User.setVisible(true);
+        TorneoVer.setVisible(false);
+    }//GEN-LAST:event_jButtonAtras11ActionPerformed
+
+    private void jButtonVer7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVer7ActionPerformed
+        // TODO add your handling code here:
+        torneoObj = (Object)jli_torneos.getSelectedValue();
+        
+        if(torneoObj == null)
+        {
+            JOptionPane.showMessageDialog(this,"Has de seleccionar un torneo");
+        }
+        else
+        {
+            Torneo torneo = (Torneo)torneoObj;
+            detallesTorneo = torneo.detallesTorneo();
+            
+            String barra_separar = Pattern.quote("|");
+            String[] detalles = detallesTorneo.split(barra_separar);
+            jlb_nombreTorneo.setText(detalles[0]);
+            jlb_datosNumJugadoresTorneo.setText(detalles[1]);
+            jlb_datosCategoriaTorneo.setText(detalles[2]);
+           
+            DatosTorneo.setVisible(true);
+            TorneoVer.setVisible(false);
+        }
+    }//GEN-LAST:event_jButtonVer7ActionPerformed
+
+    private void jbt_okTorneoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okTorneoActionPerformed
+        // TODO add your handling code here:
+        TorneoVer.setVisible(true);
+        DatosTorneo.setVisible(false);
+    }//GEN-LAST:event_jbt_okTorneoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1546,6 +1768,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JFrame ClubEliminar;
     private javax.swing.JFrame ClubVer;
     private javax.swing.JFrame CreadoExito;
+    private javax.swing.JFrame DatosTorneo;
     private javax.swing.JFrame EliminadoExito;
     private javax.swing.JFrame Partido;
     private javax.swing.JFrame PartidoCrear;
@@ -1561,6 +1784,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JButton jButtonApuntar;
     private javax.swing.JButton jButtonAtras;
     private javax.swing.JButton jButtonAtras10;
+    private javax.swing.JButton jButtonAtras11;
     private javax.swing.JButton jButtonAtras2;
     private javax.swing.JButton jButtonAtras3;
     private javax.swing.JButton jButtonAtras4;
@@ -1602,6 +1826,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JButton jButtonVer3;
     private javax.swing.JButton jButtonVer4;
     private javax.swing.JButton jButtonVer5;
+    private javax.swing.JButton jButtonVer7;
     private javax.swing.JComboBox<String> jComboBoxCategoria;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1620,6 +1845,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1633,7 +1859,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSeleccionarClub;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JLabel jLabelTorneo;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JLabel jLabelVerTorneo;
     private javax.swing.JList<String> jListJugadores;
     private javax.swing.JList<String> jListJugadores1;
     private javax.swing.JList<String> jListJugadores2;
@@ -1652,6 +1878,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextFieldEntrenador;
@@ -1665,6 +1892,18 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldNombreClub;
     private javax.swing.JTextField jTextFieldTiempo;
     private javax.swing.JTextField jTextFieldTorneo;
+    private javax.swing.JToggleButton jbt_okTorneo;
     private javax.swing.JLabel jl_titulo;
+    private javax.swing.JLabel jlb_categoriaTorneo;
+    private javax.swing.JLabel jlb_datosCategoriaTorneo;
+    private javax.swing.JLabel jlb_datosNumJugadoresTorneo;
+    private javax.swing.JLabel jlb_nombreTorneo;
+    private javax.swing.JLabel jlb_numJugadoresTorneo;
+    private javax.swing.JList<String> jli_torneos;
+    private javax.swing.JList<String> jli_torneos2;
     // End of variables declaration//GEN-END:variables
+    protected AppAjedrez appAjedrez;
+    private ArrayList listaTorneos;
+    private Object torneoObj;
+    private String detallesTorneo;
 }
