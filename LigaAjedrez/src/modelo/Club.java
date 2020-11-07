@@ -126,4 +126,24 @@ public class Club {
         Collections.sort(entrenamientos);
     }
     
+    public void desmatricularTodo()
+    {
+        for(Jugador j: jugadoresClub)
+        {
+            j.desmatricularseClub();
+            jugadoresClub.remove(j);
+        }
+        
+        this.entrenador.eliminarClubTrabaja(this);
+        
+        this.gerente = null;
+    }
+    
+    @Override
+    
+    public String toString()
+    {
+        return this.nombreClub;
+    }
+    
 }

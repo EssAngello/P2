@@ -131,12 +131,8 @@ public class AdministradorVista extends javax.swing.JFrame {
         ClubCrear = new javax.swing.JFrame();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jTextFieldNombreClub = new javax.swing.JTextField();
-        jTextFieldGerente = new javax.swing.JTextField();
-        jTextFieldEntrenador = new javax.swing.JTextField();
         jTextFieldFederacion = new javax.swing.JTextField();
         jButtonAtras8 = new javax.swing.JButton();
         jButtonCrear5 = new javax.swing.JButton();
@@ -218,6 +214,11 @@ public class AdministradorVista extends javax.swing.JFrame {
 
         jButtonCrear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonCrear.setText("Crear");
+        jButtonCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrearActionPerformed(evt);
+            }
+        });
 
         jLabelTitulo.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabelTitulo.setText("USER");
@@ -1019,17 +1020,9 @@ public class AdministradorVista extends javax.swing.JFrame {
 
         jLabel12.setText("Nombre del club:");
 
-        jLabel13.setText("Gerente:");
-
-        jLabel14.setText("Entrenador:");
-
         jLabel15.setText("Federacion:");
 
         jTextFieldNombreClub.setText("Nombre");
-
-        jTextFieldGerente.setText("Gerente");
-
-        jTextFieldEntrenador.setText("Entrenador");
 
         jTextFieldFederacion.setText("Federacion");
 
@@ -1055,18 +1048,14 @@ public class AdministradorVista extends javax.swing.JFrame {
                 .addGap(86, 86, 86)
                 .addGroup(ClubCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel15)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel13)
                     .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(ClubCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldNombreClub, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(ClubCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButtonCrear5)
-                        .addGroup(ClubCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextFieldEntrenador, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                            .addComponent(jTextFieldGerente)
-                            .addComponent(jTextFieldFederacion))))
+                    .addGroup(ClubCrearLayout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jButtonCrear5))
+                    .addComponent(jTextFieldFederacion, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(71, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClubCrearLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1089,21 +1078,13 @@ public class AdministradorVista extends javax.swing.JFrame {
                     .addComponent(jTextFieldNombreClub, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ClubCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(jTextFieldGerente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ClubCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jTextFieldEntrenador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ClubCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(jTextFieldFederacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                .addGap(47, 47, 47)
                 .addGroup(ClubCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonCrear5)
-                    .addComponent(jButtonAtras8))
-                .addContainerGap(34, Short.MAX_VALUE))
+                    .addComponent(jButtonAtras8)
+                    .addComponent(jButtonCrear5))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
@@ -1599,6 +1580,8 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButtonEliminar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar6ActionPerformed
         // Maricel
+        int indice = jListJugadores3.getSelectedIndex();
+        appAjedrez.eliminarClub((modelo.Club) clubes.get(indice));
         ClubEliminar.setVisible(false);
         EliminadoExito.setVisible(true);
     }//GEN-LAST:event_jButtonEliminar6ActionPerformed
@@ -1750,6 +1733,24 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButtonEliminar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar2ActionPerformed
         // Maricel
+        
+        DefaultListModel listmodel = new DefaultListModel();
+        
+        listmodel.removeAllElements();
+
+        clubes.removeAll(clubes);
+        
+        clubes = appAjedrez.consultarClubes();
+
+        for(Object c: clubes)
+        {
+
+            String club = c.toString();
+            listmodel.addElement(club);
+        }
+        
+        jListJugadores3.setModel(listmodel);
+        
         Club.setVisible(false);
         ClubEliminar.setVisible(true);
     }//GEN-LAST:event_jButtonEliminar2ActionPerformed
@@ -1774,6 +1775,9 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButtonCrear5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear5ActionPerformed
         // Maricel
+        String nombre = jTextFieldNombreClub.getText();
+        String federacion = jTextFieldFederacion.getText();
+        appAjedrez.crearClub(nombre, federacion);
         CreadoExito.setVisible(true);
         ClubCrear.setVisible(false);
     }//GEN-LAST:event_jButtonCrear5ActionPerformed
@@ -1919,6 +1923,10 @@ public class AdministradorVista extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jbt_aceptar_resActionPerformed
 
+    private void jButtonCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCrearActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1995,8 +2003,6 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -2047,10 +2053,8 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextFieldEntrenador;
     private javax.swing.JTextField jTextFieldFecha;
     private javax.swing.JTextField jTextFieldFederacion;
-    private javax.swing.JTextField jTextFieldGerente;
     private javax.swing.JTextField jTextFieldJug1;
     private javax.swing.JTextField jTextFieldJug2;
     private javax.swing.JTextField jTextFieldNombre;
@@ -2084,4 +2088,5 @@ public class AdministradorVista extends javax.swing.JFrame {
     private ArrayList listaTorneos;
     private Object torneoObj;
     private String detallesTorneo;
+    ArrayList<Object> clubes = new ArrayList();
 }

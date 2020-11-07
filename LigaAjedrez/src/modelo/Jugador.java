@@ -88,6 +88,11 @@ public class Jugador {
         return comprobacion;
     }
     
+    public void desmatricularseClub()
+    {
+        this.club=null;
+    }
+    
     public void añadirPartidaHistorial(Partida partida){
         historialPartidas.add(partida);
     }

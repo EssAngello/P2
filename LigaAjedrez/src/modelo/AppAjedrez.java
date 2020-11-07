@@ -54,6 +54,18 @@ public class AppAjedrez {
         torneos.add(torneo1);
     }
     
+    public void crearClub(String nombre, String federacion)
+    {
+        Club club = new Club(nombre, federacion, null, null);
+        clubes.add(club);
+    }
+    
+    public void eliminarClub(Club c)
+    {
+        c.desmatricularTodo();
+        clubes.remove(c);
+    }
+    
     public void crearTorneo(Torneo t){
         torneos.add(t);
     }
@@ -66,7 +78,7 @@ public class AppAjedrez {
         }
     }
     
-    public ArrayList<Club> consultarClubes(){
+    public ArrayList consultarClubes(){
         ArrayList<Club> listaClubes = new ArrayList(clubes);
         
         return listaClubes;

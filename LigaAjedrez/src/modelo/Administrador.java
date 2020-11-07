@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 public class Administrador {
     private Hashtable<String, String> ht;
     String user,pasw;
+    //private AppAjedrez app;
     
     public Administrador (String user, String pasw){
         this.user = user;
@@ -34,6 +35,16 @@ public class Administrador {
         }
         return comprobacion;
     }
+    
+    /*public void crearClub(String nombre, String federeacion)
+    {
+        app.crearClub(nombre, federeacion);
+    }*/
+    
+    /*public void eliminarClub(Club c)
+    {
+        app.eliminarClub(c);
+    }*/
     
   /*  public void craerJugador(String user, String passwd, String nombre, String apellido, String telefono, String dni, String categoria)
     {

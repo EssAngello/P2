@@ -27,5 +27,10 @@ public class Entrenador extends Jugador{
         clubes.add(c);
     }
     
+    public void eliminarClubTrabaja(Club c)
+    {
+        clubes.remove(c);
+    }
+    
     
 }
