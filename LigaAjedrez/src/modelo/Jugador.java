@@ -9,6 +9,7 @@ import modelo.Partida;
 import modelo.Club;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 
@@ -27,6 +28,8 @@ public class Jugador {
     protected ArrayList<Partida> historialPartidas = new ArrayList<Partida>();
     protected ArrayList<Club> historialClubes = new ArrayList<Club>();
     
+    Club club0 = new Club("inicial", "Federacion de mi Casa", null, null);
+    
     public Jugador (String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
        this.user = user;
        this.passwd = passwd;
@@ -35,6 +38,8 @@ public class Jugador {
        this.telefono = telefono;
        this.DNI = DNI;
        this.categoria = categoria;
+       
+       historialClubes.add(club0);
     }
     
     public boolean identificarse(String u, String p){
@@ -98,7 +103,7 @@ public class Jugador {
     
     public void InscribirseClub(Club c)
     {
-        c.inscribirseClub(this);
+        c.inscribirseClubJugador(this);
         historialClubes.add(c);
         this.club=c;
     }

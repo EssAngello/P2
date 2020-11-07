@@ -640,8 +640,8 @@ public class JugadorVista extends javax.swing.JFrame {
         listaClubes = appAjedrez.consultarClubes();
         
         if(!listaClubes.isEmpty()){
-            for(Object club:listaClubes){
-                modeloListaClubes.addElement(club);
+            for(Object clubAux:listaClubes){
+                modeloListaClubes.addElement(clubAux);
             }
         }
         else{
@@ -667,7 +667,6 @@ public class JugadorVista extends javax.swing.JFrame {
         }
         //else{
             club = (Club)clubObject;
-            club.inscribirseClub(jugador);
             jugador.InscribirseClub(club);
             InscribirseClubJugador.setVisible(false);
             this.setVisible(true);

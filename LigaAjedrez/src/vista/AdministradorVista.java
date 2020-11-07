@@ -73,6 +73,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         jListJugadores1 = new javax.swing.JList<>();
         jTextFieldNombre1 = new javax.swing.JTextField();
         jButtonBuscar1 = new javax.swing.JButton();
+        TorneoVer = new javax.swing.JFrame();
         TorneoEliminar = new javax.swing.JFrame();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -225,6 +226,11 @@ public class AdministradorVista extends javax.swing.JFrame {
 
         jButtonVer1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonVer1.setText("Ver");
+        jButtonVer1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVer1ActionPerformed(evt);
+            }
+        });
 
         jButtonEliminar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonEliminar1.setText("Eliminar");
@@ -589,6 +595,17 @@ public class AdministradorVista extends javax.swing.JFrame {
                     .addComponent(jButtonEliminar4)
                     .addComponent(jButtonAtras3))
                 .addGap(42, 42, 42))
+        );
+
+        javax.swing.GroupLayout TorneoVerLayout = new javax.swing.GroupLayout(TorneoVer.getContentPane());
+        TorneoVer.getContentPane().setLayout(TorneoVerLayout);
+        TorneoVerLayout.setHorizontalGroup(
+            TorneoVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        TorneoVerLayout.setVerticalGroup(
+            TorneoVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         jLabel3.setText("Lista de torneos:");
@@ -1512,6 +1529,12 @@ public class AdministradorVista extends javax.swing.JFrame {
         this.setVisible(true);
     }//GEN-LAST:event_jButtonSiguienteActionPerformed
 
+    private void jButtonVer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVer1ActionPerformed
+        // TODO add your handling code here:
+        Torneo.setVisible(false);
+        TorneoVer.setVisible(true);
+    }//GEN-LAST:event_jButtonVer1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1531,6 +1554,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JFrame Torneo;
     private javax.swing.JFrame TorneoCrear;
     private javax.swing.JFrame TorneoEliminar;
+    private javax.swing.JFrame TorneoVer;
     private javax.swing.JFrame User;
     private javax.swing.JFrame UserEliminar;
     private javax.swing.JFrame UserVer;

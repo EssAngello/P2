@@ -15,6 +15,7 @@ import modelo.Jugador;
 public class Club {
     protected ArrayList<Entrenamiento> entrenamientos = new ArrayList<Entrenamiento>();
     protected ArrayList<Jugador> jugadoresClub = new ArrayList<Jugador>();
+    protected ArrayList<Gerente> gerenteClub = new ArrayList<Gerente>();
     
     private Entrenador entrenador = null;
     private Gerente gerente = null;
@@ -29,9 +30,14 @@ public class Club {
         entrenador.setClubTrabaja(this);
     }
     
-    public void inscribirseClub(Jugador jugador){
+    public void inscribirseClubJugador(Jugador jugador){
         jugadoresClub.add(jugador);
     }
+    
+    public void inscribirseClubGerente(Gerente gerente){
+        gerenteClub.add(gerente);
+    }
+    
     public boolean darseBaja(Jugador jugador){
         boolean res = false;
         jugador.setClub(null);

@@ -20,8 +20,8 @@ public class Torneo {
     
     
     //FALTA SABER COMO SE GENERAN LAS PARTIDAS DE LOS TORNEOS
-    public Torneo(){
-        
+    public Torneo(String nombre){
+        this.nombre = nombre;
     }
     
     public void InscribirseTorneo(Jugador jugador){

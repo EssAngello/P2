@@ -7,6 +7,9 @@ package vista;
 
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import modelo.AppAjedrez;
+import modelo.Club;
 import modelo.Gerente;
 
 /**
@@ -16,9 +19,10 @@ import modelo.Gerente;
 public class GerenteVista extends javax.swing.JFrame {
 
     //Maricel
-    private ClubVista club;
+    private ClubVista clubVista;
     private TorneoVista t;
     private Gerente gerente;
+    private Club club;
     /**
      * Creates new form Gerente
      */
@@ -472,7 +476,19 @@ public class GerenteVista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbt_inscribirseClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_inscribirseClubActionPerformed
-        //FALTA
+        DefaultListModel modeloListaClubes = new DefaultListModel();
+        jli_clubes1.setModel(modeloListaClubes);
+
+        listaClubes = appAjedrez.consultarClubes();
+        
+        if(!listaClubes.isEmpty()){
+            for(Object clubAux:listaClubes){
+                modeloListaClubes.addElement(clubAux);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No hay clubes disponibles");
+        }
         // Maricel
         this.setVisible(false);
         InscribirseClubGerente.setVisible(true);
@@ -493,7 +509,19 @@ public class GerenteVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_salirActionPerformed
 
     private void jbt_historialClubesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_historialClubesActionPerformed
-        //FALTA
+        DefaultListModel modeloListaHistorialClubes = new DefaultListModel();
+        jli_historialClubes1.setModel(modeloListaHistorialClubes);
+        
+        listaHistorialClubes = gerente.getHistorialClubes();
+
+        if(!listaHistorialClubes.isEmpty()){
+            for(Object historialClub :listaHistorialClubes){
+                modeloListaHistorialClubes.addElement(historialClub);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No hay partidas");
+        }
         // Maricel
         this.setVisible(false);
         HistorialClubesGerente.setVisible(true);
@@ -526,8 +554,18 @@ public class GerenteVista extends javax.swing.JFrame {
 
     private void jbt_inscribirse1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_inscribirse1ActionPerformed
         // Maricel
+        clubObject = (Object)jli_clubes1.getSelectedValue();
+        
+        if(clubObject == null){
+            JOptionPane.showMessageDialog(this,"Selecciona un club");
+        }
+        //else{ 
+        club = (Club)clubObject;
+        club.inscribirseClubGerente(gerente);
+        gerente.InscribirseClub(club);
         InscribirseClubGerente.setVisible(false);
         this.setVisible(true);
+        //}
     }//GEN-LAST:event_jbt_inscribirse1ActionPerformed
 
     private void jbt_volverHistorial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverHistorial1ActionPerformed
@@ -555,8 +593,8 @@ public class GerenteVista extends javax.swing.JFrame {
 
     private void jbt_sedeDelClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_sedeDelClubActionPerformed
         // Maricel
-        club = new ClubVista(1,gerente);
-        club.setVisible(true);
+        clubVista = new ClubVista(1,gerente);
+        clubVista.setVisible(true);
         this.setVisible(false);
         dispose();
     }//GEN-LAST:event_jbt_sedeDelClubActionPerformed
@@ -639,4 +677,8 @@ public class GerenteVista extends javax.swing.JFrame {
     ArrayList<Object> nominas = new ArrayList<Object>();
     DefaultListModel listmodel = new DefaultListModel();
     DefaultListModel listmodel2 = new DefaultListModel();
+    private ArrayList listaClubes;
+    protected AppAjedrez appAjedrez;
+    protected Object clubObject;
+    protected ArrayList listaHistorialClubes;
 }

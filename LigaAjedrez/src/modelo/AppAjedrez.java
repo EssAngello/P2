@@ -27,7 +27,9 @@ public class AppAjedrez {
     Jugador j1 = new Jugador("Maricel","123456","Maricel","Olaru","123456789","X9356742C","senior");
     Entrenador e = new Entrenador("Jose", "123456", "Jose", "Mourinho", "123456789", "X1234567L", "senior");
     Gerente g = new Gerente("Ali", "123456","Ali", "baba", "123456789", "X1234566L", "senior");
-    Club club = new Club("TSM", "Federacion de Valencia", e, g);
+    Club club1 = new Club("TSM", "Federacion de Valencia", e, g);
+    Club club2 = new Club("FAZE", "Federacion de Madrid", null, null);
+    Torneo torneo1 = new Torneo("Torneo calabacin");
     //Ficheros
     String ficheroJugadores = "jugadores.txt";
     String gerentesJugadores = "gerentes.txt";
@@ -36,12 +38,15 @@ public class AppAjedrez {
         jugadores.add(j1);
         entrenadores.add(e);
         gerentes.add(g);
-        clubes.add(club);
-        j1.InscribirseClub(club);
-        club.setDefaultEntrenamientos();
+        clubes.add(club1);
+        j1.InscribirseClub(club1);
+        club1.setDefaultEntrenamientos();
         //Hay pasarle el fichero y el tipo jugador = 0 gerente = 1
         ficheroJugador(ficheroJugadores, 0);
         ficheroJugador(gerentesJugadores, 1);
+        
+        clubes.add(club2);
+        torneos.add(torneo1);
     }
     
     public ArrayList<Club> consultarClubes(){
