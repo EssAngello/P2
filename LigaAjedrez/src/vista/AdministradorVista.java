@@ -2299,6 +2299,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         // Maricel
         Partido.setVisible(true);
         this.setVisible(false);
+        Partido.setSize(400,400);
     }//GEN-LAST:event_jButtonPartidoActionPerformed
 
     private void jButtonCrear3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear3ActionPerformed
@@ -2382,6 +2383,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         // Maricel
         Partido.setVisible(false);
         PartidoEliminar.setVisible(true);
+        PartidoEliminar.setSize(400,400);
     }//GEN-LAST:event_jButtonEliminar3ActionPerformed
 
     private void jButtonAtras10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras10ActionPerformed
