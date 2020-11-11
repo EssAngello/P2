@@ -1776,9 +1776,9 @@ public class AdministradorVista extends javax.swing.JFrame {
     private void jButtonCrear4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear4ActionPerformed
         
         //La categoria se coge de un combobox, asiq angello...
-        //categoria = ;
-        //Torneo t = new Torneo(jTextField2.getText(), Integer.parseInt(jTextField1.getText()), categoria);
-        //appAjedrez.crearTorneo(t);
+        categoria = null;
+        Torneo t = new Torneo(jTextField2.getText(), Integer.parseInt(jTextField1.getText()), categoria);
+        appAjedrez.crearTorneo(t);
         
         TorneoCrear.setVisible(false);
         CreadoExito.setVisible(true);
@@ -1917,24 +1917,29 @@ public class AdministradorVista extends javax.swing.JFrame {
         if(torneoObj == null){
             JOptionPane.showMessageDialog(this,"Selecciona un torneo");
         }
-        Torneo torneo1 = (Torneo)torneoObj;
-            
+        else{
+            Torneo torneo1 = (Torneo)torneoObj;
 
-        if(jugador1 != null && jugador2 != null){
-            if(comprobarFecha == true){
-                Partida partida = new Partida(jugador1,jugador2,ganador,fecha,torneo1, null);
-                torneo.introducirPartidaTorneo(partida);
+            if(jugador1 != null && jugador2 != null){
+                if(comprobarFecha == true){
+                    Partida partida = new Partida(jugador1,jugador2,ganador,fecha,torneo1, null);
+                    torneo.introducirPartidaTorneo(partida);
+                    
+                    PartidoCrear.setVisible(false);
+                    CreadoExito.setVisible(true);
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "fecha no valida");
+                    
+                }
             }
             else{
-                JOptionPane.showMessageDialog(null, "fecha no valida");
+                JOptionPane.showMessageDialog(null, "usuario incorrecto");
             }
+
+            
         }
-        else{
-            JOptionPane.showMessageDialog(null, "usuario incorrecto");
-        }
-        
-        PartidoCrear.setVisible(false);
-        CreadoExito.setVisible(true);
+
     }//GEN-LAST:event_jButtonCrear6ActionPerformed
 
     private void jButtonEliminar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar3ActionPerformed

@@ -748,6 +748,9 @@ public class TorneoVista extends javax.swing.JFrame {
                     torneo.introducirResultadosPartida(partida);
                     j1.añadirPartidaHistorial(partida);
                     j2.añadirPartidaHistorial(partida);
+                    
+                    ResultadosPartida.setVisible(false);
+                    this.setVisible(true);
                 }
                 else{
                     JOptionPane.showMessageDialog(null, "fecha no valida");
@@ -766,8 +769,7 @@ public class TorneoVista extends javax.swing.JFrame {
             que se guarde en el historial de partidas
             */
             // Maricel
-            ResultadosPartida.setVisible(false);
-            this.setVisible(true);
+
         }
         else
         {
@@ -804,14 +806,15 @@ public class TorneoVista extends javax.swing.JFrame {
             jlb_fechaRespuesta1.setText(dateFormat.format(detalles[2]));
             
             jlb_duracionRespuesta.setText(detalles[3] + " segundos");
+            HistorialPartidas.setVisible(false);
+            DetallesHistorialPartidas.setVisible(true);
+            DetallesHistorialPartidas.setSize(400,400);
             
         //}
 
 
         // Maricel
-        HistorialPartidas.setVisible(false);
-        DetallesHistorialPartidas.setVisible(true);
-        DetallesHistorialPartidas.setSize(400,400);
+
     }//GEN-LAST:event_jbt_masDetalleHistorial1ActionPerformed
 
     private void jbt_okDetalles1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_okDetalles1ActionPerformed
