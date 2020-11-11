@@ -199,6 +199,25 @@ public class AdministradorVista extends javax.swing.JFrame {
         jtf_nuevo_apellido_res = new javax.swing.JTextField();
         jtf_nuevo_DNI_res = new javax.swing.JTextField();
         btg_user = new javax.swing.ButtonGroup();
+        userVer = new javax.swing.JFrame();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jlb_nom = new javax.swing.JLabel();
+        jlb_apel = new javax.swing.JLabel();
+        jlb_dni = new javax.swing.JLabel();
+        jlb_tel = new javax.swing.JLabel();
+        jlb_cat = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jlb_res_nom = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jlb_res_apel = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jlb_res_dni = new javax.swing.JLabel();
+        jbt_atras_ver = new javax.swing.JButton();
         jl_titulo = new javax.swing.JLabel();
         jButtonClub = new javax.swing.JButton();
         jButtonUser = new javax.swing.JButton();
@@ -1555,6 +1574,129 @@ public class AdministradorVista extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabel1.setText("Datos Personales");
+
+        jLabel2.setText("Nombre:");
+
+        jLabel14.setText("Apellidos:");
+
+        jLabel20.setText("DNI/NIE:");
+
+        jLabel25.setText("Telefono:");
+
+        jLabel27.setText("Categoria:");
+
+        jlb_nom.setText("jLabel28");
+
+        jlb_apel.setText("jLabel29");
+
+        jlb_dni.setText("jLabel33");
+
+        jlb_tel.setText("jLabel34");
+
+        jlb_cat.setText("jLabel35");
+
+        jLabel36.setText("Nombre");
+
+        jlb_res_nom.setText("jLabel37");
+
+        jLabel38.setText("Apellido");
+
+        jlb_res_apel.setText("jLabel39");
+
+        jLabel40.setText("DNI");
+
+        jlb_res_dni.setText("jLabel41");
+
+        jbt_atras_ver.setText("Atras");
+        jbt_atras_ver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_atras_verActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout userVerLayout = new javax.swing.GroupLayout(userVer.getContentPane());
+        userVer.getContentPane().setLayout(userVerLayout);
+        userVerLayout.setHorizontalGroup(
+            userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userVerLayout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addGroup(userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(userVerLayout.createSequentialGroup()
+                        .addGroup(userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(119, 119, 119))
+                    .addGroup(userVerLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userVerLayout.createSequentialGroup()
+                .addContainerGap(66, Short.MAX_VALUE)
+                .addComponent(jLabel36)
+                .addGap(18, 18, 18)
+                .addComponent(jlb_res_nom)
+                .addGap(18, 18, 18)
+                .addGroup(userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbt_atras_ver)
+                    .addGroup(userVerLayout.createSequentialGroup()
+                        .addComponent(jLabel38)
+                        .addGap(18, 18, 18)
+                        .addGroup(userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlb_tel)
+                            .addComponent(jlb_dni)
+                            .addComponent(jlb_cat)
+                            .addComponent(jlb_apel)
+                            .addComponent(jlb_nom)
+                            .addGroup(userVerLayout.createSequentialGroup()
+                                .addComponent(jlb_res_apel)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel40)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlb_res_dni)))))
+                .addGap(32, 32, 32))
+        );
+        userVerLayout.setVerticalGroup(
+            userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userVerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jlb_nom))
+                .addGap(18, 18, 18)
+                .addGroup(userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(jlb_apel))
+                .addGap(18, 18, 18)
+                .addGroup(userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(jlb_dni))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(jlb_tel))
+                .addGap(18, 18, 18)
+                .addGroup(userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(jlb_cat))
+                .addGap(18, 18, 18)
+                .addGroup(userVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(jlb_res_nom)
+                    .addComponent(jLabel38)
+                    .addComponent(jlb_res_apel)
+                    .addComponent(jLabel40)
+                    .addComponent(jlb_res_dni))
+                .addGap(18, 18, 18)
+                .addComponent(jbt_atras_ver)
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jl_titulo.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -1676,9 +1818,33 @@ public class AdministradorVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonApuntarActionPerformed
 
     private void jButtonEliminar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar4ActionPerformed
-        // Maricel
+        //Maricel
+        eliminarUser = (Object)jlt_user.getSelectedValue();
+        
+        if(eliminarUser == null){
+            JOptionPane.showMessageDialog(this,"Selecciona en la tabla");
+        }
+        else{
+            
+            if(jrbt_jugador.isSelected()){
+                Jugador j = (Jugador)eliminarUser;
+                appAjedrez.eliminarJugador(j);
+                JOptionPane.showMessageDialog(this, "Jugador eliminado");
+            }
+            else if(jrbt_gerente.isSelected()){
+                Gerente g = (Gerente)eliminarUser;
+                appAjedrez.eliminarGerente(g);
+                JOptionPane.showMessageDialog(this, "Gerente eliminado");
+            }   
+            else if(jrbt_entrenador.isSelected()){
+                Entrenador e = (Entrenador)eliminarUser;
+                appAjedrez.eliminarEntrenador(e);
+                JOptionPane.showMessageDialog(this, "Entrenador eliminado");
+            }
+            
+        }
         UserEliminar.setVisible(false);
-        EliminadoExito.setVisible(true);
+        this.setVisible(true);
     }//GEN-LAST:event_jButtonEliminar4ActionPerformed
 
     private void jComboBoxCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCategoriaActionPerformed
@@ -2267,8 +2433,70 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //Maricel
+        verUser = (Object)jlt_user.getSelectedValue();
         
+        if(verUser == null){
+            JOptionPane.showMessageDialog(this,"Selecciona en la tabla");
+        }
+        else{
+            
+            if(jrbt_jugador.isSelected()){
+                Jugador j = (Jugador)verUser;
+                
+                jlb_nom.setText(j.getNombre());
+                jlb_apel.setText(j.getApellido());
+                jlb_dni.setText(j.getDNI());
+                jlb_tel.setText(j.getTelefono());
+                jlb_cat.setText(j.getCategoria());
+                jlb_res_nom.setText(j.getRes_nom());
+                jlb_res_apel.setText(j.getRes_apell());
+                jlb_res_dni.setText(j.getRes_DNI());
+                
+                UserEliminar.setVisible(false);
+                userVer.setVisible(true);
+                userVer.setSize(400,400);
+            }
+            else if(jrbt_gerente.isSelected()){
+                Gerente g = (Gerente)verUser;
+                
+                jlb_nom.setText(g.getNombre());
+                jlb_apel.setText(g.getApellido());
+                jlb_dni.setText(g.getDNI());
+                jlb_tel.setText(g.getTelefono());
+                jlb_cat.setText(g.getCategoria());
+                jlb_res_nom.setText(g.getRes_nom());
+                jlb_res_apel.setText(g.getRes_apell());
+                jlb_res_dni.setText(g.getRes_DNI());
+                
+                UserEliminar.setVisible(false);
+                userVer.setVisible(true);
+                userVer.setSize(400,400);
+            }   
+            else if(jrbt_entrenador.isSelected()){
+                Entrenador e = (Entrenador)verUser;
+                
+                jlb_nom.setText(e.getNombre());
+                jlb_apel.setText(e.getApellido());
+                jlb_dni.setText(e.getDNI());
+                jlb_tel.setText(e.getTelefono());
+                jlb_cat.setText(e.getCategoria());
+                jlb_res_nom.setText(e.getRes_nom());
+                jlb_res_apel.setText(e.getRes_apell());
+                jlb_res_dni.setText(e.getRes_DNI());
+                
+                UserEliminar.setVisible(false);
+                userVer.setVisible(true);
+                userVer.setSize(400,400);
+            }
+            
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jbt_atras_verActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_atras_verActionPerformed
+        // Maricel
+        userVer.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jbt_atras_verActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2341,25 +2569,34 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JButton jButtonVer5;
     private javax.swing.JButton jButtonVer7;
     private javax.swing.JComboBox<String> jComboBoxCategoria;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -2394,6 +2631,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldNombreClub;
     private javax.swing.JTextField jTextFieldTorneo;
     private javax.swing.JButton jbt_aceptar_res;
+    private javax.swing.JButton jbt_atras_ver;
     private javax.swing.JButton jbt_cancelar_res;
     private javax.swing.JRadioButton jbt_ganadorJ1;
     private javax.swing.JRadioButton jbt_ganadorJ2;
@@ -2402,19 +2640,27 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JButton jbt_volverResultadoPartido1;
     private javax.swing.JComboBox<String> jcb_Torneo1;
     private javax.swing.JLabel jl_titulo;
+    private javax.swing.JLabel jlb_apel;
     private javax.swing.JLabel jlb_apell_infa;
+    private javax.swing.JLabel jlb_cat;
     private javax.swing.JLabel jlb_categoriaTorneo;
     private javax.swing.JLabel jlb_datosCategoriaTorneo;
     private javax.swing.JLabel jlb_datosNumJugadoresTorneo;
+    private javax.swing.JLabel jlb_dni;
     private javax.swing.JLabel jlb_duracion;
     private javax.swing.JLabel jlb_ganadorResultado1;
     private javax.swing.JLabel jlb_jugador3;
     private javax.swing.JLabel jlb_jugador4;
+    private javax.swing.JLabel jlb_nom;
     private javax.swing.JLabel jlb_nom_infa;
     private javax.swing.JLabel jlb_nombreTorneo;
     private javax.swing.JLabel jlb_numJugadoresTorneo;
+    private javax.swing.JLabel jlb_res_apel;
+    private javax.swing.JLabel jlb_res_dni;
+    private javax.swing.JLabel jlb_res_nom;
     private javax.swing.JLabel jlb_subtitulo_responsable;
     private javax.swing.JLabel jlb_subtitulo_responsable2;
+    private javax.swing.JLabel jlb_tel;
     private javax.swing.JLabel jlb_tiempoResultado1;
     private javax.swing.JLabel jlb_tituloResponsable;
     private javax.swing.JLabel jlb_tituloResultadoPartido1;
@@ -2437,11 +2683,12 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_nuevo_nombre_res;
     private javax.swing.JTextField jtf_tiempo1;
     private javax.swing.JLabel titulo_ver_eliminar;
+    private javax.swing.JFrame userVer;
     // End of variables declaration//GEN-END:variables
     protected AppAjedrez appAjedrez;
     private ArrayList listaTorneos;
     private ArrayList listaJugadores, listaGerentes, listaEntrenadores;
-    private Object torneoObj;
+    private Object torneoObj, verUser, eliminarUser;
     private String detallesTorneo;
     ArrayList<Object> clubes = new ArrayList();
     private Date fecha = null;

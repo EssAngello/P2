@@ -218,6 +218,16 @@ public class AppAjedrez {
        jugadores.remove(j);
    }
    
+    public void eliminarGerente(Gerente g)
+   {
+       gerentes.remove(g);
+   }
+    
+     public void eliminarEntrenador(Entrenador e)
+   {
+       entrenadores.remove(e);
+   }
+   
    public void ficheroJugador(String fichero, int tipo){
        String nombreFichero = "./src/modelo/";
        BufferedReader br = null;

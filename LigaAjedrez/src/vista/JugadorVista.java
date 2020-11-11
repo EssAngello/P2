@@ -335,8 +335,6 @@ public class JugadorVista extends javax.swing.JFrame {
 
         jLabel1.setText("DNI:");
 
-        jLabel2.setText("jLabel2");
-
         javax.swing.GroupLayout ResponsableLayout = new javax.swing.GroupLayout(Responsable.getContentPane());
         Responsable.getContentPane().setLayout(ResponsableLayout);
         ResponsableLayout.setHorizontalGroup(
