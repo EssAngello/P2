@@ -288,15 +288,19 @@
                           <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                           <Component id="jlb_rivalRespuesta1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jlb_fecha1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_tiempo1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_hora" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_duracion1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="63" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jlb_fechaRespuesta1" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jlb_tiempoRespuesta1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_duracionRespuesta" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jlb_fechaRespuesta1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_horaRespuesta1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
@@ -326,10 +330,15 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jlb_tiempo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jlb_tiempoRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_hora" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_horaRespuesta1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="24" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_duracion1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_duracionRespuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
                   <Component id="jbt_okDetalles1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -360,9 +369,9 @@
             <Property name="text" type="java.lang.String" value="fecha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_tiempo1">
+        <Component class="javax.swing.JLabel" name="jlb_hora">
           <Properties>
-            <Property name="text" type="java.lang.String" value="tiempo"/>
+            <Property name="text" type="java.lang.String" value="hora"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_rivalRespuesta1">
@@ -380,7 +389,7 @@
             <Property name="text" type="java.lang.String" value="jLabel14"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jlb_tiempoRespuesta1">
+        <Component class="javax.swing.JLabel" name="jlb_horaRespuesta1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel15"/>
           </Properties>
@@ -393,6 +402,16 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_okDetalles1ActionPerformed"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JLabel" name="jlb_duracion1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="duracion"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_duracionRespuesta">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel3"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JFrame" name="ResultadosPartida">
@@ -400,19 +419,39 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jlb_tituloResultadoPartido1" min="-2" pref="280" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jbt_volverResultadoPartido1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jbt_okResultadoPartido1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Component id="jlb_ganadorResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jlb_tiempoResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jlb_torneo1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jlb_jugador4" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="jlb_ganadorResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_tiempoResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_torneo1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_jugador4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jlb_jugador3" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jlb_jugador3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_duracion" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="76" pref="76" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jtf_duracion" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <Component id="jtf_jugador4" min="-2" max="-2" attributes="0"/>
                       <Component id="jtf_jugador3" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
@@ -424,18 +463,6 @@
                       <Component id="jcb_Torneo1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="68" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jlb_tituloResultadoPartido1" min="-2" pref="280" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jbt_volverResultadoPartido1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jbt_okResultadoPartido1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -472,10 +499,16 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbt_okResultadoPartido1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbt_volverResultadoPartido1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_duracion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_duracion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="24" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbt_volverResultadoPartido1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_okResultadoPartido1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -506,7 +539,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_tiempoResultado1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Tiempo"/>
+            <Property name="text" type="java.lang.String" value="Fecha"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_torneo1">
@@ -582,6 +615,21 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_ganadorJ2ActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_duracion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Duracion partida"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_duracion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="segundos"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="segundos"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

@@ -135,12 +135,10 @@ public class AdministradorVista extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jTextFieldJug1 = new javax.swing.JTextField();
         jTextFieldJug2 = new javax.swing.JTextField();
         jTextFieldFecha = new javax.swing.JTextField();
-        jTextFieldTiempo = new javax.swing.JTextField();
         jScrollPane7 = new javax.swing.JScrollPane();
         jListTorneo = new javax.swing.JList<>();
         jButtonAtras9 = new javax.swing.JButton();
@@ -168,6 +166,9 @@ public class AdministradorVista extends javax.swing.JFrame {
         jbt_ganadorJ2 = new javax.swing.JRadioButton();
         jtf_tiempo1 = new javax.swing.JTextField();
         jlb_tituloResultadoPartido1 = new javax.swing.JLabel();
+        jlb_duracion = new javax.swing.JLabel();
+        jtf_duracion = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
         EliminadoExito = new javax.swing.JFrame();
         jLabel23 = new javax.swing.JLabel();
         jButtonOk = new javax.swing.JButton();
@@ -590,9 +591,9 @@ public class AdministradorVista extends javax.swing.JFrame {
 
         jlb_categoriaTorneo.setText("categoria");
 
-        jlb_datosNumJugadoresTorneo.setText("jLabel25");
+        jlb_datosNumJugadoresTorneo.setText("num jugadores");
 
-        jlb_datosCategoriaTorneo.setText("jLabel27");
+        jlb_datosCategoriaTorneo.setText("categoria");
 
         jbt_okTorneo.setText("ok");
         jbt_okTorneo.addActionListener(new java.awt.event.ActionListener() {
@@ -621,9 +622,10 @@ public class AdministradorVista extends javax.swing.JFrame {
                                         .addComponent(jlb_datosCategoriaTorneo))
                                     .addGroup(DatosTorneoLayout.createSequentialGroup()
                                         .addComponent(jlb_numJugadoresTorneo)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jlb_datosNumJugadoresTorneo)))))
-                        .addGap(0, 69, Short.MAX_VALUE))
+                                        .addGap(50, 50, 50)
+                                        .addComponent(jlb_datosNumJugadoresTorneo)
+                                        .addGap(0, 0, Short.MAX_VALUE)))))
+                        .addGap(0, 24, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosTorneoLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jbt_okTorneo)))
@@ -1032,23 +1034,19 @@ public class AdministradorVista extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabel16.setText("CREAR PARTIDO");
 
-        jLabel17.setText("Jugador 1:");
+        jLabel17.setText("User jugador 1:");
 
-        jLabel18.setText("Jugador 2:");
+        jLabel18.setText("User jugador 2:");
 
         jLabel19.setText("Fecha:");
 
-        jLabel20.setText("Tiempo Maximo:");
-
         jLabel21.setText("Torneo:");
 
-        jTextFieldJug1.setText("Nombre jugador 1");
+        jTextFieldJug1.setText("User jugador 1");
 
-        jTextFieldJug2.setText("Nombre jugador 2");
+        jTextFieldJug2.setText("User jugador 2");
 
         jTextFieldFecha.setText("DD/MM/YYYY");
-
-        jTextFieldTiempo.setText("Tiempo Maximo");
 
         jListTorneo.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -1081,10 +1079,6 @@ public class AdministradorVista extends javax.swing.JFrame {
                     .addGroup(PartidoCrearLayout.createSequentialGroup()
                         .addGap(39, 39, 39)
                         .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PartidoCrearLayout.createSequentialGroup()
-                        .addComponent(jButtonAtras9)
-                        .addGap(104, 104, 104)
-                        .addComponent(jButtonCrear6))
                     .addGroup(PartidoCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(PartidoCrearLayout.createSequentialGroup()
                             .addComponent(jLabel17)
@@ -1097,14 +1091,18 @@ public class AdministradorVista extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PartidoCrearLayout.createSequentialGroup()
                             .addGroup(PartidoCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel18)
-                                .addComponent(jLabel19)
-                                .addComponent(jLabel20))
+                                .addComponent(jLabel19))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(PartidoCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextFieldTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jTextFieldFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jTextFieldJug2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PartidoCrearLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButtonAtras9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonCrear6)
+                .addContainerGap())
         );
         PartidoCrearLayout.setVerticalGroup(
             PartidoCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1124,19 +1122,15 @@ public class AdministradorVista extends javax.swing.JFrame {
                 .addGroup(PartidoCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
                     .addComponent(jTextFieldFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(PartidoCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20)
-                    .addComponent(jTextFieldTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addGroup(PartidoCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel21)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(PartidoCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonCrear6)
                     .addComponent(jButtonAtras9))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jButtonAtras10.setText("Atras");
@@ -1270,30 +1264,16 @@ public class AdministradorVista extends javax.swing.JFrame {
         jlb_tituloResultadoPartido1.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
         jlb_tituloResultadoPartido1.setText("RESULTADO PARTIDO");
 
+        jlb_duracion.setText("Duracion partida");
+
+        jtf_duracion.setText("segundos");
+
+        jLabel13.setText("segundos");
+
         javax.swing.GroupLayout ApuntarResultadoPartidoLayout = new javax.swing.GroupLayout(ApuntarResultadoPartido.getContentPane());
         ApuntarResultadoPartido.getContentPane().setLayout(ApuntarResultadoPartidoLayout);
         ApuntarResultadoPartidoLayout.setHorizontalGroup(
             ApuntarResultadoPartidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ApuntarResultadoPartidoLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(ApuntarResultadoPartidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ApuntarResultadoPartidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jlb_ganadorResultado1)
-                        .addComponent(jlb_tiempoResultado1)
-                        .addComponent(jlb_torneo1)
-                        .addComponent(jlb_jugador4))
-                    .addComponent(jlb_jugador3))
-                .addGap(76, 76, 76)
-                .addGroup(ApuntarResultadoPartidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtf_jugador4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtf_jugador3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(ApuntarResultadoPartidoLayout.createSequentialGroup()
-                        .addComponent(jbt_ganadorJ1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jbt_ganadorJ2))
-                    .addComponent(jtf_tiempo1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcb_Torneo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(93, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ApuntarResultadoPartidoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jlb_tituloResultadoPartido1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1304,6 +1284,34 @@ public class AdministradorVista extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jbt_okResultadoPartido1)
                 .addContainerGap())
+            .addGroup(ApuntarResultadoPartidoLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(ApuntarResultadoPartidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ApuntarResultadoPartidoLayout.createSequentialGroup()
+                        .addComponent(jlb_duracion)
+                        .addGap(76, 76, 76)
+                        .addComponent(jtf_duracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel13))
+                    .addGroup(ApuntarResultadoPartidoLayout.createSequentialGroup()
+                        .addGroup(ApuntarResultadoPartidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ApuntarResultadoPartidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jlb_ganadorResultado1)
+                                .addComponent(jlb_tiempoResultado1)
+                                .addComponent(jlb_torneo1)
+                                .addComponent(jlb_jugador4))
+                            .addComponent(jlb_jugador3))
+                        .addGap(76, 76, 76)
+                        .addGroup(ApuntarResultadoPartidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_jugador4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_jugador3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ApuntarResultadoPartidoLayout.createSequentialGroup()
+                                .addComponent(jbt_ganadorJ1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbt_ganadorJ2))
+                            .addComponent(jtf_tiempo1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcb_Torneo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         ApuntarResultadoPartidoLayout.setVerticalGroup(
             ApuntarResultadoPartidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1333,9 +1341,14 @@ public class AdministradorVista extends javax.swing.JFrame {
                     .addComponent(jcb_Torneo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ApuntarResultadoPartidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_duracion)
+                    .addComponent(jtf_duracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(ApuntarResultadoPartidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbt_okResultadoPartido1)
                     .addComponent(jbt_volverResultadoPartido1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
@@ -1854,6 +1867,20 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButtonCrear3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear3ActionPerformed
         // Maricel
+
+        DefaultListModel modeloListaTorneos = new DefaultListModel();
+        jListTorneo.setModel(modeloListaTorneos);
+        
+        listaTorneos = appAjedrez.consultarTorneos();
+
+        if(!listaTorneos.isEmpty()){
+            for(Object torneo:listaTorneos){
+                modeloListaTorneos.addElement(torneo);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No hay torneos disponibles");
+        }
         Partido.setVisible(false);
         PartidoCrear.setVisible(true);
     }//GEN-LAST:event_jButtonCrear3ActionPerformed
@@ -1867,6 +1894,43 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButtonCrear6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear6ActionPerformed
         // Maricel
+        boolean comprobarFecha = true;
+        Jugador ganador = null;
+        
+        String j1 = jTextFieldJug1.getText();
+        Jugador jugador1 = appAjedrez.buscarJugadorUser(j1);
+        String j2 = jTextFieldJug2.getText();
+        Jugador jugador2 = appAjedrez.buscarJugadorUser(j1);
+        
+        SimpleDateFormat cambioFecha = new SimpleDateFormat("dd/MM/yyyy");
+        String fechaAux = jTextFieldFecha.getText();
+        
+        try {
+                fecha = cambioFecha.parse(fechaAux);
+            } 
+        catch (ParseException ex) {
+            System.out.print(ex);
+            comprobarFecha = false;
+        }
+        
+        torneoObj = (Object)jListTorneo.getSelectedValue();
+            //Aqui se pone el objeto seleccionado por el combobox;
+        Torneo torneo1 = (Torneo)torneoObj;
+            
+
+        if(jugador1 != null && jugador2 != null){
+            if(comprobarFecha == true){
+                Partida partida = new Partida(jugador1,jugador2,ganador,fecha,torneo1, null);
+                torneo.introducirPartidaTorneo(partida);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "fecha no valida");
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "usuario incorrecto");
+        }
+        
         PartidoCrear.setVisible(false);
         CreadoExito.setVisible(true);
     }//GEN-LAST:event_jButtonCrear6ActionPerformed
@@ -2026,12 +2090,15 @@ public class AdministradorVista extends javax.swing.JFrame {
                 comprobarFecha = false;
             }
 
+            torneoObj = (Object)jListTorneo.getSelectedValue();
             //Aqui se pone el objeto seleccionado por el combobox;
-            torneo = (Torneo) listaTorneos.get(indice);
+            Torneo torneo = (Torneo)torneoObj;
+            
+            String duracion = jtf_duracion.getText();
 
             if(j1 != null && j2 != null){
                 if(comprobarFecha == true){
-                    Partida partida = new Partida(j1,j2,ganador,fecha,torneo);
+                    Partida partida = new Partida(j1,j2,ganador,fecha,torneo, duracion);
                     torneo.introducirResultadosPartida(partida);
                     j1.añadirPartidaHistorial(partida);
                     j2.añadirPartidaHistorial(partida);
@@ -2153,13 +2220,13 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -2207,7 +2274,6 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldJug2;
     private javax.swing.JTextField jTextFieldNombre1;
     private javax.swing.JTextField jTextFieldNombreClub;
-    private javax.swing.JTextField jTextFieldTiempo;
     private javax.swing.JTextField jTextFieldTorneo;
     private javax.swing.JButton jbt_aceptar_res;
     private javax.swing.JButton jbt_cancelar_res;
@@ -2222,6 +2288,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jlb_categoriaTorneo;
     private javax.swing.JLabel jlb_datosCategoriaTorneo;
     private javax.swing.JLabel jlb_datosNumJugadoresTorneo;
+    private javax.swing.JLabel jlb_duracion;
     private javax.swing.JLabel jlb_ganadorResultado1;
     private javax.swing.JLabel jlb_jugador3;
     private javax.swing.JLabel jlb_jugador4;
@@ -2237,6 +2304,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JList<String> jli_torneos;
     private javax.swing.JList<String> jli_torneos2;
     private javax.swing.JTextField jtf_apellido_infa;
+    private javax.swing.JTextField jtf_duracion;
     private javax.swing.JTextField jtf_jugador3;
     private javax.swing.JTextField jtf_jugador4;
     private javax.swing.JTextField jtf_nombre_infa;

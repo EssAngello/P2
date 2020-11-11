@@ -78,6 +78,12 @@ public class AppAjedrez {
         }
     }
     
+      public ArrayList<Torneo> consultarTorneos(){
+        ArrayList<Torneo> listaTorneos = new ArrayList(torneos);
+
+        return listaTorneos;
+    }
+    
     public ArrayList consultarClubes(){
         ArrayList<Club> listaClubes = new ArrayList(clubes);
         

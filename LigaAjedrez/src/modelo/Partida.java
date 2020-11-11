@@ -17,19 +17,22 @@ public class Partida {
     protected Jugador jugador;
     protected Jugador rival;
     protected Jugador ganador;
-    protected Date tiempo;
+    protected Date fecha;
     protected Torneo torneo;
+    protected String duracion;
 
-    public Partida(Jugador jugador, Jugador rival, Jugador ganador, Date tiempo, Torneo torneo) {
+    public Partida(Jugador jugador, Jugador rival, Jugador ganador, Date fecha, Torneo torneo, String duracion) {
         this.jugador = jugador;
         this.rival = rival;
         this.ganador = ganador;
-        this.tiempo = tiempo;
+        this.fecha = fecha;
         this.torneo = torneo;
+        this.duracion = duracion;
     }
+    
            
     
     public String detallesPartida(){
-        return rival + "|" + ganador + "|" + tiempo;
+        return rival + "|" + ganador + "|" + fecha + "|" + duracion;
     }
 }

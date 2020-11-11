@@ -16,6 +16,7 @@ import modelo.Jugador;
  */
 public class Torneo {
     protected ArrayList<Partida> partidasTorneo = new ArrayList<Partida>();
+    protected ArrayList<Partida> partidasJugadasTorneo = new ArrayList<Partida>();
     protected ArrayList<Jugador> jugadoresTorneo = new ArrayList<Jugador>();
     String nombre = "";
     int num_jugadores;
@@ -36,8 +37,12 @@ public class Torneo {
             JOptionPane.showMessageDialog(null, "Torneo Lleno");
     }
     
-    public void introducirResultadosPartida(Partida partida){
+    public void introducirPartidaTorneo(Partida partida){
         partidasTorneo.add(partida);
+    }
+    
+    public void introducirResultadosPartida(Partida partida){
+        partidasJugadasTorneo.add(partida);
     }
     
     public String detallesTorneo(){

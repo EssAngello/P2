@@ -624,15 +624,16 @@
                                           <EmptySpace max="32767" attributes="0"/>
                                           <Component id="jlb_datosCategoriaTorneo" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <Component id="jlb_numJugadoresTorneo" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                           <Component id="jlb_datosNumJugadoresTorneo" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="69" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="24" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -686,12 +687,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_datosNumJugadoresTorneo">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel25"/>
+            <Property name="text" type="java.lang.String" value="num jugadores"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_datosCategoriaTorneo">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel27"/>
+            <Property name="text" type="java.lang.String" value="categoria"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JToggleButton" name="jbt_okTorneo">
@@ -1323,11 +1324,6 @@
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           <Component id="jLabel16" min="-2" pref="158" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jButtonAtras9" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
-                          <Component id="jButtonCrear6" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
@@ -1343,18 +1339,23 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="76" max="32767" attributes="0"/>
+                              <EmptySpace min="101" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTextFieldTiempo" min="-2" pref="101" max="-2" attributes="0"/>
                                   <Component id="jTextFieldFecha" min="-2" pref="101" max="-2" attributes="0"/>
                                   <Component id="jTextFieldJug2" alignment="1" min="-2" pref="101" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="51" max="32767" attributes="0"/>
+                  <EmptySpace pref="92" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButtonAtras9" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jButtonCrear6" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1380,22 +1381,17 @@
                       <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldFecha" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextFieldTiempo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
                       <Component id="jScrollPane7" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace pref="34" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButtonCrear6" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButtonAtras9" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="27" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1411,22 +1407,17 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel17">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Jugador 1:"/>
+            <Property name="text" type="java.lang.String" value="User jugador 1:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel18">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Jugador 2:"/>
+            <Property name="text" type="java.lang.String" value="User jugador 2:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel19">
           <Properties>
             <Property name="text" type="java.lang.String" value="Fecha:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel20">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Tiempo Maximo:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel21">
@@ -1436,22 +1427,17 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldJug1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre jugador 1"/>
+            <Property name="text" type="java.lang.String" value="User jugador 1"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldJug2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre jugador 2"/>
+            <Property name="text" type="java.lang.String" value="User jugador 2"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldFecha">
           <Properties>
             <Property name="text" type="java.lang.String" value="DD/MM/YYYY"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextFieldTiempo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Tiempo Maximo"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane7">
@@ -1615,31 +1601,6 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Component id="jlb_ganadorResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jlb_tiempoResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jlb_torneo1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jlb_jugador4" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="jlb_jugador3" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="76" pref="76" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jtf_jugador4" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtf_jugador3" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jbt_ganadorJ1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jbt_ganadorJ2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="jtf_tiempo1" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                      <Component id="jcb_Torneo1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="93" max="32767" attributes="0"/>
-              </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jlb_tituloResultadoPartido1" min="-2" pref="280" max="-2" attributes="0"/>
@@ -1651,6 +1612,42 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jbt_okResultadoPartido1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jlb_duracion" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                          <Component id="jtf_duracion" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Component id="jlb_ganadorResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_tiempoResultado1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_torneo1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlb_jugador4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jlb_jugador3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="76" pref="76" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jtf_jugador4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jtf_jugador3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jbt_ganadorJ1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jbt_ganadorJ2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jtf_tiempo1" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                              <Component id="jcb_Torneo1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="93" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1687,10 +1684,16 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_duracion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_duracion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="46" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jbt_okResultadoPartido1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jbt_volverResultadoPartido1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1796,6 +1799,21 @@
               <Font name="Tahoma" size="24" style="3"/>
             </Property>
             <Property name="text" type="java.lang.String" value="RESULTADO PARTIDO"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_duracion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Duracion partida"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_duracion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="segundos"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel13">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="segundos"/>
           </Properties>
         </Component>
       </SubComponents>
