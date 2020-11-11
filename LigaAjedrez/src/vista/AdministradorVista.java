@@ -1914,7 +1914,9 @@ public class AdministradorVista extends javax.swing.JFrame {
         }
         
         torneoObj = (Object)jListTorneo.getSelectedValue();
-            //Aqui se pone el objeto seleccionado por el combobox;
+        if(torneoObj == null){
+            JOptionPane.showMessageDialog(this,"Selecciona un torneo");
+        }
         Torneo torneo1 = (Torneo)torneoObj;
             
 
