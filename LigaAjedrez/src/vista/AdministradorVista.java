@@ -243,6 +243,16 @@ public class AdministradorVista extends javax.swing.JFrame {
         jbt_registrarse1 = new javax.swing.JButton();
         jlb_dniResponsable = new javax.swing.JLabel();
         jbt_cancelar1 = new javax.swing.JToggleButton();
+        Reservar2 = new javax.swing.JFrame();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jListEntrenamientos = new javax.swing.JList<>();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jListJugadoresClub = new javax.swing.JList<>();
+        j_bt_Atras = new javax.swing.JButton();
+        jButtonReservarEntrenamiento = new javax.swing.JButton();
         jl_titulo = new javax.swing.JLabel();
         jButtonClub = new javax.swing.JButton();
         jButtonUser = new javax.swing.JButton();
@@ -453,6 +463,11 @@ public class AdministradorVista extends javax.swing.JFrame {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
+        });
+        jListSeleccionarClub.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jListSeleccionarClubMouseClicked(evt);
+            }
         });
         jScrollPane1.setViewportView(jListSeleccionarClub);
 
@@ -1880,6 +1895,83 @@ public class AdministradorVista extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel28.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jLabel28.setText("Reservar Entrenamiento");
+
+        jLabel29.setText("selecciona el entrenamiento: ");
+
+        jLabel33.setText("selecciona el jugador que quieres apuntar al entrenamiento:");
+
+        jListEntrenamientos.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jListEntrenamientos);
+
+        jListJugadoresClub.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane10.setViewportView(jListJugadoresClub);
+
+        j_bt_Atras.setText("ATRAS");
+
+        jButtonReservarEntrenamiento.setText("RESERVAR");
+        jButtonReservarEntrenamiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonReservarEntrenamientoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Reservar2Layout = new javax.swing.GroupLayout(Reservar2.getContentPane());
+        Reservar2.getContentPane().setLayout(Reservar2Layout);
+        Reservar2Layout.setHorizontalGroup(
+            Reservar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Reservar2Layout.createSequentialGroup()
+                .addGroup(Reservar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Reservar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(Reservar2Layout.createSequentialGroup()
+                            .addGap(106, 106, 106)
+                            .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(Reservar2Layout.createSequentialGroup()
+                            .addGap(41, 41, 41)
+                            .addGroup(Reservar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel33)
+                                .addComponent(jLabel29)))
+                        .addGroup(Reservar2Layout.createSequentialGroup()
+                            .addGap(85, 85, 85)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(108, Short.MAX_VALUE))
+            .addGroup(Reservar2Layout.createSequentialGroup()
+                .addGap(116, 116, 116)
+                .addComponent(j_bt_Atras)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonReservarEntrenamiento)
+                .addGap(128, 128, 128))
+        );
+        Reservar2Layout.setVerticalGroup(
+            Reservar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Reservar2Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel28)
+                .addGap(35, 35, 35)
+                .addComponent(jLabel29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(jLabel33)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(Reservar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(j_bt_Atras)
+                    .addComponent(jButtonReservarEntrenamiento))
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jl_titulo.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -2041,7 +2133,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private void jButtonEliminar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar6ActionPerformed
         // Maricel
         int indice = jListJugadores3.getSelectedIndex();
-        appAjedrez.eliminarClub((modelo.Club) clubes.get(indice));
+        appAjedrez.eliminarClub(clubes.get(indice));
         ClubEliminar.setVisible(false);
         EliminadoExito.setVisible(true);
     }//GEN-LAST:event_jButtonEliminar6ActionPerformed
@@ -2212,7 +2304,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private void jButtonCrear4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrear4ActionPerformed
         
         //La categoria se coge de un combobox, asiq angello...
-        categoria = null;
+        String categoria = String.valueOf(jComboBoxCategoria.getSelectedItem());
         Torneo t = new Torneo(jTextField2.getText(), Integer.parseInt(jTextField1.getText()), categoria);
         appAjedrez.crearTorneo(t);
         
@@ -2394,6 +2486,21 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButtonReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReservarActionPerformed
         // Maricel
+        
+        DefaultListModel listmodel2 = new DefaultListModel();
+        listmodel2.removeAllElements();
+        
+        clubes.removeAll(clubes);
+        
+        clubes = appAjedrez.consultarClubes();
+        
+        for(Object c: clubes)
+        {
+           listmodel2.addElement(c);
+        }
+        
+        jListSeleccionarClub.setModel(listmodel2);
+        
         this.setVisible(false);
         Reservar.setVisible(true);
     }//GEN-LAST:event_jButtonReservarActionPerformed
@@ -2406,8 +2513,39 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButtonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSiguienteActionPerformed
         // Maricel
+        
+        if(!clubes.isEmpty() && clubseleccionado.equals(jListSeleccionarClub.getSelectedValue()))
+        {
+            DefaultListModel listmodel1 = new DefaultListModel();
+            listmodel1.removeAllElements();
+            listaEntrenamientos.removeAll(listaEntrenamientos);
+            listaEntrenamientos = appAjedrez.getEntrenamientosClub(clubseleccionado);
+            for(Object e: listaEntrenamientos)
+            {
+                String entrenamiento = e.toString();
+                listmodel1.addElement(e);
+            }
+            jListEntrenamientos.setModel(listmodel1);
+            
+            DefaultListModel listmodel2 = new DefaultListModel();
+            listmodel2.removeAllElements();
+            listaJugadores.removeAll(listaJugadores);
+            listaJugadores = appAjedrez.getJugadoresClub(clubseleccionado);
+            for(Object j: listaJugadores)
+            {
+                listmodel2.addElement(j);
+            }
+            
+            jListJugadoresClub.setModel(listmodel2);
+            
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this,"No hay ningun club seleccionado");
+        }
         Reservar.setVisible(false);
-        this.setVisible(true);
+        Reservar.setVisible(true);
+        Reservar2.setSize(500,500);
     }//GEN-LAST:event_jButtonSiguienteActionPerformed
 
     private void jButtonVer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVer1ActionPerformed
@@ -2719,6 +2857,21 @@ public class AdministradorVista extends javax.swing.JFrame {
         User.setVisible(true);
     }//GEN-LAST:event_jbt_cancelar1ActionPerformed
 
+    private void jListSeleccionarClubMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListSeleccionarClubMouseClicked
+        // TODO add your handling code here:
+        clubseleccionado = jListSeleccionarClub.getSelectedValue();
+    }//GEN-LAST:event_jListSeleccionarClubMouseClicked
+
+    private void jButtonReservarEntrenamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReservarEntrenamientoActionPerformed
+        // TODO add your handling code here
+        Object e = listaEntrenamientos.get(jListEntrenamientos.getSelectedIndex());
+        Object j = listaJugadores.get(jListJugadoresClub.getSelectedIndex());
+        appAjedrez.ReservarEntreamiento(e, j);
+        
+        Reservar.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jButtonReservarEntrenamientoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2737,6 +2890,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JFrame PartidoCrear;
     private javax.swing.JFrame PartidoEliminar;
     private javax.swing.JFrame Reservar;
+    private javax.swing.JFrame Reservar2;
     private javax.swing.JFrame Torneo;
     private javax.swing.JFrame TorneoCrear;
     private javax.swing.JFrame TorneoEliminar;
@@ -2778,6 +2932,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JButton jButtonOk1;
     private javax.swing.JButton jButtonPartido;
     private javax.swing.JButton jButtonReservar;
+    private javax.swing.JButton jButtonReservarEntrenamiento;
     private javax.swing.JButton jButtonResponsable;
     private javax.swing.JButton jButtonSalir;
     private javax.swing.JButton jButtonSiguiente;
@@ -2810,10 +2965,13 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
@@ -2830,12 +2988,16 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JLabel jLabelTorneo;
     private javax.swing.JLabel jLabelVerTorneo;
+    private javax.swing.JList<String> jListEntrenamientos;
     private javax.swing.JList<String> jListJugadores2;
     private javax.swing.JList<String> jListJugadores3;
+    private javax.swing.JList<String> jListJugadoresClub;
     private javax.swing.JList<String> jListSeleccionarClub;
     private javax.swing.JList<String> jListTorneo;
     private javax.swing.JList<String> jListTorneo2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -2851,6 +3013,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldJug2;
     private javax.swing.JTextField jTextFieldNombreClub;
     private javax.swing.JTextField jTextFieldTorneo;
+    private javax.swing.JButton j_bt_Atras;
     private javax.swing.JButton jbt_aceptar_res;
     private javax.swing.JButton jbt_atras_ver;
     private javax.swing.JToggleButton jbt_cancelar1;
@@ -2937,6 +3100,8 @@ public class AdministradorVista extends javax.swing.JFrame {
     private Object torneoObj, verUser, eliminarUser;
     private String detallesTorneo;
     ArrayList<Object> clubes = new ArrayList();
+    ArrayList<Object> listaEntrenamientos = new ArrayList();
     private Date fecha = null;
+    private Object clubseleccionado;
     Torneo torneo;
 }

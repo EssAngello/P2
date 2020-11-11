@@ -60,10 +60,11 @@ public class AppAjedrez {
         clubes.add(club);
     }
     
-    public void eliminarClub(Club c)
+    public void eliminarClub(Object c)
     {
-        c.desmatricularTodo();
-        clubes.remove(c);
+        Club cc = (Club) c;
+        cc.desmatricularTodo();
+        clubes.remove(cc);
     }
     
     public void crearTorneo(Torneo t){
@@ -148,6 +149,25 @@ public class AppAjedrez {
         }
         */
         return torneosDisponibles;
+    }
+    
+    public ArrayList getEntrenamientosClub(Object c)
+    {
+        Club club = (Club) c;
+        return club.getEntrenamientos();
+    }
+    
+    public ArrayList getJugadoresClub(Object c)
+    {
+        Club club = (Club) c;
+        return club.getJugadores();
+    }
+    
+    public void ReservarEntreamiento(Object e, Object j)
+    {
+        Entrenamiento ee = (Entrenamiento)e;
+        Jugador jj=(Jugador)j;
+        ee.apuntarJugador(jj);
     }
     
     public ArrayList<Jugador> consultarJugadoresExistentes(){

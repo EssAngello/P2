@@ -126,6 +126,11 @@ public class Club {
         Collections.sort(entrenamientos);
     }
     
+    public ArrayList getJugadores()
+    {
+        return this.jugadoresClub;
+    }
+    
     public void desmatricularTodo()
     {
         for(Jugador j: jugadoresClub)

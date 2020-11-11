@@ -631,8 +631,7 @@ public class ClubVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_volverActionPerformed
 
     private void jbt_reservaEntrenamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_reservaEntrenamientoActionPerformed
-        //POR COMPLETAR MUCHISIMO
-        //DEBEN ESTAR ORDENADOS POR FECHA Y HORA TENIENDO EN CUANTA 2H DE DIFERENCIA
+        //FALTA LO DE 2H DE DIFERENCIA
         // Maricel
         //Angello
 
