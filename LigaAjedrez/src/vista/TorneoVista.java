@@ -379,7 +379,7 @@ public class TorneoVista extends javax.swing.JFrame {
             }
         });
 
-        jtf_tiempo1.setText("DD/MM/YY");
+        jtf_tiempo1.setText("DD/MM/YYYY");
         jtf_tiempo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtf_tiempo1ActionPerformed(evt);
