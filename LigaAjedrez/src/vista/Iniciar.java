@@ -456,15 +456,15 @@ public class Iniciar extends javax.swing.JFrame {
             res_nom = jtf_res_nom.getText();
             res_apell = jtf_res_apellido.getText();
             res_DNI = jtf_dniResponsable.getText();
-            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, res_nom, res_apell,res_DNI);
+            app.registrarse(1,user, passwd, nombre, apellido, telefono, DNI, categoria, res_nom, res_apell,res_DNI);
         }
         else if((16 == año)||(17 == año)){
             categoria = "junior";
-            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, "", "", "");   
+            app.registrarse(1,user, passwd, nombre, apellido, telefono, DNI, categoria, "", "", "");   
         }
         else if(año >= 18){
             categoria = "senior";
-            app.registrarse(user, passwd, nombre, apellido, telefono, DNI, categoria, "", "", "");
+            app.registrarse(1,user, passwd, nombre, apellido, telefono, DNI, categoria, "", "", "");
         }
         else if(año == 0){
             JOptionPane.showMessageDialog(null, "No has introducido fecha nacimiento");

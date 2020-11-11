@@ -218,6 +218,31 @@ public class AdministradorVista extends javax.swing.JFrame {
         jLabel40 = new javax.swing.JLabel();
         jlb_res_dni = new javax.swing.JLabel();
         jbt_atras_ver = new javax.swing.JButton();
+        userCrear = new javax.swing.JFrame();
+        jlb_titulo1 = new javax.swing.JLabel();
+        jlb_nombre1 = new javax.swing.JLabel();
+        jtf_nombre1 = new javax.swing.JTextField();
+        jlb_DNI1 = new javax.swing.JLabel();
+        jtf_DNI1 = new javax.swing.JTextField();
+        jtf_apellido1 = new javax.swing.JTextField();
+        jlb_apellido1 = new javax.swing.JLabel();
+        jlb_telefono1 = new javax.swing.JLabel();
+        jtf_telefono1 = new javax.swing.JTextField();
+        jlb_usuario1 = new javax.swing.JLabel();
+        jtf_usuario1 = new javax.swing.JTextField();
+        jlb_contraseña1 = new javax.swing.JLabel();
+        jtf_contraseña1 = new javax.swing.JTextField();
+        jlb_nacimiento = new javax.swing.JLabel();
+        jtf_categoria = new javax.swing.JTextField();
+        jlb_res_res = new javax.swing.JLabel();
+        jlb_res_nom1 = new javax.swing.JLabel();
+        jtf_res_nom = new javax.swing.JTextField();
+        jlb_res_apellido = new javax.swing.JLabel();
+        jtf_res_apellido = new javax.swing.JTextField();
+        jtf_dniResponsable = new javax.swing.JTextField();
+        jbt_registrarse1 = new javax.swing.JButton();
+        jlb_dniResponsable = new javax.swing.JLabel();
+        jbt_cancelar1 = new javax.swing.JToggleButton();
         jl_titulo = new javax.swing.JLabel();
         jButtonClub = new javax.swing.JButton();
         jButtonUser = new javax.swing.JButton();
@@ -1697,6 +1722,164 @@ public class AdministradorVista extends javax.swing.JFrame {
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
+        jlb_titulo1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlb_titulo1.setText("REGISTRARSE");
+        jlb_titulo1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jlb_nombre1.setText("nombre:");
+
+        jlb_DNI1.setText("DNI/NIE:");
+
+        jlb_apellido1.setText("apellido:");
+
+        jlb_telefono1.setText("telefono:");
+
+        jlb_usuario1.setText("usuario:");
+
+        jlb_contraseña1.setText("contraseña:");
+
+        jlb_nacimiento.setText("Introduzca la categoria (infantil, junior o senior):");
+
+        jlb_res_res.setText("Responsable:");
+
+        jlb_res_nom1.setText("Nombre:");
+
+        jlb_res_apellido.setText("Apellido:");
+
+        jbt_registrarse1.setText("Registrarse");
+        jbt_registrarse1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_registrarse1ActionPerformed(evt);
+            }
+        });
+
+        jlb_dniResponsable.setText("DNI:");
+
+        jbt_cancelar1.setText("cancelar");
+        jbt_cancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_cancelar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout userCrearLayout = new javax.swing.GroupLayout(userCrear.getContentPane());
+        userCrear.getContentPane().setLayout(userCrearLayout);
+        userCrearLayout.setHorizontalGroup(
+            userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userCrearLayout.createSequentialGroup()
+                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, userCrearLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlb_DNI1)
+                            .addComponent(jlb_nombre1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jtf_DNI1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlb_contraseña1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlb_usuario1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_nombre1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(userCrearLayout.createSequentialGroup()
+                                .addGap(162, 162, 162)
+                                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlb_apellido1)
+                                    .addComponent(jlb_telefono1)))
+                            .addGroup(userCrearLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jtf_usuario1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                                    .addComponent(jtf_contraseña1))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtf_telefono1, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
+                            .addComponent(jtf_apellido1)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, userCrearLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(userCrearLayout.createSequentialGroup()
+                                .addComponent(jlb_nacimiento)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jtf_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(userCrearLayout.createSequentialGroup()
+                                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(userCrearLayout.createSequentialGroup()
+                                        .addGap(181, 181, 181)
+                                        .addComponent(jlb_res_apellido))
+                                    .addGroup(userCrearLayout.createSequentialGroup()
+                                        .addGap(24, 24, 24)
+                                        .addComponent(jlb_res_nom1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jtf_res_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jtf_res_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(42, 42, 42)
+                                .addComponent(jlb_dniResponsable)
+                                .addGap(18, 18, 18)
+                                .addComponent(jtf_dniResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(103, 103, 103))
+            .addGroup(userCrearLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jbt_cancelar1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbt_registrarse1)
+                .addGap(52, 52, 52))
+            .addGroup(userCrearLayout.createSequentialGroup()
+                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(userCrearLayout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(jlb_titulo1))
+                    .addGroup(userCrearLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jlb_res_res)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        userCrearLayout.setVerticalGroup(
+            userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userCrearLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jlb_titulo1)
+                .addGap(18, 18, 18)
+                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_nombre1)
+                    .addComponent(jlb_apellido1)
+                    .addComponent(jtf_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_apellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_DNI1)
+                    .addComponent(jtf_DNI1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlb_telefono1)
+                    .addComponent(jtf_telefono1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_usuario1)
+                    .addComponent(jtf_usuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_contraseña1)
+                    .addComponent(jtf_contraseña1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_nacimiento)
+                    .addComponent(jtf_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jlb_res_res)
+                .addGap(22, 22, 22)
+                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_res_nom1)
+                    .addComponent(jtf_res_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_res_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlb_res_apellido)
+                    .addComponent(jlb_dniResponsable)
+                    .addComponent(jtf_dniResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(userCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbt_registrarse1)
+                    .addComponent(jbt_cancelar1))
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jl_titulo.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -2498,6 +2681,42 @@ public class AdministradorVista extends javax.swing.JFrame {
         this.setVisible(true);
     }//GEN-LAST:event_jbt_atras_verActionPerformed
 
+    private void jbt_registrarse1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_registrarse1ActionPerformed
+        // Maricel
+        String user = jtf_usuario1.getText();
+        String passwd = jtf_contraseña1.getText();
+        String nombre = jtf_nombre1.getText();
+        String apellido = jtf_apellido1.getText();
+        String telefono = jtf_telefono1.getText();
+        String DNI = jtf_DNI1.getText();
+        String categoria = jtf_categoria.getText();
+        String res_nom = jtf_res_nom.getText();
+        String res_apell = jtf_res_apellido.getText();
+        String res_DNI = jtf_dniResponsable.getText();
+               
+        if(jrbt_jugador.isSelected()){
+            appAjedrez.registrarse(1, user, passwd, nombre, apellido, telefono, DNI, categoria, res_nom, res_apell,res_DNI);
+            JOptionPane.showMessageDialog(null,"Jugador creado");
+        }
+        else if(jrbt_gerente.isSelected()){
+            appAjedrez.registrarse(2, user, passwd, nombre, apellido, telefono, DNI, categoria, res_nom, res_apell,res_DNI);
+            JOptionPane.showMessageDialog(null,"Gerente creado");
+        }   
+        else if(jrbt_entrenador.isSelected()){
+            appAjedrez.registrarse(3, user, passwd, nombre, apellido, telefono, DNI, categoria, res_nom, res_apell,res_DNI);
+            JOptionPane.showMessageDialog(null,"Entrenador creado");
+        }
+        
+        userCrear.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jbt_registrarse1ActionPerformed
+
+    private void jbt_cancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelar1ActionPerformed
+        //Maricel
+        userCrear.setVisible(false);
+        User.setVisible(true);
+    }//GEN-LAST:event_jbt_cancelar1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2632,57 +2851,82 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldTorneo;
     private javax.swing.JButton jbt_aceptar_res;
     private javax.swing.JButton jbt_atras_ver;
+    private javax.swing.JToggleButton jbt_cancelar1;
     private javax.swing.JButton jbt_cancelar_res;
     private javax.swing.JRadioButton jbt_ganadorJ1;
     private javax.swing.JRadioButton jbt_ganadorJ2;
     private javax.swing.JButton jbt_okResultadoPartido1;
     private javax.swing.JToggleButton jbt_okTorneo;
+    private javax.swing.JButton jbt_registrarse1;
     private javax.swing.JButton jbt_volverResultadoPartido1;
     private javax.swing.JComboBox<String> jcb_Torneo1;
     private javax.swing.JLabel jl_titulo;
+    private javax.swing.JLabel jlb_DNI1;
     private javax.swing.JLabel jlb_apel;
     private javax.swing.JLabel jlb_apell_infa;
+    private javax.swing.JLabel jlb_apellido1;
     private javax.swing.JLabel jlb_cat;
     private javax.swing.JLabel jlb_categoriaTorneo;
+    private javax.swing.JLabel jlb_contraseña1;
     private javax.swing.JLabel jlb_datosCategoriaTorneo;
     private javax.swing.JLabel jlb_datosNumJugadoresTorneo;
     private javax.swing.JLabel jlb_dni;
+    private javax.swing.JLabel jlb_dniResponsable;
     private javax.swing.JLabel jlb_duracion;
     private javax.swing.JLabel jlb_ganadorResultado1;
     private javax.swing.JLabel jlb_jugador3;
     private javax.swing.JLabel jlb_jugador4;
+    private javax.swing.JLabel jlb_nacimiento;
     private javax.swing.JLabel jlb_nom;
     private javax.swing.JLabel jlb_nom_infa;
+    private javax.swing.JLabel jlb_nombre1;
     private javax.swing.JLabel jlb_nombreTorneo;
     private javax.swing.JLabel jlb_numJugadoresTorneo;
     private javax.swing.JLabel jlb_res_apel;
+    private javax.swing.JLabel jlb_res_apellido;
     private javax.swing.JLabel jlb_res_dni;
     private javax.swing.JLabel jlb_res_nom;
+    private javax.swing.JLabel jlb_res_nom1;
+    private javax.swing.JLabel jlb_res_res;
     private javax.swing.JLabel jlb_subtitulo_responsable;
     private javax.swing.JLabel jlb_subtitulo_responsable2;
     private javax.swing.JLabel jlb_tel;
+    private javax.swing.JLabel jlb_telefono1;
     private javax.swing.JLabel jlb_tiempoResultado1;
+    private javax.swing.JLabel jlb_titulo1;
     private javax.swing.JLabel jlb_tituloResponsable;
     private javax.swing.JLabel jlb_tituloResultadoPartido1;
     private javax.swing.JLabel jlb_torneo1;
+    private javax.swing.JLabel jlb_usuario1;
     private javax.swing.JList<String> jli_torneos;
     private javax.swing.JList<String> jli_torneos2;
     private javax.swing.JList<String> jlt_user;
     private javax.swing.JRadioButton jrbt_entrenador;
     private javax.swing.JRadioButton jrbt_gerente;
     private javax.swing.JRadioButton jrbt_jugador;
+    private javax.swing.JTextField jtf_DNI1;
+    private javax.swing.JTextField jtf_apellido1;
     private javax.swing.JTextField jtf_apellido_infa;
     private javax.swing.JTextField jtf_apellido_user;
+    private javax.swing.JTextField jtf_categoria;
+    private javax.swing.JTextField jtf_contraseña1;
+    private javax.swing.JTextField jtf_dniResponsable;
     private javax.swing.JTextField jtf_duracion;
     private javax.swing.JTextField jtf_jugador3;
     private javax.swing.JTextField jtf_jugador4;
+    private javax.swing.JTextField jtf_nombre1;
     private javax.swing.JTextField jtf_nombre_infa;
     private javax.swing.JTextField jtf_nombre_user;
     private javax.swing.JTextField jtf_nuevo_DNI_res;
     private javax.swing.JTextField jtf_nuevo_apellido_res;
     private javax.swing.JTextField jtf_nuevo_nombre_res;
+    private javax.swing.JTextField jtf_res_apellido;
+    private javax.swing.JTextField jtf_res_nom;
+    private javax.swing.JTextField jtf_telefono1;
     private javax.swing.JTextField jtf_tiempo1;
+    private javax.swing.JTextField jtf_usuario1;
     private javax.swing.JLabel titulo_ver_eliminar;
+    private javax.swing.JFrame userCrear;
     private javax.swing.JFrame userVer;
     // End of variables declaration//GEN-END:variables
     protected AppAjedrez appAjedrez;

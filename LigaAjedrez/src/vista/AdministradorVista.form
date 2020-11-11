@@ -2315,6 +2315,261 @@
         </Component>
       </SubComponents>
     </Container>
+    <Container class="javax.swing.JFrame" name="userCrear">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jlb_DNI1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlb_nombre1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jtf_DNI1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jlb_contraseña1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jlb_usuario1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jtf_nombre1" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jlb_apellido1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jlb_telefono1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jtf_usuario1" alignment="0" pref="140" max="32767" attributes="0"/>
+                                      <Component id="jtf_contraseña1" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jtf_telefono1" alignment="0" pref="74" max="32767" attributes="0"/>
+                              <Component id="jtf_apellido1" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jlb_nacimiento" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jtf_categoria" min="-2" pref="84" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
+                                          <Component id="jlb_res_apellido" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                          <Component id="jlb_res_nom1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jtf_res_nom" min="-2" pref="74" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jtf_res_apellido" min="-2" pref="81" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                  <Component id="jlb_dniResponsable" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jtf_dniResponsable" min="-2" pref="68" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jbt_cancelar1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jbt_registrarse1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
+                          <Component id="jlb_titulo1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jlb_res_res" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                  <Component id="jlb_titulo1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_nombre1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_apellido1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_nombre1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_apellido1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_DNI1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_DNI1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_telefono1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_telefono1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_usuario1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_usuario1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_contraseña1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_contraseña1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_nacimiento" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_categoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jlb_res_res" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlb_res_nom1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_res_nom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_res_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_res_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlb_dniResponsable" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtf_dniResponsable" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbt_registrarse1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbt_cancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jlb_titulo1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="REGISTRARSE"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_nombre1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="nombre:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_nombre1">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_DNI1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="DNI/NIE:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_DNI1">
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_apellido1">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_apellido1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="apellido:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_telefono1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="telefono:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_telefono1">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_usuario1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="usuario:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_usuario1">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_contrase&#xf1;a1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="contrase&#xf1;a:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_contrase&#xf1;a1">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_nacimiento">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Introduzca la categoria (infantil, junior o senior):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_categoria">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_res_res">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Responsable:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_res_nom1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nombre:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_res_nom">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_res_apellido">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Apellido:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_res_apellido">
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_dniResponsable">
+        </Component>
+        <Component class="javax.swing.JButton" name="jbt_registrarse1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Registrarse"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_registrarse1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jlb_dniResponsable">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="DNI:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="jbt_cancelar1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="cancelar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_cancelar1ActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>

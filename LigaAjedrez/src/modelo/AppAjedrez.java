@@ -196,20 +196,50 @@ public class AppAjedrez {
         return comprobar;
     }
     
-   public void registrarse(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria, String res_nom, String res_apell,String responsable_DNI){
+   //Tipo registrar jugador = 1, gerente = 2, entrenador = 3 
+   public void registrarse(int tipo, String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria, String res_nom, String res_apell,String responsable_DNI){
         boolean comprobar = false;
-      
-        for(Jugador aux2 : jugadores){
+        if(tipo == 1){
+            for(Jugador aux2 : jugadores){
+                if(comprobar == false){
+                    comprobar =aux2.comprobarExistencia(user, passwd, DNI);
+                }
+            }
             if(comprobar == false){
-                comprobar =aux2.comprobarExistencia(user, passwd, DNI);
+                Jugador aux = new Jugador (user, passwd, nombre, apellido, telefono, DNI, categoria);
+                aux.setRes_nom(res_nom);
+                aux.setRes_apell(res_apell);
+                aux.setRes_DNI(responsable_DNI);
+                jugadores.add(aux);
             }
         }
-        if(comprobar == false){
-            Jugador aux = new Jugador (user, passwd, nombre, apellido, telefono, DNI, categoria);
-	    aux.setRes_nom(res_nom);
-	    aux.setRes_apell(res_apell);
-            aux.setRes_DNI(responsable_DNI);
-            jugadores.add(aux);
+        else if(tipo == 2){
+            for(Gerente aux3 : gerentes){
+                if(comprobar == false){
+                    comprobar =aux3.comprobarExistencia(user, passwd, DNI);
+                }
+            }
+            if(comprobar == false){
+                Gerente aux = new Gerente (user, passwd, nombre, apellido, telefono, DNI, categoria);
+                aux.setRes_nom(res_nom);
+                aux.setRes_apell(res_apell);
+                aux.setRes_DNI(responsable_DNI);
+                gerentes.add(aux);
+            }
+        }
+        else if(tipo == 3){
+            for(Entrenador aux4 : entrenadores){
+                if(comprobar == false){
+                    comprobar =aux4.comprobarExistencia(user, passwd, DNI);
+                }
+            }
+            if(comprobar == false){
+                Entrenador aux = new Entrenador (user, passwd, nombre, apellido, telefono, DNI, categoria);
+                aux.setRes_nom(res_nom);
+                aux.setRes_apell(res_apell);
+                aux.setRes_DNI(responsable_DNI);
+                entrenadores.add(aux);
+            }
         }
    }
   
