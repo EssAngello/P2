@@ -101,7 +101,43 @@ public class AppAjedrez {
         
         return jugador_aux;
     }
-   
+
+    public Jugador buscarJugador(String nombre, String apellido){
+        Jugador jugador_aux = null;
+        
+        for(Jugador jugador : jugadores){
+            if(jugador.comprobarNombreApellido(nombre, apellido) == true){
+                jugador_aux = jugador;
+            }
+        }  
+        
+        return jugador_aux;
+    }
+    
+    public Gerente buscarGerente(String nombre, String apellido){
+        Gerente gerente_aux = null;
+        
+        for(Gerente gerente : gerentes){
+            if(gerente.comprobarNombreApellido(nombre, apellido) == true){
+                gerente_aux = gerente;
+            }
+        }  
+        
+        return gerente_aux;
+    }
+    
+    public Entrenador buscarEntrenador(String nombre, String apellido){
+        Entrenador entrenador_aux = null;
+        
+        for(Entrenador entrenador : entrenadores){
+            if(entrenador.comprobarNombreApellido(nombre, apellido) == true){
+                entrenador_aux = entrenador;
+            }
+        }  
+        
+        return entrenador_aux;
+    }
+    
     public ArrayList<Torneo> consultarTorneosDisponibles(){
         ArrayList<Torneo> torneosDisponibles = new ArrayList(torneos);
         /* Esto lo usaremos si hay alguna condicion para que los torneos esten libres
@@ -114,6 +150,21 @@ public class AppAjedrez {
         return torneosDisponibles;
     }
     
+    public ArrayList<Jugador> consultarJugadoresExistentes(){
+        ArrayList<Jugador> jugadoresExistentes = new ArrayList(jugadores);
+        return jugadoresExistentes;
+    }
+    
+    public ArrayList<Gerente> consultarGerentesExistentes(){
+        ArrayList<Gerente> gerentesExistentes = new ArrayList(gerentes);
+        return gerentesExistentes;
+    }
+    
+    public ArrayList<Entrenador> consultarEntrenadoresExistentes(){
+        ArrayList<Entrenador> entrenadoresExistentes = new ArrayList(entrenadores);
+        return entrenadoresExistentes;
+    }
+    
     public Jugador identificarJugador(String u, String p){ 
         Jugador datos_jugador = null;      
         for(Jugador aux : jugadores){
@@ -123,6 +174,7 @@ public class AppAjedrez {
         }   
         return datos_jugador;
     }
+    
     
     public Gerente identificarGerente(String u, String p){ 
         Gerente datos_gerente = null;

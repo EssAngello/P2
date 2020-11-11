@@ -68,6 +68,17 @@ public class Jugador {
         return comprobacion;
     }
     
+     public boolean comprobarNombreApellido(String nombre, String apellido){
+        boolean comprobacion = false;
+        
+        if(this.nombre == nombre){
+            if(this.apellido == apellido){
+                comprobacion = true;
+            }
+        }
+        return comprobacion;
+    }
+    
     public boolean comprobarExistencia(String user, String passwd,String DNI){
         boolean comprobacion = true;
         if(this.user == user){

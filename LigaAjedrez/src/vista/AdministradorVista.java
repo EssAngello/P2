@@ -14,6 +14,8 @@ import java.util.regex.Pattern;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import modelo.AppAjedrez;
+import modelo.Entrenador;
+import modelo.Gerente;
 import modelo.Jugador;
 import modelo.Partida;
 import modelo.Torneo;
@@ -30,6 +32,9 @@ public class AdministradorVista extends javax.swing.JFrame {
     public AdministradorVista(AppAjedrez app) {
         initComponents();
         this.appAjedrez = app;
+        btg_user.add(jrbt_jugador);
+        btg_user.add(jrbt_entrenador);
+        btg_user.add(jrbt_gerente);
     }
 
     /**
@@ -42,9 +47,9 @@ public class AdministradorVista extends javax.swing.JFrame {
     private void initComponents() {
 
         User = new javax.swing.JFrame();
-        jRadioButtonJugador = new javax.swing.JRadioButton();
-        jRadioButtonGerente = new javax.swing.JRadioButton();
-        jRadioButtonEntrenador = new javax.swing.JRadioButton();
+        jrbt_jugador = new javax.swing.JRadioButton();
+        jrbt_gerente = new javax.swing.JRadioButton();
+        jrbt_entrenador = new javax.swing.JRadioButton();
         jButtonVer = new javax.swing.JButton();
         jButtonEliminar = new javax.swing.JButton();
         jButtonCrear = new javax.swing.JButton();
@@ -69,11 +74,13 @@ public class AdministradorVista extends javax.swing.JFrame {
         UserEliminar = new javax.swing.JFrame();
         jButtonAtras3 = new javax.swing.JButton();
         jButtonEliminar4 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        titulo_ver_eliminar = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jListJugadores1 = new javax.swing.JList<>();
-        jTextFieldNombre1 = new javax.swing.JTextField();
+        jlt_user = new javax.swing.JList<>();
+        jtf_nombre_user = new javax.swing.JTextField();
         jButtonBuscar1 = new javax.swing.JButton();
+        jtf_apellido_user = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         TorneoVer = new javax.swing.JFrame();
         jLabelVerTorneo = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
@@ -191,6 +198,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         jtf_nuevo_nombre_res = new javax.swing.JTextField();
         jtf_nuevo_apellido_res = new javax.swing.JTextField();
         jtf_nuevo_DNI_res = new javax.swing.JTextField();
+        btg_user = new javax.swing.ButtonGroup();
         jl_titulo = new javax.swing.JLabel();
         jButtonClub = new javax.swing.JButton();
         jButtonUser = new javax.swing.JButton();
@@ -200,14 +208,14 @@ public class AdministradorVista extends javax.swing.JFrame {
         jButtonResponsable = new javax.swing.JButton();
         jButtonSalir = new javax.swing.JButton();
 
-        jRadioButtonJugador.setText("Jugador");
+        jrbt_jugador.setText("Jugador");
 
-        jRadioButtonGerente.setText("Gerente");
+        jrbt_gerente.setText("Gerente");
 
-        jRadioButtonEntrenador.setText("Entrenador");
+        jrbt_entrenador.setText("Entrenador");
 
         jButtonVer.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonVer.setText("Ver");
+        jButtonVer.setText("Atras");
         jButtonVer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonVerActionPerformed(evt);
@@ -215,7 +223,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         });
 
         jButtonEliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonEliminar.setText("Eliminar");
+        jButtonEliminar.setText("Ver/Eliminar");
         jButtonEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEliminarActionPerformed(evt);
@@ -237,26 +245,26 @@ public class AdministradorVista extends javax.swing.JFrame {
         User.getContentPane().setLayout(UserLayout);
         UserLayout.setHorizontalGroup(
             UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(jButtonVer)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                .addComponent(jButtonEliminar)
-                .addGap(65, 65, 65)
-                .addComponent(jButtonCrear)
-                .addGap(26, 26, 26))
-            .addGroup(UserLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jRadioButtonJugador)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jRadioButtonGerente)
-                .addGap(57, 57, 57)
-                .addComponent(jRadioButtonEntrenador)
-                .addContainerGap())
             .addGroup(UserLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(UserLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(UserLayout.createSequentialGroup()
+                        .addComponent(jButtonVer)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addComponent(jButtonEliminar)
+                        .addGap(35, 35, 35)
+                        .addComponent(jButtonCrear))
+                    .addGroup(UserLayout.createSequentialGroup()
+                        .addComponent(jrbt_jugador)
+                        .addGap(60, 60, 60)
+                        .addComponent(jrbt_gerente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jrbt_entrenador)))
+                .addGap(34, 34, 34))
         );
         UserLayout.setVerticalGroup(
             UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,9 +273,9 @@ public class AdministradorVista extends javax.swing.JFrame {
                 .addComponent(jLabelTitulo)
                 .addGap(23, 23, 23)
                 .addGroup(UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButtonJugador)
-                    .addComponent(jRadioButtonGerente)
-                    .addComponent(jRadioButtonEntrenador))
+                    .addComponent(jrbt_jugador)
+                    .addComponent(jrbt_gerente)
+                    .addComponent(jrbt_entrenador))
                 .addGap(37, 37, 37)
                 .addGroup(UserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonVer)
@@ -469,19 +477,33 @@ public class AdministradorVista extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jLabel2.setText("Jugador/Gerente/Entrenador");
+        titulo_ver_eliminar.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        titulo_ver_eliminar.setText("Jugador/Gerente/Entrenador");
 
-        jListJugadores1.setModel(new javax.swing.AbstractListModel<String>() {
+        jlt_user.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane3.setViewportView(jListJugadores1);
+        jScrollPane3.setViewportView(jlt_user);
 
-        jTextFieldNombre1.setText("Nombre y Apellidos");
+        jtf_nombre_user.setText("Nombre");
 
         jButtonBuscar1.setText("Buscar");
+        jButtonBuscar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscar1ActionPerformed(evt);
+            }
+        });
+
+        jtf_apellido_user.setText("Apellido");
+
+        jButton1.setText("Ver");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout UserEliminarLayout = new javax.swing.GroupLayout(UserEliminar.getContentPane());
         UserEliminar.getContentPane().setLayout(UserEliminarLayout);
@@ -490,15 +512,19 @@ public class AdministradorVista extends javax.swing.JFrame {
             .addGroup(UserEliminarLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(UserEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(titulo_ver_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(UserEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(UserEliminarLayout.createSequentialGroup()
-                            .addComponent(jTextFieldNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jtf_nombre_user, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jtf_apellido_user, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(26, 26, 26)
                             .addComponent(jButtonBuscar1))
                         .addGroup(UserEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(UserEliminarLayout.createSequentialGroup()
                                 .addComponent(jButtonAtras3)
+                                .addGap(39, 39, 39)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButtonEliminar4))
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -508,17 +534,19 @@ public class AdministradorVista extends javax.swing.JFrame {
             UserEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserEliminarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(titulo_ver_eliminar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(UserEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonBuscar1))
+                    .addComponent(jtf_nombre_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonBuscar1)
+                    .addComponent(jtf_apellido_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(UserEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonEliminar4)
-                    .addComponent(jButtonAtras3))
+                    .addComponent(jButtonAtras3)
+                    .addComponent(jButton1))
                 .addGap(42, 42, 42))
         );
 
@@ -1684,18 +1712,77 @@ public class AdministradorVista extends javax.swing.JFrame {
         // Maricel
         this.setVisible(false);
         User.setVisible(true);
+        User.setSize(400,300);
     }//GEN-LAST:event_jButtonUserActionPerformed
 
     private void jButtonVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerActionPerformed
         // Maricel
         User.setVisible(false);
-        UserVer.setVisible(true);
+        this.setVisible(true);
     }//GEN-LAST:event_jButtonVerActionPerformed
 
     private void jButtonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarActionPerformed
         // Maricel
-        User.setVisible(false);
-        UserEliminar.setVisible(true);
+        DefaultListModel modeloListaUsuario = new DefaultListModel();
+        jlt_user.setModel(modeloListaUsuario);
+        
+
+        if(jrbt_jugador.isSelected()){
+            titulo_ver_eliminar.setText("Jugador");
+            
+            listaJugadores = appAjedrez.consultarJugadoresExistentes();
+            
+            if(!listaJugadores.isEmpty()){
+                for(Object jugador:listaJugadores){
+                    modeloListaUsuario.addElement(jugador);
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "No existen jugadores");
+            }
+            User.setVisible(false);
+            UserEliminar.setVisible(true);
+            UserEliminar.setSize(400,400);
+        }
+        else if(jrbt_gerente.isSelected()){
+            titulo_ver_eliminar.setText("Gerente");
+
+            listaGerentes = appAjedrez.consultarGerentesExistentes();
+
+            if(!listaGerentes.isEmpty()){
+                for(Object gerente:listaGerentes){
+                    modeloListaUsuario.addElement(gerente);
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "No existen gerentes");
+            }
+
+            User.setVisible(false);
+            UserEliminar.setVisible(true);
+            UserEliminar.setSize(400,400);
+        }   
+        else if(jrbt_entrenador.isSelected()){
+            titulo_ver_eliminar.setText("Entrenador");
+
+            listaEntrenadores = appAjedrez.consultarEntrenadoresExistentes();
+
+            if(!listaEntrenadores.isEmpty()){
+                for(Object entrenador:listaEntrenadores){
+                    modeloListaUsuario.addElement(entrenador);
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "No existen entrenadores");
+            }
+
+            User.setVisible(false);
+            UserEliminar.setVisible(true);
+            UserEliminar.setSize(400,400);
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Debes seleccionar el tipo de usuario que quieras ver o eliminar");
+        }
     }//GEN-LAST:event_jButtonEliminarActionPerformed
 
     private void jButtonAtras3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras3ActionPerformed
@@ -2155,6 +2242,34 @@ public class AdministradorVista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtf_tiempo1ActionPerformed
 
+    private void jButtonBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscar1ActionPerformed
+         // Maricel
+        String nombre = jtf_nombre_user.getText();
+        String apellido = jtf_apellido_user.getText();
+        
+        DefaultListModel modeloListaUsuario = new DefaultListModel();
+        jlt_user.setModel(modeloListaUsuario);
+        
+        if(jrbt_jugador.isSelected()){
+            Jugador j = appAjedrez.buscarJugador(nombre, apellido);
+            modeloListaUsuario.addElement(j);
+        }
+        else if(jrbt_gerente.isSelected()){
+            Gerente g = appAjedrez.buscarGerente(nombre, apellido);
+            modeloListaUsuario.addElement(g);
+        }   
+        else if(jrbt_entrenador.isSelected()){
+            Entrenador e = appAjedrez.buscarEntrenador(nombre, apellido);
+            modeloListaUsuario.addElement(e);
+        }
+        
+    }//GEN-LAST:event_jButtonBuscar1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //Maricel
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2179,7 +2294,9 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JFrame TorneoVer;
     private javax.swing.JFrame User;
     private javax.swing.JFrame UserEliminar;
+    private javax.swing.ButtonGroup btg_user;
     private javax.swing.JFrame cambiar_responsable;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonApuntar;
     private javax.swing.JButton jButtonAtras;
     private javax.swing.JButton jButtonAtras10;
@@ -2233,7 +2350,6 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -2256,15 +2372,11 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JLabel jLabelTorneo;
     private javax.swing.JLabel jLabelVerTorneo;
-    private javax.swing.JList<String> jListJugadores1;
     private javax.swing.JList<String> jListJugadores2;
     private javax.swing.JList<String> jListJugadores3;
     private javax.swing.JList<String> jListSeleccionarClub;
     private javax.swing.JList<String> jListTorneo;
     private javax.swing.JList<String> jListTorneo2;
-    private javax.swing.JRadioButton jRadioButtonEntrenador;
-    private javax.swing.JRadioButton jRadioButtonGerente;
-    private javax.swing.JRadioButton jRadioButtonJugador;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -2279,7 +2391,6 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldFederacion;
     private javax.swing.JTextField jTextFieldJug1;
     private javax.swing.JTextField jTextFieldJug2;
-    private javax.swing.JTextField jTextFieldNombre1;
     private javax.swing.JTextField jTextFieldNombreClub;
     private javax.swing.JTextField jTextFieldTorneo;
     private javax.swing.JButton jbt_aceptar_res;
@@ -2310,18 +2421,26 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JLabel jlb_torneo1;
     private javax.swing.JList<String> jli_torneos;
     private javax.swing.JList<String> jli_torneos2;
+    private javax.swing.JList<String> jlt_user;
+    private javax.swing.JRadioButton jrbt_entrenador;
+    private javax.swing.JRadioButton jrbt_gerente;
+    private javax.swing.JRadioButton jrbt_jugador;
     private javax.swing.JTextField jtf_apellido_infa;
+    private javax.swing.JTextField jtf_apellido_user;
     private javax.swing.JTextField jtf_duracion;
     private javax.swing.JTextField jtf_jugador3;
     private javax.swing.JTextField jtf_jugador4;
     private javax.swing.JTextField jtf_nombre_infa;
+    private javax.swing.JTextField jtf_nombre_user;
     private javax.swing.JTextField jtf_nuevo_DNI_res;
     private javax.swing.JTextField jtf_nuevo_apellido_res;
     private javax.swing.JTextField jtf_nuevo_nombre_res;
     private javax.swing.JTextField jtf_tiempo1;
+    private javax.swing.JLabel titulo_ver_eliminar;
     // End of variables declaration//GEN-END:variables
     protected AppAjedrez appAjedrez;
     private ArrayList listaTorneos;
+    private ArrayList listaJugadores, listaGerentes, listaEntrenadores;
     private Object torneoObj;
     private String detallesTorneo;
     ArrayList<Object> clubes = new ArrayList();
