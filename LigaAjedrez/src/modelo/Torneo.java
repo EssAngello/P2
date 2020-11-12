@@ -48,6 +48,19 @@ public class Torneo {
     public String detallesTorneo(){
         return nombre + "|" + num_jugadores + "|" + categoria;
     }
+
+    public boolean comprobarTorneo(String nombre)
+    {
+        boolean comprobar = false;
+        if(nombre == this.nombre)
+            comprobar = true;
+        return comprobar;
+    }
+    
+    public ArrayList<Partida> dameParidas(){
+        ArrayList<Partida> partidas = new ArrayList(partidasTorneo);
+        return partidas;
+    }
     
     @Override
     public String toString()

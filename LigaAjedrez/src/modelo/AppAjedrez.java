@@ -216,6 +216,15 @@ public class AppAjedrez {
         return comprobar;
     }
     
+    public Torneo dameTorneo(String nombre){
+        Torneo aux = null;
+        for(Torneo t : torneos){
+            if(t.comprobarTorneo(nombre))
+                aux = t;
+        }
+        return aux;
+    }
+    
    //Tipo registrar jugador = 1, gerente = 2, entrenador = 3 
    public void registrarse(int tipo, String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria, String res_nom, String res_apell,String responsable_DNI){
         boolean comprobar = false;
