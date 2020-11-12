@@ -63,7 +63,7 @@ public class AppAjedrez {
     public void eliminarClub(Object c)
     {
         Club cc = (Club) c;
-        //cc.desmatricularTodo();
+        cc.desmatricularTodo();
         clubes.remove(cc);
     }
     

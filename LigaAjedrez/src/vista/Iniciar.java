@@ -19,6 +19,7 @@ public class Iniciar extends javax.swing.JFrame {
     
     //Maricel
     //Vistas
+    //bbtyCHUPALA
     private GerenteVista g;
     private JugadorVista j;
     private AdministradorVista a;

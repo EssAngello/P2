@@ -131,18 +131,19 @@ public class Club {
         return this.jugadoresClub;
     }
     
-    /*public void desmatricularTodo()
+    public void desmatricularTodo()
     {
+        System.out.println("pollo");
         for(Jugador j: jugadoresClub)
         {
-            j.desmatricularseClub();
+            //j.desmatricularseClub();
             jugadoresClub.remove(j);
         }
         
-        this.entrenador.eliminarClubTrabaja(this);
+        //this.entrenador.eliminarClubTrabaja(this);
         
-        this.gerente = null;
-    }*/
+        //this.gerente = null;
+    }
     
     @Override
     
