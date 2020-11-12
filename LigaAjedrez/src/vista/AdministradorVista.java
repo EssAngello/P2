@@ -2571,7 +2571,7 @@ public class AdministradorVista extends javax.swing.JFrame {
             
             DefaultListModel listmodel2 = new DefaultListModel();
             listmodel2.removeAllElements();
-            listaJugadores.removeAll(listaJugadores);
+            //listaJugadores.removeAll(listaJugadores);
             listaJugadores = appAjedrez.getJugadoresClub(clubseleccionado);
             for(Object j: listaJugadores)
             {
@@ -2586,7 +2586,7 @@ public class AdministradorVista extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"No hay ningun club seleccionado");
         }
         Reservar.setVisible(false);
-        Reservar.setVisible(true);
+        Reservar2.setVisible(true);
         Reservar2.setSize(500,500);
     }//GEN-LAST:event_jButtonSiguienteActionPerformed
 
@@ -2910,7 +2910,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         Object j = listaJugadores.get(jListJugadoresClub.getSelectedIndex());
         appAjedrez.ReservarEntreamiento(e, j);
         
-        Reservar.setVisible(false);
+        Reservar2.setVisible(false);
         this.setVisible(true);
     }//GEN-LAST:event_jButtonReservarEntrenamientoActionPerformed
 
