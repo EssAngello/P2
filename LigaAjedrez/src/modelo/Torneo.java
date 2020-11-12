@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import java.util.*;
 import javax.swing.JOptionPane;
 
@@ -14,7 +15,7 @@ import modelo.Jugador;
  *
  * @author juan2
  */
-public class Torneo {
+public class Torneo implements Serializable{
     protected ArrayList<Partida> partidasTorneo = new ArrayList<Partida>();
     protected ArrayList<Partida> partidasJugadasTorneo = new ArrayList<Partida>();
     protected ArrayList<Jugador> jugadoresTorneo = new ArrayList<Jugador>();

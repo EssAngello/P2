@@ -790,7 +790,7 @@ public class TorneoVista extends javax.swing.JFrame {
         if(partidaObj == null){
             JOptionPane.showMessageDialog(this,"Selecciona una partida");
         }
-        //else{
+        else{
             Partida partida = (Partida)partidaObj;
             detallesPartida = partida.detallesPartida();
             
@@ -810,7 +810,7 @@ public class TorneoVista extends javax.swing.JFrame {
             DetallesHistorialPartidas.setVisible(true);
             DetallesHistorialPartidas.setSize(400,400);
             
-        //}
+        }
 
 
         // Maricel

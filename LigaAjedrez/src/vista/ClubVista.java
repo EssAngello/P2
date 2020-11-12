@@ -639,7 +639,7 @@ public class ClubVista extends javax.swing.JFrame {
 
         listmodel2.removeAllElements();
 
-        entrenamientosSede.removeAll(entrenamientosSede);
+        //entrenamientosSede.removeAll(entrenamientosSede);
 
         entrenamientosSede = jugador.getEntrenamientosClub();
 

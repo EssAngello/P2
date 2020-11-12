@@ -6,8 +6,13 @@
 package modelo;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.*;
 
 import modelo.Torneo;
@@ -37,7 +42,10 @@ public class AppAjedrez {
     //Ficheros
     String ficheroJugadores = "jugadores.txt";
     String gerentesJugadores = "gerentes.txt";
-    public AppAjedrez(){
+    String ficheroTorneos = "torneos.txt";
+    String gerentesEntrenadores= "entrenadores.txt";
+    String ficheroClubes = "clubes.txt";
+    public AppAjedrez() throws IOException, FileNotFoundException, ClassNotFoundException{
         //Añadimos jugadores por la fuerza para comprobar/
         admin.add(admi);
         jugadores.add(j1);
@@ -46,9 +54,14 @@ public class AppAjedrez {
         clubes.add(club1);
         j1.InscribirseClub(club1);
         club1.setDefaultEntrenamientos();
-        //Hay pasarle el fichero y el tipo jugador = 0 gerente = 1
-        ficheroJugador(ficheroJugadores, 0);
-        ficheroJugador(gerentesJugadores, 1);
+        //NO LEE PORQUE LOS FICHEROS ESTAN VACIOS pero esta implementado lo de serializable
+        /*ficheroEscribir();
+        ficheroLeer(ficheroJugadores, 0);
+        ficheroLeer(gerentesJugadores, 1);
+        ficheroLeer(ficheroTorneos, 2);
+        ficheroLeer(gerentesEntrenadores, 3);
+        ficheroLeer(ficheroClubes, 4);
+        */
         
         clubes.add(club2);
         torneos.add(torneo1);
@@ -287,59 +300,107 @@ public class AppAjedrez {
        entrenadores.remove(e);
    }
    
-   public void ficheroJugador(String fichero, int tipo){
+     public void ficheroEscribir() throws FileNotFoundException, IOException, ClassNotFoundException{     
+       String nombreFichero = "./src/modelo/jugadores.txt";
+       ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(nombreFichero));
+           for (Jugador j : jugadores)
+            {
+                oos.writeObject(j);
+            }
+            oos.close();
+            
+        ObjectOutputStream ge = new ObjectOutputStream(new FileOutputStream("./src/modelo/gerentes.txt"));
+           for (Gerente g : gerentes)
+            {
+                oos.writeObject(g);
+            }
+            oos.close();
+            
+        ObjectOutputStream to = new ObjectOutputStream(new FileOutputStream("./src/modelo/torneos.txt"));
+           for (Torneo t : torneos)
+            {
+                oos.writeObject(t);
+            }
+            oos.close();
+        ObjectOutputStream cl = new ObjectOutputStream(new FileOutputStream("./src/modelo/clubes.txt"));
+           for (Club c : clubes)
+            {
+                oos.writeObject(c);
+            }
+            oos.close();
+        ObjectOutputStream en = new ObjectOutputStream(new FileOutputStream("./src/modelo/entrenadores.txt"));
+           for (Entrenador e : entrenadores)
+            {
+                oos.writeObject(e);
+            }
+            oos.close();
+    }
+
+   public void ficheroLeer(String fichero, int tipo) throws FileNotFoundException, IOException, ClassNotFoundException{     
        String nombreFichero = "./src/modelo/";
-       BufferedReader br = null;
        nombreFichero = nombreFichero + fichero;
-        try {
-           //Crear un objeto BufferedReader al que se le pasa 
-           //   un objeto FileReader con el nombre del fichero
-           br = new BufferedReader(new FileReader(nombreFichero));
-           //Leer la primera línea, guardando en un String
-           String texto = br.readLine();
-           //Repetir mientras no se llegue al final del fichero
-           while(texto != null)
-           {
-               //Hacer lo que sea con la línea leída
-               String[] parts =texto.split(",");
-               String part1 = parts[0]; 
-               String part2 = parts[1];
-               String part3 = parts[2]; 
-               String part4 = parts[3];
-               String part5 = parts[4]; 
-               String part6 = parts[5];
-               String part7 = parts[6];
-               if(tipo == 0){
-                   //OTRA FORMA PASRLE TODO EL ARRAY AL CONSTRUCTOR Y QUE LA CLASE ASIGNE TODA LA INFORMACION
-                   // ASI PUEDES ANYADIR TAMBIEN LOS OTROS ATRIBUTOS, CREAR OTRO CONSTRUCTOR
-                Jugador j1 = new Jugador(part1,part2,part3,part4,part5,part6,part7);
-                jugadores.add(j1);
-               }
-               else if (tipo == 1){
-                Gerente g = new Gerente(part1,part2,part3,part4,part5,part6,part7);
-                gerentes.add(g);
-               }
-               //Leer la siguiente línea
-               texto = br.readLine();
-           }
+       ObjectInputStream ois = new ObjectInputStream(new FileInputStream(nombreFichero));
+       if(tipo == 0){
+           Object aux = ois.readObject();
+           
+            // Mientras haya objetos
+        while (aux!=null)
+        {
+            if (aux instanceof Jugador)
+            aux = ois.readObject();
+            Jugador j = (Jugador) aux;
+            jugadores.add(j);
         }
-        catch (FileNotFoundException e) {
-            System.out.println("Error: Fichero no encontrado");
-            System.out.println(e.getMessage());
+        ois.close();
+       }
+       else if(tipo == 1){
+        Object aux = ois.readObject();
+           
+        while (aux!=null)
+        {
+            if (aux instanceof Gerente)
+            aux = ois.readObject();
+            Gerente g = (Gerente) aux;
+            gerentes.add(g);
         }
-        catch(Exception e) {
-            System.out.println("Error de lectura del fichero");
-            System.out.println(e.getMessage());
+        ois.close();
+       }
+       else if(tipo == 2){
+        Object aux = ois.readObject();
+           
+        while (aux!=null)
+        {
+            if (aux instanceof Torneo)
+            aux = ois.readObject();
+            Torneo t = (Torneo) aux;
+            torneos.add(t);
         }
-        finally {
-            try {
-                if(br != null)
-                    br.close();
-            }
-            catch (Exception e) {
-                System.out.println("Error al cerrar el fichero");
-                System.out.println(e.getMessage());
-            }
+        ois.close();
+       }
+       else if(tipo == 3){
+        Object aux = ois.readObject();
+           
+        while (aux!=null)
+        {
+            if (aux instanceof Entrenador)
+            aux = ois.readObject();
+            Entrenador e = (Entrenador) aux;
+            entrenadores.add(e);
         }
-   }
+        ois.close();
+       }
+       else if(tipo == 4){
+        Object aux = ois.readObject();
+           
+        while (aux!=null)
+        {
+            if (aux instanceof Club)
+            aux = ois.readObject();
+            Club c = (Club) aux;
+            clubes.add(c);
+        }
+        ois.close();
+       }
+    }
+
 }

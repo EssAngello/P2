@@ -5,13 +5,14 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author aange
  */
-public class Entrenador extends Jugador{
+public class Entrenador extends Jugador implements Serializable{
     
     protected ArrayList<Club> clubes = new ArrayList<Club>();
     

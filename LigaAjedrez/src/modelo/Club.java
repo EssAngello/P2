@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import modelo.Jugador;
@@ -12,7 +13,7 @@ import modelo.Jugador;
  *
  * @author juan2
  */
-public class Club {
+public class Club implements Serializable{
     protected ArrayList<Entrenamiento> entrenamientos = new ArrayList<Entrenamiento>();
     protected ArrayList<Jugador> jugadoresClub = new ArrayList<Jugador>();
     protected ArrayList<Gerente> gerenteClub = new ArrayList<Gerente>();

@@ -4,8 +4,12 @@
  * and open the template in the editor.
  */
 package vista;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import modelo.AppAjedrez;
 import modelo.Jugador;
@@ -19,7 +23,6 @@ public class Iniciar extends javax.swing.JFrame {
     
     //Maricel
     //Vistas
-    //bbtyCHUPALA
     private GerenteVista g;
     private JugadorVista j;
     private AdministradorVista a;
@@ -32,7 +35,7 @@ public class Iniciar extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame
      */
-    public Iniciar() {
+    public Iniciar() throws IOException, FileNotFoundException, ClassNotFoundException {
         initComponents();
         jbtg_iniciar.add(jrb_administrador);
         jbtg_iniciar.add(jrb_gerente);
@@ -505,7 +508,13 @@ public class Iniciar extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Iniciar().setVisible(true);
+                try {
+                    new Iniciar().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(Iniciar.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(Iniciar.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

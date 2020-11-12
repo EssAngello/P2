@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import modelo.Partida;
 import modelo.Club;
 
@@ -17,7 +18,7 @@ import javax.swing.JOptionPane;
  *
  * @author juan2
  */
-public class Jugador {
+public class Jugador implements Serializable{
     //Contiene usuario y contraseña 
     Entrenamiento e;
     protected String user, passwd, nombre, apellido, telefono, DNI, categoria;

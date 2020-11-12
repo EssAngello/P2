@@ -663,12 +663,12 @@ public class JugadorVista extends javax.swing.JFrame {
         if(clubObject == null){
             JOptionPane.showMessageDialog(this,"Selecciona un club");
         }
-        //else{
+        else{
             club = (Club)clubObject;
             jugador.InscribirseClub(club);
             InscribirseClubJugador.setVisible(false);
             this.setVisible(true);
-        //}
+        }
 
     }//GEN-LAST:event_jbt_inscribirse1ActionPerformed
 

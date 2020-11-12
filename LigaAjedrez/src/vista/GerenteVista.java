@@ -559,13 +559,13 @@ public class GerenteVista extends javax.swing.JFrame {
         if(clubObject == null){
             JOptionPane.showMessageDialog(this,"Selecciona un club");
         }
-        //else{ 
+        else{ 
         club = (Club)clubObject;
         club.inscribirseClubGerente(gerente);
         gerente.InscribirseClub(club);
         InscribirseClubGerente.setVisible(false);
         this.setVisible(true);
-        //}
+        }
     }//GEN-LAST:event_jbt_inscribirse1ActionPerformed
 
     private void jbt_volverHistorial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverHistorial1ActionPerformed

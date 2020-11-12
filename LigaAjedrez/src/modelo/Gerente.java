@@ -5,13 +5,14 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author aurel
  */
-public class Gerente extends Jugador{
+public class Gerente extends Jugador implements Serializable{
     protected ArrayList<Integer>irpfs= new ArrayList<Integer>();
     protected ArrayList<Integer>nominas= new ArrayList<Integer>();
     //protected ArrayList<Club> historialClubes = new ArrayList<Club>();

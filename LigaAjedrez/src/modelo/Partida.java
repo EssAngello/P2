@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import java.util.*;
 
 import modelo.Jugador;
@@ -13,7 +14,7 @@ import modelo.Torneo;
  *
  * @author juan2
  */
-public class Partida {
+public class Partida implements Serializable{
     protected Jugador jugador;
     protected Jugador rival;
     protected Jugador ganador;

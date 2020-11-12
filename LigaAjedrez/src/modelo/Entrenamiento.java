@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -12,7 +13,7 @@ import java.util.Date;
  *
  * @author aange
  */
-public class Entrenamiento implements Comparable<Entrenamiento> {
+public class Entrenamiento implements Comparable<Entrenamiento>, Serializable{
     ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
     private Date fecha;
     private Club club;

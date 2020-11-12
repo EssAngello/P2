@@ -2596,7 +2596,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         {
             DefaultListModel listmodel1 = new DefaultListModel();
             listmodel1.removeAllElements();
-            listaEntrenamientos.removeAll(listaEntrenamientos);
+            //listaEntrenamientos.removeAll(listaEntrenamientos);
             listaEntrenamientos = appAjedrez.getEntrenamientosClub(clubseleccionado);
             for(Object e: listaEntrenamientos)
             {
