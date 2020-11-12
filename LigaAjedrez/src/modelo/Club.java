@@ -136,13 +136,12 @@ public class Club {
         System.out.println("pollo");
         for(Jugador j: jugadoresClub)
         {
-            //j.desmatricularseClub();
+            j.desmatricularseClub();
             jugadoresClub.remove(j);
         }
-        
-        //this.entrenador.eliminarClubTrabaja(this);
-        
-        //this.gerente = null;
+        Club aux = this;
+        this.entrenador.eliminarClubTrabaja(aux);
+         this.gerente = null;
     }
     
     @Override
