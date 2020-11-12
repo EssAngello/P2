@@ -59,11 +59,13 @@ public class AdministradorVista extends javax.swing.JFrame {
         jButtonEliminar1 = new javax.swing.JButton();
         jButtonCrear1 = new javax.swing.JButton();
         jLabelTorneo = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         Club = new javax.swing.JFrame();
         jButtonVer2 = new javax.swing.JButton();
         jButtonEliminar2 = new javax.swing.JButton();
         jButtonCrear2 = new javax.swing.JButton();
         jLabelClub = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         Reservar = new javax.swing.JFrame();
         jLabelReservar = new javax.swing.JLabel();
         jLabelSeleccionarClub = new javax.swing.JLabel();
@@ -114,7 +116,6 @@ public class AdministradorVista extends javax.swing.JFrame {
         jButtonCrear4 = new javax.swing.JButton();
         ClubVer = new javax.swing.JFrame();
         jButtonAtras5 = new javax.swing.JButton();
-        jButtonVer4 = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         jListJugadores2 = new javax.swing.JList<>();
         jLabel9 = new javax.swing.JLabel();
@@ -137,6 +138,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         jButtonCrear3 = new javax.swing.JButton();
         jButtonEliminar3 = new javax.swing.JButton();
         jButtonApuntar = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         PartidoCrear = new javax.swing.JFrame();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -365,6 +367,13 @@ public class AdministradorVista extends javax.swing.JFrame {
         jLabelTorneo.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabelTorneo.setText("Torneo");
 
+        jButton3.setText("ATRAS");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout TorneoLayout = new javax.swing.GroupLayout(Torneo.getContentPane());
         Torneo.getContentPane().setLayout(TorneoLayout);
         TorneoLayout.setHorizontalGroup(
@@ -373,15 +382,17 @@ public class AdministradorVista extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(TorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(TorneoLayout.createSequentialGroup()
-                        .addComponent(jLabelTorneo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(TorneoLayout.createSequentialGroup()
                         .addComponent(jButtonVer1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                         .addComponent(jButtonEliminar1)
                         .addGap(47, 47, 47)
                         .addComponent(jButtonCrear1)
-                        .addGap(46, 46, 46))))
+                        .addGap(46, 46, 46))
+                    .addGroup(TorneoLayout.createSequentialGroup()
+                        .addGroup(TorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelTorneo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         TorneoLayout.setVerticalGroup(
             TorneoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -393,7 +404,9 @@ public class AdministradorVista extends javax.swing.JFrame {
                     .addComponent(jButtonVer1)
                     .addComponent(jButtonCrear1)
                     .addComponent(jButtonEliminar1))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jButtonVer2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -423,6 +436,13 @@ public class AdministradorVista extends javax.swing.JFrame {
         jLabelClub.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabelClub.setText("Club");
 
+        jButton2.setText("ATRAS");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout ClubLayout = new javax.swing.GroupLayout(Club.getContentPane());
         Club.getContentPane().setLayout(ClubLayout);
         ClubLayout.setHorizontalGroup(
@@ -430,6 +450,9 @@ public class AdministradorVista extends javax.swing.JFrame {
             .addGroup(ClubLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(ClubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ClubLayout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(ClubLayout.createSequentialGroup()
                         .addComponent(jLabelClub, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -451,7 +474,9 @@ public class AdministradorVista extends javax.swing.JFrame {
                     .addComponent(jButtonVer2)
                     .addComponent(jButtonCrear2)
                     .addComponent(jButtonEliminar2))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabelReservar.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
@@ -887,13 +912,6 @@ public class AdministradorVista extends javax.swing.JFrame {
             }
         });
 
-        jButtonVer4.setText("Ver");
-        jButtonVer4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonVer4ActionPerformed(evt);
-            }
-        });
-
         jListJugadores2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -908,15 +926,15 @@ public class AdministradorVista extends javax.swing.JFrame {
         ClubVerLayout.setHorizontalGroup(
             ClubVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ClubVerLayout.createSequentialGroup()
-                .addGap(58, 58, 58)
                 .addGroup(ClubVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addGroup(ClubVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(ClubVerLayout.createSequentialGroup()
-                            .addComponent(jButtonAtras5)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonVer4))
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(ClubVerLayout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addGroup(ClubVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(ClubVerLayout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(jButtonAtras5)))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         ClubVerLayout.setVerticalGroup(
@@ -927,10 +945,8 @@ public class AdministradorVista extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(ClubVerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonVer4)
-                    .addComponent(jButtonAtras5))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addComponent(jButtonAtras5)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         jButtonAtras7.setText("Atras");
@@ -1085,6 +1101,13 @@ public class AdministradorVista extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setText("ATRAS");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PartidoLayout = new javax.swing.GroupLayout(Partido.getContentPane());
         Partido.getContentPane().setLayout(PartidoLayout);
         PartidoLayout.setHorizontalGroup(
@@ -1101,7 +1124,10 @@ public class AdministradorVista extends javax.swing.JFrame {
                         .addComponent(jButtonEliminar3))
                     .addGroup(PartidoLayout.createSequentialGroup()
                         .addGap(129, 129, 129)
-                        .addComponent(jButtonApuntar)))
+                        .addComponent(jButtonApuntar))
+                    .addGroup(PartidoLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jButton4)))
                 .addContainerGap(66, Short.MAX_VALUE))
         );
         PartidoLayout.setVerticalGroup(
@@ -1115,7 +1141,8 @@ public class AdministradorVista extends javax.swing.JFrame {
                     .addComponent(jButtonEliminar3))
                 .addGap(18, 18, 18)
                 .addComponent(jButtonApuntar)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(jButton4))
         );
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
@@ -2141,10 +2168,6 @@ public class AdministradorVista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxCategoriaActionPerformed
 
-    private void jButtonVer4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVer4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonVer4ActionPerformed
-
     private void jButtonEliminar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar6ActionPerformed
         // Maricel
         int indice = jListJugadores3.getSelectedIndex();
@@ -2152,6 +2175,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         appAjedrez.eliminarClub(clubes.get(indice));
         ClubEliminar.setVisible(false);
         EliminadoExito.setVisible(true);
+        EliminadoExito.setSize(400,400);
     }//GEN-LAST:event_jButtonEliminar6ActionPerformed
 
     private void jButtonVer5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVer5ActionPerformed
@@ -2353,8 +2377,19 @@ public class AdministradorVista extends javax.swing.JFrame {
 
     private void jButtonVer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVer2ActionPerformed
         // Maricel
+        DefaultListModel listmodel2 = new DefaultListModel();
+         listmodel2.removeAllElements();
+         clubes = appAjedrez.consultarClubes();
+
+         for(Object c : clubes)
+         {
+             String nombreclub = c.toString();
+             listmodel2.addElement(nombreclub);
+         }
+         jListJugadores2.setModel(listmodel2);
         Club.setVisible(false);
         ClubVer.setVisible(true);
+        ClubVer.setSize(400, 400);
     }//GEN-LAST:event_jButtonVer2ActionPerformed
 
     private void jButtonAtras5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras5ActionPerformed
@@ -2413,6 +2448,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         String federacion = jTextFieldFederacion.getText();
         appAjedrez.crearClub(nombre, federacion);
         CreadoExito.setVisible(true);
+        CreadoExito.setSize(400,400);
         ClubCrear.setVisible(false);
     }//GEN-LAST:event_jButtonCrear5ActionPerformed
 
@@ -2934,6 +2970,24 @@ public class AdministradorVista extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonBuscar2ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Club.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Torneo.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        Partido.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2962,6 +3016,9 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btg_user;
     private javax.swing.JFrame cambiar_responsable;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButtonApuntar;
     private javax.swing.JButton jButtonAtras;
     private javax.swing.JButton jButtonAtras10;
@@ -3003,7 +3060,6 @@ public class AdministradorVista extends javax.swing.JFrame {
     private javax.swing.JButton jButtonVer;
     private javax.swing.JButton jButtonVer1;
     private javax.swing.JButton jButtonVer2;
-    private javax.swing.JButton jButtonVer4;
     private javax.swing.JButton jButtonVer5;
     private javax.swing.JButton jButtonVer7;
     private javax.swing.JComboBox<String> jComboBoxCategoria;
