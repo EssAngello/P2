@@ -2162,6 +2162,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         }
         else{
             Partida p = (Partida)eliminarPartida;
+            torneoEliminarPartida.eliminarPartida(p);
         }
         PartidoEliminar.setVisible(false);
         EliminadoExito.setVisible(true);
@@ -2912,12 +2913,12 @@ public class AdministradorVista extends javax.swing.JFrame {
     private void jButtonBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscar2ActionPerformed
         // MARICEL
         String nombre_torneo = jtf_torneo.getText();
-        Torneo t = appAjedrez.dameTorneo(nombre_torneo);
+        torneoEliminarPartida = appAjedrez.dameTorneo(nombre_torneo);
         
         DefaultListModel modeloListaTorneos = new DefaultListModel();
         jlt_eliminarTorneo.setModel(modeloListaTorneos);
         
-        listaPartidos = torneo.dameParidas();
+        listaPartidos = torneoEliminarPartida.dameParidas();
 
         if(!listaPartidos.isEmpty()){
             for(Object partida:listaPartidos){
@@ -3160,5 +3161,5 @@ public class AdministradorVista extends javax.swing.JFrame {
     ArrayList<Object> listaEntrenamientos = new ArrayList();
     private Date fecha = null;
     private Object clubseleccionado;
-    Torneo torneo;
+    Torneo torneo, torneoEliminarPartida;
 }

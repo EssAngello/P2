@@ -62,6 +62,10 @@ public class Torneo {
         return partidas;
     }
     
+    public void eliminarPartida(Partida p){
+        partidasTorneo.remove(p);
+    }
+            
     @Override
     public String toString()
     {
