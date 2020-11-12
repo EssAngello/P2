@@ -131,7 +131,7 @@ public class Club {
         return this.jugadoresClub;
     }
     
-    public void desmatricularTodo()
+    /*public void desmatricularTodo()
     {
         for(Jugador j: jugadoresClub)
         {
@@ -142,7 +142,7 @@ public class Club {
         this.entrenador.eliminarClubTrabaja(this);
         
         this.gerente = null;
-    }
+    }*/
     
     @Override
     

@@ -2148,6 +2148,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     private void jButtonEliminar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminar6ActionPerformed
         // Maricel
         int indice = jListJugadores3.getSelectedIndex();
+        System.out.println(indice);
         appAjedrez.eliminarClub(clubes.get(indice));
         ClubEliminar.setVisible(false);
         EliminadoExito.setVisible(true);
@@ -2347,6 +2348,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         // Maricel
         this.setVisible(false);
         Club.setVisible(true);
+        Club.setSize(400,400);
     }//GEN-LAST:event_jButtonClubActionPerformed
 
     private void jButtonVer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVer2ActionPerformed
@@ -2383,6 +2385,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         
         Club.setVisible(false);
         ClubEliminar.setVisible(true);
+        ClubEliminar.setSize(500,500);
     }//GEN-LAST:event_jButtonEliminar2ActionPerformed
 
     private void jButtonAtras7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras7ActionPerformed
@@ -2395,6 +2398,7 @@ public class AdministradorVista extends javax.swing.JFrame {
         // Maricel
         Club.setVisible(false);
         ClubCrear.setVisible(true);
+        ClubCrear.setSize(500,500);
     }//GEN-LAST:event_jButtonCrear2ActionPerformed
 
     private void jButtonAtras8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtras8ActionPerformed
