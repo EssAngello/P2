@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
  *
  * @author juan2
  */
-public class Jugador implements Serializable{
+public class Jugador extends PersonaFactory implements Serializable{
     //Contiene usuario y contraseña 
     Entrenamiento e;
     protected String user, passwd, nombre, apellido, telefono, DNI, categoria;
@@ -39,7 +39,7 @@ public class Jugador implements Serializable{
        this.telefono = telefono;
        this.DNI = DNI;
        this.categoria = categoria;
-       
+ 
        historialClubes.add(club0);
     }
     

@@ -30,12 +30,11 @@ public class AppAjedrez {
     protected ArrayList<Entrenador> entrenadores = new ArrayList<Entrenador>();
     protected ArrayList<Club> clubes = new ArrayList<Club>();
     protected ArrayList<Administrador> admin = new ArrayList<Administrador>();
-    
+    PersonaFactory f = new PersonaFactory ();
     Administrador admi = new Administrador ("root","root");
-    
-    Jugador j1 = new Jugador("Maricel","123456","Maricel","Olaru","123456789","X9356742C","senior");
-    Entrenador e = new Entrenador("Jose", "123456", "Jose", "Mourinho", "123456789", "X1234567L", "senior");
-    Gerente g = new Gerente("Ali", "123456","Ali", "baba", "123456789", "X1234566L", "senior");
+    Jugador j1 = (Jugador)f.CrearPersona("jugador","Maricel","123456","Maricel","Olaru","123456789","X9356742C","senior");
+    Entrenador e = (Entrenador)f.CrearPersona("entrenador","Jose", "123456", "Jose", "Mourinho", "123456789", "X1234567L", "senior");
+    Gerente g = (Gerente)f.CrearPersona("gerente","Ali", "123456","Ali", "baba", "123456789", "X1234566L", "senior");
     Club club1 = new Club("TSM", "Federacion de Valencia", e, g);
     Club club2 = new Club("FAZE", "Federacion de Madrid", null, null);
     Torneo torneo1 = new Torneo("Torneo calabacin", 3, "senior");
@@ -248,7 +247,7 @@ public class AppAjedrez {
                 }
             }
             if(comprobar == false){
-                Jugador aux = new Jugador (user, passwd, nombre, apellido, telefono, DNI, categoria);
+                Jugador aux = (Jugador)f.CrearPersona("jugador",user, passwd, nombre, apellido, telefono, DNI, categoria);
                 aux.setRes_nom(res_nom);
                 aux.setRes_apell(res_apell);
                 aux.setRes_DNI(responsable_DNI);
@@ -262,7 +261,7 @@ public class AppAjedrez {
                 }
             }
             if(comprobar == false){
-                Gerente aux = new Gerente (user, passwd, nombre, apellido, telefono, DNI, categoria);
+                Gerente aux = (Gerente)f.CrearPersona("gerente",user, passwd, nombre, apellido, telefono, DNI, categoria);
                 aux.setRes_nom(res_nom);
                 aux.setRes_apell(res_apell);
                 aux.setRes_DNI(responsable_DNI);
@@ -276,7 +275,7 @@ public class AppAjedrez {
                 }
             }
             if(comprobar == false){
-                Entrenador aux = new Entrenador (user, passwd, nombre, apellido, telefono, DNI, categoria);
+                Entrenador aux = (Entrenador)f.CrearPersona("entrenador",user, passwd, nombre, apellido, telefono, DNI, categoria);
                 aux.setRes_nom(res_nom);
                 aux.setRes_apell(res_apell);
                 aux.setRes_DNI(responsable_DNI);
