@@ -10,6 +10,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import modelo.Gerente;
 import modelo.Jugador;
+import modelo.JugadorFacade;
 /**
  *
  * @author juan2
@@ -21,19 +22,19 @@ public class ClubVista extends javax.swing.JFrame {
     private int origen;
     private GerenteVista g;
     private JugadorVista j;
-    private Jugador jugador;
+    private JugadorFacade jugador;
     private Gerente gerente;
     /**
      * Creates new form Club
      */
-    public ClubVista(int i, Jugador j) {
+    public ClubVista(int i, JugadorFacade j) {
         initComponents();
         this.origen = i;
         this.jugador = j;
         //Angello
         jlb_tituloNombreClub.setText(jugador.getNombreClub());
-        jlb_nombreGerente.setText(jugador.getNombreGerente());
-        jlb_nombreEntrenador.setText(jugador.getNombreEntrenador());
+        jlb_nombreGerente.setText(DatosGerente.get(0));
+        jlb_nombreEntrenador.setText(DatosEntrenador.get(0));
         jlb_federacionPerteneciente.setText(jugador.getNombreFederacion());
     }
     public ClubVista(int i, Gerente g) {
@@ -596,10 +597,10 @@ public class ClubVista extends javax.swing.JFrame {
         InfoGerente.setVisible(true);
         InfoGerente.setSize(400,400);
         //Angello
-        jlb_infoGerenteDatosNombre1.setText(jugador.getNombreGerente());
-        jlb_infoGerenteDatosApellido1.setText(jugador.getApellidoGerente());
-        jlb_infoGerenteDatosTelefono1.setText(jugador.getTelefonoGerente());
-        jlb_infoGerenteDatosDNI1.setText(jugador.getDNIGerente());
+        jlb_infoGerenteDatosNombre1.setText(DatosGerente.get(0));
+        jlb_infoGerenteDatosApellido1.setText(DatosGerente.get(1));
+        jlb_infoGerenteDatosTelefono1.setText(DatosGerente.get(3));
+        jlb_infoGerenteDatosDNI1.setText(DatosGerente.get(2));
     }//GEN-LAST:event_jbt_infoGerenteActionPerformed
 
     private void jbt_volverInfoGerente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_volverInfoGerente1ActionPerformed
@@ -664,10 +665,10 @@ public class ClubVista extends javax.swing.JFrame {
         InfoEntrenador.setSize(600,600);
         //Angello
         listmodel.removeAllElements();
-        jlb_infoEntrenadorDatosNombre1.setText(jugador.getNombreEntrenador());
-        jlb_infoEntrenadorDatosApellido1.setText(jugador.getApellidoEntrenador());
-        jlb_infoEntrenadorDatosTelefono1.setText(jugador.getTelefonoEntrenador());
-        jlb_infoEntrenadorDatosDNI1.setText(jugador.getDNIEntrenador());
+        jlb_infoEntrenadorDatosNombre1.setText(DatosEntrenador.get(0));
+        jlb_infoEntrenadorDatosApellido1.setText(DatosEntrenador.get(1));
+        jlb_infoEntrenadorDatosTelefono1.setText(DatosEntrenador.get(3));
+        jlb_infoEntrenadorDatosDNI1.setText(DatosEntrenador.get(2));
         clubesEntrenador.removeAll(clubesEntrenador);
         clubesEntrenador = jugador.getNombresClubesEntrenador();
         for(Object c: clubesEntrenador)
@@ -827,4 +828,6 @@ public class ClubVista extends javax.swing.JFrame {
     DefaultListModel listmodel3 = new DefaultListModel();
     DefaultListModel listmodel4 = new DefaultListModel();
     private String num = "";
+    private ArrayList<String> DatosEntrenador = jugador.ObtenerDatosEntrenador();
+    private ArrayList<String> DatosGerente = jugador.ObtenerDatosGerente();
 }

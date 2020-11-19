@@ -15,6 +15,7 @@ import modelo.Torneo;
 import modelo.AppAjedrez;
 import modelo.Gerente;
 import modelo.Jugador;
+import modelo.JugadorFacade;
 import modelo.Partida;
 /**
  *
@@ -25,12 +26,12 @@ public class TorneoVista extends javax.swing.JFrame {
     private int origen;
     private GerenteVista g;
     private JugadorVista j;
-    private Jugador jugador;
+    private JugadorFacade jugador;
     private Gerente gerente;
     /**
      * Creates new form Torneo
      */
-    public TorneoVista(int i,Jugador j) {
+    public TorneoVista(int i,JugadorFacade j) {
         initComponents();
         this.origen = i;
         this.jugador = j;
@@ -621,7 +622,7 @@ public class TorneoVista extends javax.swing.JFrame {
         else
         {
             Torneo torneo = (Torneo)torneoObj;
-            torneo.InscribirseTorneo(jugador);
+            torneo.InscribirseTorneo(jugador.ObtenerJugador());
                     
             InscribirseTorneo.setVisible(false);
             ConfirmacionInscribirseTorneo.setVisible(true);

@@ -15,6 +15,7 @@ import modelo.AppAjedrez;
 import modelo.Jugador;
 import modelo.Administrador;
 import modelo.Gerente;
+import modelo.JugadorFacade;
 /**
  *
  * @author aange
@@ -31,6 +32,7 @@ public class Iniciar extends javax.swing.JFrame {
     private String user, passwd, nombre, apellido, telefono, DNI, categoria,
             res_nom, res_apell, res_DNI;
     private Jugador inicio_jugador;
+    private JugadorFacade inicio_jugadorf;
     private Gerente gerente_inicio;
     /**
      * Creates new form NewJFrame
@@ -398,7 +400,8 @@ public class Iniciar extends javax.swing.JFrame {
             inicio_jugador = app.identificarJugador(user, passwd);
             if(inicio_jugador != null){
                 this.setVisible(false);
-                j = new JugadorVista(inicio_jugador);
+                inicio_jugadorf = new JugadorFacade(inicio_jugador);
+                j = new JugadorVista(inicio_jugadorf);
                 j.setVisible(true);
                 dispose();
             }

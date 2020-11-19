@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import modelo.AppAjedrez;
 import modelo.Club;
 import modelo.Jugador; 
+import modelo.JugadorFacade;
 /**
  *
  * @author aurel
@@ -20,12 +21,12 @@ public class JugadorVista extends javax.swing.JFrame {
     //Maricel
     private ClubVista clubVista;
     private TorneoVista t;
-    private Jugador jugador;
+    private JugadorFacade jugador;
     private Club club;
     /**
      * Creates new form Jugador
      */
-    public JugadorVista(Jugador j) {
+    public JugadorVista(JugadorFacade j) {
         initComponents();
         this.jugador = j;
         club = jugador.comprobarClub();
@@ -550,13 +551,14 @@ public class JugadorVista extends javax.swing.JFrame {
 
     private void jbt_responsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_responsableActionPerformed
         // Maricel
-        jlb_responsable_nombre.setText(jugador.getRes_nom());
-        jlb_responsable_apellido.setText(jugador.getRes_apell());
-        if(jugador.getCategoria() == "infantil"){
-            jlb_jugador_nombre.setText(jugador.getNombre());
-            jlb_jugador_apellido.setText(jugador.getApellido());
+        ArrayList<String> DatosJugador = jugador.ObtenerDatosJugador();
+        jlb_responsable_nombre.setText(DatosResponsable.get(0));
+        jlb_responsable_apellido.setText(DatosResponsable.get(1));
+        if(DatosJugador.get(4) == "infantil"){
+            jlb_jugador_nombre.setText(DatosJugador.get(0));
+            jlb_jugador_apellido.setText(DatosJugador.get(1));
         }
-        jLabel2.setText(jugador.getRes_DNI());
+        jLabel2.setText(DatosResponsable.get(2));
         this.setVisible(false);
         Responsable.setVisible(true);
         Responsable.setSize(400,400);
@@ -564,11 +566,12 @@ public class JugadorVista extends javax.swing.JFrame {
 
     private void jbt_tarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_tarjetaActionPerformed
         // Maricel
-        jlb_nombreRespuesta1.setText(jugador.getNombre());
-        jlb_apellidoRespuesta1.setText(jugador.getApellido());
-        JLB_dniRespuesta1.setText(jugador.getDNI());
-        jlb_telefonoRespuesta1.setText(jugador.getTelefono());
-        jlb_categoriaRespuesta1.setText(jugador.getCategoria());
+        ArrayList<String> DatosJugador = jugador.ObtenerDatosJugador();
+        jlb_nombreRespuesta1.setText(DatosJugador.get(0));
+        jlb_apellidoRespuesta1.setText(DatosJugador.get(1));
+        JLB_dniRespuesta1.setText(DatosJugador.get(2));
+        jlb_telefonoRespuesta1.setText(DatosJugador.get(3));
+        jlb_categoriaRespuesta1.setText(DatosJugador.get(4));
         //Falta el elo
         this.setVisible(false);
         Tarjeta_personal.setVisible(true);
@@ -683,7 +686,7 @@ public class JugadorVista extends javax.swing.JFrame {
         int aux = JOptionPane.showConfirmDialog(this,"Seguro que quieres darte de baja del club");
         if(aux == 0)
         {
-            if(club.darseBaja(jugador) == false){
+            if(club.darseBaja(jugador.ObtenerJugador()) == false){
                 JOptionPane.showMessageDialog(this,"No estas inscrito en ningun club");
             }
             else{
@@ -752,4 +755,5 @@ public class JugadorVista extends javax.swing.JFrame {
     protected AppAjedrez appAjedrez;
     protected Object clubObject;
     protected ArrayList listaHistorialClubes;
+    ArrayList<String> DatosResponsable = jugador.ObtenerDatosResponsable();
 }
