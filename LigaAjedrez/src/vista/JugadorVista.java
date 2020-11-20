@@ -551,6 +551,7 @@ public class JugadorVista extends javax.swing.JFrame {
 
     private void jbt_responsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_responsableActionPerformed
         // Maricel
+        ArrayList<String> DatosResponsable = jugador.ObtenerDatosResponsable();
         ArrayList<String> DatosJugador = jugador.ObtenerDatosJugador();
         jlb_responsable_nombre.setText(DatosResponsable.get(0));
         jlb_responsable_apellido.setText(DatosResponsable.get(1));
@@ -755,5 +756,4 @@ public class JugadorVista extends javax.swing.JFrame {
     protected AppAjedrez appAjedrez;
     protected Object clubObject;
     protected ArrayList listaHistorialClubes;
-    ArrayList<String> DatosResponsable = jugador.ObtenerDatosResponsable();
 }
