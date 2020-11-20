@@ -29,6 +29,8 @@ public class ClubVista extends javax.swing.JFrame {
      */
     public ClubVista(int i, JugadorFacade j) {
         initComponents();
+        ArrayList<String> DatosGerente = jugador.ObtenerDatosGerente();
+        ArrayList<String> DatosEntrenador = jugador.ObtenerDatosEntrenador();
         this.origen = i;
         this.jugador = j;
         //Angello
@@ -593,6 +595,7 @@ public class ClubVista extends javax.swing.JFrame {
 
     private void jbt_infoGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoGerenteActionPerformed
         // Maricel
+        ArrayList<String> DatosGerente = jugador.ObtenerDatosGerente();
         this.setVisible(false);
         InfoGerente.setVisible(true);
         InfoGerente.setSize(400,400);
@@ -660,6 +663,8 @@ public class ClubVista extends javax.swing.JFrame {
 
     private void jbt_infoEntrenadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_infoEntrenadorActionPerformed
         // Maricel
+        ArrayList<String> DatosEntrenador = jugador.ObtenerDatosEntrenador();
+
         this.setVisible(false);
         InfoEntrenador.setVisible(true);
         InfoEntrenador.setSize(600,600);
@@ -828,6 +833,5 @@ public class ClubVista extends javax.swing.JFrame {
     DefaultListModel listmodel3 = new DefaultListModel();
     DefaultListModel listmodel4 = new DefaultListModel();
     private String num = "";
-    private ArrayList<String> DatosEntrenador = jugador.ObtenerDatosEntrenador();
-    private ArrayList<String> DatosGerente = jugador.ObtenerDatosGerente();
+   
 }
