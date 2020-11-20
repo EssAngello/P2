@@ -30,6 +30,10 @@ public class Torneo implements Serializable{
         this.num_jugadores = num_jugadores;
         this.categoria = categoria;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
     
     public void InscribirseTorneo(Jugador jugador){
         if(contador < num_jugadores)

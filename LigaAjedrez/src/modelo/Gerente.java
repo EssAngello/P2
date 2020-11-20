@@ -21,14 +21,25 @@ public class Gerente extends Jugador implements Serializable{
     public Gerente(String user, String passwd,String nombre,String apellido,String telefono,String DNI,String categoria){
         super( user,  passwd, nombre, apellido, telefono, DNI, categoria);
     }
+
+    public void addIrpfs(int irpf) {
+        irpfs.add(irpf);
+    }
+    
+    public void addNominas(int nomina) {
+        nominas.add(nomina);
+    }
+
     /*
     public void InscribirseClub(Club c)
     {
-        c.inscribirseClubGerente(this);
-        historialClubes.add(c);
-        this.club=c;
+    c.inscribirseClubGerente(this);
+    historialClubes.add(c);
+    this.club=c;
     }
-    */
+     */
+
+
     public ArrayList getIrpfs() {
         return irpfs;
     }

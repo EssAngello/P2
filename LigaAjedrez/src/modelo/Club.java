@@ -31,6 +31,10 @@ public class Club implements Serializable{
 //        entrenador.setClubTrabaja(this);
     }
     
+    public void addJugador(Jugador j){
+        jugadoresClub.add(j);
+    }
+    
     public void inscribirseClubJugador(Jugador jugador){
         jugadoresClub.add(jugador);
     }

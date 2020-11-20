@@ -24,12 +24,12 @@ import modelo.Club;
  * @author juan2
  */
 public class AppAjedrez {
-    protected ArrayList<Torneo> torneos = new ArrayList<Torneo>();
-    protected ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
-    protected ArrayList<Gerente> gerentes = new ArrayList<Gerente>();
-    protected ArrayList<Entrenador> entrenadores = new ArrayList<Entrenador>();
-    protected ArrayList<Club> clubes = new ArrayList<Club>();
-    protected ArrayList<Administrador> admin = new ArrayList<Administrador>();
+    protected ArrayList<Torneo> torneos;
+    protected ArrayList<Jugador> jugadores;
+    protected ArrayList<Gerente> gerentes;
+    protected ArrayList<Entrenador> entrenadores;
+    protected ArrayList<Club> clubes;
+    protected ArrayList<Administrador> admin;
     PersonaFactory f = new PersonaFactory ();
     Administrador admi = new Administrador ("root","root");
     Jugador j1 = (Jugador)f.CrearPersona("jugador","Maricel","123456","Maricel","Olaru","123456789","X9356742C","senior");
@@ -45,6 +45,16 @@ public class AppAjedrez {
     String gerentesEntrenadores= "entrenadores.txt";
     String ficheroClubes = "clubes.txt";
     public AppAjedrez() throws IOException, FileNotFoundException, ClassNotFoundException{
+        
+        DAO dao = new DAO();
+        torneos = new ArrayList<>(dao.getV_torneos());
+        jugadores = new ArrayList<>(dao.getV_jugadores());
+        gerentes = new ArrayList<>(dao.getV_gerentes());
+        entrenadores = new ArrayList<>(dao.getV_entrenadores());
+        clubes = new ArrayList<>(dao.getV_clubes());
+        admin = new ArrayList<>(dao.getV_administradores());
+        
+        
         //Añadimos jugadores por la fuerza para comprobar/
         admin.add(admi);
         jugadores.add(j1);
