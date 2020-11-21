@@ -28,6 +28,10 @@ public class Entrenamiento implements Comparable<Entrenamiento>, Serializable{
         fecha = new Date(anyo, mes, dia, hora, minuto, segundo);
         
     }
+
+    public Club getClub() {
+        return club;
+    }
     
     @Override
     public String toString()

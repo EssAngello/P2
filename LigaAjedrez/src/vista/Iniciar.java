@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 import modelo.AppAjedrez;
 import modelo.Jugador;
 import modelo.Administrador;
+import modelo.DAO;
 import modelo.Gerente;
 import modelo.JugadorFacade;
 /**
@@ -370,7 +371,7 @@ public class Iniciar extends javax.swing.JFrame {
     }//GEN-LAST:event_jtf_contraseñaIniciarActionPerformed
 
     private void jbt_cancelarIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_cancelarIniciarActionPerformed
-        // Maricel
+        dao.realizarBackup(app);
         System.exit(0);
     }//GEN-LAST:event_jbt_cancelarIniciarActionPerformed
 
@@ -560,4 +561,5 @@ public class Iniciar extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_telefono1;
     private javax.swing.JTextField jtf_usuario1;
     // End of variables declaration//GEN-END:variables
+    private DAO dao;
 }

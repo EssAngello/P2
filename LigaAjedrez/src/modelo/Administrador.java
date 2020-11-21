@@ -21,6 +21,14 @@ public class Administrador {
         this.user = user;
         this.pasw = pasw;
     }
+
+    public String getUser() {
+        return user;
+    }
+
+    public String getPasw() {
+        return pasw;
+    }
     
     public boolean identificarse(String u, String p){
         boolean comprobacion = false;

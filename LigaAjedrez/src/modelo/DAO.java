@@ -118,9 +118,10 @@ public class DAO {
                 
                 Club en_club_def = null;
                 for(Club club_aux : v_clubes){
-                    if(club_aux.getNombre().equals(j_jugador_club))
+                    if(club_aux.getNombre().equals(j_jugador_club)){
                         en_club_def = club_aux;
                         en_club_def.addJugador(j);
+                    }
                 }
             }
             
@@ -164,8 +165,13 @@ public class DAO {
                         to = torneo_aux;
                 }
                 
-                Partida p = new Partida(j1,j2,j3,dbSqlDateConverted,to,p_duracion);
-                
+                Partida p;
+                if(to.getNombre().equals(p_torneo)){
+                    p = new Partida(j1,j2,j3,dbSqlDateConverted,to,p_duracion);
+                    to.introducirPartidaTorneo(p);
+                }
+                else
+                    p = new Partida(j1,j2,j3,dbSqlDateConverted,to,p_duracion);
             }
             
             while(gerentes.next()){
@@ -220,10 +226,11 @@ public class DAO {
                 
                 Club en_club_def = null;
                 for(Club club_aux : v_clubes){
-                    if(club_aux.getNombre().equals(en_club))
+                    if(club_aux.getNombre().equals(en_club)){
                         en_club_def = club_aux;
                         Entrenamiento en = new Entrenamiento(en_club_def,en_dia,en_mes,en_año,en_hora,en_minuto,en_segundo);
                         en_club_def.addEntrenamiento(en);
+                    }
                 }
             }
             
@@ -232,22 +239,121 @@ public class DAO {
         }
     }
     
-    public void realizarBackup(){
+    public void realizarBackup(AppAjedrez app){
         try {
-            String con_jug,con_jug_aux,con_tor, con_ger, con_ent, con_club, con_club_aux, con_adm, con_entre,con_par;
-            int id = 10; // Valor a insertar
-            // Operación SQL sobre la base de datos
-            con_jug = "INSERT INTO jugador (id_prueba) VALUES ('" + id + "')";
-            con_tor = "SELECT * FROM torneo";
-            con_ger = "SELECT * FROM gerente";
-            con_ent = "SELECT * FROM entrenador";
-            con_club = "SELECT * FROM club";
-            con_adm = "SELECT * FROM administrador";
-            con_entre = "SELECT * FROM entrenamiento";
-            con_par = "SELECT * FROM partida";
-           
-            PreparedStatement preparedStmt = conexionBD.prepareStatement(con_jug);
-            preparedStmt.executeUpdate();
+            String con_jug,con_tor, con_ger, con_ent, con_club, con_adm, con_entre,con_par;
+            
+            //tabla de jugador
+            ArrayList<Jugador> lista_jugadores = new ArrayList();
+            lista_jugadores = app.consultarJugadoresExistentes();
+            
+            for(Jugador j:lista_jugadores){
+                Club j_club = j.getClub();
+                String j_jugador_club = j_club.getNombre();
+                
+                con_jug = "INSERT INTO jugador (usuario, contraseña, nombre, apellido, telefono, DNI, categoria, club, responsable_DNI) "
+                    + "VALUES ('"+j.getUser()+"','"+j.getPasswd()+"','"+j.getNombre()+"','"+j.getApellido()+"','"+j.getTelefono()+"','"+j.getDNI()
+                    +"','"+j.getCategoria()+"','"+j_jugador_club+"','"+j.getRes_DNI()+"')";
+                
+                PreparedStatement preparedStmt = conexionBD.prepareStatement(con_jug);
+                preparedStmt.executeUpdate();
+            }
+            
+            //tabla de torneo
+            ArrayList<Torneo> lista_torneos = new ArrayList();
+            lista_torneos = app.consultarTorneosDisponibles();
+            
+            for(Torneo t:lista_torneos){
+                con_tor = "INSERT INTO torneo (nombre, num_jugadores, categoria) VALUES ('"+t.getNombre()+"','"+t.getNum_jugadores()
+                        +"','"+t.getCategoria()+"')";
+                
+                PreparedStatement preparedStmt = conexionBD.prepareStatement(con_tor);
+                preparedStmt.executeUpdate();
+            }
+            
+            //tabla de gerente
+            ArrayList<Gerente> lista_gerentes = new ArrayList();
+            lista_gerentes = app.consultarGerentesExistentes();
+            
+            for(Gerente g:lista_gerentes){
+                con_ger = "INSERT INTO gerente (usuario, contraseña, nombre, apellido, telefono, DNI, categoria, irpf, nomina) VALUES ('"
+                        +g.getUser()+"','"+g.getPasswd()+"','"+g.getNombre()+"','"+g.getApellido()+"','"+g.getTelefono()+"','"+g.getDNI()+"','"
+                        +g.getCategoria()+"','"+g.getIrpfs()+"','"+g.getNominas()+"')";
+                
+                PreparedStatement preparedStmt = conexionBD.prepareStatement(con_ger);
+                preparedStmt.executeUpdate();
+            }
+            
+            //tabla de entrenador
+            ArrayList<Entrenador> lista_entrenadores = new ArrayList();
+            lista_entrenadores = app.consultarEntrenadoresExistentes();
+            
+            for(Entrenador e:lista_entrenadores){
+                con_ent = "INSERT INTO entrenador (usuario, contraseña, nombre, apellido, telefono, DNI, categoria) VALUES ('"
+                        +e.getUser()+"','"+e.getPasswd()+"','"+e.getNombre()+"','"+e.getApellido()+"','"+e.getTelefono()+"','"+e.getDNI()+"','"
+                        +e.getCategoria()+"')";
+                
+                PreparedStatement preparedStmt = conexionBD.prepareStatement(con_ent);
+                preparedStmt.executeUpdate();
+            }
+            
+            //tabla de club
+            ArrayList<Club> lista_clubes = new ArrayList();
+            lista_clubes = app.consultarClubes();
+            
+            for(Club c:lista_clubes){
+                con_club = "INSERT INTO club (nombre, entrenador, gerente, federacion) VALUES ('"
+                        +c.getNombre()+"','"+c.getNombreEntrenador()+"','"+c.getNombreGerente()+"','"+c.getNombreFederacion()+"')";
+                
+                PreparedStatement preparedStmt = conexionBD.prepareStatement(con_club);
+                preparedStmt.executeUpdate();
+            }
+            
+            //tabla de administrador
+            ArrayList<Administrador> lista_administradores = new ArrayList();
+            lista_administradores = app.getAdmin();
+            
+            for(Administrador a:lista_administradores){
+                con_adm = "INSERT INTO administrador (usuario, contraseña) VALUES ('"+a.getUser()+"','"+a.getPasw()+"')";
+                
+                PreparedStatement preparedStmt = conexionBD.prepareStatement(con_adm);
+                preparedStmt.executeUpdate();
+            }
+            
+            //tabla de entrenamiento
+            ArrayList<Entrenamiento> lista_entrenamientos = new ArrayList();
+            for(Club c:lista_clubes){
+                lista_entrenamientos = c.getEntrenamientos();
+                String entre_club = c.getNombre();
+                for(Entrenamiento en:lista_entrenamientos){
+                    java.util.Date en_fecha = en.getDateTime();
+                    int dia = en_fecha.getDay();
+                    int mes = en_fecha.getMonth();
+                    int año = en_fecha.getYear();
+                    int hora = en_fecha.getHours();
+                    int minuto = en_fecha.getMinutes();
+                    int segundo = en_fecha.getSeconds();
+                    con_entre = "INSERT INTO administrador (dia, mes, año, hora, minuto, segundo, club) VALUES ('"
+                        +dia+"','"+mes+"','"+año+"','"+hora+"','"+minuto+"','"+segundo+"','"+entre_club+"')";
+
+                    PreparedStatement preparedStmt = conexionBD.prepareStatement(con_entre);
+                    preparedStmt.executeUpdate();
+                }
+            }
+            
+            //tabla de partida
+            ArrayList<Partida> lista_partidas = new ArrayList();
+            for(Torneo t:lista_torneos){
+                lista_partidas = t.dameParidas();
+                String p_torneo = t.getNombre();
+                for(Partida p : lista_partidas){
+                    con_par = "INSERT INTO administrador (jugador, rival, ganador, fecha, torneo, duracion) VALUES ('"
+                        +p.getJugador()+"','"+p.getRival()+"','"+p.getGanador()+"','"+p.getFecha()+"','"+p_torneo+"','"+p.getDuracion()+"')";
+                    
+                    PreparedStatement preparedStmt = conexionBD.prepareStatement(con_par);
+                    preparedStmt.executeUpdate();
+                }
+            }
         }
         catch(Exception e){ // Error al realizar la operación
             System.out.println("No se ha completado la operación");

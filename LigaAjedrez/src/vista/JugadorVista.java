@@ -10,6 +10,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import modelo.AppAjedrez;
 import modelo.Club;
+import modelo.DAO;
 import modelo.Jugador; 
 import modelo.JugadorFacade;
 /**
@@ -592,7 +593,7 @@ public class JugadorVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_torneoActionPerformed
 
     private void jbt_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_salirActionPerformed
-         // Maricel
+        dao.realizarBackup(appAjedrez);
         System.exit(0);
     }//GEN-LAST:event_jbt_salirActionPerformed
 
@@ -756,4 +757,6 @@ public class JugadorVista extends javax.swing.JFrame {
     protected AppAjedrez appAjedrez;
     protected Object clubObject;
     protected ArrayList listaHistorialClubes;
+    private DAO dao;
+    
 }

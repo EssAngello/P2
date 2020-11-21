@@ -101,7 +101,7 @@ public class AppAjedrez {
         }
     }
     
-      public ArrayList<Torneo> consultarTorneos(){
+    public ArrayList<Torneo> consultarTorneos(){
         ArrayList<Torneo> listaTorneos = new ArrayList(torneos);
 
         return listaTorneos;
@@ -195,6 +195,10 @@ public class AppAjedrez {
     public ArrayList<Jugador> consultarJugadoresExistentes(){
         ArrayList<Jugador> jugadoresExistentes = new ArrayList(jugadores);
         return jugadoresExistentes;
+    }
+
+    public ArrayList<Administrador> getAdmin() {
+        return admin;
     }
     
     public ArrayList<Gerente> consultarGerentesExistentes(){

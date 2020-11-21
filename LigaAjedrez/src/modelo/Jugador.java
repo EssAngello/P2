@@ -129,6 +129,10 @@ public class Jugador extends PersonaFactory implements Serializable{
     {
         return club;
     }
+
+    public String getPasswd() {
+        return passwd;
+    }
     
     public String getUser() {
         return user;

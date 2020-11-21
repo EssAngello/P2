@@ -14,6 +14,7 @@ import java.util.regex.Pattern;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import modelo.AppAjedrez;
+import modelo.DAO;
 import modelo.Entrenador;
 import modelo.Gerente;
 import modelo.Jugador;
@@ -2194,7 +2195,7 @@ public class AdministradorVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonVer5ActionPerformed
 
     private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
-        // Maricel
+        dao.realizarBackup(appAjedrez);
         System.exit(0);
     }//GEN-LAST:event_jButtonSalirActionPerformed
 
@@ -3222,4 +3223,5 @@ public class AdministradorVista extends javax.swing.JFrame {
     private Date fecha = null;
     private Object clubseleccionado;
     Torneo torneo, torneoEliminarPartida;
+    private DAO dao;
 }

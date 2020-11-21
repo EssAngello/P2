@@ -30,8 +30,32 @@ public class Partida implements Serializable{
         this.torneo = torneo;
         this.duracion = duracion;
     }
+
+    public Jugador getJugador() {
+        return jugador;
+    }
+
+    public Jugador getRival() {
+        return rival;
+    }
+
+    public Jugador getGanador() {
+        return ganador;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public Torneo getTorneo() {
+        return torneo;
+    }
+
+    public String getDuracion() {
+        return duracion;
+    }
     
-           
+    
     
     public String detallesPartida(){
         return rival + "|" + ganador + "|" + fecha + "|" + duracion;

@@ -34,6 +34,14 @@ public class Torneo implements Serializable{
     public String getNombre() {
         return nombre;
     }
+
+    public int getNum_jugadores() {
+        return num_jugadores;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
     
     public void InscribirseTorneo(Jugador jugador){
         if(contador < num_jugadores)
